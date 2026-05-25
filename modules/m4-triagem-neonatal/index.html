@@ -1,0 +1,2590 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0a1620">
+  <meta name="description" content="Triagem Neonatal — pezinho, coraçãozinho, olhinho, orelhinha, linguinha e dedinho. Plataforma educacional Bauer.">
+  <title>Triagem Neonatal — Neonatologia (Parte 1, M4)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="./assets/css/tokens.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages-m4.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <header class="app-header" role="banner">
+    <div class="app-header__row">
+      <div class="app-header__brand">
+        <div class="brand-logo" aria-hidden="true">NN</div>
+        <div class="brand-text">
+          <div class="brand-title">Triagem Neonatal</div>
+          <div class="brand-sub">Neonatologia · Parte 1 · Módulo 4</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-toggle="theme" aria-pressed="false" aria-label="Alternar tema claro/escuro" title="Tema">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" data-toggle="menu" aria-expanded="false" aria-controls="menu-drawer" aria-label="Abrir menu de páginas">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="progress-bar" role="progressbar" aria-label="Progresso no módulo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="progress-bar__fill"></div>
+    </div>
+  </header>
+
+  <nav class="menu-drawer" id="menu-drawer" data-open="false" aria-label="Páginas do módulo">
+    <div class="menu-drawer__panel">
+      <h2 class="menu-drawer__title">Páginas — Módulo 4</h2>
+      <ol class="menu-drawer__list" role="list">
+        <li><a class="menu-drawer__link" href="#/p1-m4-p1"  data-page-num="1"><span class="menu-drawer__num">4.1</span>A lógica única das 6 triagens</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p2"  data-page-num="2"><span class="menu-drawer__num">4.2</span>Pezinho — papel filtro, calcanhar e a janela 3-5 dias</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p3"  data-page-num="3"><span class="menu-drawer__num">4.3</span>Pezinho — 7 condições + a exceção da confirmação</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p4"  data-page-num="4"><span class="menu-drawer__num">4.4</span>Coraçãozinho — o fluxograma 2022</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p5"  data-page-num="5"><span class="menu-drawer__num">4.5</span>Circulação fetal — por que MSD é pré-ductal</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p6"  data-page-num="6"><span class="menu-drawer__num">4.6</span>Olhinho — reflexo vermelho, oftalmoscópio (não lanterna)</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p7"  data-page-num="7"><span class="menu-drawer__num">4.7</span>Orelhinha — EOA mostra cóclea, BERA mostra nervo</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p8"  data-page-num="8"><span class="menu-drawer__num">4.8</span>Orelhinha — IRDA-1 vs IRDA-2 e a pegadinha da fototerapia</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p9"  data-page-num="9"><span class="menu-drawer__num">4.9</span>Linguinha — Bristol, repercussão e controvérsia SBP × MS</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p10" data-page-num="10"><span class="menu-drawer__num">4.10</span>Dedinho — hálux, FOP e a proibição absoluta de IM</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p11" data-page-num="11"><span class="menu-drawer__num">4.11</span>Síntese — o quadro das 6 triagens</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m4-p12" data-page-num="12"><span class="menu-drawer__num">4.12</span>Cross-references — TORCHS, reanimação, tudo o mais</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="app-main" id="main">
+    <!-- PAGES_INJECT_START -->
+
+    <!-- =============================================================== -->
+    <!-- Página 4.1 — Estratégia: E1 (Pergunta central)                    -->
+    <!-- Itens roteiro: [001]-[008]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="1" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.1 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E1 · Pergunta central</span>
+        <span class="page-meta__tag">Itens 001-008</span>
+      </div>
+      <h1 class="page-title">Triagem neonatal: a mesma lógica de toda triagem, traduzida em 6 apelidos pediátricos</h1>
+
+      <section class="opener opener--question">
+        <p class="opener__q">Se a criança ainda não tem sintoma, por que faz sentido testá-la? E por que justamente 6 testes — não 1, não 20?</p>
+      </section>
+
+      <p>Triagem é um conceito de saúde pública antes de ser um conceito clínico. A lógica é simples e válida pra qualquer fase da vida: rastrear quem provavelmente tem uma doença <strong>antes</strong> que ela apareça com sintoma. Por que? Porque algumas doenças, se você diagnostica antes do sintoma surgir, você muda a história natural delas. E muda muito.</p>
+
+      <p>No período neonatal essa lógica vira regra: o recém-nascido não vai contar pra você que está com fenilcetonúria, não vai descrever uma cardiopatia crítica, não vai apontar pra cóclea e dizer "aqui não está chegando som". Existem várias avaliações no período neonatal — exame físico completo, anamnese materna, exames laboratoriais conforme a clínica — mas o que se chama formalmente de <strong>triagem neonatal</strong> é um conjunto sistemático e padronizado de testes feitos em <strong>toda criança</strong>, doente ou aparentemente saudável, com janela temporal definida.</p>
+
+      <p>O Brasil consolida essas avaliações em <strong>6 triagens obrigatórias</strong>. Cinco são clássicas, com lugar histórico no Programa Nacional de Triagem Neonatal (PNTN). A sexta entrou recentemente, normatizada por lei federal específica. Cada uma testa um sistema diferente, com técnica diferente, em janela diferente, com conduta diferente quando dá alterada. E cada uma ganhou um <strong>apelido pediátrico</strong> que é, ao mesmo tempo, mnemônico e identitário.</p>
+
+      <ul class="six-triagens" aria-label="As 6 triagens neonatais brasileiras">
+        <li class="six-triagens__item"><span class="six-triagens__name">Pezinho</span><span class="six-triagens__role">Triagem metabólica</span></li>
+        <li class="six-triagens__item"><span class="six-triagens__name">Coraçãozinho</span><span class="six-triagens__role">Oximetria de pulso</span></li>
+        <li class="six-triagens__item"><span class="six-triagens__name">Olhinho</span><span class="six-triagens__role">Reflexo vermelho</span></li>
+        <li class="six-triagens__item"><span class="six-triagens__name">Orelhinha</span><span class="six-triagens__role">Triagem auditiva</span></li>
+        <li class="six-triagens__item"><span class="six-triagens__name">Linguinha</span><span class="six-triagens__role">Frênulo lingual</span></li>
+        <li class="six-triagens__item"><span class="six-triagens__name">Dedinho</span><span class="six-triagens__role">Hálux / FOP</span></li>
+      </ul>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico-âncora — fixado pro módulo inteiro</div>
+        <div class="mnemonic__body"><strong>Pezinho • Coraçãozinho • Olhinho • Orelhinha • Linguinha • Dedinho</strong> — 6 partes do corpo. 6 sistemas. 6 algoritmos paralelos. Mesma lógica de rastreamento.</div>
+      </aside>
+
+      <p>O pediatra fala tudo no diminutivo — e o vocabulário identitário ajuda. Você dificilmente esquece os 6 nomes uma vez que entende o porquê de cada apelido apontar pra estrutura anatômica avaliada: pezinho do calcanhar pro sangue; coraçãozinho como referência metonímica ao oxímetro; olhinho pro reflexo vermelho; orelhinha pra audição; linguinha pro frênulo lingual; dedinho pro hálux.</p>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">A triagem neonatal é a primeira oportunidade prática de mudar prognóstico de doenças que se manifestariam tardiamente com dano irreversível — deficiência intelectual grave em PKU, surdez neurossensorial em CMV, óbito em cardiopatia crítica quando o canal arterial fecha. Pular ou atrasar uma triagem fecha essa janela.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p1" aria-labelledby="quiz-p1-title">
+        <h2 class="quiz__title" id="quiz-p1-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual é o objetivo PRINCIPAL de uma triagem neonatal?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Confirmar o diagnóstico de doenças já suspeitas no exame clínico</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Rastrear doenças antes do surgimento de manifestação clínica pra modificar prognóstico</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Substituir o exame físico do recém-nascido</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Identificar exclusivamente doenças genéticas raras</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Triagem é rastreamento populacional pré-sintomático com intenção de mudar história natural.</p>
+              <p class="quiz__distractor">Distractor A inverte: triagem precede suspeita clínica, não a confirma. C: triagem complementa exame físico. D: as 6 triagens cobrem cardiologia, audição, visão, anatomia oral, ortopedia, metabolismo — escopo amplo.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">As 6 avaliações da triagem neonatal brasileira são:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Pezinho, coraçãozinho, olhinho, orelhinha, narizinho, linguinha</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Pezinho, coraçãozinho, olhinho, orelhinha, linguinha, dedinho</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Pezinho, coraçãozinho, olhinho, orelhinha, dedinho do pé, dedinho da mão</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Pezinho, coraçãozinho, olhinho, orelhinha, linguinha, perninha</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> As 5 clássicas + dedinho (FOP) compõem o quadro vigente.</p>
+              <p class="quiz__distractor">A inventa "narizinho" — não existe. C confunde: dedinho do pé (hálux) é o exame; polegares malformados aparecem em ~50% dos casos FOP mas isso é detalhe da p4.10. D inventa "perninha".</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A triagem neonatal substitui o exame físico do recém-nascido.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> Triagem é complementar — adiciona testes sistemáticos sobre o exame físico padrão.</p>
+              <p class="quiz__distractor">Alguns testes (dedinho, linguinha) inclusive eram parte do exame físico já antes da normatização formal.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> o pezinho — a triagem mais antiga e mais densa do PNTN, com 7 condições rastreadas em 1 papel filtro.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" aria-disabled="true">‹ Anterior</a>
+        <span class="page-nav__indicator">1 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p2">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.2 — Estratégia: E6 (Mnemônico-âncora primeiro)           -->
+    <!-- Itens roteiro: [009]-[025]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="2" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.2 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E6 · Mnemônico-âncora</span>
+        <span class="page-meta__tag">Itens 009-025</span>
+      </div>
+      <h1 class="page-title">Pezinho — papel filtro, calcanhar e a janela 3-5 dias que muda o prognóstico</h1>
+
+      <aside class="opener opener--mnemonic">
+        <div class="opener__mnem"><span class="opener__mnem-key">PEZINHO</span> — regra dupla</div>
+        <div class="opener__expand">
+          <div class="opener__expand-item"><span class="opener__expand-key">1.</span><span>Borda lateral OU medial do calcanhar. Nunca no meio.</span></div>
+          <div class="opener__expand-item"><span class="opener__expand-key">2.</span><span>3 a 5 dias de vida. Nunca &lt;48h. Nunca pós-72h confundido com "3º dia".</span></div>
+          <div class="opener__expand-item"><span class="opener__expand-key">⚠</span><span>Cada uma já caiu em prova. Se cai uma, cai a outra.</span></div>
+        </div>
+      </aside>
+
+      <p>O teste do pezinho é a triagem mais antiga do <strong>Programa Nacional de Triagem Neonatal (PNTN)</strong> — programa do Ministério da Saúde que padroniza a triagem metabólica no Brasil. O nome popular vem da técnica: a coleta é feita no calcanhar do recém-nascido. Algumas gotas de sangue, depositadas em <strong>papel filtro</strong> (o mesmo material do coador de café — referência didática boa de guardar porque ancora visualmente o exame), secam no próprio papel e são enviadas ao laboratório. Termo técnico: o sangue é <strong>absorvido</strong> pelo papel filtro (absorvido com D, sem o S de adsorção — o detalhe é cobrado em prova quando aparece).</p>
+
+      <h2>Pegadinha 1 — Localização da punção</h2>
+      <p>A coleta NÃO é feita no meio do calcanhar. É feita nas <strong>bordas — lateral ou medial</strong>. O motivo é anatômico-mecânico: no meio do calcanhar a punção pode lesar estruturas ósseas (risco de osteocondrite e osteomielite descrito na literatura técnica do PNTN). Nas bordas, o tecido mole é suficiente pra obter as gotas sem alcançar osso.</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">Punção do pezinho é em <strong>borda lateral ou medial</strong> do calcanhar. <strong>NUNCA no meio</strong> (risco ósseo). A banca cobra isso direto.</div>
+        </div>
+      </aside>
+
+      <figure class="figure-clinical" data-img-id="B19">
+        <img src="./assets/img/BNN-b19-pezinho-puncao.jpg" alt="Coleta do teste do pezinho em RN de 2 semanas — punção em borda lateral do calcanhar com gotas de sangue sendo depositadas em papel filtro Guthrie. Cartão impresso ao fundo, profissional usando luvas, pé do RN exposto na zona lateral (não-central).">
+        <span class="figcaption">
+          <strong>B19 · Coleta do teste do pezinho.</strong> Punção em borda lateral do calcanhar do RN com gotas de sangue depositadas em papel filtro. Nota técnica visual: a coleta acontece na borda lateral/medial, NÃO no meio plantar — exatamente a pegadinha cobrada em prova.
+          <span class="attribution">Foto: Staff Sgt. Eric T. Sheler, U.S. Air Force (2007) — Wikimedia Commons · Domínio público (obra de servidor federal dos EUA).</span>
+        </span>
+      </figure>
+
+      <h2>Pegadinha 2 — Janela temporal</h2>
+      <p>A coleta padronizada acontece <strong>entre o 3º e o 5º dia de vida</strong>. Você precisa decorar isso assim — "3 ao 5" — porque é alvo de três armadilhas distintas:</p>
+
+      <ul>
+        <li><strong>Janela antiga 3-7 dias</strong>: questões muito antigas ainda trazem essa orientação. Mudou há tempos. Atual é <strong>3-5</strong>.</li>
+        <li><strong>"3º dia" ≠ "após 72 horas"</strong>: o 3º dia de vida começa a partir das 48h, não das 72h. Confundir muda a interpretação.</li>
+        <li><strong>&lt;48h é proibido por motivo bioquímico</strong>: detalhamento na próxima página.</li>
+      </ul>
+
+      <p>E qual é o <strong>limite tardio aceitável</strong>? Se por algum motivo especial a coleta não puder ser feita na janela ideal, ela pode ser feita <strong>até o final do 1º mês de vida</strong> (oficialmente até 28 dias). Mas isso é exceção, não regra. Por quê? Porque várias das doenças rastreadas pelo pezinho exigem início de tratamento <strong>nas primeiras 2 semanas de vida</strong> pra modificar o prognóstico. Coletar tarde = perder a janela terapêutica = perder o benefício da triagem.</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro fixada</div>
+        <div class="gold-rule__body">Pezinho — borda lateral/medial do calcanhar + 3 a 5 dias de vida + limite tardio até 28 dias. Tudo o que destoa disso é pegadinha.</div>
+      </aside>
+
+      <aside class="finding">
+        <div class="finding__label">Achado típico — técnica correta</div>
+        <div class="finding__body">
+          <ul>
+            <li>Calcanhar do RN aquecido (vasodilatação pra facilitar fluxo)</li>
+            <li>Punção com lanceta nas zonas laterais/mediais</li>
+            <li>Gotas depositadas no papel filtro em círculos demarcados</li>
+            <li>Papel seco em ambiente ventilado antes do envio laboratorial</li>
+          </ul>
+        </div>
+      </aside>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Borda" do calcanhar ≠ "meio" do calcanhar → meio = risco ósseo</li>
+          <li>"3-5 dias" ≠ "3-7 dias" → 3-7 é janela antiga, desatualizada</li>
+          <li>"3º dia" ≠ "após 72h" → o 3º dia começa em 48h, não 72h</li>
+          <li>"Limite tardio até 28 dias" ≠ "fazer no 28º dia é igual a fazer no 5º" → quanto mais tarde, menos benefício prognóstico</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">A janela 3-5 dias é o ponto de equilíbrio entre acúmulo bioquímico suficiente (pra evitar FN PKU) e queda do pico fisiológico de TSH neonatal (pra evitar FP hipotireoidismo). Coletar fora disso compromete a confiabilidade de toda a triagem.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p2" aria-labelledby="quiz-p2-title">
+        <h2 class="quiz__title" id="quiz-p2-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual a localização correta da punção pra coleta do teste do pezinho?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — No meio do calcanhar, onde a polpa é mais espessa</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Em qualquer ponto do calcanhar, desde que a profundidade seja controlada</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Nas bordas lateral ou medial do calcanhar</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — No dorso do pé, próximo ao maléolo</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Bordas lateral/medial evitam lesão de estruturas ósseas.</p>
+              <p class="quiz__distractor">A é a pegadinha clássica — "meio" parece intuitivo mas tem risco osteocondral. B ignora a recomendação anatômica explícita. D inventa local que não é usado.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">A janela ideal de coleta do pezinho é:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Primeiras 24 horas de vida</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Entre 24 e 48 horas de vida</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Entre o 3º e o 5º dia de vida</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Entre o 3º e o 7º dia de vida</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Janela atual padronizada pelo MS PNTN.</p>
+              <p class="quiz__distractor">A: &lt;24h = pico fisiológico TSH + sem proteína acumulada = FP + FN. B: &lt;48h ainda inaceitável pelo mesmo motivo. D: janela antiga, desatualizada há anos — armadilha em questões pré-atualização.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">Coleta do pezinho no 28º dia de vida tem o mesmo valor diagnóstico que coleta no 4º dia.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> O limite tardio até 28 dias existe pra situações excepcionais, mas várias doenças rastreadas exigem início de tratamento nas primeiras 2 semanas de vida.</p>
+              <p class="quiz__distractor">Coleta tardia detecta a doença, mas perde a janela terapêutica que justifica a triagem.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> as 7 doenças que o pezinho rastreia, com a dosagem específica de cada uma, e o mecanismo bioquímico do &lt;48h — por que FP TSH e por que FN PKU.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p1">‹ Anterior</a>
+        <span class="page-nav__indicator">2 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p3">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.3 — Estratégia: E7 (Comparação chocante)                 -->
+    <!-- Itens roteiro: [026]-[061]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="3" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.3 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E7 · Comparação chocante</span>
+        <span class="page-meta__tag">Itens 026-061</span>
+      </div>
+      <h1 class="page-title">Pezinho — as 7 condições da Etapa 1 e a única que dispensa confirmação</h1>
+
+      <section class="opener opener--vs">
+        <div class="opener__side">
+          <h4>6 das 7 condições</h4>
+          <p>Pezinho alterado → <strong>exige um segundo exame</strong> pra confirmar diagnóstico.</p>
+        </div>
+        <div class="opener__divider">vs</div>
+        <div class="opener__side">
+          <h4>1 das 7 condições</h4>
+          <p>Pezinho alterado <strong>já basta</strong>. Diagnóstico direto. Adivinha qual? E sabe por quê?</p>
+        </div>
+      </section>
+
+      <aside class="law-citation">
+        <div>
+          <strong>Lei nº 14.154/2021</strong> (sancionada em 26/maio/2021) altera o ECA e prevê expansão progressiva do PNTN em <strong>5 etapas</strong>. A Etapa 1 (atualmente vigente na maior parte dos estados) compreende as 7 doenças desta página.
+        </div>
+      </aside>
+
+      <div class="pntn-stages" role="list" aria-label="Etapas PNTN — Lei 14.154/2021">
+        <div class="pntn-stage" data-active="true" role="listitem">
+          <span class="pntn-stage__num">Etapa 1</span>
+          <span class="pntn-stage__desc">Hipotireoidismo congênito, PKU, hemoglobinopatias, fibrose cística, HAC, biotinidase, toxoplasmose congênita</span>
+        </div>
+        <div class="pntn-stage" role="listitem">
+          <span class="pntn-stage__num">Etapa 2</span>
+          <span class="pntn-stage__desc">Galactosemias, aminoacidopatias, distúrbios do ciclo da ureia, beta-oxidação de ácidos graxos</span>
+        </div>
+        <div class="pntn-stage" role="listitem">
+          <span class="pntn-stage__num">Etapa 3</span>
+          <span class="pntn-stage__desc">Doenças lisossômicas</span>
+        </div>
+        <div class="pntn-stage" role="listitem">
+          <span class="pntn-stage__num">Etapa 4</span>
+          <span class="pntn-stage__desc">Imunodeficiências primárias</span>
+        </div>
+        <div class="pntn-stage" role="listitem">
+          <span class="pntn-stage__num">Etapa 5</span>
+          <span class="pntn-stage__desc">Atrofia muscular espinhal (AME)</span>
+        </div>
+      </div>
+
+      <p>A regra geral do pezinho é dupla: (1) <strong>toda condição alterada exige confirmação por exame específico</strong>; (2) <strong>uma única condição é exceção</strong> — hemoglobinopatia. Vamos pelas 7.</p>
+
+      <h2>1. Hipotireoidismo congênito — dosagem: TSH</h2>
+      <p>A causa mais frequente é <strong>disgenesia tireoidiana</strong> — alteração anatômica da própria tireoide. A criança produz TSH normalmente (hipófise íntegra), mas a tireoide não produz hormônio tireoidiano. Sem feedback negativo, o TSH <strong>sobe</strong> — e o teste detecta. Por isso a dosagem do hipotireoidismo congênito é TSH, não T4.</p>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Nota de exceção</div>
+        <ul>
+          <li>Hipotireoidismo congênito <strong>central</strong> (a hipófise não produz TSH) existe, mas é muito menos frequente. Como a triagem usa TSH como marcador, essa criança <strong>não é detectada</strong> pelo pezinho — sai com triagem normal e só será reconhecida clinicamente mais tarde.</li>
+        </ul>
+      </aside>
+
+      <h2>2. Fenilcetonúria (PKU) — dosagem: fenilalanina</h2>
+      <p>PKU é um <strong>erro inato do metabolismo</strong> — a criança não converte fenilalanina em tirosina por deficiência da enzima fenilalanina hidroxilase. A fenilalanina <strong>acumula nos tecidos</strong>, e o acúmulo crônico leva a <strong>deficiência intelectual grave</strong> se não tratada. Conduta: dieta com restrição de fenilalanina — a criança <strong>não pode</strong> receber aleitamento materno exclusivo em livre demanda (leite contém fenilalanina).</p>
+
+      <h2>3. Hemoglobinopatias — eletroforese de hemoglobina (no próprio papel filtro)</h2>
+      <p>A criança em recém-nascido normal tem padrão hemoglobínico <strong>F + A</strong>. Hemoglobina <strong>F é fetal</strong> — não tem nada a ver com falciforme. Hemoglobina A é o padrão adulto. Se aparece <strong>hemoglobina S</strong> no rastreamento, isso pode indicar:</p>
+      <ul>
+        <li><strong>Traço falciforme</strong> (heterozigoto, geralmente assintomático)</li>
+        <li><strong>Anemia falciforme</strong> (homozigoto SS, doente)</li>
+      </ul>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">Hemoglobina <strong>F = fetal</strong>, NÃO falciforme. Falciforme é a hemoglobina <strong>S</strong>. A banca cobra essa distinção literal.</div>
+        </div>
+      </aside>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro — única exceção</div>
+        <div class="gold-rule__body">Hemoglobinopatia é a <strong>única condição do pezinho que dispensa confirmação</strong> por outro exame. A eletroforese no papel filtro é diagnóstica direta — não mede metabólitos, identifica a própria proteína estrutural. A criança ainda fará eletroforese de Hb tempo depois (quando a Hb fetal diminuir), mas isso é caracterização, não confirmação diagnóstica.</div>
+      </aside>
+
+      <h2>4. Fibrose cística — IRT (tripsina imunorreativa)</h2>
+      <p>IRT é uma enzima pancreática que <strong>se acumula no sangue</strong> da criança com fibrose cística (ductos pancreáticos obstruídos pela secreção espessa). Pezinho alterado → confirmação por <strong>teste do suor</strong>.</p>
+
+      <h2>5. Hiperplasia adrenal congênita (HAC) — 17-hidroxiprogesterona</h2>
+      <p>17-OH-progesterona é <strong>precursor da síntese de cortisol</strong>. Na HAC, o bloqueio enzimático impede a conversão final em cortisol → o precursor <strong>acumula</strong>. Pezinho alterado → confirmação por dosagem específica + ACTH.</p>
+
+      <h2>6. Deficiência de biotinidase — atividade enzimática direta</h2>
+      <p>A enzima biotinidase é medida diretamente no papel filtro. Atividade reduzida → criança tem deficiência. Confirmação por nova dosagem enzimática quantitativa.</p>
+
+      <h2>7. Toxoplasmose congênita — IgM anti-toxoplasma</h2>
+      <p>Entrou recentemente no PNTN via <strong>Lei 14.154/2021</strong>. Pezinho com IgM positiva → confirmação por sorologia materna + sorologia da criança + investigação clínica completa.</p>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 · Cross-link</div>
+          <a href="../m2-torch/index.html#/p1-m2-p2">Toxoplasmose congênita — sorologia materna, calcificações intracranianas difusas, coriorretinite (#/p1-m2-p2)</a>
+        </div>
+      </aside>
+
+      <h2>Mecanismo do &lt;48h — dois resultados falsos opostos</h2>
+
+      <p>A janela &lt;48h gera <strong>dois resultados falsos simultâneos</strong> que se anulam logicamente mas existem juntos por mecanismos bioquímicos opostos:</p>
+
+      <ul>
+        <li><strong>Falso positivo para TSH (hipotireoidismo)</strong>: o recém-nascido tem <strong>pico fisiológico de TSH</strong> nas primeiras 24-48 horas de vida — adaptação à vida extrauterina, sem doença. Se você dosa nesse pico, o resultado vem alto sem haver doença.</li>
+        <li><strong>Falso negativo para PKU</strong>: o que se dosa em PKU é a <strong>própria fenilalanina</strong> acumulada. Pra acumular fenilalanina, a criança precisa estar <strong>recebendo proteína pela via oral</strong> — leite materno ou fórmula. Nas primeiras horas de vida, antes do estabelecimento da alimentação enteral, não há fenilalanina acumulada → resultado vem <strong>falsamente baixo</strong>.</li>
+      </ul>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro — mecanística</div>
+        <div class="gold-rule__body">&lt;48h → TSH transitoriamente alto (FP) + fenilalanina ainda não acumulou (FN). Mecanismos opostos, mesma janela proibida.</div>
+      </aside>
+
+      <h2>Tabela síntese — V21</h2>
+
+      <div class="comparison" role="region" aria-label="V21 — 7 condições do pezinho">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Condição</th>
+              <th scope="col">Dosagem usada</th>
+              <th scope="col">Mecanismo da alteração</th>
+              <th scope="col">Cuidado especial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Hipotireoidismo congênito</th>
+              <td>TSH</td>
+              <td>TSH sobe por falta de feedback (disgenesia tireoidiana)</td>
+              <td>TSH não detecta forma central</td>
+            </tr>
+            <tr>
+              <th scope="row">PKU</th>
+              <td>Fenilalanina</td>
+              <td>Acúmulo por bloqueio enzimático</td>
+              <td>Dieta restritiva — sem AM livre demanda</td>
+            </tr>
+            <tr style="background: var(--accent-coral-soft);">
+              <th scope="row">Hemoglobinopatias ★</th>
+              <td>Eletroforese Hb</td>
+              <td>Aparecimento de HbS</td>
+              <td><strong>ÚNICA que dispensa confirmação</strong></td>
+            </tr>
+            <tr>
+              <th scope="row">Fibrose cística</th>
+              <td>IRT</td>
+              <td>Enzima pancreática acumula</td>
+              <td>Confirmação por teste do suor</td>
+            </tr>
+            <tr>
+              <th scope="row">HAC</th>
+              <td>17-OH-progesterona</td>
+              <td>Acúmulo de precursor de cortisol</td>
+              <td>Risco de crise adrenal aguda</td>
+            </tr>
+            <tr>
+              <th scope="row">Deficiência biotinidase</th>
+              <td>Atividade enzimática</td>
+              <td>Atividade reduzida medida direto</td>
+              <td>Cofator vitamínico do metabolismo</td>
+            </tr>
+            <tr>
+              <th scope="row">Toxoplasmose congênita</th>
+              <td>IgM anti-Toxo</td>
+              <td>Entrada via Lei 14.154/2021</td>
+              <td>Cross-link M2 — confirmar com sorologia</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"F" de fetal ≠ "F" de falciforme → padrão normal RN é F + A</li>
+          <li>"Confirmação dispensada em hemoglobinopatia" ≠ "exame não se repete nunca" → eletroforese tardia é caracterização, não confirmação diagnóstica</li>
+          <li>"&lt;48h gera FP" ≠ "&lt;48h gera só falso positivo" → também gera FN PKU pelo mecanismo oposto</li>
+          <li>"TSH alto no &lt;48h é doença" ≠ "TSH alto fisiológico" → primeiras 48h tem pico transitório fisiológico</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">Cada uma das 7 doenças tem janela terapêutica nas primeiras 2 semanas de vida. PKU sem dieta = deficiência intelectual irreversível. Hipotireoidismo sem reposição = atraso neuropsicomotor. HAC sem corticoide = crise adrenal aguda. A triagem só faz sentido se a coleta acontece em janela bioquimicamente válida (3-5 dias) e o resultado alterado mobiliza ação rápida — com a exceção da hemoglobinopatia, que já é diagnóstica.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p3" aria-labelledby="quiz-p3-title">
+        <h2 class="quiz__title" id="quiz-p3-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual das condições rastreadas pelo pezinho dispensa confirmação por exame específico?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Fenilcetonúria</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Hipotireoidismo congênito</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Hemoglobinopatias</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Hiperplasia adrenal congênita</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> A eletroforese de hemoglobina no próprio papel filtro é diagnóstica direta.</p>
+              <p class="quiz__distractor">A: PKU exige confirmação por dosagem específica de fenilalanina sérica. B: hipotireoidismo exige confirmação por TSH + T4 livre séricos. D: HAC exige dosagem confirmatória + ACTH.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Coleta do pezinho realizada com 24 horas de vida pode gerar:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Falso negativo pra hipotireoidismo + falso positivo pra PKU</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Falso positivo pra hipotireoidismo + falso negativo pra PKU</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Falso positivo pra ambos os exames</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Falso negativo pra ambos os exames</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> TSH tem pico fisiológico nas primeiras 24-48h (FP); fenilalanina ainda não acumulou por falta de proteína enteral (FN).</p>
+              <p class="quiz__distractor">A inverte os mecanismos — confunde quem decora sem entender. C e D ignoram que os mecanismos são opostos.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A letra F da hemoglobina F refere-se a falciforme.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> F é de fetal. Falciforme é a hemoglobina S.</p>
+              <p class="quiz__distractor">Pegadinha clássica — o padrão hemoglobínico normal do RN é F + A; aparecimento de S indica traço ou anemia falciforme.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> o coraçãozinho — a triagem que mais aparece em prova, com fluxograma que mudou em 2022 em 3 cortes simultâneos.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p2">‹ Anterior</a>
+        <span class="page-nav__indicator">3 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p4">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.4 — Estratégia: E4 (Achado típico/pegadinha)             -->
+    <!-- Itens roteiro: [062]-[093] · V20 fluxograma 2022                  -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="4" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.4 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E4 · Pegadinha</span>
+        <span class="page-meta__tag">Itens 062-093</span>
+      </div>
+      <h1 class="page-title">Coraçãozinho — o teste que não busca a cardiopatia mais comum, e o fluxograma 2022 que mudou em tudo</h1>
+
+      <aside class="opener opener--trap">
+        <div>
+          <div class="opener__msg">Coraçãozinho NÃO busca a cardiopatia congênita mais frequente. Busca a que <strong>mata cedo quando o canal arterial fecha</strong>. E o fluxograma que você precisa decorar mudou em <strong>2022</strong> — em três cortes ao mesmo tempo. Quem decorou em 2020 está errado hoje. <span class="badge-update">Atualização 2022</span></div>
+        </div>
+      </aside>
+
+      <p>Em termos quantitativos, o coraçãozinho é a triagem que mais aparece em prova. E aparece justamente porque tem 4 pegadinhas estruturais cobráveis em 1 fluxograma só. Vamos pela ordem.</p>
+
+      <h2>1. O coraçãozinho NÃO busca cardiopatia frequente</h2>
+      <p>O objetivo do teste do coraçãozinho é detectar <strong>cardiopatia congênita crítica</strong> — aquela que pode levar o RN a óbito nos primeiros dias de vida, no momento em que o <strong>canal arterial fecha</strong>. Não é a cardiopatia mais frequente (a mais frequente é comunicação interventricular, que não é crítica). Não é a cardiopatia mais sintomática inicialmente. É a que <strong>depende do canal arterial pra manter circulação pulmonar ou sistêmica</strong>.</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro conceitual</div>
+        <div class="gold-rule__body">Coraçãozinho busca a cardiopatia que <strong>mata cedo quando o canal arterial fecha</strong>. Não a mais comum.</div>
+      </aside>
+
+      <div class="crit-cards" aria-label="Cardiopatias críticas detectadas">
+        <div class="crit-card"><span class="crit-card__name">Atresia pulmonar</span><span class="crit-card__desc">Septo íntegro ou em Tetralogia de Fallot</span></div>
+        <div class="crit-card"><span class="crit-card__name">HLHS</span><span class="crit-card__desc">Síndrome do coração esquerdo hipoplásico</span></div>
+        <div class="crit-card"><span class="crit-card__name">Coarctação crítica</span><span class="crit-card__desc">Interrupção do arco aórtico</span></div>
+        <div class="crit-card"><span class="crit-card__name">TGA</span><span class="crit-card__desc">Transposição dos grandes vasos</span></div>
+        <div class="crit-card"><span class="crit-card__name">Tronco arterioso</span><span class="crit-card__desc">Tronco único — mistura constante</span></div>
+        <div class="crit-card"><span class="crit-card__name">Atresia tricúspide</span><span class="crit-card__desc">Fluxo pulmonar canal-dependente</span></div>
+        <div class="crit-card"><span class="crit-card__name">DATVP</span><span class="crit-card__desc">Drenagem anômala total das veias pulmonares</span></div>
+      </div>
+
+      <p>Sensibilidade ~70% pra cardiopatia crítica — não é teste perfeito, mas captura a maioria antes da deterioração. Por que essas cardiopatias dependem do canal? A próxima página (4.5) desenvolve a fisiologia inteira — circulação fetal, forame oval, ducto venoso, MSD pré-ductal vs MI pós-ductal. Aprofundamento opcional, mas é o que faz o teste fazer sentido.</p>
+
+      <h2>2. Quem entra: IG ≥ 35 semanas <span class="badge-update">Atualização 2022</span></h2>
+      <p>Pelo Ministério da Saúde + SBP 2022, o teste é feito em <strong>toda criança com IG ≥ 35 semanas</strong>. Mudou em 2022 (era ≥34). Por quê o corte? Crianças &lt;35 semanas em geral estão <strong>internadas e monitorizadas em UTI neonatal</strong> — não entram no protocolo de rotina porque o objetivo da triagem é evitar deterioração após alta hospitalar.</p>
+
+      <h2>3. Quando: 24-48 horas de vida</h2>
+      <ul>
+        <li><strong>Não antes de 24h</strong>: o canal arterial pode ainda estar muito aberto e mascarar a cardiopatia</li>
+        <li><strong>Não depois de 48h</strong>: o canal já está fechando — se a criança tem cardiopatia canal-dependente, ela já pode estar deteriorando</li>
+      </ul>
+
+      <h2>4. Como: MSD + um dos MIs</h2>
+      <p>Saturação no <strong>membro superior direito (MSD)</strong> E em <strong>qualquer um dos membros inferiores</strong> (MID ou MIE, tanto faz). MSD é fixo. MI é flexível.</p>
+
+      <div class="satO2-pair">
+        <div class="satO2-cell satO2-cell--msd">
+          <div class="satO2-cell__label">MSD — pré-ductal</div>
+          <div class="satO2-cell__value">96%</div>
+          <div class="satO2-cell__sub">exemplo de medida normal</div>
+        </div>
+        <div class="satO2-cell satO2-cell--mi">
+          <div class="satO2-cell__label">MI — pós-ductal</div>
+          <div class="satO2-cell__value">95%</div>
+          <div class="satO2-cell__sub">qualquer membro inferior</div>
+        </div>
+      </div>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico fixado</div>
+        <div class="mnemonic__body"><strong>MSD = sempre pré-ductal. MI = pós-ductal.</strong> O teste compara os dois. Detalhamento fisiopatológico completo na página seguinte.</div>
+      </aside>
+
+      <figure class="figure-clinical" data-img-id="B20">
+        <img src="./assets/img/BNN-b20-oximetro-rn.jpg" alt="Recém-nascido com sensor de oximetria de pulso posicionado pra triagem do coraçãozinho — saturação medida em MSD (pré-ductal) e MI (pós-ductal).">
+        <span class="figcaption">
+          <strong>B20 · Oxímetro de pulso em RN.</strong> Sensor posicionado pra medida de SatO₂. No coraçãozinho, a comparação MSD pré-ductal vs MI pós-ductal revela shunt direita-esquerda canal-dependente.
+          <span class="attribution">Wikimedia Commons · uso educacional permitido sob licença CC.</span>
+        </span>
+      </figure>
+
+      <h2>5. O fluxograma 2022 — 3 cores, 4 cortes, 2 conectores</h2>
+      <p>Aqui mora a parte mais cobrada em prova. SBP atualizou o fluxograma em <strong>agosto/2022</strong> mudando 3 cortes simultaneamente. Questões de 2020-2021 estão desatualizadas com a orientação antiga.</p>
+
+      <!-- V20 — Fluxograma decisório coraçãozinho 2022 -->
+      <figure class="fig" aria-labelledby="v20-cap">
+        <svg viewBox="0 0 720 520" role="img" aria-labelledby="v20-title v20-desc" width="720" height="520">
+          <title id="v20-title">V20 — Fluxograma coraçãozinho atualização 2022</title>
+          <desc id="v20-desc">Fluxograma com três saídas: negativo (verde, conector E), duvidoso (amarelo, conector OU, repete até 2 vezes em 1h), positivo (vermelho, suspende alta).</desc>
+          <defs>
+            <linearGradient id="grad-green-v20" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5fcf80"/><stop offset="100%" stop-color="#3fa05a"/></linearGradient>
+            <linearGradient id="grad-yellow-v20" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0b440"/><stop offset="100%" stop-color="#c08820"/></linearGradient>
+            <linearGradient id="grad-red-v20" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff5d6b"/><stop offset="100%" stop-color="#cf3848"/></linearGradient>
+          </defs>
+          <!-- Entrada -->
+          <rect x="220" y="20" width="280" height="60" rx="14" fill="#142838" stroke="#3a5260" stroke-width="2"/>
+          <text x="360" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#f3ede0">RN ≥35 sem · 24-48h vida</text>
+          <text x="360" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#c3bcae">Medir SatO₂ MSD + qualquer MI</text>
+          <!-- linha vertical -->
+          <line x1="360" y1="80" x2="360" y2="110" stroke="#5d5b50" stroke-width="2"/>
+          <!-- Três saídas: ramificações -->
+          <line x1="120" y1="110" x2="600" y2="110" stroke="#5d5b50" stroke-width="2"/>
+          <line x1="120" y1="110" x2="120" y2="140" stroke="#5d5b50" stroke-width="2"/>
+          <line x1="360" y1="110" x2="360" y2="140" stroke="#5d5b50" stroke-width="2"/>
+          <line x1="600" y1="110" x2="600" y2="140" stroke="#5d5b50" stroke-width="2"/>
+
+          <!-- Negativo verde -->
+          <rect x="20" y="140" width="200" height="120" rx="12" fill="url(#grad-green-v20)"/>
+          <text x="120" y="165" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#0a1610">NEGATIVO</text>
+          <text x="120" y="190" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" font-weight="700" fill="#0a1610">≥95% E ≤3%</text>
+          <text x="120" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0a1610">conector E (AND)</text>
+          <text x="120" y="232" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#0a1610">→ vida que segue</text>
+          <text x="120" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#0a1610">rotina · alta</text>
+
+          <!-- Duvidoso amarelo -->
+          <rect x="260" y="140" width="200" height="120" rx="12" fill="url(#grad-yellow-v20)"/>
+          <text x="360" y="165" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#1a1010">DUVIDOSO</text>
+          <text x="360" y="190" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="13" font-weight="700" fill="#1a1010">90-94% OU ≥4%</text>
+          <text x="360" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#1a1010">conector OU (OR)</text>
+          <text x="360" y="232" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#1a1010">→ repete em 1h</text>
+          <text x="360" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#1a1010">★ até 2× (era 1×)</text>
+
+          <!-- Positivo vermelho -->
+          <rect x="500" y="140" width="200" height="120" rx="12" fill="url(#grad-red-v20)"/>
+          <text x="600" y="165" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#f5e8e8">POSITIVO</text>
+          <text x="600" y="190" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="14" font-weight="700" fill="#f5e8e8">≤89% qualquer</text>
+          <text x="600" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f5e8e8">uma medida basta</text>
+          <text x="600" y="232" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#f5e8e8">→ suspende alta</text>
+          <text x="600" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f5e8e8">eco · cardiologia</text>
+
+          <!-- Repetição duvidoso -->
+          <line x1="360" y1="260" x2="360" y2="300" stroke="#5d5b50" stroke-width="2" stroke-dasharray="4,4"/>
+          <rect x="220" y="300" width="280" height="80" rx="12" fill="#1a3245" stroke="#c08820" stroke-width="2"/>
+          <text x="360" y="324" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#f0b440">1ª repetição (1h depois)</text>
+          <text x="360" y="345" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#e7e0d0">3 saídas iguais: neg / pos / duvidoso novamente</text>
+          <text x="360" y="365" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#e7e0d0">Se duvidoso → 2ª repetição (mais 1h)</text>
+
+          <line x1="360" y1="380" x2="360" y2="410" stroke="#5d5b50" stroke-width="2" stroke-dasharray="4,4"/>
+          <rect x="180" y="410" width="360" height="90" rx="12" fill="#1a0a0a" stroke="#cf3848" stroke-width="2"/>
+          <text x="360" y="434" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#ff5d6b">3 testes duvidosos consecutivos</text>
+          <text x="360" y="456" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#f3ede0">= reclassifica como POSITIVO</text>
+          <text x="360" y="476" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae">Ecocardiograma + avaliação cardiológica completa</text>
+        </svg>
+        <figcaption id="v20-cap">Fluxograma coraçãozinho — atualização SBP agosto/2022. Negativo usa E (AND); duvidoso usa OU (OR); positivo basta uma medida ≤89%. Repete até 2 vezes em 1h.</figcaption>
+      </figure>
+
+      <div class="connector-trap">
+        <div class="connector-trap__side">
+          <strong>Negativo</strong>
+          ≥95% <em>E</em> ≤3%
+          <br><small>as duas condições simultâneas</small>
+        </div>
+        <div class="connector-trap__op">vs</div>
+        <div class="connector-trap__side">
+          <strong>Duvidoso</strong>
+          90-94% <em>OU</em> ≥4%
+          <br><small>uma das duas já basta</small>
+        </div>
+      </div>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha estrutural — inversão de conectores</div>
+          <div class="trap__body"><strong>Negativo usa E</strong> (≥95% E ≤3%). <strong>Duvidoso usa OU</strong> (90-94% OU ≥4%). A banca inverte os conectores em questão pra ver quem decorou sem entender. Decore essa diferença literal.</div>
+        </div>
+      </aside>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Atualização 2022 — badges</div>
+          <div class="trap__body">≥35 sem (era ≥34) · ≤89% (era ≤95%) · categoria duvidoso introduzida (antes só negativo/positivo) · repetir 2× (era 1×).</div>
+        </div>
+      </aside>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Negativo usa E" ≠ "negativo usa OU" → as duas condições simultâneas pra ser negativo</li>
+          <li>"Duvidoso usa OU" ≠ "duvidoso usa E" → uma das duas condições já basta pra ser duvidoso</li>
+          <li>"≤89%" (positivo) ≠ "&lt;89%" → o corte inclui 89</li>
+          <li>"Repetir 2 vezes" (2022) ≠ "Repetir 1 vez" (era pré-2022)</li>
+          <li>"≥35 sem" (2022) ≠ "≥34 sem" (era pré-2022)</li>
+          <li>"MSD pré-ductal" ≠ "MSD sempre o esquerdo" — MSD é o direito porque a saída da subclávia direita é pré-ductal universalmente</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">O coraçãozinho captura cardiopatia crítica <strong>antes</strong> da deterioração sintomática — janela de horas. Quem perde a janela vê o RN entrar em insuficiência cardíaca, hipóxia, choque assim que o canal arterial fecha (em geral entre 48-72h de vida). É a triagem com maior potencial de evitar óbito imediato.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p4" aria-labelledby="quiz-p4-title">
+        <h2 class="quiz__title" id="quiz-p4-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN com IG 36 semanas, 30 horas de vida. Saturação MSD = 97%, MID = 93%. Como classificar?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Negativo — segue rotina</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Positivo — encaminhar pra ecocardiograma</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Duvidoso — repetir após 1h</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Inconclusivo — repetir imediatamente</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Nenhuma medida ≤89% (não é positivo); diferença = 97-93 = 4% (≥4% → DUVIDOSO pelo conector OU).</p>
+              <p class="quiz__distractor">A é a armadilha: aluno olha as duas saturações ≥95% e esquece a diferença ≥4%. B aplicaria se houvesse medida ≤89%. D inventa categoria.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">A atualização de 2022 do fluxograma do coraçãozinho incluiu, entre outras mudanças:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Mudança da IG mínima de ≥35 pra ≥34 semanas</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Repetir o teste duvidoso até 2 vezes (era 1 vez)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Eliminação da categoria "duvidoso"</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Mudança do corte de positivo de ≤89% pra ≤95%</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> 1× → 2× é a pegadinha mais quente.</p>
+              <p class="quiz__distractor">A inverte a mudança (foi ≥34 → ≥35). C inverte (a categoria duvidoso FOI introduzida em 2022). D inverte o corte (≤95% era o corte antigo de positivo).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">O teste do coraçãozinho NÃO é aplicado de rotina a RN com menos de 35 semanas porque essas crianças, em geral, já estão internadas e monitorizadas.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: VERDADEIRO.</strong> O objetivo da triagem é evitar deterioração após alta hospitalar.</p>
+              <p class="quiz__distractor">Bebê pré-termo internado já tem oximetria contínua + monitor cardíaco — a triagem isolada nesse contexto é redundante.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> por que MSD é pré-ductal — circulação fetal completa, forame oval, canal arterial, ducto venoso. Aprofundamento opcional, mas é o que faz tudo isso fazer sentido.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p3">‹ Anterior</a>
+        <span class="page-nav__indicator">4 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p5">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.5 — Estratégia: E2 (Dado impactante)                     -->
+    <!-- Itens roteiro: [094]-[142] · V18 circulação fetal (DENSO)         -->
+    <!-- Selo: aprofundamento opcional                                     -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="5" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.5 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E2 · Dado impactante</span>
+        <span class="page-meta__tag">Itens 094-142</span>
+      </div>
+      <h1 class="page-title">Por que MSD é sempre pré-ductal: forame oval, canal arterial e ducto venoso</h1>
+
+      <div class="optional-deep-dive" role="complementary">
+        <span class="optional-deep-dive__label">Aprofundamento opcional · Fisiologia fetal</span>
+        <a class="optional-deep-dive__back" href="#/p1-m4-p4">‹ Voltar pro Coraçãozinho</a>
+      </div>
+
+      <figure class="opener opener--stat">
+        <div class="opener__num">3</div>
+        <div class="opener__ctx">estruturas fetais comunicam circulação direita e esquerda <strong>enquanto o feto está dentro do útero</strong>: forame oval, canal arterial, ducto venoso. As três desaparecem nas primeiras horas após o nascimento. Cardiopatia crítica é, em essência, uma cardiopatia que <strong>precisa que uma delas permaneça aberta</strong> pra criança não morrer. É por isso que o coraçãozinho mede MSD vs MI.</div>
+      </figure>
+
+      <p>A circulação fetal é diferente da circulação do adulto. Não é "quase igual" — é estrutural e fisiologicamente diferente. Entender essa diferença é o que justifica todo o teste do coraçãozinho, e é o que conecta este conteúdo à reanimação neonatal (oxímetro no MSD).</p>
+
+      <h2>O ponto de partida: a placenta substitui o pulmão</h2>
+      <p>Durante a vida fetal, quem faz a troca gasosa <strong>não é o pulmão da criança</strong> — é a <strong>placenta</strong>. O pulmão fetal está colabado, cheio de líquido, sem ventilação. Não faz sentido o sangue fetal passar preferencialmente pelos pulmões (que não trocam gás nenhum). Faz sentido <strong>desviar o sangue dos pulmões</strong> e enviá-lo prioritariamente pras estruturas que mais precisam de oxigênio: <strong>cérebro e coração</strong>.</p>
+
+      <p>O sangue mais oxigenado do feto vem da <strong>placenta</strong>, passa pela <strong>veia umbilical</strong>, e tem que chegar prioritariamente às estruturas nobres. As 3 estruturas comunicantes fetais existem pra fazer exatamente isso.</p>
+
+      <!-- V18 — Circulação fetal SVG denso autoral -->
+      <figure class="fig fig--circulation" aria-labelledby="v18-cap">
+        <svg viewBox="0 0 760 620" role="img" aria-labelledby="v18-title v18-desc" width="760" height="620" preserveAspectRatio="xMidYMid meet">
+          <title id="v18-title">V18 — Circulação fetal e as 3 estruturas comunicantes</title>
+          <desc id="v18-desc">Esquema da circulação fetal: forame oval (átrio direito para esquerdo), canal arterial (artéria pulmonar para aorta), ducto venoso (veia umbilical para VCI). Aorta pré-ductal mais oxigenada (cérebro + coração); aorta pós-ductal com mistura (resto do corpo). Sangue oxigenado em vermelho, não oxigenado em azul, mistura em rosa.</desc>
+          <defs>
+            <linearGradient id="oxy-rich" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff5d6b"/><stop offset="100%" stop-color="#cf3848"/></linearGradient>
+            <linearGradient id="oxy-poor" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6cb4e8"/><stop offset="100%" stop-color="#2870a8"/></linearGradient>
+            <linearGradient id="oxy-mix" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#c87a8a"/><stop offset="100%" stop-color="#9a5868"/></linearGradient>
+            <marker id="arrow-r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ff5d6b"/></marker>
+            <marker id="arrow-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6cb4e8"/></marker>
+            <marker id="arrow-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c87a8a"/></marker>
+          </defs>
+
+          <!-- Cabeça (cérebro) -->
+          <circle cx="380" cy="60" r="42" fill="#1a3245" stroke="#5d5b50" stroke-width="2"/>
+          <text x="380" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#f3ede0">cérebro</text>
+          <text x="380" y="74" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae">+ O₂</text>
+
+          <!-- MSD -->
+          <rect x="80" y="110" width="100" height="40" rx="8" fill="#1a3245" stroke="#ff5d6b" stroke-width="2"/>
+          <text x="130" y="125" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#ff5d6b">MSD</text>
+          <text x="130" y="140" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#f3ede0">pré-ductal</text>
+
+          <!-- Tronco braquiocefálico -->
+          <line x1="180" y1="130" x2="300" y2="170" stroke="url(#oxy-rich)" stroke-width="6" marker-end="url(#arrow-r)"/>
+          <text x="230" y="148" font-family="Inter,sans-serif" font-size="9" fill="#ff5d6b">tronco braquiocefálico</text>
+
+          <!-- Coração central -->
+          <rect x="280" y="180" width="200" height="200" rx="20" fill="#0f1f2c" stroke="#ff8a7a" stroke-width="3"/>
+          <text x="380" y="200" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#f3ede0">coração fetal</text>
+
+          <!-- Átrios -->
+          <rect x="295" y="215" width="80" height="60" rx="8" fill="#142838" stroke="#6cb4e8" stroke-width="2"/>
+          <text x="335" y="240" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#6cb4e8">AD</text>
+          <text x="335" y="258" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#c3bcae">não-oxi</text>
+
+          <rect x="385" y="215" width="80" height="60" rx="8" fill="#1a0a0a" stroke="#ff5d6b" stroke-width="2"/>
+          <text x="425" y="240" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#ff5d6b">AE</text>
+          <text x="425" y="258" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#ece8df">oxi</text>
+
+          <!-- Forame oval - flecha entre AD e AE -->
+          <line x1="375" y1="245" x2="385" y2="245" stroke="#f0b440" stroke-width="3" marker-end="url(#arrow-r)"/>
+          <text x="380" y="290" text-anchor="middle" font-family="Lora,serif" font-size="11" font-weight="700" fill="#f0b440">forame oval</text>
+          <text x="380" y="304" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#f0b440">AD → AE</text>
+
+          <!-- Ventrículos -->
+          <rect x="295" y="320" width="80" height="50" rx="6" fill="#142838" stroke="#6cb4e8" stroke-width="2"/>
+          <text x="335" y="345" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#6cb4e8">VD</text>
+
+          <rect x="385" y="320" width="80" height="50" rx="6" fill="#1a0a0a" stroke="#ff5d6b" stroke-width="2"/>
+          <text x="425" y="345" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#ff5d6b">VE</text>
+
+          <!-- Artéria pulmonar do VD -->
+          <line x1="335" y1="320" x2="250" y2="290" stroke="url(#oxy-poor)" stroke-width="5" marker-end="url(#arrow-b)"/>
+          <text x="200" y="285" font-family="Inter,sans-serif" font-size="10" fill="#6cb4e8">art. pulmonar</text>
+
+          <!-- Canal arterial - artéria pulmonar para aorta pós-ductal -->
+          <path d="M250 290 Q190 260 200 380" fill="none" stroke="#f0b440" stroke-width="4" stroke-dasharray="6,3" marker-end="url(#arrow-m)"/>
+          <text x="150" y="330" font-family="Lora,serif" font-size="11" font-weight="700" fill="#f0b440">canal arterial</text>
+          <text x="150" y="344" font-family="Inter,sans-serif" font-size="9" fill="#f0b440">AP → aorta pós</text>
+
+          <!-- Aorta do VE -->
+          <line x1="425" y1="320" x2="500" y2="280" stroke="url(#oxy-rich)" stroke-width="6" marker-end="url(#arrow-r)"/>
+          <line x1="500" y1="280" x2="500" y2="380" stroke="url(#oxy-rich)" stroke-width="6"/>
+          <text x="510" y="320" font-family="Inter,sans-serif" font-size="10" fill="#ff5d6b">aorta pré</text>
+
+          <!-- Junção canal arterial entra na aorta pós-ductal -->
+          <line x1="200" y1="380" x2="500" y2="380" stroke="url(#oxy-mix)" stroke-width="6"/>
+          <text x="350" y="370" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#c87a8a">aorta pós-ductal (mistura)</text>
+
+          <!-- Membros inferiores -->
+          <rect x="320" y="540" width="120" height="40" rx="8" fill="#1a3245" stroke="#c87a8a" stroke-width="2"/>
+          <text x="380" y="558" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#c87a8a">MI (pós-ductal)</text>
+          <text x="380" y="572" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#c3bcae">resto do corpo · mistura</text>
+
+          <line x1="380" y1="380" x2="380" y2="540" stroke="url(#oxy-mix)" stroke-width="6" marker-end="url(#arrow-m)"/>
+
+          <!-- VCI (subindo da placenta) -->
+          <line x1="600" y1="540" x2="600" y2="270" stroke="url(#oxy-rich)" stroke-width="6"/>
+          <line x1="600" y1="270" x2="375" y2="245" stroke="url(#oxy-rich)" stroke-width="5" marker-end="url(#arrow-r)"/>
+          <text x="610" y="400" font-family="Inter,sans-serif" font-size="10" fill="#ff5d6b">VCI</text>
+          <text x="610" y="414" font-family="Inter,sans-serif" font-size="9" fill="#c3bcae">oxi (fetal)</text>
+
+          <!-- Ducto venoso da veia umbilical -->
+          <line x1="700" y1="540" x2="600" y2="500" stroke="#f0b440" stroke-width="4" stroke-dasharray="6,3" marker-end="url(#arrow-r)"/>
+          <text x="640" y="490" font-family="Lora,serif" font-size="11" font-weight="700" fill="#f0b440">ducto venoso</text>
+          <text x="640" y="504" font-family="Inter,sans-serif" font-size="9" fill="#f0b440">v. umbilical → VCI</text>
+
+          <!-- Placenta -->
+          <ellipse cx="700" cy="570" rx="55" ry="35" fill="#7c2d12" stroke="#ff8a7a" stroke-width="2"/>
+          <text x="700" y="568" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#f3ede0">placenta</text>
+          <text x="700" y="584" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#ece8df">troca gasosa</text>
+
+          <!-- Legenda -->
+          <rect x="20" y="500" width="200" height="106" rx="8" fill="#0a1620" stroke="#3a5260"/>
+          <text x="30" y="520" font-family="Lora,serif" font-size="11" font-weight="700" fill="#f3ede0">Legenda</text>
+          <line x1="30" y1="535" x2="60" y2="535" stroke="url(#oxy-rich)" stroke-width="5"/>
+          <text x="68" y="539" font-family="Inter,sans-serif" font-size="10" fill="#ff5d6b">oxigenado</text>
+          <line x1="30" y1="555" x2="60" y2="555" stroke="url(#oxy-poor)" stroke-width="5"/>
+          <text x="68" y="559" font-family="Inter,sans-serif" font-size="10" fill="#6cb4e8">não oxigenado</text>
+          <line x1="30" y1="575" x2="60" y2="575" stroke="url(#oxy-mix)" stroke-width="5"/>
+          <text x="68" y="579" font-family="Inter,sans-serif" font-size="10" fill="#c87a8a">mistura</text>
+          <line x1="30" y1="595" x2="60" y2="595" stroke="#f0b440" stroke-width="4" stroke-dasharray="6,3"/>
+          <text x="68" y="599" font-family="Inter,sans-serif" font-size="10" fill="#f0b440">shunt fetal</text>
+        </svg>
+        <figcaption id="v18-cap">V18 — Circulação fetal. Três shunts fetais (forame oval, canal arterial, ducto venoso) garantem que sangue oxigenado da placenta chegue prioritariamente ao cérebro/coração via aorta pré-ductal. MSD = sempre pré-ductal porque a subclávia direita sai do tronco braquiocefálico, antes da entrada do canal arterial na aorta.</figcaption>
+      </figure>
+
+      <h2>As 3 estruturas comunicantes fetais</h2>
+
+      <h3>Forame oval</h3>
+      <p>Comunica o <strong>átrio direito com o átrio esquerdo</strong> (shunt intra-atrial fetal). Permite que sangue oxigenado vindo da VCI (via ducto venoso, vindo da placenta) <strong>atravesse direto pro lado esquerdo</strong> sem precisar passar pelos pulmões.</p>
+
+      <h3>Canal arterial</h3>
+      <p>Comunica a <strong>artéria pulmonar com a aorta</strong> (shunt extra-cardíaco fetal). Permite que sangue ejetado pelo ventrículo direito (que sairia para os pulmões) seja <strong>desviado pra aorta</strong> — escapando do circuito pulmonar de alta resistência.</p>
+
+      <h3>Ducto venoso</h3>
+      <p>Desvia o sangue oxigenado vindo da placenta pela <strong>veia umbilical</strong> direto <strong>pra dentro da veia cava inferior</strong>. Resultado: a VCI fetal <strong>carrega sangue oxigenado</strong> — completamente diferente da VCI do adulto, que carrega sangue não oxigenado.</p>
+
+      <h2>A lógica do fluxo fetal</h2>
+      <p>O AD fetal recebe simultaneamente:</p>
+      <ul>
+        <li><strong>Sangue oxigenado</strong> vindo da VCI (que vem da placenta via veia umbilical + ducto venoso)</li>
+        <li><strong>Sangue não oxigenado</strong> vindo da VCS (drenagem da metade superior do corpo)</li>
+      </ul>
+
+      <p>Por questão anatômica e física, o sangue <strong>oxigenado</strong> da VCI atravessa preferencialmente o <strong>forame oval</strong> → AE → mitral → VE → aorta. Vai direto pras estruturas nobres irrigadas pela aorta pré-ductal (cérebro, coração).</p>
+
+      <p>O sangue <strong>não oxigenado</strong> da VCS segue preferencialmente pra <strong>VD → artéria pulmonar</strong>. Mas aqui entra o canal arterial: como a <strong>resistência vascular pulmonar fetal está muito alta</strong> (pulmões colabados, sem ventilação), o sangue ejetado na artéria pulmonar segue preferencialmente pela via de <strong>menor resistência</strong> — o canal arterial → aorta pós-ductal.</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Princípio físico fixado</div>
+        <div class="gold-rule__body">O fluxo sanguíneo segue a via de menor resistência. Resistência pulmonar fetal alta + canal arterial aberto = shunt direita-esquerda pela aorta.</div>
+      </aside>
+
+      <h2>A aorta fetal tem dois territórios distintos</h2>
+      <ul>
+        <li><strong>Aorta pré-ductal</strong> = região da aorta <strong>antes</strong> da entrada do canal arterial. Tem sangue <strong>mais oxigenado</strong> (vindo do AE/VE via forame oval). Dela saem <strong>coronárias</strong> + <strong>tronco braquiocefálico</strong> (que dá origem à subclávia direita → artéria axilar direita → braquial direita → o MSD inteiro).</li>
+        <li><strong>Aorta pós-ductal</strong> = região da aorta <strong>depois</strong> da entrada do canal arterial. Tem sangue <strong>misto</strong> (oxigenado da circulação esquerda + não oxigenado vindo do canal arterial). Irriga o restante do corpo, incluindo os membros inferiores.</li>
+      </ul>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro — economia de oxigênio fetal</div>
+        <div class="gold-rule__body">Pré-ductal alimenta cérebro + coração (mais oxigenado); pós-ductal alimenta o resto do corpo (menos oxigenado). É a economia de oxigênio do feto.</div>
+      </aside>
+
+      <h2>Por que MSD é sempre pré-ductal</h2>
+      <p>O <strong>membro superior direito</strong> é irrigado pela subclávia direita, que se origina do tronco braquiocefálico, que sai da aorta <strong>antes</strong> da entrada do canal arterial. Logo, MSD = pré-ductal por anatomia universal.</p>
+
+      <p>O <strong>membro superior esquerdo</strong> geralmente também é pré-ductal, mas existem variações anatômicas individuais. O MSD é <strong>a única posição universalmente confiável</strong> pra medir saturação pré-ductal. Por isso a oximetria neonatal sempre se padroniza no MSD — coraçãozinho, oxímetro de pulso na reanimação neonatal, VPP com SatO₂ alvo por minuto de vida. Tudo o que envolve "saturação pré-ductal" no RN se mede no MSD.</p>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico universal</div>
+        <div class="mnemonic__body"><strong>MSD = sempre pré-ductal.</strong> Padrão único pra qualquer monitorização de oxigenação neonatal.</div>
+      </aside>
+
+      <h2>Após o nascimento: a transição</h2>
+      <p>Quando o RN nasce, a placenta sai de circulação. O AD passa a receber sangue <strong>não oxigenado</strong> retornando da circulação sistêmica (padrão adulto se instala). As 3 estruturas comunicantes começam a fechar:</p>
+      <ul>
+        <li>Ducto venoso fecha rapidamente (sem fluxo umbilical, perde função)</li>
+        <li>Forame oval fecha funcionalmente nas primeiras horas (gradiente de pressão se inverte)</li>
+        <li>Canal arterial <strong>começa a fechar em horas-dias</strong> — fecho anatômico completo em ~3 semanas</li>
+      </ul>
+
+      <p>É <strong>justamente nessas primeiras horas-dias</strong> que cardiopatia crítica canal-dependente se manifesta — porque o canal arterial está fechando enquanto a circulação da criança não consegue funcionar sem ele.</p>
+
+      <h2>Cardiopatia congênita crítica — a definição mecanicista</h2>
+      <p><strong>Cardiopatia congênita crítica</strong> = cardiopatia em que <strong>circulação pulmonar OU circulação sistêmica vão depender de fluxo sanguíneo através do canal arterial após o nascimento</strong>. Sem canal aberto, o sangue não alcança o pulmão (cardiopatia com <strong>fluxo pulmonar canal-dependente</strong>) ou não alcança a aorta sistêmica (cardiopatia com <strong>fluxo sistêmico canal-dependente</strong>). Em ambos os casos, fechamento do canal = colapso clínico.</p>
+
+      <h3>Exemplo 1 — Atresia da válvula pulmonar (fluxo pulmonar canal-dependente)</h3>
+      <p>Sangue não oxigenado chega ao AD, NÃO consegue ir pra artéria pulmonar (atresia da válvula), é desviado pelo forame oval pro AE → VE → aorta. Pós-nascimento, sem o canal arterial aberto, <strong>NÃO passa sangue pelos pulmões</strong> — incompatível com a vida. Com o canal aberto, parte do sangue na aorta atravessa o canal (esquerda → direita) pra artéria pulmonar, oxigena nos pulmões, volta pro AE → VE → aorta. A aorta da criança tem mistura → saturação diminui visivelmente.</p>
+
+      <h3>Exemplo 2 — Interrupção do arco aórtico (fluxo sistêmico canal-dependente)</h3>
+      <p>Sangue não oxigenado vai pelo AD → VD → artéria pulmonar → pulmão (oxigena) → AE → VE → aorta interrompida. Em algumas interrupções do arco, a obstrução está <strong>antes</strong> da emergência da subclávia direita/tronco braquiocefálico — nesse caso, os <strong>membros superiores recebem sangue oxigenado</strong> (vindo da aorta pré-ductal antes da interrupção), mas os <strong>membros inferiores recebem mistura</strong> (chegando via canal arterial). Resultado clínico: <strong>diferença de saturação pré-ductal alta (MSD) vs pós-ductal baixa (MI)</strong>.</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Conexão final com o coraçãozinho</div>
+        <div class="gold-rule__body">A diferença pré-pós-ductal sugere <strong>shunt direita-esquerda</strong> pelo canal arterial — exatamente o mecanismo que o coraçãozinho rastreia. A pegadinha do "duvidoso = diferença ≥4%" é literalmente o teste tentando capturar shunt canal-dependente subclínico.</div>
+      </aside>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M3 · Cross-link bidirecional</div>
+          <a href="../m3-reanimacao/index.html#/p1-m3-p7">O oxímetro no MSD durante a VPP usa a mesma lógica — saturação pré-ductal porque é a que importa pro cérebro e miocárdio. Esta página é a fonte canônica do conceito; M3 §3.7 referencia esta. (#/p1-m3-p7)</a>
+        </div>
+      </aside>
+
+      <h2>Box lateral — Cardiopatias críticas detectadas pelo coraçãozinho</h2>
+
+      <div class="comparison" role="region" aria-label="Cardiopatias críticas — mecanismo">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Cardiopatia</th>
+              <th scope="col">Mecanismo</th>
+              <th scope="col">Tipo de dependência</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Atresia pulmonar</th><td>Sangue não passa pelo pulmão sem canal</td><td>Fluxo pulmonar canal-dependente</td></tr>
+            <tr><th scope="row">HLHS</th><td>VE/aorta hipoplásicos — circulação sistêmica via canal</td><td>Fluxo sistêmico canal-dependente</td></tr>
+            <tr><th scope="row">Coarctação crítica / Interrupção do arco</th><td>Obstrução aórtica — circulação inferior via canal</td><td>Fluxo sistêmico canal-dependente</td></tr>
+            <tr><th scope="row">TGA</th><td>Circuitos paralelos — mistura via canal + forame</td><td>Mistura crítica canal-dependente</td></tr>
+            <tr><th scope="row">Tronco arterioso</th><td>Tronco único — mistura constante</td><td>Variável</td></tr>
+            <tr><th scope="row">Atresia tricúspide</th><td>Sangue não chega ao VD/pulmão sem canal</td><td>Fluxo pulmonar canal-dependente</td></tr>
+            <tr><th scope="row">DATVP</th><td>Sangue pulmonar drena errado — depende de comunicação</td><td>Mistura crítica</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Pré-ductal = mais oxigenado" ≠ "pré-ductal = sangue puramente oxigenado" — a aorta pré-ductal tem sangue do AE/VE que veio via forame oval (oxigenado); é o <strong>mais</strong> oxigenado da circulação</li>
+          <li>"Canal arterial fetal" ≠ "PCA (persistência do canal arterial)" patológica — fetal é fisiológico; persistência após o nascimento (&gt;3 semanas) é doença</li>
+          <li>"Cardiopatia crítica" ≠ "cardiopatia mais frequente" — frequente ≠ grave</li>
+          <li>"Shunt direita-esquerda" no canal fetal ≠ shunt direita-esquerda patológico no adulto — direção do fluxo depende das resistências</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">Entender que MSD é pré-ductal e MI é pós-ductal é a única forma de não decorar o fluxograma do coraçãozinho. Quem entende a fisiologia resolve qualquer questão de oximetria neonatal — coraçãozinho E reanimação. Quem decora vai cair na inversão de conectores ou na inversão de membros.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p5" aria-labelledby="quiz-p5-title">
+        <h2 class="quiz__title" id="quiz-p5-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Por que MSD é a posição padronizada pra medir saturação pré-ductal no recém-nascido?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">A — A subclávia direita sai do tronco braquiocefálico, antes da entrada do canal arterial na aorta</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — O membro superior direito é maior e tem melhor sinal de oximetria</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — A artéria pulmonar emerge do lado esquerdo do coração</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — O oxímetro foi desenhado especificamente pra MSD</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: A.</strong> Tronco braquiocefálico → subclávia direita = aorta pré-ductal universalmente.</p>
+              <p class="quiz__distractor">B inventa razão técnica. C confunde anatomia. D inventa razão instrumental.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Cardiopatia crítica com fluxo pulmonar canal-dependente significa:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — A criança morre se o canal arterial fica aberto após o nascimento</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — O sangue só alcança os pulmões através do canal arterial</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — O canal arterial obstrui a passagem de sangue pra os pulmões</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — A oxigenação não muda com o fechamento do canal</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Sem canal aberto, o sangue não alcança o pulmão (atresia pulmonar é o exemplo paradigma).</p>
+              <p class="quiz__distractor">A inverte. C inverte (o canal NÃO obstrui — ele permite a passagem). D ignora o ponto central — fechamento do canal = colapso.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">O ducto venoso conecta a artéria pulmonar à aorta.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> Ducto venoso conecta a veia umbilical à VCI (carrega sangue oxigenado da placenta direto pra circulação sistêmica).</p>
+              <p class="quiz__distractor">Quem conecta artéria pulmonar à aorta é o canal arterial. Pegadinha clássica de troca de nomes.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> volta ao protocolo de triagem — olhinho. Reflexo vermelho, oftalmoscópio (não lanterna), e a pegadinha clássica de prova.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p4">‹ Anterior</a>
+        <span class="page-nav__indicator">5 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p6">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.6 — Estratégia: E8 (Erro comum desmontado)               -->
+    <!-- Itens roteiro: [143]-[162]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="6" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.6 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E8 · Erro desmontado</span>
+        <span class="page-meta__tag">Itens 143-162</span>
+      </div>
+      <h1 class="page-title">Olhinho — reflexo vermelho-alaranjado bilateral simétrico, e por que NÃO é lanterna</h1>
+
+      <section class="opener opener--bust">
+        <span class="opener__wrong">O reflexo vermelho pode ser feito com lanterna.</span>
+        <span class="opener__right">Não pode. Tem que ser com <strong>oftalmoscópio</strong>. E essa pegadinha cai literal em prova. A diferença não é estética — é física, e vai mudar o que o exame consegue detectar.</span>
+      </section>
+
+      <p>A pesquisa do reflexo vermelho (teste do olhinho) é feita por todo pediatra logo após o nascimento. Não é exame de oftalmologista — é triagem <strong>de pediatra</strong>. E ela se repete várias vezes ao longo da puericultura, exatamente porque algumas das doenças que ela rastreia (especialmente <strong>retinoblastoma</strong>) podem aparecer ao longo dos primeiros anos de vida, não necessariamente no nascimento.</p>
+
+      <h2>Técnica correta</h2>
+      <p>A luz projetada do <strong>oftalmoscópio</strong> percorre o eixo visual, atinge a retina no fundo do olho, reflete, e esse reflexo emerge pela pupila como uma luz vermelho-alaranjada. É o mesmo princípio físico do "olho vermelho" das fotos antigas com flash — quando os antigos tiravam foto com flash e o olho saía vermelho, era exatamente esse reflexo escapando pela pupila aberta no escuro.</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">NÃO é com lanterna. É com <strong>oftalmoscópio</strong>. A diferença não é só de potência — o oftalmoscópio projeta um <strong>feixe paralelo alinhado com o eixo de observação</strong> do examinador. Lanterna projeta luz divergente — você não captura o reflexo retiniano da mesma forma.</div>
+        </div>
+      </aside>
+
+      <figure class="figure-clinical" data-img-id="B22">
+        <img src="./assets/img/BNN-b22-leucocoria-catarata.jpg" alt="Imagem clínica de leucocoria unilateral em criança — reflexo branco visível em uma das pupilas durante exame oftalmológico. Sinal clínico cardinal de patologia do eixo visual (catarata congênita, retinoblastoma ou outra causa de obstrução).">
+        <span class="figcaption">
+          <strong>B22 · Leucocoria.</strong> Reflexo branco em uma das pupilas — sinal cardinal de patologia do eixo visual. DDx principal: catarata congênita, retinoblastoma, glaucoma congênito. Conduta: encaminhar pro oftalmologista.
+          <span class="attribution">Wikimedia Commons · uso educacional.</span>
+        </span>
+      </figure>
+
+      <h2>O que se busca: reflexo vermelho-alaranjado bilateral E simétrico</h2>
+
+      <figure class="figure-clinical" data-img-id="B21">
+        <object data="./assets/img/BNN-b21-reflexo-vermelho-positivo-svg.svg" type="image/svg+xml" aria-label="Reflexo vermelho positivo bilateral em RN — ilustração esquemática autoral"></object>
+        <span class="figcaption">
+          <strong>B21 · Reflexo vermelho positivo bilateral.</strong> Ilustração autoral — reflexo retiniano alaranjado-avermelhado simétrico em ambas as pupilas configura exame normal. A simetria é tão importante quanto a presença do reflexo.
+          <span class="attribution">Ilustração autoral Bauer — fallback declarado pelo buscador (B21 inconclusivo em fontes abertas).</span>
+        </span>
+      </figure>
+
+      <div class="eyes-preview">
+        <div class="eyes-preview__col">
+          <h4>Normal</h4>
+          <svg viewBox="0 0 160 90" width="160" height="90" role="img" aria-label="Pupilas normais — reflexo vermelho-alaranjado bilateral simétrico">
+            <circle cx="50" cy="45" r="22" fill="#1a3245" stroke="#3a5260" stroke-width="2"/>
+            <circle cx="50" cy="45" r="12" fill="#ff8a7a"/>
+            <circle cx="110" cy="45" r="22" fill="#1a3245" stroke="#3a5260" stroke-width="2"/>
+            <circle cx="110" cy="45" r="12" fill="#ff8a7a"/>
+          </svg>
+          <p style="font-size:var(--fs-xs);color:var(--ink-70)">Reflexo vermelho-alaranjado bilateral, simétrico</p>
+        </div>
+        <div class="eyes-preview__col">
+          <h4>Leucocoria</h4>
+          <svg viewBox="0 0 160 90" width="160" height="90" role="img" aria-label="Pupila com leucocoria — reflexo branco">
+            <circle cx="50" cy="45" r="22" fill="#1a3245" stroke="#3a5260" stroke-width="2"/>
+            <circle cx="50" cy="45" r="12" fill="#ff8a7a"/>
+            <circle cx="110" cy="45" r="22" fill="#1a3245" stroke="#3a5260" stroke-width="2"/>
+            <circle cx="110" cy="45" r="12" fill="#f3ede0"/>
+          </svg>
+          <p style="font-size:var(--fs-xs);color:var(--ink-70)">Leucocoria à direita — sinal cardinal de patologia</p>
+        </div>
+      </div>
+
+      <p>Reflexo vermelho <strong>normal</strong> = presente bilateralmente <strong>E</strong> simétrico. Os dois critérios juntos:</p>
+      <ul>
+        <li><strong>Bilateral</strong>: presente em ambos os olhos</li>
+        <li><strong>Simétrico</strong>: mesma intensidade e cor nos dois lados</li>
+      </ul>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro técnica</div>
+        <div class="gold-rule__body">Reflexo normal = <strong>bilateral E simétrico</strong>. As duas condições.</div>
+      </aside>
+
+      <h2>Boa prática: examinar os dois olhos simultaneamente</h2>
+      <p>Além de avaliar cada olho individualmente (com o oftalmoscópio sobre cada um), é fundamental fazer o exame em <strong>ambos os olhos ao mesmo tempo</strong> — alguma distância do bebê, oftalmoscópio iluminando os dois olhos simultaneamente. <strong>Só assim é possível detectar assimetria.</strong> A diferença sutil entre os reflexos pode passar despercebida se você examinar um olho de cada vez.</p>
+
+      <h2>Alterações possíveis</h2>
+      <ul>
+        <li><strong>Reflexo ausente em um dos lados</strong> — pode indicar obstrução do eixo visual (catarata, opacidade) ou neoplasia retiniana</li>
+        <li><strong>Reflexo assimétrico</strong> entre os dois olhos — assimetria de intensidade ou cor sugere patologia</li>
+        <li><strong>Leucocoria</strong> — reflexo <strong>branco</strong> em vez de vermelho-alaranjado, sinal clínico cardinal</li>
+      </ul>
+
+      <h2>Diagnósticos diferenciais</h2>
+      <ul>
+        <li><strong>Catarata congênita</strong> — opacidade do cristalino. Causa clássica: Síndrome da Rubéola Congênita (SRC — tríade de Gregg: catarata + surdez + cardiopatia). Galactosemia (doença metabólica rara), idiopática.</li>
+        <li><strong>Retinoblastoma</strong> — neoplasia intraocular maligna mais frequente da infância. Leucocoria é o sinal de apresentação mais comum.</li>
+        <li><strong>Glaucoma congênito</strong> — aumento da pressão intraocular com alterações estruturais do olho.</li>
+        <li><strong>Outros</strong> (DDx expandido — opcional): persistência do vítreo primário hiperplásico (PVPH), doença de Coats, toxocaríase ocular, descolamento de retina congênito, retinopatia da prematuridade grave, coloboma.</li>
+      </ul>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 · Cross-link bidirecional</div>
+          <a href="../m2-torch/index.html#/p1-m2-p4">Catarata congênita aparece em SRC como parte da tríade de Gregg (catarata + surdez neurossensorial + cardiopatia — PCA e EAP). (#/p1-m2-p4)</a>
+        </div>
+      </aside>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro conduta</div>
+        <div class="gold-rule__body">Reflexo vermelho alterado = <strong>encaminhar pro oftalmologista</strong>. Sem tentar diagnóstico no consultório de pediatria. O pediatra rastreia; o especialista diagnostica.</div>
+      </aside>
+
+      <h2>Quando: janela inicial + repetições</h2>
+      <ul>
+        <li><strong>Primeira realização</strong>: ainda nas <strong>primeiras 72 horas de vida</strong> (recomendação conjunta SBP + Sociedade Brasileira de Oftalmologia Pediátrica + Conselho Brasileiro de Oftalmologia)</li>
+        <li><strong>Repetições</strong>: <strong>3 vezes ao ano</strong> nos <strong>3 primeiros anos de vida</strong></li>
+      </ul>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico fixado</div>
+        <div class="mnemonic__body">Reflexo vermelho — <strong>1ª vez em 72h, depois 3×/ano por 3 anos</strong>. Triplo trio.</div>
+      </aside>
+
+      <h2>Por que repetir 3×/ano por 3 anos?</h2>
+      <p>Um dos grandes objetivos da repetição é o <strong>diagnóstico precoce do retinoblastoma</strong>. Retinoblastoma é reconhecido principalmente nos <strong>primeiros anos de vida</strong> — não está presente no nascimento na maioria dos casos. A alteração do reflexo pode ser o <strong>primeiro sinal</strong>, e o pediatra do dia-a-dia (não o oftalmologista) é quem está com a criança nas consultas de rotina. A repetição sistemática captura o tumor enquanto ele ainda é tratável com preservação do olho.</p>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Oftalmoscópio" ≠ "lanterna" → diferença física, não estética</li>
+          <li>"Examinar cada olho separado" ≠ "suficiente pra detectar assimetria" → tem que examinar simultaneamente</li>
+          <li>"Reflexo bilateral" ≠ "reflexo normal" → tem que ser bilateral E simétrico</li>
+          <li>"Pediatra avalia" ≠ "pediatra diagnostica" → alterado vai pra oftalmologista</li>
+          <li>"Primeiras 72h" + "3×/ano por 3 anos" — duas frequências distintas, ambas obrigatórias</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">Retinoblastoma diagnosticado precocemente é tratável com preservação do olho e da vida. Diagnosticado tardiamente, exige enucleação e tem maior risco de mortalidade. A repetição 3×/ano por 3 anos não é exagero — é janela mínima de captura.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p6" aria-labelledby="quiz-p6-title">
+        <h2 class="quiz__title" id="quiz-p6-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">A técnica correta pra realização do reflexo vermelho é:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Lanterna apontada pra pupila dilatada</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Oftalmoscópio percorrendo o eixo visual, com avaliação bilateral simultânea</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Lâmpada de fenda sob midríase farmacológica</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Reflexo direto da luz solar nas pupilas</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Oftalmoscópio projeta feixe paralelo alinhado com o examinador, capturando o reflexo retiniano.</p>
+              <p class="quiz__distractor">A é a pegadinha cobrada. C é técnica oftalmológica diferente (lâmpada de fenda exige consultório especializado). D inventa.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">RN nasce com reflexo vermelho assimétrico. Qual a conduta correta?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Repetir o teste em 30 minutos</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Encaminhar pro oftalmologista pra avaliação especializada</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Iniciar tratamento empírico pra catarata</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Solicitar tomografia de crânio</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Reflexo é triagem; alterado encaminha pro especialista, sem tentar diagnóstico inicial.</p>
+              <p class="quiz__distractor">A: repetir não muda achado. C: tratamento empírico sem diagnóstico é incorreto. D: imagem não é a próxima etapa diante de reflexo alterado.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A repetição 3 vezes ao ano por 3 anos visa principalmente o diagnóstico precoce do retinoblastoma.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: VERDADEIRO.</strong> Retinoblastoma é a neoplasia intraocular maligna mais frequente da infância e aparece principalmente nos primeiros anos de vida.</p>
+              <p class="quiz__distractor">A repetição sistemática captura o tumor ainda tratável.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> a triagem auditiva — única triagem com mais de uma técnica disponível (EOA + BERA), e a única que conversa diretamente com TORCHS e reanimação grave.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p5">‹ Anterior</a>
+        <span class="page-nav__indicator">6 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p7">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.7 — Estratégia: E7 (Comparação chocante)                 -->
+    <!-- Itens roteiro: [163]-[176]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="7" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.7 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E7 · Comparação chocante</span>
+        <span class="page-meta__tag">Itens 163-176</span>
+      </div>
+      <h1 class="page-title">Orelhinha — EOA mostra cóclea, BERA mostra nervo</h1>
+
+      <section class="opener opener--vs">
+        <div class="opener__side">
+          <h4>EOA</h4>
+          <p>Detecta problemas <strong>até a cóclea</strong>. Pré-neural — eco coclear captado.</p>
+        </div>
+        <div class="opener__divider">vs</div>
+        <div class="opener__side">
+          <h4>BERA / PEATE</h4>
+          <p>Detecta o que vem <strong>DEPOIS da cóclea</strong>. Neural — resposta eletrofisiológica de tronco encefálico.</p>
+        </div>
+      </section>
+
+      <p>Trocar uma pela outra = perder o diagnóstico de surdez neurossensorial. E essa troca cai em prova.</p>
+
+      <p>A triagem auditiva (teste da orelhinha) é a próxima triagem obrigatória — e é a única com <strong>mais de uma técnica disponível</strong>. Diferentemente das outras (1 método único por triagem), aqui existem <strong>2 avaliações possíveis</strong> com indicações diferentes.</p>
+
+      <h2>As 2 técnicas</h2>
+
+      <div class="eoa-bera">
+        <div class="eoa-bera__col eoa-bera__col--eoa">
+          <h3>EOA — Emissões Otoacústicas</h3>
+          <p><strong>Técnica</strong>: um fone pequeno é colocado no <strong>conduto auditivo externo</strong>. O fone emite um ruído sonoro. A onda percorre conduto → orelha média → atinge a cóclea e provoca a <strong>vibração das células ciliadas externas</strong>. Essa vibração produz um pequeno <strong>eco</strong> que volta pelo mesmo caminho. O mesmo fone capta esse eco.</p>
+          <p><strong>Resultado</strong>: se há eco, a via até a cóclea está funcional. Se não há eco, há problema entre o conduto e a cóclea (inclusive a própria cóclea).</p>
+          <p><strong>Limitação fundamental</strong>: testa <strong>até a cóclea</strong>. Problemas <strong>depois</strong> da cóclea — via nervosa, surdez neurossensorial pós-coclear, neuropatia auditiva — <strong>NÃO</strong> são detectados pela EOA. A criança pode ter cóclea íntegra (EOA passa) e via auditiva nervosa lesada (criança não escuta).</p>
+        </div>
+        <div class="eoa-bera__col eoa-bera__col--bera">
+          <h3>BERA / PEATE</h3>
+          <p><strong>BERA</strong> (Brainstem Evoked Response Audiometry) e <strong>PEATE</strong> (Potencial Evocado Auditivo de Tronco Encefálico) são <strong>a mesma coisa</strong>, com nomes em idiomas diferentes. Em prova brasileira, <strong>BERA domina</strong> — sigla inglesa muito mais popular que a portuguesa.</p>
+          <p><strong>Técnica</strong>: muito mais complexa que EOA. Eletrodos são posicionados na cabeça do bebê. Um estímulo sonoro é emitido. O exame <strong>emite o estímulo E capta a onda eletrofisiológica</strong> gerada pelo estímulo — a resposta neural ao som no nível do tronco encefálico.</p>
+          <p><strong>Resultado</strong>: se a resposta neural existe e tem padrão normal → via auditiva neural íntegra. Se a resposta está ausente ou anormal → surdez neurossensorial (lesão pós-cóclea).</p>
+        </div>
+      </div>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Equivalência fixada</div>
+        <div class="gold-rule__body">PEATE = BERA. Mesmo exame, dois nomes. Em prova brasileira, use <strong>BERA</strong>.</div>
+      </aside>
+
+      <h2>Comparação estrutural</h2>
+
+      <div class="comparison" role="region" aria-label="V23 — EOA vs BERA comparativa">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">EOA</th>
+              <th scope="col">BERA / PEATE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">O que detecta</th><td>Problemas até a cóclea (conduto + orelha média + cóclea)</td><td>Problemas pós-cóclea (via neural)</td></tr>
+            <tr><th scope="row">Como funciona</th><td>Capta eco coclear gerado por estímulo sonoro</td><td>Capta resposta eletrofisiológica neural a estímulo sonoro</td></tr>
+            <tr><th scope="row">Tipo de surdez detectada</th><td>Pré-neural (condutiva + coclear)</td><td>Neurossensorial retrococlear</td></tr>
+            <tr><th scope="row">Equipamento</th><td>Fone pequeno no conduto</td><td>Eletrodos + estimulador + computador analisando onda</td></tr>
+            <tr><th scope="row">Complexidade</th><td>Rápido, simples</td><td>Mais demorado, mais complexo</td></tr>
+            <tr><th scope="row">Uso na triagem</th><td>Universal em sem fator de risco; reteste se falhar em IRDA-1</td><td>Obrigatório em IRDA-2 (junto com EOA)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="figure-clinical" data-img-id="B23">
+        <img src="./assets/img/BNN-b23-eoa-equipamento.png" alt="Equipamento de emissões otoacústicas (EOA) — fone pequeno posicionado no conduto auditivo externo do RN durante triagem auditiva. Capta o eco gerado pela vibração das células ciliadas externas da cóclea.">
+        <span class="figcaption">
+          <strong>B23 · Equipamento EOA.</strong> Fone pequeno emite ruído sonoro e capta o eco coclear de volta. Testa a via até a cóclea — limitada quando há lesão pós-coclear (precisa de BERA).
+          <span class="attribution">Wikimedia Commons · uso educacional.</span>
+        </span>
+      </figure>
+
+      <figure class="figure-clinical" data-img-id="B24">
+        <img src="./assets/img/BNN-b24-bera-eletrodos.jpg" alt="Recém-nascido com eletrodos BERA posicionados na cabeça e estimulador sonoro acoplado durante exame de triagem auditiva neurossensorial — exame eletrofisiológico que capta a resposta neural ao som no tronco encefálico.">
+        <span class="figcaption">
+          <strong>B24 · BERA — eletrodos no RN.</strong> Eletrodos captam a resposta eletrofisiológica neural ao estímulo sonoro. Único exame que avalia a via auditiva neural pós-cóclea — obrigatório em IRDA-2.
+          <span class="attribution">Wikimedia Commons · uso educacional.</span>
+        </span>
+      </figure>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico fixado</div>
+        <div class="mnemonic__body"><strong>EOA mostra cóclea; BERA mostra nervo.</strong> EOA é pré-neural; BERA capta a via neural. Decore essa diferença literal — é a base do fluxograma IRDA-1 vs IRDA-2.</div>
+      </aside>
+
+      <h2>Por que essa diferença importa</h2>
+      <p>Algumas crianças têm <strong>cóclea íntegra</strong> (EOA passa normal) e <strong>via neural lesada</strong> (criança não escuta). Esse perfil é chamado de <strong>espectro de neuropatia auditiva</strong> — e é exatamente o perfil de risco mais alto. Sem BERA, essa criança sai da maternidade com triagem "normal" e o diagnóstico se atrasa anos.</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro clínica</div>
+        <div class="gold-rule__body">BERA é <strong>obrigatório</strong> quando há risco de surdez <strong>neurossensorial</strong> — é o único exame que captura a via neural. EOA isolada não basta.</div>
+      </aside>
+
+      <p>Quem tem risco de surdez neurossensorial? Crianças com indicadores de risco categoria 2 (IRDA-2) — UTI prolongada, hiperbilirrubinemia com exsanguíneo, anóxia grave, EHI, prematuridade extrema. Detalhamento integral na próxima página.</p>
+
+      <aside class="finding">
+        <div class="finding__label">Achado típico — interpretação dos resultados</div>
+        <div class="finding__body">
+          <ul>
+            <li><strong>EOA passou</strong>: criança não tem problema do conduto à cóclea. Pode ainda ter problema neural — não está testado.</li>
+            <li><strong>EOA falhou</strong>: pode ser cera no conduto, líquido na orelha média, disfunção coclear, ou artefato. Reteste indicado.</li>
+            <li><strong>BERA passou</strong>: criança tem via auditiva neural íntegra.</li>
+            <li><strong>BERA falhou</strong>: pode ter neuropatia auditiva ou outra lesão neurossensorial. Encaminhamento especializado obrigatório.</li>
+          </ul>
+        </div>
+      </aside>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"PEATE" ≠ "exame diferente do BERA" → mesma técnica, dois nomes (português vs inglês)</li>
+          <li>"EOA negativa" (passou) ≠ "audição perfeita" → pode haver surdez neurossensorial não detectada</li>
+          <li>"BERA passou" ≠ "EOA é dispensável" → EOA testa cóclea; BERA testa via neural; complementares em IRDA-2</li>
+          <li>"Triagem auditiva = EOA" → simplificação errada; em IRDA-2 é EOA + BERA simultaneamente</li>
+        </ul>
+      </aside>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 · Cross-link</div>
+          <a href="../m2-torch/index.html#/p1-m2-p3">CMV é a principal causa não-genética de surdez neurossensorial congênita. Criança com CMV congênita silencioso pode ter cóclea íntegra ao nascimento e desenvolver surdez neurossensorial ao longo dos primeiros meses. (#/p1-m2-p3)</a>
+        </div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">Identificar a criança com CMV como IRDA-1 (infecção congênita) e aplicar EOA + reteste + acompanhamento muda o prognóstico de aquisição de linguagem.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p7" aria-labelledby="quiz-p7-title">
+        <h2 class="quiz__title" id="quiz-p7-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">EOA e BERA diferem essencialmente porque:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — EOA é mais sensível que BERA em qualquer cenário</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — EOA detecta problemas até a cóclea; BERA detecta problemas pós-cóclea</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — BERA é exame de pediatra; EOA é exame de otorrinolaringologista</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — EOA usa eletrodos; BERA usa fones intra-aurais</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Diferença anatômica do alcance.</p>
+              <p class="quiz__distractor">A inverte — EOA é menos sensível que BERA pra surdez neurossensorial. C inventa hierarquia profissional. D inverte os métodos.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Por que BERA é obrigatório em crianças com risco de surdez neurossensorial?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Porque BERA é mais barato e disponível que EOA</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Porque é o único exame da triagem que captura a via auditiva neural pós-cóclea</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Porque EOA é proibida em RN</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Porque BERA confirma o diagnóstico definitivo de surdez</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> BERA capta resposta eletrofisiológica neural — única forma de avaliar via pós-coclear.</p>
+              <p class="quiz__distractor">A inverte (BERA é mais complexo, não mais barato). C: EOA é universal pra sem fator de risco. D: triagem ≠ diagnóstico; BERA é triagem.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">PEATE e BERA são exames diferentes.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> PEATE (português) = BERA (inglês). Mesma técnica, dois nomes.</p>
+              <p class="quiz__distractor">Pegadinha tradicional de aluno que decorou siglas sem entender equivalência.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> o fluxograma completo — IRDA-1 vs IRDA-2 vs sem fator de risco, com a pegadinha fototerapia ≠ exsanguíneo e a atualização recente do MS sobre BERA + EOA simultâneos em IRDA-2.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p6">‹ Anterior</a>
+        <span class="page-nav__indicator">7 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p8">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.8 — Estratégia: E4 (Achado típico/pegadinha)             -->
+    <!-- Itens roteiro: [177]-[199]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="8" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.8 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E4 · Pegadinha</span>
+        <span class="page-meta__tag">Itens 177-199</span>
+      </div>
+      <h1 class="page-title">Orelhinha — IRDA-1 vs IRDA-2 e a pegadinha fototerapia ≠ exsanguíneo</h1>
+
+      <aside class="opener opener--trap">
+        <div>
+          <div class="opener__msg"><strong>Fototerapia NÃO indica BERA. Exsanguinotransfusão SIM.</strong> Esta é a inversão que mais cai em prova da triagem auditiva. Se cai uma pegadinha desta página, é esta.</div>
+        </div>
+      </aside>
+
+      <p>Recentemente o Ministério da Saúde alterou o programa de triagem auditiva. <strong>Antes</strong>: EOA universal + BERA pra crianças com <strong>qualquer</strong> fator de risco. <strong>Agora</strong>: divisão em <strong>3 grupos</strong> com condutas diferentes pra cada um — sem fator de risco, IRDA-1, IRDA-2. O <strong>Guia Nacional da Triagem Auditiva Neonatal</strong> publicado pelo MS em <strong>29 de novembro de 2025</strong> mantém essa estrutura e adiciona padronização do prazo de reteste (15 dias).</p>
+
+      <aside class="law-citation">
+        <div>
+          <strong>Guia TAN MS nov/2025</strong> — prazo de reteste padronizado em <strong>15 dias</strong> após falha na 1ª avaliação. Falha no reteste em qualquer orelha → encaminhamento imediato ao serviço especializado (CER). Esta padronização não muda a lógica do fluxograma — apenas precisa o tempo.
+        </div>
+      </aside>
+
+      <h2>Os 3 grupos</h2>
+
+      <div class="irda-grid">
+        <div class="irda-card irda-card--none">
+          <div class="irda-card__head"><span class="badge-irda">Grupo 1</span> Sem fator de risco</div>
+          <div class="irda-card__body">
+            <ul>
+              <li><strong>Conduta</strong>: EOA apenas</li>
+              <li><strong>Passa</strong>: segue acompanhamento de rotina</li>
+              <li><strong>Falha</strong>: reteste (repetir EOA em até 15 dias — Guia TAN 2025)</li>
+              <li><strong>Falha no reteste</strong>: encaminhamento ao CER (Centro Especializado de Reabilitação)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="irda-card irda-card--1">
+          <div class="irda-card__head"><span class="badge-irda">Grupo 2 · IRDA-1</span> Risco coclear</div>
+          <div class="irda-card__body">
+            <p>Perfil: risco aumentado de <strong>surdez predominantemente coclear</strong>.</p>
+            <ul>
+              <li><strong>Infecções congênitas</strong> (TORCHS+Z — toxo, rubéola, CMV, herpes, sífilis, varicela-zóster)</li>
+              <li><strong>Medicações ototóxicas</strong> (aminoglicosídeos, diuréticos de alça, alguns quimioterápicos)</li>
+              <li><strong>Anomalias craniofaciais</strong> (especialmente orelha externa, média ou osso temporal)</li>
+              <li><strong>Hereditariedade</strong> (história familiar de surdez genética)</li>
+              <li><strong>Síndromes genéticas</strong> (Waardenburg, Usher, Pendred, Alport, etc.)</li>
+            </ul>
+            <p><strong>Conduta IRDA-1</strong>: faz EOA; falha → reteste em 15 dias; falha no reteste → CER.</p>
+          </div>
+        </div>
+
+        <div class="irda-card irda-card--2">
+          <div class="irda-card__head"><span class="badge-irda">Grupo 3 · IRDA-2</span> Risco neurossensorial</div>
+          <div class="irda-card__body">
+            <p>Perfil: risco aumentado de <strong>surdez neurossensorial / espectro de neuropatia auditiva retrococlear</strong>. Risco muito mais alto que IRDA-1.</p>
+            <ul>
+              <li><strong>&gt;5 dias em UTI neonatal</strong></li>
+              <li><strong>Peso ao nascer &lt;1500g</strong></li>
+              <li><strong>Hiperbilirrubinemia com necessidade de exsanguinotransfusão</strong> ⚠️</li>
+              <li><strong>ECMO</strong></li>
+              <li><strong>Ventilação mecânica &gt;5 dias</strong></li>
+              <li><strong>Anóxia grave</strong> (Apgar muito baixo)</li>
+              <li><strong>Encefalopatia hipóxico-isquêmica (EHI)</strong></li>
+              <li><strong>Hemorragia peri-intraventricular (HPIV)</strong></li>
+              <li><strong>Distúrbio neurodegenerativo</strong></li>
+            </ul>
+            <p><strong>Conduta IRDA-2</strong> (atualização recente importante): <strong>BERA + EOA SIMULTANEAMENTE</strong>. Mesmo passando nas duas, vai pra acompanhamento especializado no <strong>CER</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova crítica — Fototerapia ≠ Exsanguinotransfusão</div>
+          <div class="trap__body">Hiperbilirrubinemia como IRDA-2 exige <strong>EXSANGUINOTRANSFUSÃO</strong>. Fototerapia NÃO indica BERA. Uma criança que precisou só de fototerapia (mesmo prolongada) não é IRDA-2 por causa da bilirrubina. Tratamentos diferentes, risco auditivo completamente diferente.</div>
+        </div>
+      </aside>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico</div>
+        <div class="mnemonic__body">Foto <strong>NÃO</strong>, Exsanguíneo <strong>SIM</strong> (pra disparar BERA).</div>
+      </aside>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro — atualização</div>
+        <div class="gold-rule__body">IRDA-2 = <strong>as duas avaliações (BERA + EOA)</strong>. Atualização recente — antes era só BERA. Pega gente que decorou material antigo.</div>
+      </aside>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro — seguimento</div>
+        <div class="gold-rule__body">IRDA-2 que <strong>passa</strong> ainda vai pro CER. O risco em si já é indicação de seguimento longitudinal. Não é só fluxograma de "passou-acabou".</div>
+      </aside>
+
+      <h2>Por que IRDA-2 segue mesmo passando?</h2>
+      <p>Porque o <strong>risco residual</strong> de desenvolver surdez neurossensorial nos primeiros meses-anos é alto demais pra simplesmente dispensar a criança. EOA + BERA capturam o que existe no momento da triagem, mas alterações podem aparecer ao longo do desenvolvimento. O acompanhamento especializado captura essa janela.</p>
+
+      <h2>Atualizações cobráveis em prova</h2>
+      <ol>
+        <li><strong>Antes</strong>: qualquer fator de risco = BERA. <strong>Agora</strong>: só IRDA-2 = BERA.</li>
+        <li><strong>Antes</strong>: IRDA-2 = só BERA. <strong>Agora</strong>: IRDA-2 = BERA + EOA simultâneos.</li>
+        <li><strong>Antes</strong>: prazo de reteste não padronizado. <strong>Agora</strong> (Guia TAN MS nov/2025): reteste em 15 dias quando há falha.</li>
+      </ol>
+
+      <h2>Cross-links com módulos anteriores</h2>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 · CMV → IRDA-1</div>
+          <a href="../m2-torch/index.html#/p1-m2-p3">CMV é a principal causa não-genética de surdez neurossensorial congênita. Criança com CMV congênita entra como IRDA-1. (#/p1-m2-p3)</a>
+        </div>
+      </aside>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 · Comparativa surdez → IRDA-1</div>
+          <a href="../m2-torch/index.html#/p1-m2-p7">Quadro comparativo de surdez nas infecções TORCHS+Z. (#/p1-m2-p7)</a>
+        </div>
+      </aside>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M3 · EHI/Reanimação grave → IRDA-2</div>
+          <a href="../m3-reanimacao/index.html#/p1-m3-p9">Criança que evoluiu com EHI ou anóxia grave após reanimação entra como IRDA-2. (#/p1-m3-p9 — situações especiais)</a>
+        </div>
+      </aside>
+
+      <h2>Box lateral — Quem é IRDA-2 ao mesmo tempo?</h2>
+      <p>Os critérios IRDA-2 frequentemente <strong>se sobrepõem</strong>. Quem precisou de ECMO ou VM &gt;5 dias certamente também ficou &gt;5 dias em UTI neonatal. Quem teve EHI grave geralmente teve Apgar baixo + acidose + necessidade de VPP/IOT na sala de parto. Uma criança pode marcar 3-4 critérios simultaneamente. Isso <strong>NÃO</strong> muda a conduta — basta 1 critério pra disparar IRDA-2.</p>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Fototerapia" ≠ "Exsanguinotransfusão" → tratamentos diferentes da hiperbilirrubinemia; só exsanguíneo dispara BERA</li>
+          <li>"IRDA-1" ≠ "IRDA-2" → IRDA-1 faz EOA; IRDA-2 faz BERA + EOA</li>
+          <li>"IRDA-2 passou" ≠ "IRDA-2 alta sem seguimento" → vai pro CER mesmo passando</li>
+          <li>"Qualquer fator de risco = BERA" (orientação antiga) ≠ "só IRDA-2 = BERA" (atual)</li>
+          <li>"&gt;5 dias em UTI" ≠ "5 dias em UTI" → o corte é <strong>mais</strong> de 5 (≥6)</li>
+          <li>"Anóxia leve" ≠ "anóxia grave" — só anóxia grave (Apgar muito baixo) é IRDA-2</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">Identificar IRDA-2 corretamente direciona BERA + EOA simultâneos desde a triagem inicial — janela única de captura da neuropatia auditiva precocemente. Confundir com fototerapia simples manda a criança pra fluxo errado, perde a captura, e o diagnóstico de surdez neurossensorial atrasa anos.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p8" aria-labelledby="quiz-p8-title">
+        <h2 class="quiz__title" id="quiz-p8-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN com 39 semanas, 3200g, evoluiu com hiperbilirrubinemia que necessitou fototerapia por 48 horas, com queda dos níveis. Qual a conduta de triagem auditiva?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — BERA + EOA simultâneos — IRDA-2</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — EOA isolada — sem fator de risco ou IRDA-1</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Apenas observação clínica, sem triagem auditiva</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — BERA isolada — IRDA-1</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Hiperbilirrubinemia tratada com fototerapia NÃO é critério IRDA-2 (somente hiperbilirrubinemia com EXSANGUINOTRANSFUSÃO entra).</p>
+              <p class="quiz__distractor">A é a armadilha clássica — você vê "hiperbilirrubinemia" e pula pra IRDA-2. C ignora a obrigatoriedade da triagem. D inverte — BERA não é indicado em IRDA-1.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Conduta correta em criança classificada como IRDA-2 que passou em ambos os exames (BERA e EOA) na triagem inicial:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Alta com acompanhamento na atenção primária</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Repetir BERA em 6 meses</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Encaminhamento ao serviço especializado (CER) para acompanhamento longitudinal</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Dispensar do programa de triagem auditiva</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> IRDA-2 vai pro CER mesmo passando — o risco residual de surdez neurossensorial nos primeiros meses justifica seguimento especializado.</p>
+              <p class="quiz__distractor">A subestima o risco. B inventa cronograma. D dispensa indevidamente.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A atualização recente do MS na triagem auditiva mudou a conduta de IRDA-2 — antes era só BERA, agora é BERA + EOA simultaneamente.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: VERDADEIRO.</strong> As duas avaliações em conjunto desde o início aumentam a sensibilidade do rastreio.</p>
+              <p class="quiz__distractor">Mudança consolidada no Guia TAN MS — questões antigas podem trazer só BERA pra IRDA-2.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> a 5ª triagem — única com controvérsia institucional ativa entre MS e SBP. Voz crítica preservada literal.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p7">‹ Anterior</a>
+        <span class="page-nav__indicator">8 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p9">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.9 — Estratégia: E8 (Erro comum desmontado)               -->
+    <!-- Itens roteiro: [200]-[215] · .bauer-revisable laudo dual          -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="9" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.9 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E8 · Erro desmontado</span>
+        <span class="page-meta__tag">Itens 200-215</span>
+      </div>
+      <h1 class="page-title">Linguinha — Bristol, anquiloglossia COM repercussão e a controvérsia SBP × MS preservada</h1>
+
+      <section class="opener opener--bust">
+        <span class="opener__wrong">Anquiloglossia grave sempre indica frenectomia.</span>
+        <span class="opener__right">Não indica. O critério não é o protocolo de Bristol isolado. O critério é <strong>repercussão clínica</strong>. Operar criança que mama bem é erro. E aqui é onde duas sociedades médicas brasileiras discordam frontalmente — e essa discordância vale entender.</span>
+      </section>
+
+      <p>O nome técnico correto é <strong>"Protocolo de Avaliação do Frênulo Lingual"</strong> — apelido pediátrico: <strong>teste da linguinha</strong>.</p>
+
+      <aside class="law-citation">
+        <div>
+          <strong>Lei nº 13.002/2014</strong> (sancionada em 20/junho/2014) tornou a avaliação do frênulo lingual obrigatória em todos os hospitais e maternidades. O MS incorporou e padronizou via <strong>Nota Técnica nº 52/2023</strong>, indicando o <strong>Protocolo de Bristol (BTAT — Bristol Tongue Assessment Tool)</strong> como ferramenta de avaliação. O protocolo é em geral aplicado pela equipe de fonoaudiologia.
+        </div>
+      </aside>
+
+      <h2>O Protocolo de Bristol (BTAT)</h2>
+      <p>Avalia parâmetros do exame físico do frênulo lingual: formato da língua, protrusão da língua, e outros parâmetros estruturais. Objetivo: identificar crianças com <strong>anquiloglossia grave</strong> — encurtamento do frênulo lingual.</p>
+
+      <p><strong>Por que importa a anquiloglossia grave?</strong></p>
+      <ul>
+        <li>Pode comprometer a <strong>amamentação</strong> (dificuldade pra mamar / ser amamentada)</li>
+        <li>Pode gerar <strong>comprometimento de linguagem</strong> no futuro</li>
+        <li>Pode comprometer <strong>ganho de peso</strong> por dificuldade alimentar</li>
+      </ul>
+
+      <p>A conduta clássica em anquiloglossia grave é a <strong>frenectomia</strong> — procedimento cirúrgico pequeno, um pique no frênulo lingual. Mas — e aqui mora a regra de ouro — <strong>NÃO basta anquiloglossia grave</strong>.</p>
+
+      <h2>A regra de ouro clínica — sobrevive à controvérsia institucional</h2>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro consensual</div>
+        <div class="gold-rule__body">NÃO basta anquiloglossia grave pra indicar frenectomia. Tem que ter <strong>repercussão clínica</strong>.</div>
+      </aside>
+
+      <p>Critérios de repercussão clínica:</p>
+      <ul>
+        <li><strong>Dificuldade de mamar</strong> (suga mal, solta o seio, cansa rápido)</li>
+        <li><strong>Comprometimento de ganho de peso</strong></li>
+        <li><strong>Comprometimento de linguagem</strong> (avaliável tardiamente, ao longo do desenvolvimento)</li>
+      </ul>
+
+      <p><strong>Anquiloglossia SEM repercussão</strong> — criança mamando bem, ganhando peso adequado, sem sinais de dificuldade funcional — a princípio <strong>NÃO se indica nenhuma abordagem cirúrgica</strong>. Mesmo que o frênulo esteja anatomicamente curto, mesmo que o Bristol classifique como anquiloglossia grave.</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">Anquiloglossia + boa amamentação + bom ganho de peso → <strong>NÃO opera</strong>. Não é o protocolo de Bristol isolado que decide cirurgia.</div>
+        </div>
+      </aside>
+
+      <h2>A controvérsia SBP × MS — laudo dual preservado</h2>
+      <p>Aqui mora o ponto institucional explicitamente sinalizado. Quando o MS incorporou a obrigatoriedade da triagem, a <strong>Sociedade Brasileira de Pediatria (SBP)</strong> discordou explicitamente — argumentou que não fazia sentido incorporar dessa forma. A controvérsia continua ativa e tem implicação prática direta na forma como o tema é apresentado em material didático.</p>
+
+      <div class="bauer-revisable" data-expanded="true">
+        <div class="bauer-revisable__header">
+          <span class="bauer-revisable__label">Laudo dual · controvérsia institucional</span>
+          <button class="bauer-revisable__toggle" type="button" aria-expanded="true">Vozes</button>
+        </div>
+        <div class="bauer-revisable__voices">
+          <div class="voice voice--ms">
+            <div class="voice__name">Voz MS — Lei 13.002/2014 + NT 52/2023</div>
+            <ul>
+              <li>Avaliação obrigatória do frênulo em todos os RNs.</li>
+              <li>Aplicar o Protocolo de Bristol (BTAT) por profissional qualificado (em geral fonoaudiologia).</li>
+              <li>Score Bristol orienta classificação de risco anatômico.</li>
+            </ul>
+          </div>
+          <div class="voice voice--sbp">
+            <div class="voice__name">Voz SBP — manifestação institucional</div>
+            <ul>
+              <li>Pede <strong>revogação da Lei 13.002/2014</strong> (sem consulta prévia à entidade na criação da lei).</li>
+              <li>O exame da cavidade oral já faz parte do <strong>exame físico pediátrico de rotina</strong>.</li>
+              <li>Casos clinicamente significativos são <strong>facilmente diagnosticáveis</strong> no exame pediátrico padrão.</li>
+              <li>O tamanho do frênulo é altamente variável; protocolo formalizado pode levar a <strong>sobreintervenção</strong> (cirurgia em crianças que não precisariam).</li>
+              <li>Ausência de consenso técnico sobre critérios de avaliação e classificação anatômica.</li>
+            </ul>
+          </div>
+          <div class="voice voice--consensus">
+            <div class="voice__name">Posição prática consensual — sobrevive à controvérsia</div>
+            <ul>
+              <li>Frenectomia <strong>SÓ</strong> se anquiloglossia com <strong>REPERCUSSÃO CLÍNICA</strong>.</li>
+              <li>Anquiloglossia sem repercussão = <strong>NÃO operar</strong> (mesmo com Bristol baixo).</li>
+              <li>Repercussão = dificuldade de mamar / ganho de peso / linguagem comprometida.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2>Por que essa controvérsia vale entender</h2>
+      <p>Porque ela molda como o tema cai em prova. Provas mais recentes tendem a cobrar o <strong>critério clínico</strong> (repercussão), não o <strong>escore numérico do Bristol</strong>. Quem decora "Bristol 0-3 = opera" sem entender a controvérsia clínica cai em pegadinha. A pergunta usual é "anquiloglossia grave em RN mamando bem — opera?" e a resposta correta é <strong>não</strong>.</p>
+
+      <aside class="finding">
+        <div class="finding__label">Achado típico — decisão clínica</div>
+        <div class="finding__body">
+          <ul>
+            <li><strong>Anquiloglossia grave + dificuldade de mamar + ganho de peso comprometido</strong> → frenectomia indicada</li>
+            <li><strong>Anquiloglossia grave + mama bem + ganho de peso adequado</strong> → NÃO opera</li>
+            <li><strong>Frênulo limítrofe + qualquer perfil clínico</strong> → observação + acompanhamento</li>
+          </ul>
+        </div>
+      </aside>
+
+      <figure class="figure-clinical" data-img-id="B25">
+        <img src="./assets/img/BNN-b25-linguinha-frenulo.jpg" alt="Avaliação do frênulo lingual em RN — protocolo de Bristol (BTAT). Visualização da face inferior da língua e da inserção do frênulo lingual.">
+        <span class="figcaption">
+          <strong>B25 · Avaliação do frênulo lingual.</strong> Visualização da face inferior da língua durante o protocolo de Bristol. A decisão cirúrgica não depende do escore isolado — depende de repercussão clínica (mamada, ganho de peso, linguagem).
+          <span class="attribution">Wikimedia Commons · uso educacional.</span>
+        </span>
+      </figure>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Anquiloglossia grave" ≠ "indicação de frenectomia" → tem que haver repercussão</li>
+          <li>"Protocolo de Bristol baixo" ≠ "cirurgia obrigatória" → critério é clínico</li>
+          <li>"Triagem obrigatória" (Lei 13.002) ≠ "intervenção obrigatória" → triagem identifica; intervenção depende de repercussão</li>
+          <li>"SBP × MS discordam" ≠ "não há posição clínica clara" → a posição prática (repercussão) sobrevive aos dois lados</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">O RN com anquiloglossia grave que mama bem não precisa de cirurgia. Operar nesse cenário é sobreintervenção — risco de complicações cirúrgicas sem benefício comprovado. A controvérsia institucional reforça exatamente a importância de não decorar protocolo sem critério clínico.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p9" aria-labelledby="quiz-p9-title">
+        <h2 class="quiz__title" id="quiz-p9-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN com anquiloglossia classificada como grave pelo Protocolo de Bristol, mama vigorosamente ao seio materno com boa pega, está com ganho de peso adequado. Conduta correta:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Frenectomia eletiva imediata pra prevenir comprometimento futuro de linguagem</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Frenectomia ambulatorial em até 7 dias</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Observação clínica — sem intervenção cirúrgica enquanto não houver repercussão</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Encaminhamento direto pra cirurgia bucomaxilofacial</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Anquiloglossia sem repercussão clínica NÃO opera.</p>
+              <p class="quiz__distractor">A e B caem na armadilha de decorar Bristol e operar protocolarmente. D escala intervenção sem indicação.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Sobre a controvérsia entre Ministério da Saúde e Sociedade Brasileira de Pediatria no Teste da Linguinha:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — MS pede revogação da Lei 13.002/2014; SBP defende manutenção</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — SBP pede revogação da Lei 13.002/2014, argumentando que a avaliação já faz parte do exame físico pediátrico de rotina</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Há consenso entre as duas instituições sobre a aplicação do Protocolo de Bristol</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — O MS não recomenda a triagem; a SBP sim</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Posição institucional da SBP é por revogação.</p>
+              <p class="quiz__distractor">A inverte. C nega a controvérsia existente. D inverte.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A indicação de frenectomia depende exclusivamente do escore obtido no Protocolo de Bristol.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> A indicação consensual depende de repercussão clínica.</p>
+              <p class="quiz__distractor">Bristol orienta avaliação anatômica, mas não substitui o critério clínico.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> a 6ª triagem — a mais recente, normatizada por Lei federal de 8 de janeiro de 2025: o teste do dedinho. FOP, hálux deformado, e a proibição absoluta de via intramuscular.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p8">‹ Anterior</a>
+        <span class="page-nav__indicator">9 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p10">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.10 — Estratégia: E2 (Dado impactante)                    -->
+    <!-- Itens roteiro: [216]-[242] · Lei 15.094/2025                       -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="10" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.10 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E2 · Dado impactante</span>
+        <span class="page-meta__tag">Itens 216-242</span>
+      </div>
+      <h1 class="page-title">Dedinho — hálux deformado, Lei 15.094/2025 e a proibição absoluta de via intramuscular</h1>
+
+      <figure class="opener opener--stat">
+        <div class="opener__num">~40</div>
+        <div class="opener__ctx"><strong>anos de vida média.</strong> Causa principal de óbito: doença respiratória restritiva por ossificação da caixa torácica. Sem tratamento específico. Sem cura. Cada injeção intramuscular pode acelerar a doença. Tudo isso captura <strong>olhando o hálux</strong> do RN em sala de parto. É essa a 6ª triagem.</div>
+      </figure>
+
+      <p>Mais recentemente, o Ministério da Saúde tornou obrigatório um <strong>6º exame de triagem</strong> no período neonatal. Já fazia parte do exame físico de rotina, mas a normatização legal garante adesão universal — em todos os serviços, pra todos os recém-nascidos. A doença alvo é <strong>Fibrodisplasia Ossificante Progressiva (FOP)</strong> — também conhecida como Miosite Ossificante Progressiva. O jargão pediátrico de uso comum é <strong>FOP</strong>.</p>
+
+      <h2>O que é FOP</h2>
+      <p><strong>Característica clínica fundamental</strong>: ossificação disseminada de tecidos que não deveriam se ossificar. Tecido mole — músculo, ligamento, tendão, fáscia — é progressivamente substituído por tecido ósseo ao longo da vida.</p>
+
+      <p><strong>Consequência clínica progressiva</strong>:</p>
+      <ul>
+        <li>Perda progressiva de mobilidade articular (movimentos limitados por "ossificação extra-esquelética")</li>
+        <li>Restrição da caixa torácica (ossificação progressiva da musculatura torácica e intercostal limita expansão pulmonar)</li>
+        <li>Doença respiratória restritiva crônica</li>
+        <li>Pneumonia recorrente</li>
+      </ul>
+
+      <p><strong>Vida média</strong>: ~40 anos segundo a normativa MS (faixa real na literatura internacional: 40-46 anos, com mediana ~40-41; alguns pacientes alcançam a 6ª década com cuidado multidisciplinar otimizado).</p>
+      <p><strong>Causa principal de óbito</strong>: doença respiratória restritiva por restrição da caixa torácica + pneumonia.</p>
+
+      <h2>Genética</h2>
+      <ul>
+        <li><strong>Herança autossômica DOMINANTE com penetrância completa</strong>.</li>
+        <li>Gene afetado: <strong>ACVR1</strong> (locus 2q24.1), também chamado ALK2.</li>
+        <li>Mutação mais comum: <strong>c.617G&gt;A; p.Arg206His (R206H)</strong> — presente em <strong>~95% dos pacientes</strong> com FOP.</li>
+        <li>Mecanismo: a mutação causa <strong>ganho de função</strong> do receptor — confere responsividade anômala à activina A (ligante normalmente antagonista da via BMP), levando à ossificação heterotópica de tecidos moles.</li>
+        <li><strong>Maioria dos casos é mutação <em>de novo</em></strong> (não herdada) — pais sem doença, criança com fenótipo completo. Casos familiares são raros.</li>
+      </ul>
+
+      <aside class="law-citation">
+        <div>
+          <strong>Lei nº 15.094, de 8 de janeiro de 2025</strong> <span class="badge-update badge-update--law">Marco regulatório</span> — lei federal sancionada, publicada no DOU em 9/janeiro/2025. Torna obrigatório o exame clínico para identificar malformações dos dedos grandes dos pés (hálux) em todos os recém-nascidos em redes pública e privada com cobertura SUS. <strong>Esta é a base regulatória do teste do dedinho.</strong>
+        </div>
+      </aside>
+
+      <h2>Sem tratamento específico</h2>
+      <p>FOP não tem tratamento específico disponível atualmente. A conduta clínica é <strong>reduzir ao máximo o processo de substituição de tecido mole por tecido ósseo</strong> — ou seja, <strong>evitar os gatilhos</strong> que aceleram a doença.</p>
+
+      <h2>Flare-up — os episódios de progressão</h2>
+      <p>Crises de progressão da FOP são chamadas de <strong>flare-up</strong>. Cada flare-up é um episódio em que parte do tecido muscular ou ligamentar é substituída por tecido ósseo — perda funcional permanente.</p>
+
+      <p><strong>Gatilhos de flare-up</strong>:</p>
+      <ul>
+        <li><strong>Espontâneo</strong> (ocorre ao longo da vida sem motivo identificável)</li>
+        <li><strong>Trauma local</strong> — pancada, queda, lesão muscular</li>
+        <li><strong>Injeção intramuscular</strong> — qualquer injeção IM pode deflagrar flare-up</li>
+      </ul>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro crítica</div>
+        <div class="gold-rule__body">FOP = <strong>evitar trauma + evitar injeção intramuscular</strong>. Os dois grandes gatilhos cobráveis.</div>
+      </aside>
+
+      <h2>Implicações práticas — a vacina é o tema mais importante</h2>
+      <p>Criança com FOP <strong>NÃO recebe vacinas por via intramuscular</strong>. Criança com FOP <strong>NÃO recebe medicações por via intramuscular</strong>. Vacinas tradicionalmente IM precisam ser adaptadas — algumas podem ser feitas por <strong>via subcutânea</strong> alternativa, outras não.</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">FOP = <strong>sem injeção intramuscular</strong>, ponto. Vacinas e medicações precisam de via alternativa.</div>
+        </div>
+      </aside>
+
+      <aside class="law-citation">
+        <div>
+          <strong>Nota Técnica nº 43/2025 MS</strong> (publicada em 3/abril/2025, elaborada com participação da SBP) orienta especificamente a vacinação de pessoas com FOP. A criança é encaminhada à <strong>RIE — Rede de Imunobiológicos Especiais</strong> — serviço especializado pra avaliação e adaptação do calendário vacinal, monitorização especializada de cada imunização, identificação precoce pra adaptação estratégica, e treinamento de equipe pra estratégias seguras de administração.
+        </div>
+      </aside>
+
+      <p>Não é "improvisar via SC no consultório". É encaminhar à RIE pra estratégia estruturada e segura. Sutil mas importante: a via alternativa também precisa de planejamento.</p>
+
+      <h2>A avaliação prática — o teste do dedinho</h2>
+      <p>A avaliação prática é realizada na sala de parto como <strong>exame do hálux</strong> do recém-nascido. <strong>Percentual grande das crianças com FOP</strong> (~95% — sinal cardinal) <strong>já apresenta deformidade do hálux ao nascimento</strong>, <strong>bilateralmente</strong>:</p>
+      <ul>
+        <li>Hálux curto</li>
+        <li>Hálux em valgo</li>
+        <li>Falange única ou fusionada</li>
+      </ul>
+
+      <p>Aproximadamente <strong>50% das crianças com FOP</strong> também apresentam <strong>polegares malformados</strong> (deformidade nas mãos), mas a deformidade do hálux é a <strong>mais comum</strong> e o achado de <strong>rastreamento</strong>.</p>
+
+      <figure class="figure-clinical" data-img-id="B26">
+        <img src="./assets/img/BNN-b26-fop-halux-bilateral.jpg" alt="Hálux bilateralmente malformados em criança com FOP — hálux curto, em valgo, com falange única ou fusionada. Sinal clínico cardinal de Fibrodisplasia Ossificante Progressiva presente em aproximadamente 95% dos casos no momento do nascimento.">
+        <span class="figcaption">
+          <strong>B26 · Hálux FOP bilateral.</strong> Deformidade típica — hálux curto, em valgo, falange única ou fusionada. Presente em ~95% dos pacientes ao nascimento, sinal cardinal de rastreamento.
+          <span class="attribution">Imagem clínica · uso educacional.</span>
+        </span>
+      </figure>
+
+      <figure class="figure-clinical" data-img-id="B27">
+        <img src="./assets/img/BNN-b27-fop-ossificacao-dorso.jpg" alt="Pessoa com FOP avançada — ossificação heterotópica do dorso e regiões paravertebrais com perda progressiva de mobilidade torácica. Reflete a evolução natural da doença: tecido mole substituído por tecido ósseo progressivamente.">
+        <span class="figcaption">
+          <strong>B27 · FOP — ossificação heterotópica avançada.</strong> Evolução progressiva — tecido muscular e ligamentar substituído por tecido ósseo. A restrição da caixa torácica é a principal causa de óbito. Por isso a triagem do hálux ao nascimento é decisiva — janela única pra evitar IM gatilho.
+          <span class="attribution">Imagem clínica · uso educacional.</span>
+        </span>
+      </figure>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico fixado</div>
+        <div class="mnemonic__body">Teste do dedinho = <strong>olhar o hálux de todos os recém-nascidos na sala de parto</strong>.</div>
+      </aside>
+
+      <h2>Conduta diante de hálux alterado</h2>
+      <ul>
+        <li><strong>Encaminhar pra avaliação genética</strong></li>
+        <li>Diagnóstico molecular: <strong>sequenciamento do gene ACVR1</strong> (mutação R206H confirma)</li>
+        <li>Centro de Referência em Doenças Raras coordena seguimento</li>
+        <li>Calendário vacinal <strong>redesenhado</strong> via RIE — sem IM</li>
+        <li>Educação familiar sobre proteção contra trauma e gatilhos</li>
+      </ul>
+
+      <h2>Por que esta triagem é nova</h2>
+      <p>Tema ainda <strong>não cai em prova de residência</strong> ativamente — você ainda não vai encontrar a questão sobre isso. Mas é apostável que comece a aparecer em breve, porque:</p>
+      <ul>
+        <li>A Lei 15.094/2025 é recente (jan/2025) e cria pressão regulatória pra incorporação curricular</li>
+        <li>Doença rara é alvo recorrente da banca em provas de pediatria/genética</li>
+        <li>A pegadinha "sem IM" é muito limpa pra cobrar</li>
+      </ul>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Hálux deformado isolado" ≠ "diagnóstico de FOP" → é sinal de rastreamento; diagnóstico exige sequenciamento ACVR1</li>
+          <li>"FOP" ≠ "doença com tratamento específico" → não tem cura; conduta é evitar gatilhos</li>
+          <li>"FOP herança autossômica" ≠ "necessariamente família afetada" → maioria é <em>de novo</em></li>
+          <li>"Sem IM" ≠ "sem vacina nenhuma" → vacina via SC quando possível, via RIE com estratégia adaptada</li>
+          <li>"Vida média 40 anos" ≠ "diagnóstico aos 40" → óbito mediano ~40-46; diagnóstico precoce permite cuidado multidisciplinar</li>
+          <li>"Hálux FOP" ≠ "hálux valgo do adulto" — quadro do RN bilateralmente, com falange única/fusionada</li>
+          <li>"Fototerapia" como gatilho de FOP — não é gatilho; FOP não tem relação com fototerapia (não confundir com IRDA-2)</li>
+        </ul>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">A triagem do dedinho permite identificar o RN com FOP antes da primeira vacina IM. Aplicar IM em criança com FOP não identificada pode deflagrar flare-up logo nas primeiras semanas de vida — perda funcional permanente antes mesmo da consulta inicial de puericultura.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p10" aria-labelledby="quiz-p10-title">
+        <h2 class="quiz__title" id="quiz-p10-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Sobre a Fibrodisplasia Ossificante Progressiva (FOP), assinale a alternativa correta:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Doença autossômica recessiva com tratamento específico via difosfonatos</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Doença autossômica dominante de penetrância completa, sem tratamento específico; via intramuscular é gatilho de flare-up</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Doença ligada ao X com herança materna</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Distúrbio adquirido por trauma na vida adulta</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> AD penetrância completa, mutação ACVR1 R206H em ~95% dos casos, sem cura.</p>
+              <p class="quiz__distractor">A inverte (não é recessiva e não há tratamento específico). C inventa herança. D inverte (é congênita, não adquirida).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Conduta vacinal correta em criança com diagnóstico confirmado de FOP:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Via intramuscular padrão, com cuidados de assepsia reforçados</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Suspensão completa de todas as vacinas</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Encaminhamento à RIE (Rede de Imunobiológicos Especiais) para adaptação do calendário com via alternativa (geralmente subcutânea quando possível)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Aguardar maioridade pra iniciar imunizações</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> NT 43/2025 MS orienta encaminhamento estruturado à RIE.</p>
+              <p class="quiz__distractor">A é a pegadinha que mata — IM é gatilho de flare-up. B priva a criança de imunização necessária. D abandona a proteção imunológica.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">O achado clínico que disparou a inclusão do exame do hálux na triagem neonatal é a deformidade do hálux bilateral, presente em aproximadamente 95% dos casos de FOP no momento do nascimento.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: VERDADEIRO.</strong> O hálux malformado bilateralmente é o sinal cardinal de FOP no RN.</p>
+              <p class="quiz__distractor">~50% também têm polegares malformados, mas o hálux é o achado dominante e o foco do rastreamento.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> a síntese das 6 triagens em quadro comparativo único — apelido, quando fazer, o que detecta, conduta se alterado. O quadro que você revisita pra sempre.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p9">‹ Anterior</a>
+        <span class="page-nav__indicator">10 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p11">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.11 — Estratégia: E5 (Meta + checklist)                   -->
+    <!-- Itens roteiro: [243] + síntese                                    -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="11" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.11 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E5 · Meta + checklist</span>
+        <span class="page-meta__tag">Item 243 + síntese</span>
+      </div>
+      <h1 class="page-title">Síntese das 6 triagens: o quadro que você revisita pra sempre</h1>
+
+      <section class="opener opener--checklist">
+        <div class="opener__intro">Você vai sair desta página com:</div>
+        <ol>
+          <li>As 6 triagens lado a lado — apelido, quando, como, o que detecta, conduta</li>
+          <li>As pegadinhas estruturais consolidadas em 1 só vista</li>
+          <li>A ponte cognitiva pro próximo conteúdo (Apgar score — tema pendente)</li>
+        </ol>
+      </section>
+
+      <p>As 6 triagens compartilham a mesma <strong>lógica de rastreamento</strong> — diagnosticar antes do sintoma, mudar a história natural — mas têm técnicas, janelas, achados e condutas <strong>totalmente diferentes</strong>. A consolidação abaixo é a tabela canônica pra revisão final do módulo.</p>
+
+      <h2>V27 — Tabela síntese das 6 triagens</h2>
+
+      <div class="synth-table" role="region" aria-label="V27 — Síntese das 6 triagens neonatais">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Apelido</th>
+              <th scope="col">Triagem técnica</th>
+              <th scope="col">Quando fazer</th>
+              <th scope="col">Como (técnica)</th>
+              <th scope="col">O que detecta</th>
+              <th scope="col">Conduta se alterado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pezinho</td>
+              <td>Triagem metabólica</td>
+              <td>3 a 5 dias (até 28 dias se exceção)</td>
+              <td>Punção lateral/medial do calcanhar → papel filtro</td>
+              <td>7 doenças Etapa 1 (Lei 14.154/2021)</td>
+              <td>Confirmação por exame específico (exceto hemoglobinopatia — já diagnóstica)</td>
+            </tr>
+            <tr>
+              <td>Coraçãozinho</td>
+              <td>Oximetria de pulso</td>
+              <td>24 a 48h, IG ≥35 sem</td>
+              <td>Saturação MSD + qualquer MI</td>
+              <td>Cardiopatia congênita crítica (canal-dependente)</td>
+              <td>Positivo → eco + cardiologia; duvidoso → repete até 2× em 1h</td>
+            </tr>
+            <tr>
+              <td>Olhinho</td>
+              <td>Reflexo vermelho</td>
+              <td>Primeiras 72h + 3×/ano por 3 anos</td>
+              <td>Oftalmoscópio percorrendo eixo visual bilateral simultâneo</td>
+              <td>Catarata congênita, retinoblastoma, glaucoma congênito</td>
+              <td>Encaminhar pro oftalmologista (não diagnostica)</td>
+            </tr>
+            <tr>
+              <td>Orelhinha</td>
+              <td>Triagem auditiva</td>
+              <td>Antes da alta (idealmente &lt;30 dias)</td>
+              <td>EOA universal; BERA + EOA simultâneos em IRDA-2</td>
+              <td>Surdez condutiva, coclear e (com BERA) neurossensorial</td>
+              <td>Falha → reteste em 15 dias; IRDA-2 vai pro CER mesmo passando</td>
+            </tr>
+            <tr>
+              <td>Linguinha</td>
+              <td>Avaliação do frênulo lingual</td>
+              <td>Antes da alta hospitalar</td>
+              <td>Protocolo de Bristol (BTAT)</td>
+              <td>Anquiloglossia</td>
+              <td>Frenectomia SÓ se repercussão clínica (mamada / ganho de peso / linguagem)</td>
+            </tr>
+            <tr>
+              <td>Dedinho</td>
+              <td>Exame do hálux</td>
+              <td>Sala de parto</td>
+              <td>Inspeção bilateral do hálux</td>
+              <td>Sinal cardinal de FOP (~95% bilateral)</td>
+              <td>Encaminhamento genético; calendário vacinal sem IM (via RIE)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Pegadinhas consolidadas</h2>
+
+      <div class="summary-cards">
+        <div class="summary-card">
+          <h3 class="summary-card__title">Pezinho</h3>
+          <span class="summary-card__when">6 pegadinhas</span>
+          <div class="summary-card__body">
+            <ul>
+              <li>Punção lateral/medial, NUNCA no meio</li>
+              <li>&lt;48h = FP TSH + FN PKU</li>
+              <li>Hemoglobinopatia dispensa confirmação (única)</li>
+              <li>F = fetal, não falciforme</li>
+              <li>3º dia ≠ pós-72h (começa em 48h)</li>
+              <li>3-5 dias (não 3-7, janela antiga)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-card">
+          <h3 class="summary-card__title">Coraçãozinho</h3>
+          <span class="summary-card__when">5 pegadinhas</span>
+          <div class="summary-card__body">
+            <ul>
+              <li>Negativo usa E; duvidoso usa OU — inversão clássica</li>
+              <li>Repetir até 2× (2022; era 1×)</li>
+              <li>≥35 sem (2022; era ≥34)</li>
+              <li>MSD pré-ductal sempre</li>
+              <li>24-48h, não &lt;24h, não pós-48h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-card">
+          <h3 class="summary-card__title">Olhinho</h3>
+          <span class="summary-card__when">5 pegadinhas</span>
+          <div class="summary-card__body">
+            <ul>
+              <li>Oftalmoscópio, nunca lanterna</li>
+              <li>Exame bilateral simultâneo</li>
+              <li>Bilateral E simétrico (as duas condições)</li>
+              <li>Pediatra não diagnostica — encaminha</li>
+              <li>3×/ano por 3 anos pra retinoblastoma</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-card">
+          <h3 class="summary-card__title">Orelhinha</h3>
+          <span class="summary-card__when">5 pegadinhas</span>
+          <div class="summary-card__body">
+            <ul>
+              <li>EOA cóclea; BERA nervo</li>
+              <li>Fototerapia NÃO; exsanguíneo SIM (pegadinha cobrada literal)</li>
+              <li>IRDA-2 = BERA + EOA simultâneos (atualização)</li>
+              <li>IRDA-2 vai pro CER mesmo passando</li>
+              <li>&gt;5 dias UTI, não 5 dias</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-card">
+          <h3 class="summary-card__title">Linguinha</h3>
+          <span class="summary-card__when">3 pegadinhas</span>
+          <div class="summary-card__body">
+            <ul>
+              <li>Anquiloglossia sem repercussão = NÃO opera</li>
+              <li>Critério clínico (mamada, ganho de peso, linguagem), não Bristol isolado</li>
+              <li>Controvérsia SBP × MS — posição prática é repercussão</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-card">
+          <h3 class="summary-card__title">Dedinho</h3>
+          <span class="summary-card__when">4 pegadinhas</span>
+          <div class="summary-card__body">
+            <ul>
+              <li>Sem IM — vacinas via RIE</li>
+              <li>Hálux bilateral deformado em ~95% dos FOP</li>
+              <li>Ainda não cai em prova ativamente; vai cair em breve</li>
+              <li>Base regulatória: Lei 15.094/2025 + NT 43/2025 MS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h2>Gap declarado — Apgar score</h2>
+
+      <aside class="gap-notice">
+        <div class="gap-notice__label">Tema pendente · futuro</div>
+        Apgar score <strong>não foi objeto destas 12 páginas</strong>. É tema pendente. Apgar é parte da avaliação imediata do RN (1º e 5º minuto pós-parto) mas tem lógica distinta da triagem — não rastreia doença oculta, classifica a vitalidade imediata. Aparecerá em momento próprio, conectando-se com reanimação (M3) e com a definição de "anóxia grave" que é critério IRDA-2 (4.8).
+      </aside>
+
+      <aside class="gap-notice">
+        <div class="gap-notice__label">Outros temas pendentes</div>
+        Apgar score, distúrbios respiratórios do RN (SDR, TTRN, SAM), icterícia neonatal, hipoglicemia neonatal, HIV vertical e hepatites, sepse neonatal, hipotermia terapêutica pós-EHI — todos são temas pendentes que se encaixam na arquitetura da Parte 1.
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">Rastreamento sistemático no período neonatal modifica a história natural de doenças com janela terapêutica curta. Pular ou atrasar uma triagem fecha essa janela. A consolidação acima é o ponto de partida pro raciocínio clínico em consulta de RN — você pergunta, na ordem: pezinho colhido? Coraçãozinho feito antes da alta? Reflexo vermelho? Triagem auditiva (e classificação IRDA)? Frênulo avaliado? Hálux examinado?</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p11" aria-labelledby="quiz-p11-title">
+        <h2 class="quiz__title" id="quiz-p11-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Sobre as 6 triagens neonatais brasileiras, assinale a alternativa correta:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Todas têm a mesma janela de execução (primeiras 24 horas)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — O pezinho dispensa confirmação em todas as 7 condições rastreadas</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — O coraçãozinho usa medidas em MSD + qualquer membro inferior, com critérios distintos pra negativo (E) e duvidoso (OU)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Olhinho e linguinha são avaliados pelo oftalmologista e fonoaudiólogo, nunca pelo pediatra</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Técnica + conectores corretos.</p>
+              <p class="quiz__distractor">A é falso (cada triagem tem janela própria). B é falso (só hemoglobinopatia dispensa confirmação). D inverte — olhinho é exatamente o pediatra que faz; linguinha em geral é fonoaudiologia mas a regra clínica é pediatra-conhecedor.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Qual das pegadinhas abaixo NÃO corresponde a achado canônico da triagem neonatal brasileira?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Punção no meio do calcanhar pra pezinho é proibida pelo risco de lesão óssea</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Fototerapia indica BERA; exsanguinotransfusão indica apenas EOA</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Anquiloglossia sem repercussão clínica não é indicação cirúrgica</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Criança com FOP não recebe vacinas por via intramuscular</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> A relação correta é invertida — exsanguíneo (não fototerapia) indica BERA via IRDA-2.</p>
+              <p class="quiz__distractor">As demais (A, C, D) são pegadinhas reais e cobradas.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">O Apgar score é uma das 6 triagens neonatais brasileiras.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> As 6 triagens são pezinho, coraçãozinho, olhinho, orelhinha, linguinha e dedinho.</p>
+              <p class="quiz__distractor">Apgar é avaliação imediata da vitalidade pós-parto (1º e 5º minuto), com lógica distinta de rastreamento. Tema pendente, abordado em conteúdo próprio.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> o mapa de revisão cruzada — como cada uma das 6 triagens conversa com TORCHS (M2), reanimação (M3) e a base anatômica de M1.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p10">‹ Anterior</a>
+        <span class="page-nav__indicator">11 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m4-p12">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 4.12 — Estratégia: E5 (Meta + checklist)                   -->
+    <!-- Cross-references M1+M2+M3 ↔ M4                                    -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="12" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">4.12 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E5 · Meta + checklist</span>
+        <span class="page-meta__tag">Cross-module</span>
+      </div>
+      <h1 class="page-title">Cross-references: como a triagem conversa com TORCHS, reanimação e tudo o mais</h1>
+
+      <section class="opener opener--checklist">
+        <div class="opener__intro">Você vai sair desta página com:</div>
+        <ol>
+          <li>O mapa visual de como triagem se conecta a TORCHS (M2) — toxo no pezinho, rubéola no olhinho, CMV na orelhinha</li>
+          <li>A ponte de M4 com reanimação (M3) — EHI/anóxia grave como IRDA-2, MSD pré-ductal como conceito compartilhado</li>
+          <li>As 3 questões metacognitivas de revisão ativa pra fixar o módulo</li>
+        </ol>
+      </section>
+
+      <p>O Módulo 4 fecha a Parte 1 do conteúdo de neonatologia com o vértice <strong>protocolar/sistemático</strong> — 6 algoritmos paralelos pra rastreamento populacional. Mas nenhuma dessas triagens vive isolada. Cada uma toca conteúdo de módulos anteriores em pontos específicos, e quem entende essas conexões responde questões integradas em prova com folga.</p>
+
+      <h2>V28 — Mapa de costura cross-references</h2>
+
+      <div class="crossref-map" aria-label="V28 — 6 cross-links bidirecionais M4 ↔ M1/M2/M3">
+        <div class="crossref-row">
+          <span class="crossref-row__from">4.3 · Pezinho — toxo</span>
+          <span class="crossref-row__arrow">↔</span>
+          <a class="crossref-row__to" href="../m2-torch/index.html#/p1-m2-p2">M2 · #/p1-m2-p2</a>
+        </div>
+        <div class="crossref-row">
+          <span class="crossref-row__from">4.5 · Circulação fetal — MSD pré-ductal</span>
+          <span class="crossref-row__arrow">↔</span>
+          <a class="crossref-row__to" href="../m3-reanimacao/index.html#/p1-m3-p7">M3 · #/p1-m3-p7</a>
+        </div>
+        <div class="crossref-row">
+          <span class="crossref-row__from">4.6 · Olhinho — leucocoria/rubéola</span>
+          <span class="crossref-row__arrow">↔</span>
+          <a class="crossref-row__to" href="../m2-torch/index.html#/p1-m2-p4">M2 · #/p1-m2-p4</a>
+        </div>
+        <div class="crossref-row">
+          <span class="crossref-row__from">4.8 · Orelhinha IRDA-1 — CMV</span>
+          <span class="crossref-row__arrow">↔</span>
+          <a class="crossref-row__to" href="../m2-torch/index.html#/p1-m2-p3">M2 · #/p1-m2-p3</a>
+        </div>
+        <div class="crossref-row">
+          <span class="crossref-row__from">4.8 · Orelhinha IRDA-1 — comparativa surdez</span>
+          <span class="crossref-row__arrow">↔</span>
+          <a class="crossref-row__to" href="../m2-torch/index.html#/p1-m2-p7">M2 · #/p1-m2-p7</a>
+        </div>
+        <div class="crossref-row">
+          <span class="crossref-row__from">4.8 · Orelhinha IRDA-2 — EHI</span>
+          <span class="crossref-row__arrow">↔</span>
+          <a class="crossref-row__to" href="../m3-reanimacao/index.html#/p1-m3-p9">M3 · #/p1-m3-p9</a>
+        </div>
+      </div>
+
+      <h2>Pezinho ↔ TORCHS (M2)</h2>
+      <p><strong>Toxoplasmose congênita</strong> entrou na Etapa 1 do PNTN via <strong>Lei 14.154/2021</strong>. Isso significa que a infecção congênita por <em>Toxoplasma gondii</em>, que aparece em M2 §2.2 (sorologia materna IgG/IgM, calcificações intracranianas difusas, coriorretinite, hidrocefalia), agora é rastreada na triagem metabólica via IgM anti-toxoplasma no papel filtro.</p>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 §2.2 · Toxoplasmose</div>
+          <a href="../m2-torch/index.html#/p1-m2-p2">RN com mãe sem sorologia adequada na gestação pode ter o diagnóstico capturado pelo pezinho — janela de tratamento precoce com sulfadiazina + pirimetamina + ácido folínico se abre. (#/p1-m2-p2)</a>
+        </div>
+      </aside>
+
+      <h2>Olhinho ↔ Rubéola congênita (M2)</h2>
+      <p><strong>Catarata congênita</strong> é parte da <strong>tríade de Gregg</strong> (Síndrome da Rubéola Congênita — SRC): catarata + surdez neurossensorial + cardiopatia (especialmente PCA e estenose da artéria pulmonar). Leucocoria captada no reflexo vermelho do RN pode ser a primeira pista clínica de SRC se a sorologia materna não foi clara na gestação.</p>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 §2.4 · Rubéola</div>
+          <a href="../m2-torch/index.html#/p1-m2-p4">Reflexo vermelho alterado + cardiopatia + falha auditiva = avaliar SRC. Conexão diagnóstica entre 3 das 6 triagens (olhinho + coraçãozinho + orelhinha) numa única doença. (#/p1-m2-p4)</a>
+        </div>
+      </aside>
+
+      <h2>Orelhinha ↔ CMV congênito (M2)</h2>
+      <p><strong>CMV é a principal causa não-genética de surdez neurossensorial congênita</strong>. A criança com CMV congênita (sintomática ou assintomática) entra como <strong>IRDA-1</strong> (infecção congênita) → EOA + reteste se falhar. Algumas formas graves de CMV congênita podem cursar com outros achados que classificam como IRDA-2 (&gt;5 dias UTI, anóxia grave secundária a complicações infecciosas), mas a entrada padrão é IRDA-1.</p>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M2 §2.3 · CMV</div>
+          <a href="../m2-torch/index.html#/p1-m2-p3">Triagem auditiva em CMV não é apenas formalidade. É captura de janela terapêutica pra adaptação de linguagem antes que a surdez se manifeste clinicamente. (#/p1-m2-p3)</a>
+        </div>
+      </aside>
+
+      <h2>Orelhinha (IRDA-2) ↔ Reanimação grave (M3)</h2>
+      <p><strong>Encefalopatia hipóxico-isquêmica (EHI)</strong> e <strong>anóxia grave</strong> são critérios IRDA-2 — indicam BERA + EOA simultaneamente. A criança que evoluiu com necessidade de reanimação prolongada, MCE, epinefrina, intubação &gt;5 dias, ECMO — todos critérios de M3 vivendo no fluxograma de M4.</p>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M3 §3.9 · Situações especiais</div>
+          <a href="../m3-reanimacao/index.html#/p1-m3-p9">O RN que precisou de reanimação grave não tem alta com triagem auditiva simples. Sai com BERA + EOA + encaminhamento ao CER mesmo se passou. Conexão direta entre a sala de parto e o seguimento longitudinal. (#/p1-m3-p9)</a>
+        </div>
+      </aside>
+
+      <h2>Coraçãozinho ↔ Reanimação (M3) — conceito compartilhado MSD pré-ductal</h2>
+      <p><strong>MSD = sempre pré-ductal</strong> é o conceito que vive tanto em M3 (oxímetro no MSD durante VPP, SatO₂ alvo por minuto de vida) quanto em M4 (coraçãozinho compara MSD vs MI). A página 4.5 (circulação fetal) é a <strong>fonte canônica</strong> do conceito — M3 §3.7 referencia esta.</p>
+
+      <aside class="cross-link">
+        <div>
+          <div class="cross-link__module">M3 §3.7 · VPP — oxímetro MSD</div>
+          <a href="../m3-reanimacao/index.html#/p1-m3-p7">Quem entende a fisiologia da circulação fetal resolve qualquer questão envolvendo oximetria neonatal. Não há monitorização de oxigenação neonatal séria que não passe pelo MSD pré-ductal. (#/p1-m3-p7)</a>
+        </div>
+      </aside>
+
+      <h2>Coraçãozinho ↔ Rubéola (M2) — PCA e EAP</h2>
+      <p>A <strong>rubéola congênita</strong> cursa frequentemente com <strong>PCA (persistência do canal arterial)</strong> e <strong>estenose da artéria pulmonar</strong> — cardiopatias que podem ser detectadas pelo coraçãozinho dependendo da gravidade hemodinâmica.</p>
+
+      <h2>Revisão ativa cumulativa M1+M2+M3+M4</h2>
+
+      <aside class="active-review">
+        <div class="active-review__label">3 perguntas reflexivas — pensar é o ponto, não acertar</div>
+        <ol>
+          <li><strong>Reflexão M1+M4</strong>: Um RN nasce com 36 semanas, 1900 gramas, PIG, de mãe com sífilis mal-tratada. Da perspectiva da triagem neonatal, qual é o conjunto de triagens prioritárias e em que ordem você as solicitaria? (Pista: pezinho captura potencial coexistência infecciosa; coraçãozinho rastreia cardiopatia crítica oculta; olhinho captura coriorretinite ou catarata possíveis; orelhinha gera classificação IRDA pelo histórico materno.)</li>
+          <li><strong>Reflexão M2+M4</strong>: Qual a relação direta entre os achados de TORCHS (M2) e a classificação de uma criança como IRDA-1 (orelhinha)? Que mecanismo fisiopatológico justifica essa entrada?</li>
+          <li><strong>Reflexão M3+M4</strong>: O conceito de "MSD pré-ductal" aparece em qual minuto da reanimação neonatal (M3) e em qual passo do coraçãozinho (M4)? Por que a mesma posição anatômica vale pra ambos?</li>
+        </ol>
+      </aside>
+
+      <h2>Síntese de fechamento — o que você levou do módulo</h2>
+      <ul>
+        <li><strong>Lógica única de rastreamento neonatal</strong>: 6 testes, mesma intenção (capturar pré-sintoma, mudar prognóstico)</li>
+        <li><strong>6 algoritmos decisórios paralelos</strong>: cada um com janela, técnica, critério e conduta próprios</li>
+        <li><strong>12+ pegadinhas estruturais</strong> cobertas (consolidadas em 4.11)</li>
+        <li><strong>5 atualizações regulatórias recentes</strong> internalizadas: Lei 14.154/2021 (pezinho), Lei 13.002/2014 (linguinha), SBP 2022 (coraçãozinho), Guia TAN MS nov/2025 (orelhinha), Lei 15.094/2025 (dedinho)</li>
+        <li><strong>6 cross-links bidirecionais</strong> com M1, M2, M3 ancorados via hash routing</li>
+      </ul>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">O RN passa pela maternidade uma única vez. As 6 triagens são, juntas, a janela mais densa de captura diagnóstica precoce da pediatria. Quem domina o quadro inteiro responde questão integrada, conduz consulta de RN com critério, e identifica precocemente o que sem triagem se manifestaria tarde demais.</div>
+      </aside>
+
+      <aside class="gap-notice">
+        <div class="gap-notice__label">Próximo conteúdo · Pendente</div>
+        Apgar score, distúrbios respiratórios do RN (SDR, TTRN, SAM), icterícia neonatal, hipoglicemia, HIV vertical, sepse neonatal e cuidados pós-reanimação (hipotermia terapêutica) compõem os temas pendentes que se encaixam logicamente na continuidade da Parte 1.
+      </aside>
+
+      <section class="quiz" data-quiz-id="p12" aria-labelledby="quiz-p12-title">
+        <h2 class="quiz__title" id="quiz-p12-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">A inclusão da toxoplasmose congênita no teste do pezinho ocorreu por qual marco regulatório?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Nota Técnica MS nº 52/2023</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Lei nº 14.154, de 26 de maio de 2021</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Lei nº 13.002, de 20 de junho de 2014</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Lei nº 15.094, de 8 de janeiro de 2025</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Lei 14.154/2021 estruturou o PNTN expandido em 5 etapas, com toxoplasmose entrando na Etapa 1.</p>
+              <p class="quiz__distractor">A é a NT sobre linguinha. C é a obrigatoriedade do teste da linguinha. D é a obrigatoriedade do teste do dedinho (FOP).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Criança com encefalopatia hipóxico-isquêmica diagnosticada após reanimação prolongada na sala de parto. Conduta correta na triagem auditiva:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — EOA isolada, com reteste em 15 dias se falhar</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Aguardar resolução do quadro neurológico antes de qualquer triagem</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — BERA + EOA simultâneos como IRDA-2; encaminhamento ao CER mesmo se passar</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Apenas observação clínica auditiva nos primeiros 6 meses</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> EHI é critério IRDA-2 → BERA + EOA + CER mesmo se passa.</p>
+              <p class="quiz__distractor">A trata como sem fator de risco ou IRDA-1. B atrasa sem justificativa técnica. D dispensa triagem indevidamente.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">O conceito de "MSD = sempre pré-ductal" usado na oximetria do coraçãozinho é o mesmo conceito usado na monitorização da saturação durante a reanimação neonatal.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: VERDADEIRO.</strong> A anatomia do tronco braquiocefálico → subclávia direita = aorta pré-ductal universalmente vale pra qualquer monitorização de oxigenação neonatal.</p>
+              <p class="quiz__distractor">Por isso o oxímetro de reanimação vai no MSD, e por isso o coraçãozinho compara MSD vs MI — a mesma fisiologia.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>Fim do Módulo 4.</strong> O fechamento da Parte 1 acontece quando os 4 módulos (M1 + M2 + M3 + M4) ficam disponíveis pra consulta cruzada. A Parte 2 abre temas como Apgar, distúrbios respiratórios, icterícia, sepse neonatal e cuidados pós-reanimação.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m4-p11">‹ Anterior</a>
+        <span class="page-nav__indicator">12 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" aria-disabled="true">Próxima ›</a>
+      </nav>
+    </article>
+<!-- PAGES_PART1_END -->
+
+  </main>
+
+  <footer class="app-footer">
+    <p>Triagem Neonatal · Neonatologia (Parte 1, M4) · Plataforma educacional Bauer · Conteúdo de estudo — verificar com fontes primárias</p>
+  </footer>
+
+</div>
+
+<script src="./assets/js/router.js" defer></script>
+<script src="./assets/js/quiz.js" defer></script>
+
+</body>
+</html>

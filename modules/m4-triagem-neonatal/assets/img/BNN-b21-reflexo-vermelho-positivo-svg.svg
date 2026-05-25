@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-b21 desc-b21">
+  <title id="title-b21">Reflexo vermelho positivo bilateral em recém-nascido</title>
+  <desc id="desc-b21">Esquema de face de recém-nascido em vista frontal durante teste do reflexo vermelho. Lanterna direcionada ao centro da face a aproximadamente trinta centímetros de distância produz reflexo retiniano alaranjado-avermelhado simétrico em ambas as pupilas, configurando exame normal.</desc>
+  <defs>
+    <radialGradient id="bg-b21" cx="50%" cy="45%" r="80%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <radialGradient id="skin-b21" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f7e0d2"/>
+      <stop offset="100%" stop-color="#e0bfa8"/>
+    </radialGradient>
+    <radialGradient id="reflexo-b21" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ffb070"/>
+      <stop offset="35%" stop-color="#f08a48"/>
+      <stop offset="75%" stop-color="#d4521c"/>
+      <stop offset="100%" stop-color="#8a2810"/>
+    </radialGradient>
+    <radialGradient id="luz-b21" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6d8" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#ffe4a0" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffd06a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="feixe-b21" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#fff6d8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#fff6d8" stop-opacity="0"/>
+    </linearGradient>
+    <marker id="arrow-b21" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+  </defs>
+
+  <rect width="480" height="400" fill="url(#bg-b21)"/>
+
+  <!-- Rosto oval do RN (centro-direita pra deixar lanterna à esquerda) -->
+  <ellipse cx="295" cy="200" rx="115" ry="138" fill="url(#skin-b21)" stroke="#b8957a" stroke-width="1.5"/>
+
+  <!-- Orelhas -->
+  <ellipse cx="183" cy="200" rx="13" ry="22" fill="#e0bfa8" stroke="#b8957a" stroke-width="1.2"/>
+  <ellipse cx="407" cy="200" rx="13" ry="22" fill="#e0bfa8" stroke="#b8957a" stroke-width="1.2"/>
+
+  <!-- Sobrancelhas sutis -->
+  <path d="M 250 152 Q 265 146 280 153" fill="none" stroke="#7a5a48" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 310 153 Q 325 146 340 152" fill="none" stroke="#7a5a48" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Olho ESQUERDO do RN (direita do observador) -->
+  <!-- Esclera -->
+  <ellipse cx="325" cy="178" rx="20" ry="11" fill="#fafafa" stroke="#7a5a48" stroke-width="1.2"/>
+  <!-- Íris -->
+  <circle cx="325" cy="178" r="9" fill="#5a7a8c" stroke="#3a5560" stroke-width="0.8"/>
+  <!-- Pupila com reflexo retiniano alaranjado-avermelhado -->
+  <circle cx="325" cy="178" r="5.5" fill="url(#reflexo-b21)"/>
+  <!-- Reflexo especular branco discreto (catchlight) -->
+  <ellipse cx="323" cy="176" rx="1.5" ry="1" fill="#fff6d8" opacity="0.7"/>
+
+  <!-- Olho DIREITO do RN (esquerda do observador) -->
+  <ellipse cx="265" cy="178" rx="20" ry="11" fill="#fafafa" stroke="#7a5a48" stroke-width="1.2"/>
+  <circle cx="265" cy="178" r="9" fill="#5a7a8c" stroke="#3a5560" stroke-width="0.8"/>
+  <circle cx="265" cy="178" r="5.5" fill="url(#reflexo-b21)"/>
+  <ellipse cx="263" cy="176" rx="1.5" ry="1" fill="#fff6d8" opacity="0.7"/>
+
+  <!-- Nariz -->
+  <path d="M 295 195 Q 287 225 290 250 Q 295 258 300 250 Q 303 225 295 195 z" fill="#d9b496" stroke="#a37e64" stroke-width="1.2"/>
+  <ellipse cx="289" cy="248" rx="2.8" ry="4" fill="#5a3a2a"/>
+  <ellipse cx="301" cy="248" rx="2.8" ry="4" fill="#5a3a2a"/>
+
+  <!-- Lábios -->
+  <path d="M 268 285 Q 295 292 322 285 Q 324 297 295 301 Q 266 297 268 285 z" fill="#c46b58" stroke="#8a4030" stroke-width="1.2"/>
+  <path d="M 273 290 Q 295 292 317 290" fill="none" stroke="#8a4030" stroke-width="1"/>
+
+  <!-- Queixo discreto -->
+  <path d="M 275 325 Q 295 338 315 325" fill="none" stroke="#a37e64" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Lanterna esquemática à esquerda (oftalmoscópio direto simplificado) -->
+  <!-- Corpo da lanterna -->
+  <rect x="38" y="168" width="58" height="28" rx="4" fill="#1f3645" stroke="#3d5a6e" stroke-width="1.5"/>
+  <rect x="40" y="172" width="20" height="20" rx="2" fill="#2a4659" opacity="0.85"/>
+  <!-- Cabeça da lanterna (lente) -->
+  <rect x="96" y="172" width="14" height="20" rx="2" fill="#3d5a6e" stroke="#5a7a8c" stroke-width="1.2"/>
+  <circle cx="108" cy="182" r="6" fill="#fff6d8" opacity="0.85" stroke="#ffd06a" stroke-width="1"/>
+  <!-- Botão da lanterna -->
+  <circle cx="60" cy="166" r="3" fill="#ff6b5a"/>
+
+  <!-- Feixe de luz: cone do bulbo da lanterna até as duas pupilas -->
+  <path d="M 114 182 Q 200 178 245 178 L 245 178 Q 200 184 114 184 z" fill="url(#feixe-b21)" opacity="0.55"/>
+  <path d="M 114 182 Q 200 178 245 178" fill="none" stroke="#fff6d8" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,2"/>
+  <path d="M 114 182 Q 200 186 305 178" fill="none" stroke="#fff6d8" stroke-width="0.8" opacity="0.4" stroke-dasharray="3,2"/>
+
+  <!-- Halo de iluminação convergindo na face -->
+  <ellipse cx="295" cy="180" rx="55" ry="20" fill="url(#luz-b21)" opacity="0.55"/>
+
+  <!-- Indicador de distância: linha pontilhada coral entre lanterna e face com label -->
+  <line x1="115" y1="220" x2="180" y2="220" stroke="#ff8a7a" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+  <text x="147" y="236" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="0.3">~30 cm</text>
+
+  <!-- Label superior: luz incidente -->
+  <text x="68" y="148" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    <tspan x="68" dy="0">Luz</tspan>
+    <tspan x="68" dy="14">incidente</tspan>
+  </text>
+  <line x1="68" y1="155" x2="68" y2="165" stroke="#ff6b5a" stroke-width="1.5" marker-end="url(#arrow-b21)"/>
+
+  <!-- Label inferior pra reflexo: 2 setas convergindo de baixo -->
+  <text x="240" y="378" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0.2">
+    <tspan x="240" dy="0">Reflexo retiniano</tspan>
+    <tspan x="240" dy="14">alaranjado-avermelhado</tspan>
+  </text>
+  <!-- Seta da label pro olho direito do RN -->
+  <line x1="220" y1="352" x2="262" y2="188" stroke="#ff6b5a" stroke-width="1.5" marker-end="url(#arrow-b21)"/>
+  <!-- Seta da label pro olho esquerdo do RN -->
+  <line x1="260" y1="352" x2="322" y2="188" stroke="#ff6b5a" stroke-width="1.5" marker-end="url(#arrow-b21)"/>
+
+  <!-- Rótulo inferior verde - quadro de exame normal -->
+  <rect x="20" y="22" width="270" height="62" rx="12" fill="rgba(76,175,140,0.10)" stroke="rgba(76,175,140,0.45)" stroke-width="1"/>
+  <text x="155" y="44" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8">TESTE DO REFLEXO VERMELHO · NORMAL</text>
+  <text x="155" y="62" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11" text-anchor="middle">Bilateral · simétrico · alaranjado-avermelhado</text>
+  <text x="155" y="77" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle" font-weight="600" opacity="0.85">Distância de Brückner ≈ 30 cm · sala penumbra</text>
+</svg>
