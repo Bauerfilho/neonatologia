@@ -1,0 +1,2635 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0a1620">
+  <meta name="description" content="Reanimação Neonatal — algoritmo PRN-SBP 2022 do nascimento à epinefrina. Plataforma educacional Bauer.">
+  <title>Reanimação Neonatal — Neonatologia (Parte 1, M3)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="./assets/css/tokens.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <header class="app-header" role="banner">
+    <div class="app-header__row">
+      <div class="app-header__brand">
+        <div class="brand-logo" aria-hidden="true">NN</div>
+        <div class="brand-text">
+          <div class="brand-title">Reanimação Neonatal</div>
+          <div class="brand-sub">Neonatologia · Parte 1 · Módulo 3</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn" type="button" data-toggle="theme" aria-pressed="false" aria-label="Alternar tema claro/escuro" title="Tema">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" data-toggle="menu" aria-expanded="false" aria-controls="menu-drawer" aria-label="Abrir menu de páginas">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="progress-bar" role="progressbar" aria-label="Progresso no módulo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="progress-bar__fill"></div>
+    </div>
+  </header>
+
+  <nav class="menu-drawer" id="menu-drawer" data-open="false" aria-label="Páginas do módulo">
+    <div class="menu-drawer__panel">
+      <h2 class="menu-drawer__title">Páginas — Módulo 3</h2>
+      <ol class="menu-drawer__list" role="list">
+        <li><a class="menu-drawer__link" href="#/p1-m3-p1"  data-page-num="1"><span class="menu-drawer__num">3.1</span>João Eucalipto retorna</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p2"  data-page-num="2"><span class="menu-drawer__num">3.2</span>As 3 perguntas iniciais</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p3"  data-page-num="3"><span class="menu-drawer__num">3.3</span>Semáforo da reanimação</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p4"  data-page-num="4"><span class="menu-drawer__num">3.4</span>ASPAS em 30 segundos</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p5"  data-page-num="5"><span class="menu-drawer__num">3.5</span>Boca antes de narinas, FC em 6s</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p6"  data-page-num="6"><span class="menu-drawer__num">3.6</span>VPP — indicações, técnica, FiO2, MSD</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p7"  data-page-num="7"><span class="menu-drawer__num">3.7</span>VPP falhou? Checar técnica</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p8"  data-page-num="8"><span class="menu-drawer__num">3.8</span>Quando começar MCE</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p9"  data-page-num="9"><span class="menu-drawer__num">3.9</span>Técnica MCE: 2 polegares, 3:1</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p10" data-page-num="10"><span class="menu-drawer__num">3.10</span>Epinefrina — dose precisa</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p11" data-page-num="11"><span class="menu-drawer__num">3.11</span>3 situações especiais</a></li>
+        <li><a class="menu-drawer__link" href="#/p1-m3-p12" data-page-num="12"><span class="menu-drawer__num">3.12</span>Fluxograma completo + João Eucalipto</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="app-main" id="main">
+    <!-- PAGES_INJECT_START -->
+
+    <!-- =============================================================== -->
+    <!-- Página 3.1 — Estratégia: E3 (Caso clínico em abertura)            -->
+    <!-- Itens roteiro: [001] [002] [003] [004]                            -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="1" data-show-caso="caso-1" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.1 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E3 · Caso clínico</span>
+        <span class="page-meta__tag">Itens 001-004</span>
+      </div>
+      <h1 class="page-title">João Eucalipto retorna: o RN que justificou tudo</h1>
+
+      <article class="opener opener--case">
+        <h2 class="opener__case-title">Caso 1 — João Eucalipto, capítulo 2</h2>
+        <p>Você se lembra dele. Filho da Florinda Rosa. 36 semanas e 4 dias. 1900 gramas. PIG. Mãe com sífilis mal-tratada — uma dose de benzatina pra duração ignorada, história que já foi elucidada antes na Parte 1. Mas antes da sífilis, antes do líquor com 40 células e 160 de proteína, antes da cristalina por 10 dias — antes de qualquer coisa, João Eucalipto teve um problema mais grave e mais precoce: <strong>ele nasceu hipotônico, em apneia</strong>.</p>
+        <p>Ele precisou ser atendido na hora. Precisou de reanimação neonatal na sala de parto, com cronômetro, com mesa preparada, com mãos coordenadas. E o que acontece nesses primeiros segundos define o resto da vida de João Eucalipto — mais do que o tratamento da sífilis, mais do que o seguimento ambulatorial, mais do que qualquer coisa que venha depois.</p>
+        <p>É por isso que reanimação neonatal aparece aqui como tema central. E é por isso que cai tanto em prova: porque é sistemático, tem ordem rigorosa, e cada etapa tem critério de entrada e critério de saída.</p>
+      </article>
+
+      <p>A reanimação neonatal não é um conjunto de manobras heroicas. É um <strong>protocolo</strong>. Quem entende a lógica sequencial dos passos resolve grande parte das questões de prova sobre o tema, porque a banca cobra justamente a ordem, os critérios e as exceções — não improvisação. O algoritmo é estável, brasileiro (PRN-SBP), alinhado ao internacional (ILCOR/NRP) e atualizado em 2022.</p>
+
+      <p>Por que isso importa pra prova? Porque cada bifurcação do fluxograma tem uma armadilha. "Bom tônus" é tônus FLEXOR — não tônus genérico. "FC &lt;60" não dispara MCE de imediato — primeiro segue todo o fluxograma. "Banhado em mecônio" não significa aspirar todo bebê — significa aspirar apenas se uma condição específica aparecer durante a checagem de técnica da VPP. Cada uma dessas pegadinhas tem um item de prova esperando você cair.</p>
+
+      <p>Por que importa pra prática? Porque a janela é minúscula. ASPAS tem 30 segundos. A primeira reavaliação de FC vem aos 30 segundos seguintes. A indicação de epinefrina vem 1 minuto depois do início da MCE. Quem chega na sala de parto sem saber a ordem improvisa — e improviso em RN custa caro.</p>
+
+      <p>João Eucalipto nasceu hipotônico em apneia. No semáforo da reanimação, isso é cenário vermelho — clampeamento imediato, mesa de reanimação direto. O que aconteceu com ele só faz sentido depois de percorrer todo o algoritmo. O fechamento do módulo retoma o caso aplicando cada etapa do fluxograma. Por enquanto, basta saber: ele estava em apneia. Por isso o tema existe.</p>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Por que importa na prática</div>
+        <div class="op-summary__body">Reanimação neonatal é a primeira intervenção que decide sobrevivência do RN. Não há margem pra erro de ordem; quem improvisa, perde RN.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p1" aria-labelledby="quiz-p1-title">
+        <h2 class="quiz__title" id="quiz-p1-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual o motivo principal pelo qual reanimação neonatal cai sistematicamente em prova de residência?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Porque os fármacos são complexos e mudam frequentemente</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Porque é um protocolo sistemático com ordem rigorosa e critérios claros pra cada etapa</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Porque é uma área com muitas controvérsias entre as principais sociedades</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Porque depende mais de improvisação clínica do que de algoritmo</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> O conteúdo é cobrado justamente por ter ordem inviolável e critérios objetivos — a banca cobra ordem e critério, não improvisação.</p>
+              <p class="quiz__distractor">A farmacoterapia neonatal é estável e o ponto cobrado é critério de indicação, não escolha de droga (A). Improviso em RN é o oposto do que se espera — o protocolo existe pra eliminar improviso (D).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="vf">
+            <span class="quiz__qnum">Questão 2 — V ou F</span>
+            <p class="quiz__stem">"Boa vitalidade" do RN ao nascer significa apenas que ele respirou ou chorou.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> Boa vitalidade exige <strong>dois critérios</strong> — respirou/chorou <strong>E</strong> bom tônus em flexão. Falta qualquer um → má vitalidade.</p>
+              <p class="quiz__distractor">A página 3.2 detalha as 3 perguntas e por que a respiração isolada é insuficiente.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> as 3 perguntas que decidem o destino imediato de qualquer RN — incluindo João Eucalipto.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" aria-disabled="true">‹ Anterior</a>
+        <span class="page-nav__indicator">1 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p2">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.2 — Estratégia: E1 (Pergunta central)                    -->
+    <!-- Itens roteiro: [005]-[014]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="2" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.2 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E1 · Pergunta central</span>
+        <span class="page-meta__tag">Itens 005-014</span>
+      </div>
+      <h1 class="page-title">As 3 perguntas iniciais: o que decide o destino do RN ao nascer</h1>
+
+      <section class="opener opener--question">
+        <p class="opener__q">Por que três perguntas, e por que ESSAS três? O que cada uma delas elimina da decisão clínica?</p>
+      </section>
+
+      <p>Quando o RN sai do útero, a primeira coisa que se faz não é tocar nele, ouvir o coração, contar a frequência respiratória. Antes de qualquer manobra, <strong>três perguntas</strong>. As respostas a essas três perguntas decidem duas coisas práticas imediatas: <strong>quando clampear o cordão</strong> e <strong>pra onde mandar o bebê em seguida</strong> (colo da mãe ou mesa de reanimação).</p>
+
+      <h2>Pergunta 1 — IG ≥ 34 semanas?</h2>
+      <p>Bebê com menos de 34 semanas é fisicamente frágil. Perde calor com facilidade, tem risco de hipotermia, tem risco de complicações respiratórias. Mesmo nascendo bem, vai precisar de cuidado adicional. Por isso a IG entra na primeira pergunta — não pra excluir o bebê pré-termo da reanimação, mas pra mudar o caminho dele dentro do algoritmo.</p>
+
+      <aside class="history-note">
+        <div class="history-note__label">Nota histórica</div>
+        Até a revisão de 2016 do PRN-SBP, a primeira pergunta era "Termo?" (≥37 semanas). A versão 2022 mudou o corte para ≥34 semanas. Material antigo pode trazer a versão anterior.
+      </aside>
+
+      <h2>Pergunta 2 — Respirou ou chorou?</h2>
+      <p>Respiração efetiva e choro são sinais imediatos de adaptação extrauterina. Pulmão expandido, troca gasosa iniciada, drive respiratório funcionando. Bebê que não respira ou não chora ao nascer não fez essa transição — e precisa de ajuda agora, não daqui a um minuto.</p>
+
+      <h2>Pergunta 3 — Bom tônus?</h2>
+      <p>Aqui mora a primeira pegadinha clássica de prova. "Bom tônus" significa, especificamente, <strong>tônus em flexão</strong> — bracinhos e perninhas em flexão, postura de RN saudável. Não é tônus "genérico". Não é "criança que mexe". É <strong>flexor</strong>. RN molenga, com membros estendidos e hipotônicos, está em má vitalidade.</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova</div>
+          <div class="trap__body"><strong>BOM TÔNUS = TÔNUS FLEXOR.</strong> A banca cobra essa distinção. Tônus "genérico" ou "criança que se mexe" não conta.</div>
+        </div>
+      </aside>
+
+      <p>As duas últimas perguntas — respirou/chorou e bom tônus — são <strong>mais fundamentais</strong> que a primeira pra definir vitalidade. Idade gestacional muda o caminho do algoritmo, mas é respiração + tônus que classificam o bebê como "boa vitalidade" ou "má vitalidade".</p>
+
+      <h2>Síntese operacional</h2>
+      <ul>
+        <li><strong>Boa vitalidade</strong> = RN respirou OU chorou ao nascer <strong>E</strong> está com bom tônus flexor (os dois critérios juntos).</li>
+        <li><strong>Má vitalidade</strong> = alteração em <strong>qualquer um</strong> dos dois critérios (não respirou/chorou <strong>OU</strong> sem bom tônus).</li>
+      </ul>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Bom tônus" ≠ "criança que se mexe" — tem que ser <strong>flexor</strong> especificamente.</li>
+          <li>"Boa vitalidade" exige <strong>os dois</strong> critérios (respiração + tônus), não apenas um.</li>
+          <li>IG ≥34 sem é importante mas <strong>não</strong> suficiente sozinha pra definir vitalidade.</li>
+        </ul>
+      </aside>
+
+      <aside class="finding">
+        <div class="finding__label">Achado típico — sinal de boa vitalidade</div>
+        <div class="finding__body">
+          <ul>
+            <li>RN com bracinhos e perninhas flexionados sobre o tronco</li>
+            <li>Choro vigoroso ou respiração efetiva imediata</li>
+            <li>Cor rosada centralmente em segundos</li>
+          </ul>
+        </div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">3 perguntas — IG≥34 sem? Respirou/chorou? Tônus flexor? — combinadas, dividem o RN em duas categorias funcionais (boa vs má vitalidade) que alimentam o semáforo da página seguinte.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p2" aria-labelledby="quiz-p2-title">
+        <h2 class="quiz__title" id="quiz-p2-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN nasce com 35 semanas, chora vigorosamente, está com bracinhos estendidos e perninhas estendidas. Qual a vitalidade?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Boa vitalidade — respirou/chorou ao nascer</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Má vitalidade — IG &lt;37 semanas</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Má vitalidade — sem bom tônus flexor</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Boa vitalidade — IG ≥34 semanas</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Respirou/chorou ✓, mas tônus não está em flexão → má vitalidade.</p>
+              <p class="quiz__distractor">A armadilha clássica (A): fixar só no choro e ignorar tônus. B confunde com o corte antigo PRN 2016 (Termo? ≥37 sem). D confunde IG (que define caminho) com vitalidade (que exige respiração + tônus).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">As 3 perguntas iniciais ao nascer são, na ordem do PRN-SBP 2022:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Termo? Respirou/chorou? Bom tônus?</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — ≥34 semanas? Respirou/chorou? Bom tônus?</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — ≥34 semanas? Bom tônus? Apgar ≥7?</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Respirou/chorou? Bom tônus? ≥34 semanas?</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Ordem canônica PRN-SBP 2022 — IG (≥34 sem), depois respiração, depois tônus.</p>
+              <p class="quiz__distractor">A é a versão pré-2016. C interpola Apgar — Apgar não entra nas 3 perguntas iniciais. D inverte a ordem.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> as combinações entre IG e vitalidade geram 3 cenários distintos com 3 tempos de clampeamento e 2 destinos possíveis.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p1">‹ Anterior</a>
+        <span class="page-nav__indicator">2 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p3">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.3 — Estratégia: E4 (Achado típico/pegadinha)             -->
+    <!-- Itens roteiro: [015]-[032] · Inclui V11 (semáforo SVG)            -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="3" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.3 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E4 · Pegadinha</span>
+        <span class="page-meta__tag">Itens 015-032</span>
+      </div>
+      <h1 class="page-title">Semáforo da reanimação: verde, amarelo, vermelho — e os 3 tempos de clampeamento</h1>
+
+      <aside class="opener opener--trap">
+        <div>
+          <div class="opener__msg">Três cores. Três tempos de clampeamento. Dois destinos possíveis. Uma pegadinha: o cenário vermelho <strong>não olha pra idade gestacional</strong>.</div>
+        </div>
+      </aside>
+
+      <p>As 3 perguntas iniciais não são exercício acadêmico. Elas geram <strong>duas decisões práticas imediatas</strong>: quando clampear o cordão e pra onde levar o RN. As respostas combinadas (IG ≥34? Boa vitalidade?) produzem três cenários, e cada um tem uma cor, um tempo e um destino.</p>
+
+      <!-- V11 — Semáforo SVG didático autoral -->
+      <figure class="fig" aria-labelledby="v11-cap">
+        <svg viewBox="0 0 720 280" role="img" aria-labelledby="v11-title v11-desc" width="720" height="280">
+          <title id="v11-title">Semáforo da reanimação neonatal</title>
+          <desc id="v11-desc">Três cenários: verde (≥34 sem + boa vitalidade), amarelo (&lt;34 sem + boa vitalidade), vermelho (má vitalidade, qualquer IG).</desc>
+          <defs>
+            <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5fcf80"/><stop offset="100%" stop-color="#3fa05a"/></linearGradient>
+            <linearGradient id="grad-yellow" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0b440"/><stop offset="100%" stop-color="#c08820"/></linearGradient>
+            <linearGradient id="grad-red" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ff5d6b"/><stop offset="100%" stop-color="#cf3848"/></linearGradient>
+          </defs>
+          <!-- Carcaça do semáforo -->
+          <rect x="280" y="20" width="160" height="240" rx="20" fill="#1a3245" stroke="#3a5260" stroke-width="2"/>
+          <!-- Verde -->
+          <circle cx="360" cy="70" r="32" fill="url(#grad-green)"/>
+          <text x="360" y="76" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#0a1610">✓</text>
+          <text x="120" y="65" font-family="Lora,serif" font-size="14" font-weight="700" fill="#5fcf80">VERDE — vida que segue</text>
+          <text x="120" y="84" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae">≥34 sem + boa vitalidade</text>
+          <text x="120" y="99" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae">Clampeamento ≥60s · Mãe (pele a pele)</text>
+          <!-- Amarelo -->
+          <circle cx="360" cy="140" r="32" fill="url(#grad-yellow)"/>
+          <text x="360" y="146" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#1a1010">!</text>
+          <text x="460" y="135" font-family="Lora,serif" font-size="14" font-weight="700" fill="#f0b440">AMARELO — mesa estável</text>
+          <text x="460" y="154" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae">&lt;34 sem + boa vitalidade</text>
+          <text x="460" y="169" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae">Clampeamento ≥30s · Mesa</text>
+          <!-- Vermelho -->
+          <circle cx="360" cy="210" r="32" fill="url(#grad-red)"/>
+          <text x="360" y="216" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#f5e8e8">×</text>
+          <text x="120" y="205" font-family="Lora,serif" font-size="14" font-weight="700" fill="#ff5d6b">VERMELHO — sem tempo</text>
+          <text x="120" y="224" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae">Má vitalidade (qualquer IG)</text>
+          <text x="120" y="239" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae">Clampeamento imediato · Mesa</text>
+        </svg>
+        <figcaption id="v11-cap">V11 — Semáforo da reanimação neonatal (cor + ícone + label textual; WCAG AA).</figcaption>
+      </figure>
+
+      <article class="signal-card signal-card--green">
+        <h2 class="signal-card__title"><span class="signal-card__icon" aria-hidden="true">✓</span>Cenário VERDE — sinal verde, "vida que segue"</h2>
+        <dl>
+          <dt>Quem entra</dt><dd>RN com IG ≥34 sem <strong>E</strong> boa vitalidade (respirou/chorou + bom tônus flexor)</dd>
+          <dt>Clampeamento</dt><dd><strong>Tardio — acima de 60 segundos</strong> após o nascimento (podendo ir até cessar pulsação do cordão segundo PRN-SBP 2022)</dd>
+          <dt>Destino</dt><dd>Contato pele a pele com a mãe, amamentação na primeira hora</dd>
+        </dl>
+        <p style="margin:0;font-size:var(--fs-xs);color:var(--ink-70);font-style:italic;">Voz autoral: "vida que segue" — sem mesa, sem intervenção adicional, cenário ideal.</p>
+      </article>
+
+      <article class="signal-card signal-card--yellow">
+        <h2 class="signal-card__title"><span class="signal-card__icon" aria-hidden="true">!</span>Cenário AMARELO — mesa de reanimação porém estável</h2>
+        <dl>
+          <dt>Quem entra</dt><dd>RN com IG <strong>&lt;34 sem</strong> <strong>E</strong> boa vitalidade</dd>
+          <dt>Clampeamento</dt><dd><strong>Intermediário — acima de 30 segundos</strong> (não 60, porque é pré-termo e a janela de manobra é menor)</dd>
+          <dt>Destino</dt><dd>Mesa de reanimação, pelo menos pra passos iniciais — <strong>não vai direto pro colo da mãe</strong></dd>
+        </dl>
+        <p style="margin:0;font-size:var(--fs-xs);color:var(--ink-70);font-style:italic;">Lógica: o bebê pode estar bem agora, mas é frágil (hipotermia, risco respiratório) — vale o cuidado adicional.</p>
+      </article>
+
+      <article class="signal-card signal-card--red">
+        <h2 class="signal-card__title"><span class="signal-card__icon" aria-hidden="true">×</span>Cenário VERMELHO — sem tempo a perder</h2>
+        <dl>
+          <dt>Quem entra</dt><dd>RN com <strong>má vitalidade</strong>, independente da IG</dd>
+          <dt>Clampeamento</dt><dd><strong>Imediato</strong> (sem tempo a perder; circulação placentária interrompida pra agir)</dd>
+          <dt>Destino</dt><dd>Mesa de reanimação direto</dd>
+        </dl>
+      </article>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova</div>
+          <div class="trap__body">O cenário vermelho <strong>NÃO OLHA pra idade gestacional</strong>. RN de 39 sem em apneia hipotônico cai no vermelho igual a um RN de 28 sem em apneia. IG não muda esse caminho.</div>
+        </div>
+      </aside>
+
+      <p><em>Detalhe operacional</em>: o obstetra pode fazer 2 estímulos no dorso da criança com má vitalidade pra tentar uma reação imediata — mas o cordão é clampeado de qualquer jeito. Sem demora.</p>
+
+      <h2>Os 3 tempos de clampeamento — não confunda</h2>
+      <p>Esta é uma das pegadinhas mais cobradas. Três cenários, três cortes diferentes:</p>
+
+      <div class="comparison comparison--highlight">
+        <table>
+          <thead>
+            <tr><th>Cenário</th><th>Critério</th><th>Clampeamento</th><th>Destino</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Verde</strong></td><td>≥34 sem + boa vitalidade</td><td><strong>≥60 segundos</strong></td><td>Mãe (pele a pele)</td></tr>
+            <tr><td><strong>Amarelo</strong></td><td>&lt;34 sem + boa vitalidade</td><td><strong>≥30 segundos</strong></td><td>Mesa de reanimação</td></tr>
+            <tr><td><strong>Vermelho</strong></td><td>Má vitalidade (qualquer IG)</td><td><strong>Imediato</strong></td><td>Mesa de reanimação</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico — Semáforo da reanimação</div>
+        <div class="mnemonic__body"><strong>VERDE</strong> = mãe + ≥60s · <strong>AMARELO</strong> = mesa + ≥30s · <strong>VERMELHO</strong> = mesa + imediato.</div>
+      </aside>
+
+      <p><em>Tônus flácido = bebê molenga</em> — linguagem coloquial pra fixar a imagem do RN em má vitalidade.</p>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>≥60s ≠ ≥30s ≠ imediato — três cortes distintos.</li>
+          <li>Cenário vermelho <strong>não</strong> olha pra IG (pegadinha clássica de prova).</li>
+          <li>"Mesa de reanimação" não significa que o RN vai ser reanimado — pode receber só os passos iniciais e seguir bem.</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">Identificar corretamente os 3 cenários, suas combinações IG×vitalidade e os 3 tempos de clampeamento. Pegadinha favorita: RN de 39 sem em apneia → cenário vermelho (não amarelo, não verde).</div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">3 cenários, 3 cores, 3 tempos de clampeamento, 2 destinos. Vermelho independe de IG.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p3" aria-labelledby="quiz-p3-title">
+        <h2 class="quiz__title" id="quiz-p3-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN de 39 semanas nasce hipotônico, em apneia. Conduta imediata correta?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Cenário verde — clampeamento ≥60s + pele a pele</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Cenário amarelo — clampeamento ≥30s + mesa de reanimação</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Cenário vermelho — clampeamento imediato + mesa de reanimação</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Avaliar Apgar primeiro e decidir</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Má vitalidade (apneia + hipotonia) define cenário vermelho independente da IG. A IG ≥34 sem <strong>não</strong> salva do vermelho.</p>
+              <p class="quiz__distractor">A é a pegadinha clássica (aluno fixa só na IG). B confunde com cenário amarelo (que exige &lt;34 sem). D interpola Apgar — Apgar é avaliação que vem depois, não decide cenário inicial.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="gap">
+            <span class="quiz__qnum">Questão 2 — Completar lacuna</span>
+            <p class="quiz__stem">O cenário ___________ tem clampeamento imediato e a IG <strong>não</strong> influencia a decisão.</p>
+            <input class="quiz__gap-input" type="text" placeholder="Digite a resposta…" aria-label="Sua resposta para a lacuna">
+            <button class="quiz__gap-reveal" type="button">Revelar gabarito</button>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict quiz__verdict--correct">Gabarito.</p>
+              <p class="quiz__justification"><strong>Resposta: vermelho.</strong> Cenário vermelho = má vitalidade independente de IG; clampeamento imediato; mesa de reanimação.</p>
+              <p class="quiz__distractor">É a exceção que confirma a regra: IG define caminho — quando há má vitalidade, IG perde força.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="mcq">
+            <span class="quiz__qnum">Questão 3 — MCQ</span>
+            <p class="quiz__stem">RN de 32 semanas, chora vigorosamente, com bracinhos e perninhas em flexão. Qual o tempo de clampeamento correto?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — ≥60 segundos</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — ≥30 segundos</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Imediato</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Aguardar 5 minutos</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> IG &lt;34 sem + boa vitalidade = cenário amarelo = clampeamento ≥30s + mesa de reanimação.</p>
+              <p class="quiz__distractor">A é cenário verde (exige ≥34 sem). C é cenário vermelho (exige má vitalidade). D não existe no protocolo.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> todo RN que cai na mesa de reanimação (amarelo ou vermelho) recebe os passos iniciais — sintetizados no mnemônico ASPAS.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p2">‹ Anterior</a>
+        <span class="page-nav__indicator">3 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p4">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.4 — Estratégia: E6 (Mnemônico-âncora)                    -->
+    <!-- Itens roteiro: [033]-[048] · Inclui V12 (ASPAS SVG)               -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="4" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.4 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E6 · Mnemônico-âncora</span>
+        <span class="page-meta__tag">Itens 033-048</span>
+      </div>
+      <h1 class="page-title">ASPAS em 30 segundos: a mesa de reanimação como ritual cronometrado</h1>
+
+      <aside class="opener opener--mnemonic">
+        <div class="opener__mnem">
+          <span class="opener__mnem-key">A</span><span class="opener__mnem-key">S</span><span class="opener__mnem-key">P</span><span class="opener__mnem-key">A</span><span class="opener__mnem-key">S</span>
+        </div>
+        <div class="opener__expand">
+          <div class="opener__expand-item"><span class="opener__expand-key">A</span><span>Aquecer</span></div>
+          <div class="opener__expand-item"><span class="opener__expand-key">S</span><span>Secar</span></div>
+          <div class="opener__expand-item"><span class="opener__expand-key">P</span><span>Posicionar vias aéreas</span></div>
+          <div class="opener__expand-item"><span class="opener__expand-key">AS</span><span>Aspirar <em>se necessário</em></span></div>
+        </div>
+        <p style="margin-top:var(--space-4);font-family:var(--font-mono);font-size:var(--fs-sm);color:var(--ink-70);">Tudo em <strong style="color:var(--accent-coral)">30 segundos</strong>. Cronometrado.</p>
+      </aside>
+
+      <p>Toda criança que chega na mesa de reanimação recebe os passos iniciais — sem exceção. Não importa se é cenário amarelo ou vermelho: chegou na mesa, recebe ASPAS. A metáfora coloquial é direta: colocar a criança "entre aspas".</p>
+
+      <p>ASPAS é a sequência. <strong>A</strong>quecer, <strong>S</strong>ecar, <strong>P</strong>osicionar vias aéreas, <strong>AS</strong>pirar se necessário. Quatro passos, executados em ordem, dentro de um limite de tempo apertado: <strong>30 segundos</strong>. "Caraca, rápido assim?" — sim. 30 segundos pra completar todo o ASPAS desde o momento em que o RN chega na mesa.</p>
+
+      <!-- V12 — Esquema ASPAS -->
+      <figure class="fig" aria-labelledby="v12-cap">
+        <svg viewBox="0 0 720 200" role="img" aria-labelledby="v12-title v12-desc" width="720" height="200">
+          <title id="v12-title">Mnemônico ASPAS — passos iniciais</title>
+          <desc id="v12-desc">Quatro ícones em linha: Aquecer, Secar, Posicionar vias aéreas, Aspirar (se necessário).</desc>
+          <defs>
+            <linearGradient id="aspas-card" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3245"/><stop offset="100%" stop-color="#0f1f2c"/></linearGradient>
+          </defs>
+          <g font-family="Inter,sans-serif" font-size="11" fill="#e7e0d0">
+            <!-- A -->
+            <g transform="translate(20,30)">
+              <rect width="150" height="140" rx="12" fill="url(#aspas-card)" stroke="#ff6b5a" stroke-width="2"/>
+              <text x="75" y="40" text-anchor="middle" font-family="Lora,serif" font-size="32" font-weight="700" fill="#ff6b5a">A</text>
+              <text x="75" y="65" text-anchor="middle" font-weight="600" fill="#f3ede0">Aquecer</text>
+              <text x="75" y="95" text-anchor="middle" font-size="10" fill="#c3bcae">Sala 23-25°C</text>
+              <text x="75" y="110" text-anchor="middle" font-size="10" fill="#c3bcae">Calor radiante</text>
+              <text x="75" y="125" text-anchor="middle" font-size="10" fill="#c3bcae">Compressas</text>
+            </g>
+            <!-- S -->
+            <g transform="translate(190,30)">
+              <rect width="150" height="140" rx="12" fill="url(#aspas-card)" stroke="#ff6b5a" stroke-width="2"/>
+              <text x="75" y="40" text-anchor="middle" font-family="Lora,serif" font-size="32" font-weight="700" fill="#ff6b5a">S</text>
+              <text x="75" y="65" text-anchor="middle" font-weight="600" fill="#f3ede0">Secar</text>
+              <text x="75" y="95" text-anchor="middle" font-size="10" fill="#c3bcae">Compressas secas</text>
+              <text x="75" y="110" text-anchor="middle" font-size="10" fill="#c3bcae">Foco na cabeça</text>
+              <text x="75" y="125" text-anchor="middle" font-size="9" fill="#f0b440">[em &lt;34 sem: Saco plástico]</text>
+            </g>
+            <!-- P -->
+            <g transform="translate(360,30)">
+              <rect width="150" height="140" rx="12" fill="url(#aspas-card)" stroke="#ff6b5a" stroke-width="2"/>
+              <text x="75" y="40" text-anchor="middle" font-family="Lora,serif" font-size="32" font-weight="700" fill="#ff6b5a">P</text>
+              <text x="75" y="65" text-anchor="middle" font-weight="600" fill="#f3ede0">Posicionar</text>
+              <text x="75" y="95" text-anchor="middle" font-size="10" fill="#c3bcae">Posição neutra</text>
+              <text x="75" y="110" text-anchor="middle" font-size="10" fill="#c3bcae">"Farejador"</text>
+              <text x="75" y="125" text-anchor="middle" font-size="10" fill="#c3bcae">Coxim sob ombros</text>
+            </g>
+            <!-- AS -->
+            <g transform="translate(530,30)">
+              <rect width="170" height="140" rx="12" fill="url(#aspas-card)" stroke="#f0b440" stroke-width="2"/>
+              <text x="85" y="40" text-anchor="middle" font-family="Lora,serif" font-size="32" font-weight="700" fill="#f0b440">AS</text>
+              <text x="85" y="65" text-anchor="middle" font-weight="600" fill="#f3ede0">Aspirar</text>
+              <text x="85" y="85" text-anchor="middle" font-size="11" font-weight="700" fill="#f0b440">[SE NECESSÁRIO]</text>
+              <text x="85" y="108" text-anchor="middle" font-size="10" fill="#c3bcae">Condicional</text>
+              <text x="85" y="123" text-anchor="middle" font-size="10" fill="#c3bcae">Boca antes narinas</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption id="v12-cap">V12 — Mnemônico ASPAS. O AS final é <strong>condicional</strong>. Em &lt;34 sem, o S vira "Saco plástico" (página 3.11).</figcaption>
+      </figure>
+
+      <h2>A — Aquecer</h2>
+      <p>A sala de parto tem que estar previamente entre <strong>23 e 25 graus</strong>. O bebê recém-nascido perde calor com velocidade enorme; manter a temperatura ambiente correta é parte do "aquecer". Na mesa, o calor radiante já está ligado.</p>
+
+      <h2>S — Secar</h2>
+      <p>Compressas pré-aquecidas, secagem vigorosa do corpo do RN, principalmente da cabeça (área de maior superfície relativa). Trocar compressas molhadas por secas. Em RN ≥34 sem com boa vitalidade que está na mesa por IG &lt;34 sem (cenário amarelo), o "secar" é literal. <strong>Em &lt;34 sem, esse S muda — vira saco plástico</strong> (situação especial detalhada na página 3.11).</p>
+
+      <h2>P — Posicionar vias aéreas</h2>
+      <p>Cabeça em posição <strong>neutra ou leve extensão</strong> ("posição do farejador"). Bebê com cabeça em flexão excessiva ou hiperextensão obstrui via aérea. Coxim sob os ombros pode ajudar a manter o alinhamento.</p>
+
+      <h2>AS — Aspirar SE NECESSÁRIO</h2>
+      <p>Aqui mora a primeira pegadinha clássica da página. O último passo do ASPAS é <strong>condicional</strong>. Não é "aspirar todo RN que chega na mesa". É "aspirar <strong>se necessário</strong>".</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body">Não aspirar todo bebê. Aspiração é seletiva.</div>
+      </aside>
+
+      <p><strong>Quando aspirar é necessário?</strong> Quando a criança chega encatarrada, cheia de secreção visível na boca ou narina. Bebê que chega "limpo" não precisa aspirar.</p>
+
+      <p><strong>Por que essa cautela?</strong> Porque <strong>aspiração excessiva em RN estimula o reflexo vagal e pode gerar bradicardia</strong> — exatamente o oposto do que se quer na reanimação. Aspirar por aspirar pode piorar o RN. Por isso o "se necessário" é parte essencial do mnemônico, não detalhe.</p>
+
+      <h2>A mesa preparada ANTES da chegada do RN</h2>
+      <p>Os 30 segundos do ASPAS só são possíveis se a mesa já está pronta quando o bebê chega. Antes do parto, deve estar tudo preparado:</p>
+      <ul>
+        <li>Sala de parto entre <strong>23-25°C</strong></li>
+        <li>Calor radiante da mesa ligado</li>
+        <li>Compressas aquecidas</li>
+        <li><strong>Máscara facial</strong> (vários tamanhos)</li>
+        <li><strong>Tubo traqueal</strong> (vários calibres)</li>
+        <li><strong>Medicação</strong> (epinefrina, soro)</li>
+        <li><strong>Material de acesso umbilical</strong></li>
+        <li>Tudo ao alcance de mão</li>
+      </ul>
+      <blockquote style="border-left:3px solid var(--accent-coral);padding-left:var(--space-3);margin:var(--space-4) 0;font-style:italic;color:var(--ink-70);">Não ter materiais preparados antes atrasa o ASPAS — o objetivo dos 30s vira inviável.</blockquote>
+
+      <h2>Por que 30 segundos?</h2>
+      <p>Porque a janela fisiológica de adaptação extrauterina é estreita. Cada segundo perdido sem expansão pulmonar adequada é mais hipoxia, mais acidose, mais dificuldade pra reverter. ASPAS rápido + avaliação imediata = decisão rápida sobre o próximo passo (segue normal ou parte pra VPP).</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha de prova</div>
+          <div class="trap__body">
+            <ul style="margin:0;padding-left:var(--space-4);">
+              <li>Aspirar todo bebê ao chegar na mesa = <strong>errado</strong> (rotineiro foi abandonado; só se cheio de secreção)</li>
+              <li>ASPAS pode demorar 1 minuto se necessário = <strong>errado</strong> (30 segundos é o teto)</li>
+              <li>O último S de ASPAS é "Sentar o bebê" = <strong>errado</strong> (é Aspirar, SE NECESSÁRIO)</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>Aspirar boca ≠ aspirar narinas (ordem importa — página 3.5)</li>
+          <li>Aspiração condicional ≠ aspiração proibida (faz quando precisa, com cautela)</li>
+          <li>Posicionar vias aéreas ≠ hiperextender o pescoço (posição neutra ou leve extensão)</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">Ordem ASPAS correta + janela de 30s + condicionalidade do último S + preparação prévia da mesa.</div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">ASPAS = Aquecer + Secar + Posicionar + Aspirar <strong>se necessário</strong>, tudo em 30s, com mesa preparada antes.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p4" aria-labelledby="quiz-p4-title">
+        <h2 class="quiz__title" id="quiz-p4-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual o tempo máximo pra completar o ASPAS desde a chegada do RN na mesa?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — 10 segundos</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — 30 segundos</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — 60 segundos</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — 2 minutos</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> PRN-SBP 2022 define 30 segundos como janela para os passos iniciais (ASPAS).</p>
+              <p class="quiz__distractor">A é irrealisticamente curto. C confunde com o tempo de VPP antes da primeira reavaliação. D destrói a janela fisiológica de adaptação extrauterina.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">RN chega na mesa de reanimação sem secreções visíveis na boca ou narinas. Conduta com relação ao último S do ASPAS?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Aspirar boca e narinas sempre — é parte obrigatória do protocolo</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Não aspirar — o passo é condicional ("se necessário")</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Aspirar apenas a boca; narinas só se houver secreção</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Aspirar com pressão máxima pra prevenir aspiração futura</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Aspiração é seletiva — só executar se o RN chegou encatarrado/com secreção visível. Aspiração de rotina foi abandonada porque estimula reflexo vagal e pode causar bradicardia.</p>
+              <p class="quiz__distractor">A é o erro clássico. C aspira sem necessidade. D agrava o reflexo vagal.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A sala de parto deve estar entre 23-25°C antes da chegada do RN.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: VERDADEIRO.</strong> Temperatura ambiente 23-25°C é parte da preparação pra evitar hipotermia neonatal — RN perde calor com altíssima velocidade.</p>
+              <p class="quiz__distractor">Faixa-padrão do PRN-SBP 2022; abaixo de 23°C aumenta risco de hipotermia grave.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> completo o ASPAS, a próxima decisão depende da avaliação imediata do RN — FC pelo estetoscópio e qualidade da respiração. E antes disso, se a aspiração foi necessária, há uma regra de ordem entre boca e narinas que cai em prova.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p3">‹ Anterior</a>
+        <span class="page-nav__indicator">4 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p5">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.5 — Estratégia: E8 (Erro comum desmontado)               -->
+    <!-- Itens roteiro: [049]-[060] · V15 (boca→narinas)                   -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="5" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.5 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E8 · Erro desmontado</span>
+        <span class="page-meta__tag">Itens 049-060</span>
+      </div>
+      <h1 class="page-title">Boca antes de narinas e a FC em 6 segundos: a avaliação que decide o próximo passo</h1>
+
+      <section class="opener opener--bust">
+        <span class="opener__wrong">Aspirar primeiro a narina porque "está mais visível". Auscultar o coração do RN por 1 minuto inteiro pra contar FC.</span>
+        <span class="opener__right">Ambos errados. A ordem correta da aspiração é <strong>boca antes de narinas</strong>; a FC é contada por <strong>6 segundos vezes 10</strong>.</span>
+      </section>
+
+      <h2>Aspiração: boca antes de narinas</h2>
+      <p>Quando a aspiração é necessária (lembrando: condicional, página 3.4), a <strong>sequência é obrigatória</strong>: começar pela <strong>BOCA</strong> e depois pelas <strong>NARINAS</strong>.</p>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico</div>
+        <div class="mnemonic__body">"<strong>B antes de N no alfabeto</strong>" — primeiro Boca, depois Narinas.</div>
+      </aside>
+
+      <p><strong>Por que essa ordem?</strong> Aspirar primeiro as narinas joga a secreção da narina pra dentro da boca por gravidade, enchendo a boca de "meleca" que você teria que aspirar de novo. A sequência correta — boca antes — evita que a meleca da narina escorra pra uma boca já aspirada e limpa. É lógica de fluxo, não de hierarquia anatômica.</p>
+
+      <!-- V15 — Sequência boca→narinas -->
+      <figure class="fig" aria-labelledby="v15-cap">
+        <svg viewBox="0 0 640 220" role="img" aria-labelledby="v15-title v15-desc" width="640" height="220">
+          <title id="v15-title">Sequência da aspiração — boca antes de narinas</title>
+          <desc id="v15-desc">Dois painéis: painel 1 aspira a boca (correto, primeiro); painel 2 aspira as narinas (correto, depois).</desc>
+          <defs>
+            <marker id="arr-coral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ff6b5a"/></marker>
+          </defs>
+          <!-- Painel 1: BOCA -->
+          <g transform="translate(40,30)">
+            <rect width="240" height="160" rx="14" fill="#142838" stroke="#5fcf80" stroke-width="2"/>
+            <text x="120" y="28" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#5fcf80">1 — BOCA ✓</text>
+            <!-- silhueta cabeça -->
+            <ellipse cx="120" cy="100" rx="60" ry="50" fill="#1a3245" stroke="#3a5260"/>
+            <!-- boca (oval) -->
+            <ellipse cx="120" cy="120" rx="22" ry="8" fill="#7c2030"/>
+            <!-- narina -->
+            <circle cx="112" cy="100" r="2.5" fill="#3a5260"/>
+            <circle cx="128" cy="100" r="2.5" fill="#3a5260"/>
+            <!-- sonda -->
+            <line x1="120" y1="120" x2="120" y2="170" stroke="#ff6b5a" stroke-width="3" marker-end="url(#arr-coral)"/>
+            <text x="120" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae">Sonda → boca</text>
+          </g>
+          <!-- Seta -->
+          <text x="320" y="115" text-anchor="middle" font-family="Lora,serif" font-style="italic" font-size="20" fill="#ff6b5a">→</text>
+          <!-- Painel 2: NARINAS -->
+          <g transform="translate(360,30)">
+            <rect width="240" height="160" rx="14" fill="#142838" stroke="#5fcf80" stroke-width="2"/>
+            <text x="120" y="28" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#5fcf80">2 — NARINAS ✓</text>
+            <ellipse cx="120" cy="100" rx="60" ry="50" fill="#1a3245" stroke="#3a5260"/>
+            <ellipse cx="120" cy="120" rx="22" ry="8" fill="#5a3845"/>
+            <circle cx="112" cy="100" r="2.5" fill="#7c2030"/>
+            <circle cx="128" cy="100" r="2.5" fill="#7c2030"/>
+            <line x1="112" y1="100" x2="92" y2="170" stroke="#ff6b5a" stroke-width="3" marker-end="url(#arr-coral)"/>
+            <line x1="128" y1="100" x2="148" y2="170" stroke="#ff6b5a" stroke-width="3" marker-end="url(#arr-coral)"/>
+            <text x="120" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae">Sonda → narinas</text>
+          </g>
+        </svg>
+        <figcaption id="v15-cap">V15 — Por que "B antes de N": aspirar narinas antes da boca faz meleca escorrer pra boca já limpa. Lógica de fluxo.</figcaption>
+      </figure>
+
+      <h2>Avaliação pós-ASPAS: o que avaliar e como</h2>
+      <p>Terminado o ASPAS (em ≤30s), o RN é avaliado imediatamente. <strong>Dois parâmetros</strong> entram nessa avaliação inicial:</p>
+      <ol>
+        <li><strong>Frequência cardíaca</strong> (FC)</li>
+        <li><strong>Qualidade da respiração</strong></li>
+      </ol>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Cuidado com a primeira pegadinha</div>
+          <div class="trap__body">A avaliação <strong>não inclui</strong> a frequência respiratória. Só a <strong>qualidade</strong> da respiração (se há movimento respiratório bom, expansão visível do tórax). A FR de RN é difícil de avaliar com precisão e demoraria muito — não cabe nos 30s do fluxo subsequente.</div>
+        </div>
+      </aside>
+
+      <h2>Por que FC é o parâmetro principal</h2>
+      <p>A FC é o <strong>principal parâmetro</strong> de toda a reanimação neonatal. Não é a frequência respiratória, não é a saturação (ainda), não é a perfusão periférica. É a FC. Por uma razão simples: ela responde rápido a qualquer intervenção que dê certo (ou não dê).</p>
+
+      <h2>Como medir a FC nesta etapa: ESTETOSCÓPIO</h2>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">A FC pós-ASPAS é avaliada por <strong>ESTETOSCÓPIO</strong>. Não por monitor, não por palpação do cordão.</div>
+        </div>
+      </aside>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body">Já caiu em prova na maldade — "como avaliar a FC nesse passo inicial?" Resposta = <strong>estetoscópio</strong>.</div>
+      </aside>
+
+      <p>Por que estetoscópio e não monitor? Porque nesse momento (passos iniciais terminados) o monitor ainda não está conectado. Conectar o monitor (oxímetro) toma tempo precioso. O estetoscópio é rápido, sempre disponível e suficiente pra essa primeira avaliação.</p>
+
+      <h2>Técnica de contagem: 6 segundos × 10</h2>
+      <p>Auscultar a FC por <strong>6 segundos</strong> e <strong>multiplicar o valor por 10</strong> — assim você obtém FC em batimentos por minuto sem precisar contar por 60 segundos.</p>
+      <p>Por que não 60 segundos? Porque você não tem 1 minuto pra ficar parado ouvindo o RN. O fluxograma exige decisão rápida (FC &lt;100? FC ≥100?), e perder 1 minuto pra contar FC quebra a cadência.</p>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mnemônico</div>
+        <div class="mnemonic__body">6 segundos × 10 = FC em 60 segundos.</div>
+      </aside>
+
+      <h2>Síntese — quadro de avaliação pós-ASPAS</h2>
+      <div class="comparison">
+        <table>
+          <thead><tr><th>O que avaliar</th><th>Como</th><th>Por quê</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Frequência cardíaca</strong></td><td>Estetoscópio, 6s × 10</td><td>Principal parâmetro da reanimação; rápido pra obter</td></tr>
+            <tr><td><strong>Qualidade da respiração</strong></td><td>Inspeção visual da expansão torácica</td><td>"Boa" ou "ruim" — não frequência exata</td></tr>
+            <tr><td><strong>Frequência respiratória</strong></td><td><em>Não se avalia nesta etapa</em></td><td>Difícil de medir, quebra a cadência</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>Aspirar boca antes de narinas ≠ aspirar tudo junto</li>
+          <li>FC pós-ASPAS por estetoscópio ≠ FC por monitor (esse vem depois, na VPP)</li>
+          <li>Avaliação inclui <strong>qualidade</strong> da respiração ≠ <strong>frequência</strong> respiratória</li>
+          <li>6s × 10 ≠ 60s direto</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">
+          <ul>
+            <li>Ordem aspiração boca→narinas (mnemônico B antes de N)</li>
+            <li>Instrumento da FC pós-ASPAS = ESTETOSCÓPIO</li>
+            <li>Técnica de contagem = 6s × 10</li>
+            <li>A avaliação NÃO inclui frequência respiratória</li>
+          </ul>
+        </div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">Aspiração quando necessária = boca antes de narinas. Avaliação pós-ASPAS = FC por estetoscópio em 6s × 10 + qualidade respiratória (não frequência).</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p5" aria-labelledby="quiz-p5-title">
+        <h2 class="quiz__title" id="quiz-p5-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual o instrumento correto pra avaliar a FC do RN logo após os passos iniciais (ASPAS)?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Monitor cardíaco (cardioscópio)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Oxímetro de pulso</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Estetoscópio</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Palpação do cordão umbilical</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Estetoscópio é o instrumento da avaliação pós-ASPAS. Monitor e oxímetro entram após o início da VPP (página 3.6). Já caiu em prova na maldade.</p>
+              <p class="quiz__distractor">A e B confundem com a fase pós-VPP. D é técnica menos confiável e mais lenta no RN.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Técnica correta de contagem da FC pelo estetoscópio nesta etapa?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Contar 60 segundos pra obter o valor exato</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Contar 15 segundos e multiplicar por 4</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Contar 6 segundos e multiplicar por 10</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Auscultar até identificar arritmia</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> PRN-SBP 2022 padroniza 6s × 10 — rápido e suficiente.</p>
+              <p class="quiz__distractor">A quebra a cadência do fluxograma. B é tempo válido mas não é o padronizado. D não é critério desta etapa.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A sequência correta de aspiração quando indicada é: primeiro narinas, depois boca.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> Ordem correta é <strong>boca antes de narinas</strong> ("B antes de N no alfabeto") — aspirar narinas primeiro joga secreção da narina pra dentro da boca por gravidade.</p>
+              <p class="quiz__distractor">Lógica de fluxo, não de hierarquia anatômica.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> a FC e a qualidade da respiração geram 3 critérios pra indicação de VPP — qualquer um deles presente, indica iniciar VPP imediatamente.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p4">‹ Anterior</a>
+        <span class="page-nav__indicator">5 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p6">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.6 — Estratégia: E7 (Comparação chocante)                 -->
+    <!-- Itens roteiro: [061]-[083] · V_TabSatO2 + B15 placeholder        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="6" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.6 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E7 · Comparação chocante</span>
+        <span class="page-meta__tag">Itens 061-083</span>
+      </div>
+      <h1 class="page-title">VPP: a principal medida da sala de parto — indicações, técnica, FiO2 e o pulso MSD</h1>
+
+      <section class="opener opener--vs">
+        <div class="opener__side">
+          <h4>ANTES da VPP</h4>
+          <p>Estetoscópio · 6s × 10 · FC isolada · sem monitor</p>
+        </div>
+        <div class="opener__divider">vs</div>
+        <div class="opener__side">
+          <h4>DEPOIS da VPP</h4>
+          <p>Oxímetro · MSD pré-ductal · saturação contínua · mãos livres</p>
+        </div>
+      </section>
+
+      <p style="font-size:var(--fs-md);font-style:italic;color:var(--ink-70);">A reanimação muda de instrumento, muda de lógica, muda de mãos livres. E o motivo é simples: durante a VPP, você não pode estar parado ouvindo.</p>
+
+      <h2>Por que VPP é a principal medida</h2>
+      <p>Bebês não param por problema cardíaco primário. <strong>Param por hipoxia.</strong> O pulmão fica fechado durante toda a vida intrauterina; ao nascer, precisa expandir. Quando não expande, o RN entra em hipóxia e tudo o que vem depois (bradicardia, acidose, parada) é consequência.</p>
+      <p>Por isso a primeira medida real da reanimação é <strong>jogar ar pra dentro do pulmão e ajudar a expansão pulmonar</strong>. Isso é VPP — ventilação por pressão positiva. É a medida-mãe da sala de parto.</p>
+
+      <!-- B15 — placeholder imagem real -->
+      <div class="img-placeholder" data-needs-real-image="B15">
+        <span class="img-placeholder__id">B15</span>
+        Imagem real pendente: profissional de saúde realizando VPP por balão+máscara em RN na sala de parto.
+        <br><small>Alt text: "Profissional de saúde realizando ventilação por pressão positiva com balão e máscara facial em recém-nascido em sala de parto. Máscara facial vedando boca e nariz, balão autoinflável acoplado, posição neutra da cabeça do RN."</small>
+      </div>
+
+      <h2>Indicações de VPP — OU lógico, não E</h2>
+      <p>A VPP é indicada se <strong>qualquer um</strong> dos 3 critérios estiver presente. Não precisa dos 3 ao mesmo tempo. <strong>OU</strong>, não E.</p>
+
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Critério</th><th>Significado</th></tr></thead>
+          <tbody>
+            <tr><td><strong>FC &lt;100 bpm</strong></td><td>Bradicardia neonatal</td></tr>
+            <tr><td><strong>Apneia</strong></td><td>Ausência de movimento respiratório</td></tr>
+            <tr><td><strong>Respiração irregular (gasp)</strong></td><td>Respiração tipo arquejo, "puxar ar" irregular</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">"Ou isso, ou isso, ou isso" — qualquer um dos 3 indica VPP. Confundir OU com E adia a VPP e perde RN.</div>
+        </div>
+      </aside>
+
+      <h2>Técnica VPP — "aperta, solta, solta"</h2>
+      <ul>
+        <li><strong>Frequência</strong>: 40 a 60 ventilações por minuto</li>
+        <li><strong>Mantra de cadência</strong>: "<strong>aperta, solta, solta</strong>" — esse ritmo garante 40-60/min sem precisar olhar relógio</li>
+        <li><strong>Duração inicial</strong>: <strong>30 segundos</strong> antes da primeira reavaliação</li>
+        <li><strong>Pressão</strong>: suficiente pra ver expansão torácica (não exagerar — risco de barotrauma)</li>
+      </ul>
+
+      <h2>FiO2 — 21% padrão, 30% pra &lt;34 sem</h2>
+      <div class="comparison">
+        <table>
+          <thead><tr><th>População</th><th>FiO2 inicial</th></tr></thead>
+          <tbody>
+            <tr><td><strong>RN ≥34 sem</strong></td><td><strong>21% — ar ambiente</strong></td></tr>
+            <tr><td><strong>RN &lt;34 sem</strong></td><td><strong>30% — enriquecimento leve</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Por que 21% pra ≥34 sem?</strong> Porque o problema do RN em parada <strong>não é troca gasosa</strong> (pulmão funcionando mas sem ar). O problema é que o pulmão <strong>não expande</strong>. Não adianta enriquecer oxigênio se o ar não chega. Começar com 21% e titular pra cima conforme a SatO2 alvo é a abordagem PRN-SBP 2022.</p>
+
+      <p><strong>Por que 30% pra &lt;34 sem?</strong> Bebê pré-termo certamente vai pra UTI Neonatal e tem complicação adicional (síndrome do desconforto respiratório / membrana hialina). Iniciar o enriquecimento de O2 mais cedo é mais seguro. Não 21%, não 100% — 30% como ponto inicial pragmático.</p>
+
+      <h2>Reavaliação pós-VPP: oxímetro no MSD, pré-ductal</h2>
+      <p>Após <strong>30 segundos de VPP</strong>, reavaliar o RN. Aqui muda o instrumento:</p>
+      <blockquote style="border-left:3px solid var(--accent-coral);padding-left:var(--space-3);margin:var(--space-4) 0;font-style:italic;color:var(--ink-100);font-size:var(--fs-md);">Não é mais por estetoscópio. Agora é por monitor (oxímetro).</blockquote>
+      <p>Por quê? Durante a VPP, quem está ventilando está concentrado em manter a técnica. Não dá pra simultaneamente ouvir com esteto. O oxímetro libera as mãos e dá leitura contínua.</p>
+
+      <h3>Onde colocar o oxímetro?</h3>
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">Oxímetro no <strong>MEMBRO SUPERIOR DIREITO (MSD)</strong> — saturação <strong>PRÉ-DUCTAL</strong>.</div>
+        </div>
+      </aside>
+
+      <p>Por que MSD? Porque a artéria subclávia direita sai da aorta <strong>antes</strong> do canal arterial. Sangue medido aí é <strong>pré-ductal</strong> — sem mistura com sangue desoxigenado que volta pelo canal arterial pra aorta descendente. Sem interferência do shunt direita-esquerda fisiológico do RN. Você lê a saturação que importa pra avaliar a oxigenação do encéfalo.</p>
+      <p>Oxímetro em MSE ou em MMII = saturação pós-ductal = pode ser enganadoramente baixa por mistura.</p>
+
+      <h2>Tabela canônica SatO2 alvo por minuto de vida (PRN-SBP 2022)</h2>
+      <p>A SatO2 do RN não chega a 95% imediatamente — sobe gradualmente nos primeiros minutos de vida. A tabela canônica define o alvo por minuto:</p>
+
+      <!-- V_TabSatO2 -->
+      <div class="comparison comparison--highlight">
+        <table aria-label="Tabela SatO2 alvo por minuto de vida">
+          <thead><tr><th>Minuto de vida</th><th>SatO2 alvo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1 min</strong></td><td><strong>60-65%</strong></td></tr>
+            <tr><td>2 min</td><td>65-70%</td></tr>
+            <tr><td>3 min</td><td>70-75%</td></tr>
+            <tr><td>4 min</td><td>75-80%</td></tr>
+            <tr><td><strong>5 min</strong></td><td><strong>80-85%</strong></td></tr>
+            <tr><td><strong>10 min</strong></td><td><strong>85-95%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:var(--fs-sm);color:var(--ink-70);font-style:italic;">Se a SatO2 estiver abaixo do alvo do minuto correspondente → aumentar a FiO2. Se acima → reduzir. Titulação dinâmica.</p>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>OU vs E nos critérios de VPP → é OU (qualquer um indica)</li>
+          <li>FiO2 21% (≥34 sem) ≠ FiO2 30% (&lt;34 sem) ≠ 100% (não usar de início rotineiramente)</li>
+          <li>Oxímetro no MSD (pré-ductal) ≠ MSE/MMII (pós-ductal — leitura enganosa)</li>
+          <li>Estetoscópio (avaliação pós-ASPAS) ≠ Oxímetro (avaliação pós-VPP)</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">
+          <ul>
+            <li>3 critérios de VPP com OU lógico</li>
+            <li>Frequência 40-60/min ("aperta solta solta")</li>
+            <li>Duração inicial 30s</li>
+            <li>FiO2 21% padrão, 30% se &lt;34 sem</li>
+            <li>Oxímetro MSD = pré-ductal</li>
+            <li>Tabela SatO2 alvo por minuto (alta probabilidade de prova)</li>
+          </ul>
+        </div>
+      </aside>
+
+      <aside class="active-review">
+        <div class="active-review__label">Revisão ativa</div>
+        <ol>
+          <li>Por que faz sentido fisiopatologicamente começar com ar ambiente em RN ≥34 sem em vez de oxigênio puro?</li>
+          <li>Por que a saturação pré-ductal (MSD) é mais informativa que a pós-ductal nas primeiras horas de vida?</li>
+          <li>Como o mantra "aperta, solta, solta" sustenta a frequência de 40-60/min sem precisar de cronômetro?</li>
+        </ol>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">VPP indicada por OU lógico (FC&lt;100 OU apneia OU irregular); 40-60/min "aperta solta solta"; 30s antes de reavaliar; FiO2 21% padrão/30% se &lt;34 sem; oxímetro MSD pré-ductal; titular SatO2 pela tabela por minuto.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p6" aria-labelledby="quiz-p6-title">
+        <h2 class="quiz__title" id="quiz-p6-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN com FC 140, sem respiração espontânea, sem cianose. Indicação de VPP?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Não — FC está normal</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Não — sem cianose, sem urgência</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Sim — apneia indica VPP independente da FC</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Sim — toda criança que chega na mesa recebe VPP</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Os 3 critérios de VPP são <strong>OU lógico</strong> — apneia sozinha indica VPP, mesmo com FC normal.</p>
+              <p class="quiz__distractor">A é a pegadinha clássica (aluno fixa só na FC). B introduz critério não-canônico. D confunde passos iniciais (ASPAS, sempre) com VPP (condicional).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Onde se coloca o oxímetro de pulso na monitorização pós-VPP do RN?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Membro superior esquerdo (MSE)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — Membro superior direito (MSD)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Membro inferior direito (MID)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Qualquer membro, desde que tenha boa perfusão</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> MSD garante saturação <strong>pré-ductal</strong> — sem mistura com sangue desoxigenado do canal arterial.</p>
+              <p class="quiz__distractor">MSE e MMII medem saturação pós-ductal, enganosamente baixa nas primeiras horas pela fisiologia do RN. D ignora a fisiologia do canal arterial fetal.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="mcq">
+            <span class="quiz__qnum">Questão 3 — MCQ</span>
+            <p class="quiz__stem">Qual a SatO2 alvo aos 5 minutos de vida segundo a tabela canônica PRN-SBP 2022?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — 60-65%</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — 70-75%</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — 80-85%</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — 95-100%</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Aos 5 min, alvo 80-85%; aos 10 min, 85-95%.</p>
+              <p class="quiz__distractor">A é alvo de 1 min. B é alvo de 3 min. D é alvo de adulto, não RN nos primeiros minutos.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> se após 30s de VPP a FC continua &lt;100, a primeira coisa <strong>não</strong> é progredir de dispositivo — é duvidar da própria técnica.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p5">‹ Anterior</a>
+        <span class="page-nav__indicator">6 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p7">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.7 — Estratégia: E1 (Pergunta central)                    -->
+    <!-- Itens roteiro: [084]-[094] · V16 (progressão interfaces)         -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="7" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.7 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E1 · Pergunta central</span>
+        <span class="page-meta__tag">Itens 084-094</span>
+      </div>
+      <h1 class="page-title">VPP falhou? Duvide de si mesmo primeiro: checagem de técnica e progressão de interfaces</h1>
+
+      <section class="opener opener--question">
+        <p class="opener__q">Após 30 segundos de VPP, FC continua abaixo de 100. Qual a primeira coisa a fazer? Trocar de dispositivo? Aumentar a pressão? Indicar MCE? Nenhuma das anteriores. <strong>Duvide de si mesmo primeiro.</strong></p>
+      </section>
+
+      <h2>Checar a técnica antes de mudar de dispositivo</h2>
+      <p>Após 30 segundos de VPP, se a FC continua abaixo de 100, a VPP falhou. Mas falhou por quê? Antes de mudar a estratégia, mudar de dispositivo, escalar de complexidade — <strong>duvide da técnica que você acabou de aplicar</strong>.</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body">Antes de mudar a interface, <strong>checar a técnica</strong>. Duvidar de si mesmo primeiro.</div>
+      </aside>
+
+      <p>A grande maioria das falhas iniciais de VPP é por <strong>defeito de técnica</strong>, não por necessidade de dispositivo mais avançado. Checar:</p>
+      <ul>
+        <li><strong>Compressão correta</strong> do balão (volume e cadência)</li>
+        <li><strong>Tudo conectado</strong> (balão ao reservatório de O2, máscara ao balão)</li>
+        <li><strong>Máscara vedada</strong> no rosto do RN (sem escape lateral)</li>
+        <li><strong>Tamanho de máscara adequado</strong> (cobrir boca + nariz sem cobrir olhos nem pressionar mento)</li>
+        <li><strong>Ausência de escape de ar</strong> (audível, visível)</li>
+      </ul>
+
+      <p>Se algum desses pontos estiver errado, a VPP não está sendo VPP de verdade — está sendo aparência de VPP. Corrigir a técnica pode fazer a FC subir sem precisar mudar dispositivo.</p>
+
+      <h2>Se a técnica está correta — progredir a INTERFACE</h2>
+      <p>Confirmada a técnica e mantendo FC &lt;100 após 30s de VPP correta, agora sim — progredir o dispositivo. A progressão segue <strong>ordem inviolável</strong>:</p>
+
+      <!-- V16 — Progressão de interfaces SVG -->
+      <figure class="fig" aria-labelledby="v16-cap">
+        <svg viewBox="0 0 720 200" role="img" aria-labelledby="v16-title v16-desc" width="720" height="200">
+          <title id="v16-title">Progressão de interfaces de VPP</title>
+          <desc id="v16-desc">Três interfaces em sequência: balão+máscara facial, máscara laríngea, tubo orotraqueal.</desc>
+          <defs>
+            <marker id="arr-coral2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ff6b5a"/></marker>
+          </defs>
+          <!-- Caixa 1: Balão+Máscara -->
+          <g transform="translate(20,40)">
+            <rect width="180" height="120" rx="14" fill="#142838" stroke="#5fcf80" stroke-width="2"/>
+            <text x="90" y="28" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#5fcf80">1. Balão + Máscara</text>
+            <!-- ícone simplificado: balão = esfera + máscara = triângulo -->
+            <circle cx="60" cy="75" r="20" fill="#1a3245" stroke="#c3bcae" stroke-width="2"/>
+            <polygon points="80,75 120,55 120,95" fill="#1a3245" stroke="#c3bcae" stroke-width="2"/>
+            <text x="90" y="115" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae">Padrão de início</text>
+          </g>
+          <!-- Seta -->
+          <line x1="210" y1="100" x2="250" y2="100" stroke="#ff6b5a" stroke-width="2.5" marker-end="url(#arr-coral2)"/>
+          <!-- Caixa 2: ML -->
+          <g transform="translate(260,40)">
+            <rect width="180" height="120" rx="14" fill="#142838" stroke="#f0b440" stroke-width="2"/>
+            <text x="90" y="28" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#f0b440">2. Máscara Laríngea</text>
+            <ellipse cx="90" cy="75" rx="38" ry="14" fill="#1a3245" stroke="#c3bcae" stroke-width="2"/>
+            <line x1="128" y1="75" x2="160" y2="75" stroke="#c3bcae" stroke-width="3"/>
+            <text x="90" y="115" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae">Falha 1, técnica ok</text>
+          </g>
+          <!-- Seta -->
+          <line x1="450" y1="100" x2="490" y2="100" stroke="#ff6b5a" stroke-width="2.5" marker-end="url(#arr-coral2)"/>
+          <!-- Caixa 3: IOT -->
+          <g transform="translate(500,40)">
+            <rect width="200" height="120" rx="14" fill="#142838" stroke="#ff5d6b" stroke-width="2"/>
+            <text x="100" y="28" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#ff5d6b">3. IOT</text>
+            <line x1="40" y1="75" x2="160" y2="75" stroke="#c3bcae" stroke-width="4"/>
+            <circle cx="40" cy="75" r="6" fill="#c3bcae"/>
+            <text x="100" y="115" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae">Falha ML / pré-termo / HDC</text>
+          </g>
+        </svg>
+        <figcaption id="v16-cap">V16 — Progressão balão+máscara → ML → IOT. Em &lt;34 sem ou HDC, pula a ML (caminho alternativo direto pra IOT).</figcaption>
+      </figure>
+
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Etapa</th><th>Dispositivo</th><th>Quando</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1</strong></td><td><strong>Balão + máscara facial</strong></td><td>Padrão de início</td></tr>
+            <tr><td><strong>2</strong></td><td><strong>Máscara laríngea (ML)</strong></td><td>Falha de 1 com técnica correta</td></tr>
+            <tr><td><strong>3</strong></td><td><strong>Tubo orotraqueal (IOT)</strong></td><td>Falha de 2</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="font-style:italic;color:var(--ink-70);">Progressão é: balão+máscara → ML → IOT. <strong>O dispositivo muda, mas o conceito (VPP) é o mesmo.</strong></p>
+
+      <h2>VPP não é sinônimo de dispositivo</h2>
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">VPP <strong>não é</strong> balão+máscara. VPP é o <strong>ato</strong> de jogar ar com pressão positiva no pulmão. Pode ser feito por balão+máscara, por máscara laríngea ou por tubo orotraqueal.</div>
+        </div>
+      </aside>
+
+      <p>Quando alguém diz "vou intubar e ventilar", está dizendo "vou colocar o tubo traqueal e fazer VPP por ele". A VPP continua sendo VPP. Mudou o dispositivo (interface). Não mudou o ato (ventilação por pressão positiva).</p>
+
+      <h2>A lógica da progressão</h2>
+      <ul>
+        <li><strong>Balão+máscara</strong>: rápido, não invasivo, suficiente pra maioria. Limitação: escape de ar, dificuldade de vedação em algumas faces, técnica dependente.</li>
+        <li><strong>Máscara laríngea (ML)</strong>: cobre a entrada da laringe, melhor vedação que máscara facial, sem precisar de IOT. Limitação: tamanho fixo (não cabe em &lt;34 sem — situação especial na página 3.11).</li>
+        <li><strong>IOT (tubo orotraqueal)</strong>: máxima eficácia de ventilação dirigida ao pulmão, sem desvio pra esôfago. Limitação: invasivo, requer laringoscopia, mais tempo.</li>
+      </ul>
+
+      <h2>Quando criança não melhora com balão+máscara mesmo com técnica correta</h2>
+      <p>Troca pra máscara laríngea. Reavalia. Se não melhora com ML, parte pra IOT e faz VPP pelo tubo traqueal.</p>
+
+      <h2>Tabela comparativa de interfaces</h2>
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Interface</th><th>Indicação</th><th>Vantagem</th><th>Limitação</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Balão + máscara facial</strong></td><td>Padrão de início</td><td>Rápido, não invasivo</td><td>Escape de ar; técnica dependente</td></tr>
+            <tr><td><strong>Máscara laríngea</strong></td><td>Falha de balão+máscara com técnica correta</td><td>Melhor vedação sem IOT</td><td>Não cabe em RN &lt;34 sem</td></tr>
+            <tr><td><strong>IOT (tubo orotraqueal)</strong></td><td>Falha de ML; ou direto em &lt;34 sem; ou hérnia diafragmática desde início</td><td>Máxima eficácia ventilatória</td><td>Invasivo, requer laringoscopia</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>Falha de VPP ≠ indicação direta de MCE (primeiro checar técnica + progredir interface)</li>
+          <li>VPP = ato ≠ dispositivo = interface (3 interfaces possíveis pro mesmo ato)</li>
+          <li>Progredir interface ≠ aumentar pressão (são caminhos distintos; pressão é parte da técnica)</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">
+          <ul>
+            <li>Ordem checar técnica ANTES de mudar dispositivo</li>
+            <li>Progressão balão→ML→IOT (inviolável)</li>
+            <li>VPP ≠ dispositivo (questão conceitual frequente)</li>
+            <li>Componentes da checagem (vedação, escape, tamanho de máscara)</li>
+          </ul>
+        </div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">VPP falha → checar técnica primeiro → se técnica correta, progredir interface (balão→ML→IOT). VPP é ato, não dispositivo.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p7" aria-labelledby="quiz-p7-title">
+        <h2 class="quiz__title" id="quiz-p7-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Após 30 segundos de VPP com balão e máscara, FC continua em 80 bpm. Qual a primeira conduta?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Trocar imediatamente pra máscara laríngea</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Iniciar MCE — FC &lt;100 indica massagem</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Checar a técnica da VPP (vedação, escape, tamanho de máscara)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Administrar epinefrina EV</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Regra de ouro — antes de mudar dispositivo, checar técnica.</p>
+              <p class="quiz__distractor">A pula etapa essencial. B confunde critério (MCE só com paciente intubado + FC&lt;60, não &lt;100). D ignora completamente o fluxograma (epinefrina vem depois de 1 min de MCE).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Qual a ordem correta de progressão de interfaces na VPP quando a técnica está adequada e a FC não melhora?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Balão+máscara → IOT → máscara laríngea</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Máscara laríngea → balão+máscara → IOT</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Balão+máscara → máscara laríngea → IOT</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — IOT direto, pulando as outras</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Progressão canônica balão+máscara → ML → IOT (ordem PRN-SBP 2022 vigente; ML entrou como etapa intermediária formal em 2022).</p>
+              <p class="quiz__distractor">A inverte ML e IOT. B inverte início. D só se aplica em situação especial (&lt;34 sem ou hérnia diafragmática).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">VPP é sinônimo de balão+máscara.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> VPP é o <strong>ato</strong> de ventilar com pressão positiva. O dispositivo (interface) pode ser balão+máscara, máscara laríngea ou tubo orotraqueal.</p>
+              <p class="quiz__distractor">Pegadinha conceitual frequente em prova.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> paciente já intubado e com FC ainda &lt;60? Agora sim, MCE entra em cena — mas só agora, depois de todo este caminho.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p6">‹ Anterior</a>
+        <span class="page-nav__indicator">7 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p8">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.8 — Estratégia: E5 (Meta + checklist)                    -->
+    <!-- Itens roteiro: [095]-[102]                                        -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="8" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.8 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E5 · Meta + checklist</span>
+        <span class="page-meta__tag">Itens 095-102</span>
+      </div>
+      <h1 class="page-title">Quando começar MCE: bebê com FC 20 NÃO pula etapas</h1>
+
+      <section class="opener opener--checklist">
+        <div class="opener__intro">Ao final desta página você vai saber:</div>
+        <ol>
+          <li>Os 2 critérios CONJUNTOS pra iniciar MCE</li>
+          <li>Por que FC 20 não autoriza MCE imediata</li>
+          <li>A pegadinha "casca de banana" que cai em prova</li>
+          <li>A ordem inviolável que precede a MCE</li>
+        </ol>
+      </section>
+
+      <h2>Os 2 critérios CONJUNTOS pra MCE</h2>
+      <p>A indicação de massagem cardíaca externa (MCE) em RN exige <strong>dois critérios juntos</strong> — não um ou outro, os DOIS:</p>
+
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Critério</th><th>Significado</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Paciente JÁ INTUBADO</strong></td><td>Já passou por toda a progressão de interface (balão+máscara → ML → IOT) e está com tubo orotraqueal</td></tr>
+            <tr><td><strong>FC &lt;60 bpm</strong></td><td>Bradicardia profunda persistente</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova fixada</div>
+          <div class="trap__body">Os 2 critérios pra MCE são <strong>conjuntos</strong> — intubado <strong>E</strong> FC &lt;60. Sem intubação, <strong>não há MCE ainda</strong>.</div>
+        </div>
+      </aside>
+
+      <h2>A ordem inviolável</h2>
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body">Passos iniciais → VPP → checar técnica → ML → IOT → <strong>só então MCE</strong> quando FC &lt;60 com paciente intubado.</div>
+      </aside>
+
+      <p>Não há atalho. Não há "FC tá muito baixa, vou direto pra MCE". O fluxograma é inviolável. Por uma razão fisiológica direta: como já dito na página 3.6, o RN para por hipoxia, não por problema cardíaco primário. <strong>Ventilar bem é a medida-mãe</strong>. MCE entra apenas quando a ventilação por VPP, com paciente intubado pra máxima eficácia, ainda não restaurou a FC.</p>
+
+      <h2>A pegadinha clássica: bebê com FC 20</h2>
+      <aside class="case-card">
+        <div class="case-card__title">Caso paradigmático — "casca de banana" da prova</div>
+        <p>RN nasce com FC de 20 bpm. Você está na sala de parto. Tentação imediata: "FC 20, é muito baixa, vou começar MCE agora". <strong>Errado.</strong></p>
+        <p>O fluxograma não muda só porque a FC tá muito baixa. Mesmo com FC 20:</p>
+        <ol>
+          <li>Passos iniciais (ASPAS) — 30s</li>
+          <li>Avaliação FC + qualidade respiração</li>
+          <li>Indicação VPP (FC &lt;100 atende, claro) — 30s de VPP</li>
+          <li>Reavaliação — FC ainda &lt;100? Checar técnica</li>
+          <li>Técnica correta + sem melhora? Progredir interface (ML → IOT)</li>
+          <li>Com paciente intubado + FC ainda &lt;60 → <strong>agora MCE</strong></li>
+        </ol>
+        <p>Sim, leva alguns minutos. Sim, parece contraintuitivo. Mas é exatamente o que a banca cobra.</p>
+      </aside>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro — "casca de banana"</div>
+        <div class="gold-rule__body">FC 20 não pula etapas. Mesmo com FC muito baixa, segue todo o fluxograma na ordem.</div>
+      </aside>
+
+      <h2>Lógica matemática que ajuda a fixar</h2>
+      <p>FC &lt;60 é um critério <strong>mais restritivo</strong> que FC &lt;100. Toda criança com FC 20 satisfaz FC &lt;60. Toda criança com FC &lt;60 satisfaz FC &lt;100 (porque 60 &lt; 100).</p>
+      <p>Então:</p>
+      <ul>
+        <li>FC &lt;100 → indica <strong>VPP</strong></li>
+        <li>FC &lt;60 → também indica VPP <strong>e</strong>, se já intubado, indica MCE</li>
+      </ul>
+      <p>Bebê com FC 20 entra no fluxograma pela porta da VPP (FC &lt;100), não pela porta direta da MCE. A porta da MCE exige paciente intubado.</p>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Frase-fixação</div>
+        <div class="mnemonic__body"><strong>20 &lt; 60 &lt; 100.</strong> A FC 20 atende todos os cortes — inclusive o de VPP, que é o primeiro a aparecer.</div>
+      </aside>
+
+      <h2>Segue sempre o fluxograma</h2>
+      <p>Não tem atalho pra MCE baseado em FC isolada. A FC dispara a indicação de VPP imediatamente; só após o paciente estar intubado (terceiro nível da progressão de interface) e ainda &lt;60 é que MCE entra em cena.</p>
+
+      <h2>Síntese visual da ordem</h2>
+      <pre class="flow-ascii">Nasce → 3 perguntas → semáforo → mesa
+  ↓
+ASPAS (30s)
+  ↓
+Avaliação: FC esteto 6s×10 + qualidade respiração
+  ↓
+Indicação VPP? (FC&lt;100 OU apneia OU irregular)
+  ↓ SIM
+VPP balão+máscara (30s, "aperta solta solta", FiO2 21% / 30% &lt;34sem, oxímetro MSD)
+  ↓
+Reavaliação por oxímetro
+  ↓ FC ainda &lt;100?
+CHECAR TÉCNICA (vedação, escape, máscara)
+  ↓ técnica correta + sem melhora
+ML → IOT (intubação)
+  ↓ FC ainda &lt;60 com paciente intubado?
+═══ MCE ═══ (página 3.9 detalha)</pre>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>FC &lt;60 ≠ indicação direta de MCE (precisa estar intubado também)</li>
+          <li>Ordem fluxograma inviolável ≠ adaptável a "casos graves"</li>
+          <li>VPP por IOT ≠ MCE (são coisas distintas; pode ter VPP por IOT sem MCE se FC ≥60)</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">
+          <ul>
+            <li>Os 2 critérios conjuntos pra MCE (intubado + FC&lt;60)</li>
+            <li>Que FC isolada (mesmo FC 20) NÃO pula etapas</li>
+            <li>A ordem completa do fluxograma até a MCE</li>
+          </ul>
+        </div>
+      </aside>
+
+      <aside class="active-review">
+        <div class="active-review__label">Revisão ativa</div>
+        <ol>
+          <li>Por que faz sentido fisiopatologicamente exigir IOT antes da MCE em RN?</li>
+          <li>Como a frase "20 &lt; 60 &lt; 100" ajuda a fixar a ordem de indicações?</li>
+          <li>Em que momento da ordem inviolável a MCE finalmente entra?</li>
+        </ol>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">MCE = 2 critérios conjuntos (intubado E FC&lt;60). FC isolada não dispara MCE. Ordem inviolável: ASPAS → VPP → checar técnica → ML → IOT → MCE.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p8" aria-labelledby="quiz-p8-title">
+        <h2 class="quiz__title" id="quiz-p8-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN nasce com FC de 20 bpm. Qual a primeira conduta correta?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Iniciar MCE imediatamente</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Iniciar MCE + intubação simultânea</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Seguir o fluxograma normal: passos iniciais → VPP → checagem técnica → progressão de interface → MCE só se intubado e FC ainda &lt;60</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Administrar epinefrina antes de qualquer manobra</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Pegadinha "casca de banana" — FC isolada não pula etapas, mesmo se for 20.</p>
+              <p class="quiz__distractor">A é o erro clássico. B confunde paralelismo de manobras com pulo de etapas. D inverte completamente a ordem (epinefrina vem só depois de 1 min de MCE).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Quais os 2 critérios CONJUNTOS pra indicação de MCE no RN?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — FC &lt;60 OU apneia</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — FC &lt;100 E paciente intubado</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — FC &lt;60 E paciente intubado</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — FC &lt;60 OU má vitalidade</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> PRN-SBP 2022 exige os 2 critérios juntos (E, não OU): FC &lt;60 + paciente já intubado.</p>
+              <p class="quiz__distractor">A confunde com critério de VPP (que é OU). B usa o corte de FC errado (100 é VPP, 60 é MCE). D introduz critério não-canônico.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">Bebê com FC &lt;60 entra direto na MCE, independente de qualquer outra condição.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> Precisa estar <strong>já intubado</strong> além de FC &lt;60. Sem intubação, segue o fluxograma normal (VPP, checar técnica, progredir interface).</p>
+              <p class="quiz__distractor">Critério conjunto, não isolado.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> agora que você sabe QUANDO começar MCE, vem a técnica — 2 polegares, 3:1 sincronizada, com posicionamento específico dos profissionais ao redor do RN.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p7">‹ Anterior</a>
+        <span class="page-nav__indicator">8 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p9">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.9 — Estratégia: E3 (Caso clínico em abertura)            -->
+    <!-- Itens roteiro: [103]-[114] · V14 + B16                            -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="9" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.9 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E3 · Caso clínico</span>
+        <span class="page-meta__tag">Itens 103-114</span>
+      </div>
+      <h1 class="page-title">Técnica MCE: 2 polegares, 3 compressões pra 1 ventilação sincronizada — e por que diferente do adulto</h1>
+
+      <article class="opener opener--case">
+        <h2 class="opener__case-title">Coreografia da sala de parto</h2>
+        <p>Sala de parto. RN intubado. FC ainda em 50 bpm após técnica correta. Três profissionais entram em coreografia: um na cabeça ventila pelo tubo, um atrás da cabeça do RN comprime o tórax com 2 polegares, um terceiro no flanco pegando acesso umbilical. A coreografia tem regra: <strong>3 compressões, 1 ventilação. Sincronizadas.</strong> Sempre.</p>
+        <p>Se fosse uma criança maior (PALS) ou um adulto (ACLS) intubado, esses mesmos três profissionais trabalhariam <strong>independentes</strong> — quem comprime no seu ritmo, quem ventila no seu. Em RN, não. Aqui sincroniza-se sempre.</p>
+        <p><em>Por quê?</em></p>
+      </article>
+
+      <h2>Técnica MCE em RN — 2 polegares</h2>
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body">Técnica MCE em RN = <strong>2 polegares</strong>, com mãos encerclando o tórax.</div>
+      </aside>
+
+      <p>A Sociedade Brasileira de Pediatria (SBP, via PRN — Programa de Reanimação Neonatal) é explícita: melhor técnica de MCE em RN é a dos 2 polegares. Não é a técnica dos 2 dedos (indicador + médio) — embora seja aceitável quando há um único profissional. A dos 2 polegares é a preferida.</p>
+
+      <p><strong>Por quê?</strong></p>
+      <ul>
+        <li>Maior controle de compressão do tórax</li>
+        <li>Maior controle de <strong>reexpansão</strong> do tórax entre compressões</li>
+        <li>Mais seguro (menor risco de comprimir além do limite)</li>
+        <li>Maior pico de pressão sistólica gerada</li>
+      </ul>
+
+      <p><strong>Como executar:</strong></p>
+      <ul>
+        <li>2 polegares posicionados no <strong>terço inferior do esterno</strong></li>
+        <li>Mãos encerclam o tórax do RN (palmas em direção ao dorso)</li>
+        <li>Profundidade de compressão: <strong>1/3 do diâmetro anteroposterior do tórax</strong></li>
+        <li>Permitir reexpansão completa entre compressões</li>
+      </ul>
+
+      <!-- V14 — Esquema MCE 2 polegares -->
+      <figure class="fig" aria-labelledby="v14-cap">
+        <svg viewBox="0 0 640 280" role="img" aria-labelledby="v14-title v14-desc" width="640" height="280">
+          <title id="v14-title">Técnica MCE — 2 polegares encerclando o tórax</title>
+          <desc id="v14-desc">Vista superior do tórax do RN com dois polegares no terço inferior do esterno; demais dedos encerclam o tórax pelo dorso.</desc>
+          <!-- Tórax do RN -->
+          <ellipse cx="320" cy="140" rx="120" ry="80" fill="#1a3245" stroke="#c3bcae" stroke-width="2"/>
+          <!-- Esterno (linha central) -->
+          <line x1="320" y1="80" x2="320" y2="200" stroke="#5a6878" stroke-width="2" stroke-dasharray="3,3"/>
+          <!-- Marca terço inferior -->
+          <line x1="280" y1="170" x2="360" y2="170" stroke="#ff6b5a" stroke-width="1" stroke-dasharray="2,2"/>
+          <text x="380" y="174" font-family="Inter,sans-serif" font-size="10" fill="#ff6b5a">terço inferior</text>
+          <!-- 2 polegares (formas ovais) -->
+          <ellipse cx="305" cy="180" rx="14" ry="22" fill="#ff6b5a" stroke="#1a1010" stroke-width="1"/>
+          <ellipse cx="335" cy="180" rx="14" ry="22" fill="#ff6b5a" stroke="#1a1010" stroke-width="1"/>
+          <text x="305" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#1a1010">1</text>
+          <text x="335" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#1a1010">2</text>
+          <!-- Mãos (arcos representando dedos encerclando) -->
+          <path d="M 270,180 Q 220,140 240,90" fill="none" stroke="#ff8a7a" stroke-width="3"/>
+          <path d="M 370,180 Q 420,140 400,90" fill="none" stroke="#ff8a7a" stroke-width="3"/>
+          <text x="200" y="80" font-family="Lora,serif" font-size="11" font-style="italic" fill="#c3bcae">mãos encerclam</text>
+          <text x="200" y="95" font-family="Lora,serif" font-size="11" font-style="italic" fill="#c3bcae">o tórax</text>
+          <!-- Indicador profundidade -->
+          <line x1="100" y1="240" x2="540" y2="240" stroke="#5fcf80" stroke-width="1.5"/>
+          <text x="320" y="260" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#5fcf80">Profundidade: 1/3 do diâmetro anteroposterior</text>
+          <!-- Legenda -->
+          <text x="20" y="30" font-family="Lora,serif" font-size="13" font-weight="700" fill="#f3ede0">V14 — MCE em RN: 2 polegares no terço inferior do esterno</text>
+        </svg>
+        <figcaption id="v14-cap">V14 — Esquema técnica MCE 2 polegares com mãos encerclando o tórax.</figcaption>
+      </figure>
+
+      <!-- B16 — placeholder foto real -->
+      <div class="img-placeholder" data-needs-real-image="B16">
+        <span class="img-placeholder__id">B16</span>
+        Imagem real pendente: foto de MCE 2 polegares em RN intubado na sala de parto / UTIN.
+        <br><small>Alt text: "Massagem cardíaca externa em recém-nascido intubado pela técnica dos dois polegares. Mãos encerclando o tórax, polegares posicionados no terço inferior do esterno; profissional adjacente realizando ventilação pelo tubo orotraqueal."</small>
+      </div>
+
+      <h2>A coreografia — 3 profissionais coordenados</h2>
+      <p>Durante a MCE, são 3 profissionais ativos no RN:</p>
+
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Profissional</th><th>Função</th><th>Posição</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1 — quem comprime</strong></td><td>MCE 2 polegares</td><td>Atrás da cabeça do RN</td></tr>
+            <tr><td><strong>2 — quem ventila</strong></td><td>VPP pelo tubo traqueal</td><td>Lateral do RN</td></tr>
+            <tr><td><strong>3 — quem obtém acesso</strong></td><td>Cateterização umbilical</td><td>Acesso ao flanco/abdome</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>O abdome do RN fica <strong>livre pra frente</strong> durante a MCE — exatamente porque o terceiro profissional precisa estar acessando o cordão umbilical em paralelo. Quando a indicação de epinefrina chegar (após 1 minuto), o acesso já vai estar pronto.</p>
+
+      <h2>A relação 3:1 sincronizada — diferente do adulto</h2>
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova crítica fixada</div>
+          <div class="trap__body">Em <strong>RN</strong>, mesmo com paciente intubado, MCE e ventilação são <strong>sincronizadas</strong> em ritmo <strong>3 compressões : 1 ventilação</strong>. Em <strong>PALS</strong> (criança maior) e <strong>ACLS</strong> (adulto), paciente intubado tem ventilação e compressão <strong>independentes</strong>.</div>
+        </div>
+      </aside>
+
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Cenário</th><th>Relação MCE:Ventilação</th><th>Sincronização</th></tr></thead>
+          <tbody>
+            <tr><td><strong>RN (neonato) — qualquer fase</strong></td><td><strong>3:1</strong></td><td><strong>SINCRONIZADA SEMPRE</strong></td></tr>
+            <tr><td>PALS (criança), paciente <strong>não</strong> intubado</td><td>30:2 (1 reanimador) ou 15:2 (2 reanimadores)</td><td>Sincronizada</td></tr>
+            <tr><td>PALS (criança), paciente <strong>já</strong> intubado</td><td>Compressões contínuas + ventilação a cada 6s</td><td><strong>Independente (assíncrono)</strong></td></tr>
+            <tr><td>ACLS (adulto), paciente <strong>já</strong> intubado</td><td>Compressões contínuas + ventilação a cada 6s</td><td><strong>Independente (assíncrono)</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Por que neonato é diferente?</h2>
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body">A lógica do 3:1 sincronizado em RN é que a <strong>ventilação é o método principal</strong> e tem que ser preservada em qualidade. Se houvesse compressão durante a ventilação, prejudicaria a expansão pulmonar. Como o problema de fundo do RN é hipoxia, qualquer prejuízo à ventilação compromete o objetivo central da reanimação.</div>
+      </aside>
+
+      <p>Em adulto e criança maior, a hipóxia já está resolvida (parada é cardíaca primária); compressões contínuas otimizam perfusão coronariana e cerebral. Em RN, a hipóxia é o problema; ventilação é a solução; comprometer ventilação é comprometer a reanimação.</p>
+
+      <h2>Aritmética — 3:1 = 120 eventos/min</h2>
+      <ul>
+        <li>90 compressões/min + 30 ventilações/min = 120 eventos/min total</li>
+        <li>Cadência: "1 e 2 e 3 e ventila" — ciclo de aproximadamente 2 segundos</li>
+      </ul>
+
+      <h2>Comparação visual — contraste neonato × adulto</h2>
+      <div class="comparison comparison--highlight">
+        <table>
+          <thead><tr><th>Aspecto</th><th>RN (PRN-SBP 2022)</th><th>Adulto (ACLS)</th></tr></thead>
+          <tbody>
+            <tr><td>Causa típica de PCR</td><td>Hipoxia primária</td><td>Cardíaca primária</td></tr>
+            <tr><td>Técnica MCE</td><td>2 polegares encerclando tórax</td><td>2 mãos sobrepostas no esterno</td></tr>
+            <tr><td>Profundidade compressão</td><td>1/3 do diâmetro AP</td><td>≥5 cm</td></tr>
+            <tr><td>Ritmo MCE</td><td>90 compressões/min</td><td>100-120 compressões/min</td></tr>
+            <tr><td>Relação MCE:Ventilação intubado</td><td><strong>3:1 SINCRONIZADA</strong></td><td><strong>Independente (assíncrono)</strong></td></tr>
+            <tr><td>Acesso medicação</td><td>Cateter umbilical</td><td>EV periférico ou intraósseo</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>3:1 sincronizado em RN ≠ assíncrono do adulto intubado</li>
+          <li>2 polegares (preferida) ≠ 2 dedos (aceitável só com 1 reanimador)</li>
+          <li>Posição comprime: atrás da cabeça ≠ na lateral (que é de quem ventila)</li>
+          <li>3:1 mesmo intubado → vale em RN, não vale em criança maior ou adulto</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">
+          <ul>
+            <li>Técnica 2 polegares</li>
+            <li>Relação 3:1 SINCRONIZADA em RN, sempre</li>
+            <li>Contraste explícito com PALS/ACLS (assíncrono após intubação)</li>
+            <li>Posicionamento dos 3 profissionais</li>
+          </ul>
+        </div>
+      </aside>
+
+      <p style="background:var(--bg-elev-2);padding:var(--space-3);border-radius:var(--r-sm);border-left:3px solid var(--accent-coral);font-size:var(--fs-sm);"><strong>O que diferencia o aluno avançado:</strong> saber a aritmética 90+30=120 eventos/min e explicar fisiopatologicamente por que neonato preserva sincronia (ventilação como medida principal pra resolver hipoxia, problema primário do RN).</p>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">MCE em RN = 2 polegares, 1/3 do diâmetro AP, 3:1 sincronizada SEMPRE (mesmo intubado), 90+30=120 eventos/min. Diferente do adulto.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p9" aria-labelledby="quiz-p9-title">
+        <h2 class="quiz__title" id="quiz-p9-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual a técnica preferida de MCE em RN segundo o PRN-SBP 2022?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — 2 dedos (indicador + médio) sobre o esterno</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — 2 polegares com mãos encerclando o tórax</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — 1 mão sobre o esterno</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Punho cerrado sobre o esterno</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> 2 polegares é a preferida (maior controle de compressão e reexpansão; maior pico de pressão sistólica). 2 dedos é aceitável apenas com 1 reanimador disponível.</p>
+              <p class="quiz__distractor">C/D não se aplicam ao RN.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">RN intubado, em MCE. Relação MCE:Ventilação correta?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Compressões contínuas + ventilação a cada 6 segundos (assíncrono)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — 30 compressões : 2 ventilações</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — 15 compressões : 2 ventilações</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">D — 3 compressões : 1 ventilação, sincronizadas</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: D.</strong> Em RN, mesmo intubado, mantém-se 3:1 sincronizada (90+30=120 eventos/min). A sincronia preserva qualidade da ventilação — medida-mãe da reanimação neonatal.</p>
+              <p class="quiz__distractor">A é a regra do ACLS adulto intubado, NÃO de RN. B é a regra do PALS com 1 reanimador. C é a regra do PALS com 2 reanimadores.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">Em RN, após a intubação, a MCE deve ser feita de forma assíncrona com a ventilação, como no adulto.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> Em RN a sincronização 3:1 é mantida MESMO com paciente intubado — diferente do PALS/ACLS.</p>
+              <p class="quiz__distractor">Pegadinha clássica de prova.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> após 1 minuto de MCE eficaz com FC ainda &lt;60, entra a epinefrina — e há uma dose precisa que cai em prova.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p8">‹ Anterior</a>
+        <span class="page-nav__indicator">9 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p10">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.10 — Estratégia: E2 (Dado impactante)                    -->
+    <!-- Itens roteiro: [115]-[121] · V_TabEpi                             -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="10" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.10 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E2 · Dado impactante</span>
+        <span class="page-meta__tag">Itens 115-121</span>
+      </div>
+      <h1 class="page-title">Epinefrina: 1 minuto de MCE e a dose precisa que cai em prova</h1>
+
+      <figure class="opener opener--stat">
+        <div class="opener__num">0,01–0,03 mg/kg EV</div>
+        <div class="opener__ctx">Volume equivalente: <strong>0,1–0,3 mL/kg</strong> após diluição obrigatória <strong>1:10.000</strong> (1 mg em 10 mL de SF). Via: <strong>cateter venoso umbilical</strong>, inserido 1–2 cm após o anel umbilical. Esta é a dose de epinefrina na reanimação neonatal. PRN-SBP 2022.</div>
+      </figure>
+
+      <h2>Indicação de epinefrina</h2>
+      <p>A epinefrina é a <strong>grande droga</strong> da parada cardiorrespiratória neonatal. Indicação:</p>
+      <blockquote style="border-left:3px solid var(--accent-coral);padding-left:var(--space-3);margin:var(--space-4) 0;font-style:italic;color:var(--ink-100);font-size:var(--fs-md);">Após <strong>1 minuto</strong> de MCE com FC ainda &lt;60 bpm em paciente intubado.</blockquote>
+      <p>O tempo: 1 minuto = 60 segundos. Conta-se desde o início da massagem cardíaca sincronizada com VPP pelo tubo traqueal. Após esse minuto, reavalia-se a FC. Se persistir &lt;60, indica-se a primeira dose de epinefrina.</p>
+
+      <h2>Via — cateter venoso umbilical (CVU)</h2>
+      <p>A via preferencial é <strong>venosa, pelo cateter umbilical</strong>. Por que umbilical? Porque o cateter já está sendo obtido durante a MCE — terceiro profissional na coreografia da página 3.9. Quando a indicação de epinefrina chega aos 60 segundos de MCE, o acesso já está disponível. A logística é desenhada pra isso.</p>
+      <p><em>Detalhe técnico:</em> o cateter é inserido emergencialmente <strong>1–2 cm após o anel umbilical</strong> — mantendo-se periférico pra evitar posicionamento intra-hepático (cateter "alto" tem outros usos não-emergenciais).</p>
+
+      <h2>Dose precisa — PRN-SBP 2022</h2>
+      <div class="comparison">
+        <table>
+          <thead><tr><th>Parâmetro</th><th>Valor</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Dose EV (preferencial)</strong></td><td><strong>0,01 a 0,03 mg/kg</strong></td></tr>
+            <tr><td><strong>Volume EV equivalente</strong> (após diluição)</td><td><strong>0,1 a 0,3 mL/kg</strong></td></tr>
+            <tr><td><strong>Diluição obrigatória</strong></td><td><strong>1 mg em 10 mL</strong> de SF 0,9% — concentração final <strong>1:10.000</strong> (= 0,1 mg/mL)</td></tr>
+            <tr><td>Como preparar</td><td>1 mL da ampola de adrenalina <strong>1:1.000</strong> + 9 mL de SF 0,9% = solução pronta</td></tr>
+            <tr><td>Via endotraqueal (alternativa sem acesso EV)</td><td>Dose <strong>maior</strong>: <strong>0,05 a 0,1 mg/kg</strong> (volume <strong>0,5 a 1 mL/kg</strong> da solução diluída) — aceitável <strong>apenas uma vez</strong> enquanto se obtém acesso EV</td></tr>
+            <tr><td>Intervalo entre doses</td><td>A cada <strong>3-5 minutos</strong> se FC persistir &lt;60 com MCE+VPP eficazes</td></tr>
+            <tr><td>Dose máxima EV</td><td><strong>Não exceder 0,1 mg/kg EV</strong> (risco de hipertensão grave)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Tabela aplicada — dose × peso × volume</h2>
+      <!-- V_TabEpi -->
+      <div class="comparison comparison--highlight">
+        <table aria-label="Tabela peso × dose × volume da epinefrina">
+          <thead><tr><th>Peso do RN</th><th>Dose EV (mg)</th><th>Volume EV (mL da solução 1:10.000)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1 kg</strong></td><td>0,01 - 0,03 mg</td><td><strong>0,1 - 0,3 mL</strong></td></tr>
+            <tr><td><strong>2 kg</strong></td><td>0,02 - 0,06 mg</td><td><strong>0,2 - 0,6 mL</strong></td></tr>
+            <tr><td><strong>3 kg</strong></td><td>0,03 - 0,09 mg</td><td><strong>0,3 - 0,9 mL</strong></td></tr>
+            <tr><td><strong>4 kg</strong></td><td>0,04 - 0,12 mg</td><td><strong>0,4 - 1,2 mL</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:var(--fs-sm);color:var(--ink-70);font-style:italic;">Essa tabela é o que cai em prova quando a questão dá um peso e pede o volume.</p>
+
+      <h2>Por que a dose ET é maior que a EV?</h2>
+      <p>Porque pela via endotraqueal a absorção é menos previsível — só uma parte da droga depositada na traqueia alcança a circulação sistêmica. Pra compensar, a dose é <strong>maior</strong> (até ~10× a EV). É via de <strong>resgate enquanto o acesso EV não chegou</strong> — não é a via de escolha.</p>
+
+      <h2>Outras medicações na reanimação</h2>
+      <p>Além da epinefrina, outra medicação possível na reanimação neonatal é o <strong>soro pra expansão volêmica</strong>, quando indicada (hipovolemia documentada — perda sanguínea com sinais de choque, FC persistentemente baixa apesar de MCE+VPP+epinefrina eficazes).</p>
+      <ul>
+        <li><strong>Soro fisiológico 0,9% — 10 mL/kg EV</strong> em 5-10 minutos</li>
+      </ul>
+      <p style="font-style:italic;color:var(--ink-70);">A <strong>grande droga</strong> aqui, sem dúvida, é a <strong>epinefrina</strong>. Soro é <strong>coadjuvante</strong> de expansão volêmica.</p>
+
+      <p><strong>Medicações que NÃO são usadas rotineiramente no PRN-SBP 2022:</strong></p>
+      <ul>
+        <li><strong>Bicarbonato de sódio</strong> — não recomendado rotineiramente (uso muito restrito, fora do escopo da reanimação inicial)</li>
+        <li><strong>Naloxona</strong> — não recomendada rotineiramente (depressão respiratória por opioides maternos = manejar com VPP/IOT, não com revertor)</li>
+      </ul>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>Dose EV (0,01-0,03 mg/kg) ≠ Dose ET (0,05-0,1 mg/kg, maior)</li>
+          <li>Diluição 1:10.000 (uso) ≠ Concentração 1:1.000 (ampola; não usar direto)</li>
+          <li>1 mg/10 mL = 1:10.000 (concentração final correta)</li>
+          <li>Volume EV (0,1-0,3 mL/kg) ≠ Volume ET (0,5-1 mL/kg, 5× maior em volume)</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">
+          <ul>
+            <li>Dose EV: 0,01-0,03 mg/kg</li>
+            <li>Volume EV: 0,1-0,3 mL/kg</li>
+            <li>Diluição obrigatória 1:10.000</li>
+            <li>Via preferencial = cateter umbilical</li>
+            <li>Intervalo entre doses = 3-5 min</li>
+            <li>Dose ET maior que EV (pegadinha)</li>
+          </ul>
+        </div>
+      </aside>
+
+      <p style="background:var(--bg-elev-2);padding:var(--space-3);border-radius:var(--r-sm);border-left:3px solid var(--accent-coral);font-size:var(--fs-sm);"><strong>O que diferencia o aluno avançado:</strong> saber preparar a diluição passo a passo (1 mL ampola 1:1.000 + 9 mL SF = 10 mL solução 1:10.000); saber que o cateter umbilical pra emergência é periférico (1-2 cm pós-anel), não alto; reconhecer indicação de expansão volêmica; lembrar que bicarbonato e naloxona NÃO entram no protocolo padrão.</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Erro comum desmontado</div>
+          <div class="trap__body">
+            <ul style="margin:0;padding-left:var(--space-4);">
+              <li>"Vou usar a ampola 1:1.000 direto" → <strong>errado</strong> (diluir é obrigatório pra 1:10.000)</li>
+              <li>"Dose ET = dose EV" → <strong>errado</strong> (ET é maior, ~10×)</li>
+              <li>"Bicarbonato corrige a acidose, é boa ideia" → <strong>errado</strong> (não é recomendação PRN-SBP)</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">Epinefrina = após 1 min MCE com FC&lt;60 intubado; via CVU; <strong>0,01-0,03 mg/kg EV</strong> (0,1-0,3 mL/kg após diluição 1:10.000); a cada 3-5 min se persistir. Via ET (dose maior 0,05-0,1 mg/kg) aceitável uma vez enquanto se obtém acesso.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p10" aria-labelledby="quiz-p10-title">
+        <h2 class="quiz__title" id="quiz-p10-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Qual a dose EV de epinefrina na reanimação neonatal segundo PRN-SBP 2022?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">A — 0,01 a 0,03 mg/kg, diluída 1:10.000</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — 0,1 a 0,3 mg/kg, sem diluição</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — 1 mg em bolus, dose única adulta</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — 0,05 a 0,1 mg/kg, diluída 1:1.000</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: A.</strong> PRN-SBP 2022: 0,01-0,03 mg/kg EV após diluição obrigatória 1:10.000 (1 mg em 10 mL de SF).</p>
+              <p class="quiz__distractor">B confunde dose com volume (e omite diluição). C é dose adulta. D confunde com dose ET (que é maior, 0,05-0,1 mg/kg, mas mantém diluição 1:10.000, não 1:1.000).</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">RN de 3 kg, indicada epinefrina EV. Volume correto da solução diluída 1:10.000?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — 0,1 - 0,3 mL</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — 0,3 - 0,9 mL</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — 1 - 3 mL</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — 3 mL fixos</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> 3 kg × (0,1 a 0,3 mL/kg) = 0,3 a 0,9 mL da solução diluída.</p>
+              <p class="quiz__distractor">A seria pra RN de 1 kg. C confunde escala (10×). D ignora o cálculo por peso.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="vf">
+            <span class="quiz__qnum">Questão 3 — V ou F</span>
+            <p class="quiz__stem">A epinefrina endotraqueal usa a mesma dose da epinefrina endovenosa.</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">Verdadeiro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">Falso</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: FALSO.</strong> Dose ET é <strong>maior</strong> (0,05-0,1 mg/kg = ~3-10× a EV) pra compensar a absorção menos previsível pela mucosa traqueal.</p>
+              <p class="quiz__distractor">Pegadinha de prova: "dose ET = dose EV" é o erro clássico.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> três cenários especiais alteram o fluxograma — pré-termo &lt;34 sem, banhado em mecônio e hérnia diafragmática. Cada um com suas adaptações.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p9">‹ Anterior</a>
+        <span class="page-nav__indicator">10 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p11">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.11 — Estratégia: E7 (Comparação chocante)                -->
+    <!-- Itens roteiro: [122]-[174] · V17 + B14 + B18                      -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="11" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.11 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E7 · Comparação chocante</span>
+        <span class="page-meta__tag">Itens 122-174</span>
+      </div>
+      <h1 class="page-title">3 situações especiais: pré-termo, mecônio e hérnia diafragmática lado a lado</h1>
+
+      <section class="opener opener--vs">
+        <div class="opener__side">
+          <h4>&lt;34 sem</h4>
+          <p>O <strong>S</strong> do ASPAS muda de "Secar" pra "<strong>Saco plástico</strong>". E não tem máscara laríngea.</p>
+        </div>
+        <div class="opener__divider">vs</div>
+        <div class="opener__side">
+          <h4>Mecônio</h4>
+          <p>Você intuba. Mas <strong>pra aspirar</strong>. Não pra ventilar.</p>
+        </div>
+      </section>
+      <section class="opener opener--vs" style="margin-top:var(--space-3);">
+        <div class="opener__side">
+          <h4>Hérnia diafragmática</h4>
+          <p>Balão e máscara estão <strong>proibidos</strong>. VPP só por tubo desde o primeiro segundo. Por quê? Porque balão+máscara <strong>piora</strong> o quadro.</p>
+        </div>
+        <div class="opener__divider">∴</div>
+        <div class="opener__side">
+          <h4>Três modificações, três pegadinhas</h4>
+          <p>Cada situação altera o fluxograma de jeito diferente. Conhecer as três é o conteúdo desta página.</p>
+        </div>
+      </section>
+
+      <h2>Macro-tabela comparativa</h2>
+      <div class="comparison comparison--highlight">
+        <table>
+          <thead><tr><th>Aspecto</th><th>&lt;34 semanas</th><th>Banhado em mecônio</th><th>Hérnia diafragmática</th></tr></thead>
+          <tbody>
+            <tr><td>O que muda no ASPAS</td><td>S = <strong>saco plástico</strong>; dupla touca</td><td>Nada inicialmente</td><td>Nada inicialmente</td></tr>
+            <tr><td>Monitorização (oxímetro)</td><td><strong>Já nos passos iniciais</strong></td><td>Padrão (pós-VPP)</td><td>Padrão (pós-VPP)</td></tr>
+            <tr><td>FiO2 inicial na VPP</td><td><strong>30%</strong></td><td>21% padrão</td><td>21% padrão</td></tr>
+            <tr><td>Interface de VPP</td><td>balão+máscara → IOT <strong>direto</strong> (sem ML)</td><td>Padrão (balão→ML→IOT)</td><td><strong>TOT desde o primeiro segundo</strong> (balão+máscara proibido)</td></tr>
+            <tr><td>Pegadinha característica</td><td>S vira saco plástico; sem ML</td><td>Intubar pra ASPIRAR (não pra ventilar) — só se tórax não expande</td><td>Abdome escavado; balão+máscara piora</td></tr>
+            <tr><td>Justificativa fisiológica</td><td>Hipotermia + SDR</td><td>Risco de rolha meconial obstruindo traqueia</td><td>Víscera abdominal no tórax + distender TGI via balão+máscara piora herniação</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2>Situação Especial 1 — RN &lt;34 semanas</h2>
+      <p>O fluxograma da reanimação tem adaptações específicas pra RN pré-termo &lt;34 sem. <strong>Por que adaptar?</strong> Porque o bebê &lt;34 sem tem fragilidade fisiológica adicional — risco enorme de hipotermia (perde calor com altíssima facilidade) e complicação respiratória recorrente (síndrome do desconforto respiratório / membrana hialina).</p>
+
+      <p><strong>Mudanças no ASPAS:</strong></p>
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Mudança 1 — saco plástico</div>
+          <div class="trap__body">O "S" do ASPAS em &lt;34 sem <strong>deixa de ser Secar e vira saco plástico</strong>. O bebê pré-termo vai dentro de saco plástico transparente — sem secar. O saco preserva calor e umidade. <strong>Pegadinha clássica de prova.</strong></div>
+        </div>
+      </aside>
+
+      <aside class="mnemonic">
+        <div class="mnemonic__label">Mudança 2 — dupla touca</div>
+        <div class="mnemonic__body">RN &lt;34 sem usa <strong>dupla touca</strong>: touca de plástico + touca de pano por cima. Cabeça é a área de maior superfície relativa de perda de calor; dupla proteção.</div>
+      </aside>
+
+      <!-- B18 — placeholder saco plástico -->
+      <div class="img-placeholder" data-needs-real-image="B18">
+        <span class="img-placeholder__id">B18</span>
+        Imagem real pendente (fallback SVG se foto CC0 indisponível): foto de RN pré-termo dentro de saco plástico transparente nos passos iniciais.
+        <br><small>Alt text: "Recém-nascido pré-termo (&lt;34 semanas) envolvido em saco plástico transparente durante os passos iniciais da reanimação, com touca de plástico sobre a cabeça (parte da estratégia de prevenção de hipotermia)."</small>
+      </div>
+
+      <aside class="finding">
+        <div class="finding__label">Mudança 3 — monitorização precoce</div>
+        <div class="finding__body">Oxímetro <strong>já nos passos iniciais</strong>, não esperando indicação de VPP. Justificativa: bebê pequenininho é difícil de auscultar com estetoscópio, e a gravidade do quadro é alta (vai pra UTI Neonatal). Monitor cedo libera mãos e dá leitura contínua.</div>
+      </aside>
+
+      <aside class="finding">
+        <div class="finding__label">Mudança 4 — FiO2 inicial diferente</div>
+        <div class="finding__body">FiO2 da VPP em &lt;34 sem começa em <strong>30%</strong> (não 21%). RN pré-termo geralmente desenvolve síndrome do desconforto respiratório (antigamente chamada doença da membrana hialina) — o tratamento envolve enriquecimento de O2 desde o início. Por isso 30% é o ponto inicial pragmático. RN &lt;34 sem <strong>certamente</strong> vai pra UTI Neonatal — iniciar enriquecimento mais cedo é mais seguro.</div>
+      </aside>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Mudança 5 — sem máscara laríngea</div>
+          <div class="trap__body">Em RN &lt;34 sem <strong>não se usa máscara laríngea</strong>. Dispositivos de ML não têm boa adaptação ao tamanho do bebê pequenininho.</div>
+        </div>
+      </aside>
+
+      <p><strong>Progressão de interface em &lt;34 sem:</strong></p>
+      <pre class="flow-ascii">balão+máscara → checar técnica → IOT direto</pre>
+      <p>Sem o passo intermediário de ML. <strong>Pegadinha clássica de prova.</strong></p>
+
+      <p style="font-size:var(--fs-sm);color:var(--ink-70);font-style:italic;">Nota sobre síndrome do desconforto respiratório: mencionada en passant; tema completo de manejo pulmonar do prematuro fica pra desenvolvimentos posteriores da plataforma.</p>
+
+      <hr>
+
+      <h2>Situação Especial 2 — Banhado em mecônio</h2>
+      <p>Bebê nasce coberto de líquido espesso, viscoso, esverdeado — mecônio (fezes intrauterinas do RN). O medo principal: <strong>aspiração do mecônio pra vias aéreas</strong>, gerando obstrução traqueal e a temida <strong>síndrome de aspiração meconial</strong> (quadro grave).</p>
+
+      <p><strong>O fluxograma muda? Praticamente NÃO até a checagem de técnica.</strong></p>
+      <ul>
+        <li>Bebê banhado em mecônio com ≥34 sem + boa vitalidade → <strong>clampeamento ≥60s, mãe, "vida que segue" normal</strong></li>
+        <li>Bebê banhado em mecônio com &lt;34 sem + boa vitalidade → clampeamento ≥30s, mesa de reanimação</li>
+        <li>Bebê banhado em mecônio com má vitalidade → clampeamento imediato, mesa de reanimação</li>
+      </ul>
+      <p>Na mesa, recebe os passos iniciais (ASPAS), VPP se indicada (FC&lt;100 OU apneia OU irregular), checagem de técnica — <strong>tudo igual</strong>.</p>
+
+      <p><strong>A diferença surge AQUI:</strong></p>
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova</div>
+          <div class="trap__body">Na checagem de técnica da VPP, se o <strong>tórax não expande</strong> mesmo com técnica correta → <strong>suspeitar de rolha de mecônio na traqueia</strong>.</div>
+        </div>
+      </aside>
+
+      <p>A rolha de mecônio é uma obstrução grossa na traqueia formada pelo mecônio aspirado. Impede o ar de chegar ao pulmão — por isso a VPP com técnica correta não expande o tórax.</p>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body"><strong>Intubar pra ASPIRAR — não pra ventilar.</strong></div>
+      </aside>
+
+      <p>Repete: o objetivo da intubação aqui é <strong>único</strong> — aspirar a traqueia. Não é pra ventilar.</p>
+
+      <p><strong>Técnica:</strong></p>
+      <ol>
+        <li>Laringoscopia</li>
+        <li>Pegar tubo traqueal</li>
+        <li>Intubar</li>
+        <li>Conectar tubo em <strong>adaptador</strong> específico</li>
+        <li>Conectar adaptador no <strong>vácuo de parede</strong></li>
+        <li>O tubo, agora, <strong>não é tubo de ventilar — é aspirador</strong></li>
+      </ol>
+      <p>Tirou mecônio, desfez a rolha → <strong>desprezar o tubo traqueal usado</strong> (ele virou aspirador, está contaminado de mecônio).</p>
+
+      <p><strong>Após desfazer a rolha:</strong></p>
+      <ul>
+        <li>Paciente melhorou → segue o curso normal</li>
+        <li>Paciente continua ruim → pode precisar de <strong>nova intubação</strong> — agora SIM pra <strong>ventilar</strong> (não mais pra aspirar)</li>
+      </ul>
+
+      <p style="font-style:italic;color:var(--ink-70);">Diferença única no fluxograma do banhado em mecônio: tórax não expande na checagem de técnica → intubar pra aspirar → desfazer rolha.</p>
+
+      <aside class="history-note">
+        <div class="history-note__label">Mudança histórica</div>
+        Até 2015/2016 (versões antigas do PRN), aspirava-se traqueia de <strong>todo RN não-vigoroso</strong> banhado em mecônio (rotineira). Desde a atualização ILCOR 2015 e PRN-SBP correspondente, aspiração de rotina foi <strong>abandonada</strong> — só se aspira se houver suspeita de rolha após falha de VPP com máscara. O protocolo descrito aqui é a versão atual (PRN-SBP 2022).
+      </aside>
+
+      <hr>
+
+      <h2>Situação Especial 3 — Hérnia diafragmática congênita</h2>
+      <p>A hérnia diafragmática congênita (HDC) é uma falha no diafragma que permite a herniação de vísceras abdominais pra dentro do tórax. O bebê <strong>não tem expansão pulmonar adequada</strong> porque tem víscera abdominal ocupando o tórax.</p>
+
+      <p><strong>Suspeita diagnóstica:</strong></p>
+      <ul>
+        <li><strong>Pré-natal</strong>: ultrassonografia obstétrica pode detectar a herniação</li>
+        <li><strong>Pós-natal</strong>: se não há dado pré-natal, suspeita pelo <strong>exame físico</strong> do RN</li>
+      </ul>
+
+      <aside class="finding">
+        <div class="finding__label">Achado clássico</div>
+        <div class="finding__body"><strong>Abdome escavado.</strong> RN comum tem abdome <strong>globoso</strong>. Em hérnia diafragmática, o abdome fica <strong>fundo, escavado</strong> — porque as vísceras (que ocupariam o abdome) subiram pro tórax.</div>
+      </aside>
+
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro</div>
+        <div class="gold-rule__body">Abdome escavado em RN → <strong>pensar em hérnia diafragmática congênita</strong>.</div>
+      </aside>
+
+      <p><strong>Achado de imagem:</strong> a radiografia mostra <strong>alças intestinais dentro do tórax</strong> — parece um RX de abdome dentro do hemitórax acometido (geralmente esquerdo, 80-85% dos casos). Pode haver desvio mediastinal pra direita.</p>
+
+      <!-- V17 — Esquema HDC -->
+      <figure class="fig" aria-labelledby="v17-cap">
+        <svg viewBox="0 0 720 360" role="img" aria-labelledby="v17-title v17-desc" width="720" height="360">
+          <title id="v17-title">Hérnia diafragmática congênita — corte sagital</title>
+          <desc id="v17-desc">Corte sagital de RN com hérnia diafragmática esquerda: alças intestinais no hemitórax esquerdo, pulmão comprimido, abdome escavado.</desc>
+          <!-- Comparação lado a lado: normal vs HDC -->
+          <!-- NORMAL -->
+          <g transform="translate(20,30)">
+            <text x="160" y="22" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#5fcf80">RN NORMAL</text>
+            <!-- silhueta torso normal -->
+            <path d="M 80,40 Q 100,40 110,60 L 110,200 Q 160,250 220,200 L 220,60 Q 230,40 250,40 Q 240,180 220,220 Q 200,280 165,290 Q 130,280 110,220 Q 90,180 80,40 Z" fill="#1a3245" stroke="#3a5260" stroke-width="2"/>
+            <!-- Diafragma normal -->
+            <path d="M 90,170 Q 165,150 240,170" fill="none" stroke="#ff8a7a" stroke-width="2"/>
+            <!-- Pulmão normal -->
+            <ellipse cx="135" cy="120" rx="35" ry="42" fill="rgba(95,207,128,0.30)" stroke="#5fcf80" stroke-width="1.5"/>
+            <ellipse cx="195" cy="120" rx="35" ry="42" fill="rgba(95,207,128,0.30)" stroke="#5fcf80" stroke-width="1.5"/>
+            <!-- Abdome (alças) -->
+            <circle cx="135" cy="230" r="14" fill="#7c2030" opacity="0.7"/>
+            <circle cx="170" cy="240" r="14" fill="#7c2030" opacity="0.7"/>
+            <circle cx="200" cy="225" r="14" fill="#7c2030" opacity="0.7"/>
+            <text x="165" y="320" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#5fcf80">Abdome globoso · pulmões expandidos</text>
+          </g>
+          <!-- HDC -->
+          <g transform="translate(380,30)">
+            <text x="160" y="22" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#ff5d6b">RN com HDC esquerda</text>
+            <!-- silhueta torso HDC (abdome escavado) -->
+            <path d="M 80,40 Q 100,40 110,60 L 110,200 Q 130,230 165,225 Q 200,230 220,200 L 220,60 Q 230,40 250,40 Q 240,180 220,220 Q 200,260 165,255 Q 130,260 110,220 Q 90,180 80,40 Z" fill="#1a3245" stroke="#3a5260" stroke-width="2"/>
+            <!-- Diafragma defeituoso esquerdo -->
+            <path d="M 90,170 Q 130,165 165,170" fill="none" stroke="#ff8a7a" stroke-width="2" stroke-dasharray="3,3"/>
+            <path d="M 165,170 Q 200,150 240,170" fill="none" stroke="#ff8a7a" stroke-width="2"/>
+            <!-- Pulmão direito normal -->
+            <ellipse cx="195" cy="120" rx="32" ry="42" fill="rgba(95,207,128,0.25)" stroke="#5fcf80" stroke-width="1.5"/>
+            <!-- Pulmão esquerdo COMPRIMIDO -->
+            <ellipse cx="138" cy="80" rx="20" ry="20" fill="rgba(95,207,128,0.18)" stroke="#5fcf80" stroke-width="1"/>
+            <!-- Alças intestinais NO TÓRAX -->
+            <circle cx="120" cy="115" r="12" fill="#7c2030" opacity="0.9"/>
+            <circle cx="145" cy="130" r="12" fill="#7c2030" opacity="0.9"/>
+            <circle cx="115" cy="145" r="11" fill="#7c2030" opacity="0.9"/>
+            <text x="135" y="280" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#ff5d6b">Abdome escavado</text>
+            <text x="135" y="105" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#f3ede0">alças no tórax →</text>
+            <text x="195" y="320" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#ff5d6b">VPP só por TOT · balão+máscara proibido</text>
+          </g>
+        </svg>
+        <figcaption id="v17-cap">V17 — Comparação RN normal × RN com HDC esquerda. Alças no tórax + abdome escavado + pulmão comprimido (complementa B14 com RX real).</figcaption>
+      </figure>
+
+      <!-- B14 — placeholder RX HDC -->
+      <div class="img-placeholder" data-needs-real-image="B14">
+        <span class="img-placeholder__id">B14</span>
+        Imagem real pendente: radiografia de tórax e abdome em RN com HDC esquerda.
+        <br><small>Alt text: "Radiografia de tórax e abdome em recém-nascido com hérnia diafragmática congênita esquerda. Visualizam-se alças intestinais no hemitórax esquerdo, com desvio mediastinal para a direita e abdome relativamente desocupado."</small>
+      </div>
+
+      <h3>Conduta na reanimação — A REGRA</h3>
+      <aside class="gold-rule">
+        <div class="gold-rule__label">Regra de ouro fixada</div>
+        <div class="gold-rule__body">Em hérnia diafragmática, <strong>VPP exclusivamente por TOT desde o início</strong>. NÃO usar balão+máscara.</div>
+      </aside>
+
+      <p><strong>Por quê?</strong> Aqui mora a fisiologia que justifica a regra:</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Pegadinha-prova</div>
+          <div class="trap__body">Balão+máscara em hérnia diafragmática <strong>piora</strong> o quadro.</div>
+        </div>
+      </aside>
+
+      <p>A lógica:</p>
+      <ol>
+        <li>VPP por balão+máscara faz parte do ar ir pro pulmão e parte ir pro esôfago/via digestiva (traqueia e esôfago em paralelo).</li>
+        <li>Em RN normal, o ar que vai pra via digestiva não é problema.</li>
+        <li>Em RN com HDC, distender a via digestiva (estômago, alças intestinais) aumenta a pressão sobre o conteúdo herniado.</li>
+        <li>Mais distensão = mais herniação = mais compressão pulmonar = piora respiratória.</li>
+      </ol>
+
+      <p><strong>Solução:</strong> VPP <strong>diretamente pelo TOT desde o início</strong>. O tubo traqueal bem posicionado garante que o ar vai exclusivamente pro pulmão, sem desvio pra esôfago. Resultado: ventilação atinge apenas o pulmão e permite expansão pulmonar adequada (dentro do limite imposto pela víscera ocupante).</p>
+
+      <aside class="bauer-note">
+        <div class="bauer-note__label">Nota Bauer-revisável (enriquecimento E3)</div>
+        PRN-SBP 2022 também indica <strong>inserção imediata de sonda gástrica</strong> simultânea à IOT em HDC — pra descomprimir o estômago/alças herniadas via gravidade. Detalhe operacional adicional, complemento da estratégia "ventilar só pelo pulmão".
+      </aside>
+
+      <hr>
+
+      <h2>Quadro-síntese das 3 situações especiais</h2>
+      <div class="comparison comparison--highlight">
+        <table>
+          <thead><tr><th>Pergunta</th><th>&lt;34 sem</th><th>Mecônio</th><th>Hérnia diafragmática</th></tr></thead>
+          <tbody>
+            <tr><td>ASPAS muda?</td><td>S = saco plástico, dupla touca</td><td>Não</td><td>Não</td></tr>
+            <tr><td>Monitor desde início?</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+            <tr><td>FiO2 muda?</td><td>30% (não 21%)</td><td>Não</td><td>Não</td></tr>
+            <tr><td>Usa ML?</td><td>Não</td><td>Sim (se progressão exigir)</td><td>Pula direto pra TOT (proibido balão+máscara desde início)</td></tr>
+            <tr><td>Pegadinha clássica</td><td>S de SACO PLÁSTICO</td><td>Intubar pra ASPIRAR</td><td>Abdome escavado; proibido balão+máscara</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <aside class="dont-confuse">
+        <div class="dont-confuse__label">Não confunda</div>
+        <ul>
+          <li>"Aspirar mecônio" rotineiro → <strong>abandonado</strong> (só se rolha após falha de VPP)</li>
+          <li>"Ventilar mecônio por TOT" ≠ "Aspirar mecônio por TOT" (são intenções diferentes)</li>
+          <li>Sem ML em &lt;34 sem ≠ Sem TOT em &lt;34 sem (TOT é o passo seguinte direto após balão+máscara)</li>
+          <li>Hérnia diafragmática sem balão+máscara desde início ≠ "se balão+máscara não funcionar, troca pra TOT" (em HDC já começa por TOT)</li>
+        </ul>
+      </aside>
+
+      <aside class="board-wants">
+        <div class="board-wants__label">O que a banca quer</div>
+        <div class="board-wants__body">
+          <ul>
+            <li>S de saco plástico em &lt;34 sem</li>
+            <li>Sem ML em &lt;34 sem</li>
+            <li>FiO2 30% em &lt;34 sem</li>
+            <li>Intubar pra ASPIRAR em mecônio com tórax não-expansível</li>
+            <li>Abdome escavado como sinal de HDC</li>
+            <li>VPP exclusivamente por TOT desde início em HDC</li>
+          </ul>
+        </div>
+      </aside>
+
+      <p style="background:var(--bg-elev-2);padding:var(--space-3);border-radius:var(--r-sm);border-left:3px solid var(--accent-coral);font-size:var(--fs-sm);"><strong>O que diferencia o aluno avançado:</strong> saber por que balão+máscara piora HDC (lógica de distensão TGI); saber a evolução histórica da conduta no mecônio (rotineira até 2015, hoje seletiva); reconhecer que a inserção de sonda gástrica é complemento útil em HDC; saber que a maioria das HDC é esquerda (80-85%) com desvio mediastinal direito.</p>
+
+      <aside class="trap">
+        <div>
+          <div class="trap__title">Erro comum desmontado</div>
+          <div class="trap__body">
+            <ul style="margin:0;padding-left:var(--space-4);">
+              <li>"Todo bebê banhado em mecônio é aspirado" → errado (só se rolha)</li>
+              <li>"Em HDC tenta balão+máscara primeiro, se não der vai pra TOT" → errado (TOT desde início)</li>
+              <li>"&lt;34 sem usa ML como qualquer outro" → errado (pula ML)</li>
+              <li>"S do ASPAS em &lt;34 sem continua sendo Secar" → errado (vira saco plástico)</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional</div>
+        <div class="op-summary__body">3 situações = 3 adaptações pontuais. &lt;34 sem (saco plástico, dupla touca, monitor cedo, FiO2 30%, sem ML); mecônio (intubar pra aspirar só se rolha); HDC (TOT desde início, abdome escavado).</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p11" aria-labelledby="quiz-p11-title">
+        <h2 class="quiz__title" id="quiz-p11-title">Quiz — fixação</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">RN de 31 semanas chega à mesa de reanimação. Adaptação correta do ASPAS?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">A — Sem secar — colocar em saco plástico transparente; dupla touca; monitorização precoce com oxímetro</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Secar agressivamente pra aquecer; touca simples</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Sem aspirar nunca; resto igual</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Pular ASPAS e ir direto pra VPP</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: A.</strong> Em &lt;34 sem o S do ASPAS vira "Saco plástico" (preservar calor + umidade), usa-se dupla touca (plástica + pano) e a monitorização com oxímetro entra já nos passos iniciais.</p>
+              <p class="quiz__distractor">B aplica o protocolo padrão (≥34 sem) erroneamente em pré-termo. C não corresponde à mudança real. D ignora o protocolo.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">RN banhado em mecônio recebe VPP por balão+máscara. Na checagem de técnica, tórax não expande mesmo com técnica correta. Conduta?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Indicar MCE imediatamente</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Intubar pra ventilar com mais pressão</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Intubar pra ASPIRAR (suspeita de rolha de mecônio na traqueia)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Trocar pra máscara laríngea</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Tórax que não expande na checagem de técnica em RN banhado em mecônio sugere rolha de mecônio obstruindo a traqueia. Conduta: intubar pra <strong>aspirar</strong> (não pra ventilar).</p>
+              <p class="quiz__distractor">Mnemônico literal: "intubar pra ASPIRAR, não pra ventilar". A pula etapas. B confunde objetivo da intubação. D não resolve a obstrução.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="mcq">
+            <span class="quiz__qnum">Questão 3 — MCQ</span>
+            <p class="quiz__stem">RN com abdome escavado e desconforto respiratório intenso ao nascer. Qual a conduta correta na VPP?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Balão+máscara padrão; se falhar, progredir interface</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — VPP exclusivamente por TOT desde o início — proibido balão+máscara</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Aguardar 5 minutos antes de qualquer manobra</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — MCE imediata</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Abdome escavado é sinal clássico de hérnia diafragmática congênita. Balão+máscara distende TGI → piora herniação → piora respiratória. Por isso VPP só por TOT desde o primeiro segundo.</p>
+              <p class="quiz__distractor">A piora o quadro. C abandona o RN. D pula etapas inadequadamente.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>A seguir:</strong> tudo agora se junta no fluxograma completo + a história do João Eucalipto se resolve aplicando cada etapa que você aprendeu.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p10">‹ Anterior</a>
+        <span class="page-nav__indicator">11 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" href="#/p1-m3-p12">Próxima ›</a>
+      </nav>
+    </article>
+
+    <!-- =============================================================== -->
+    <!-- Página 3.12 — Estratégia: E5 (Meta + checklist)                   -->
+    <!-- Itens reativados: todos (síntese) + retomada [001]-[004]          -->
+    <!-- V13 — fluxograma completo em 3 painéis                            -->
+    <!-- =============================================================== -->
+    <article class="page" data-page-num="12" data-show-caso="caso-1" hidden>
+      <div class="page-meta">
+        <span class="page-meta__tag">3.12 / 12</span>
+        <span class="page-meta__tag page-meta__tag--strategy">E5 · Meta + checklist</span>
+        <span class="page-meta__tag">Síntese · Itens 001-174</span>
+      </div>
+      <h1 class="page-title">Fluxograma completo + a sala de parto do João Eucalipto</h1>
+
+      <section class="opener opener--checklist">
+        <div class="opener__intro">Ao final desta página você vai:</div>
+        <ol>
+          <li>Reconhecer o fluxograma completo de reanimação neonatal de cabeça</li>
+          <li>Aplicar o algoritmo no Caso 1 (João Eucalipto) passo a passo</li>
+          <li>Saber quais 3 situações especiais alteram o fluxograma e como</li>
+          <li>Identificar qual conteúdo já está coberto aqui e qual ainda fica em aberto (Apgar)</li>
+        </ol>
+      </section>
+
+      <h2>Fluxograma completo de reanimação neonatal</h2>
+      <p>A reanimação neonatal inteira pode ser lida como um fluxo de decisões em sequência. Cada nó tem critério de entrada, critério de saída, e leva ao próximo nó. Nada é improvisado. O V13 abaixo está dividido em <strong>3 painéis navegáveis</strong> pra acomodar a altura sem sacrificar legibilidade — use os botões pra saltar entre eles.</p>
+
+      <nav class="painel-nav" aria-label="Navegação entre painéis do fluxograma">
+        <button class="painel-nav__btn" type="button" data-painel="painel-1" aria-current="false">Painel 1 — Sala de parto + ASPAS + avaliação</button>
+        <button class="painel-nav__btn" type="button" data-painel="painel-2" aria-current="false">Painel 2 — VPP + checagem + ML + IOT</button>
+        <button class="painel-nav__btn" type="button" data-painel="painel-3" aria-current="false">Painel 3 — MCE + epinefrina</button>
+      </nav>
+
+      <!-- V13 — DEFS GLOBAIS reusáveis -->
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <marker id="v13-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ff6b5a"/></marker>
+          <linearGradient id="v13-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a3245"/><stop offset="100%" stop-color="#0f1f2c"/></linearGradient>
+          <linearGradient id="v13-warn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3d3318"/><stop offset="100%" stop-color="#26200f"/></linearGradient>
+          <linearGradient id="v13-danger" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3d1518"/><stop offset="100%" stop-color="#260c0f"/></linearGradient>
+          <linearGradient id="v13-success" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16361f"/><stop offset="100%" stop-color="#0c2014"/></linearGradient>
+          <symbol id="v13-node" viewBox="0 0 200 60">
+            <rect x="2" y="2" width="196" height="56" rx="12" fill="url(#v13-bg)" stroke="#5fcf80" stroke-width="2"/>
+          </symbol>
+        </defs>
+      </svg>
+
+      <!-- PAINEL 1 -->
+      <section class="painel" id="painel-1" aria-labelledby="painel-1-title">
+        <h3 class="painel__title" id="painel-1-title">Painel 1 — Sala de parto + ASPAS + avaliação inicial</h3>
+        <figure class="fig fig--scroll">
+          <svg viewBox="0 0 760 800" role="img" aria-labelledby="v13p1-title v13p1-desc" width="760" height="800" preserveAspectRatio="xMidYMid meet">
+            <title id="v13p1-title">V13 painel 1 — fluxo do nascimento à indicação de VPP</title>
+            <desc id="v13p1-desc">Nascimento → 3 perguntas iniciais → semáforo (verde/amarelo/vermelho) → ASPAS → avaliação FC + qualidade respiratória → indicação de VPP por critério OU.</desc>
+
+            <!-- Nascimento -->
+            <rect x="280" y="20" width="200" height="50" rx="14" fill="url(#v13-bg)" stroke="#ff6b5a" stroke-width="2"/>
+            <text x="380" y="50" text-anchor="middle" font-family="Lora,serif" font-size="16" font-weight="700" fill="#ff6b5a">NASCIMENTO</text>
+            <line x1="380" y1="70" x2="380" y2="100" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- 3 perguntas -->
+            <rect x="200" y="110" width="360" height="100" rx="12" fill="url(#v13-bg)" stroke="#6cb4e8" stroke-width="2"/>
+            <text x="380" y="135" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#6cb4e8">3 PERGUNTAS INICIAIS</text>
+            <text x="380" y="160" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#f3ede0">1. IG ≥34 sem?</text>
+            <text x="380" y="178" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#f3ede0">2. Respirou ou chorou?</text>
+            <text x="380" y="196" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#f3ede0">3. Bom tônus FLEXOR?</text>
+            <line x1="380" y1="210" x2="380" y2="240" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- Semáforo -->
+            <rect x="120" y="250" width="520" height="180" rx="12" fill="url(#v13-bg)" stroke="#c3bcae" stroke-width="2"/>
+            <text x="380" y="275" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#c3bcae">SEMÁFORO (combina IG × vitalidade)</text>
+            <!-- 3 ramos -->
+            <g>
+              <rect x="135" y="290" width="160" height="125" rx="10" fill="url(#v13-success)" stroke="#5fcf80"/>
+              <text x="215" y="310" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#5fcf80">VERDE</text>
+              <text x="215" y="328" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">≥34 sem + boa vit.</text>
+              <text x="215" y="346" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">Clampear ≥60s</text>
+              <text x="215" y="364" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#5fcf80">→ MÃE (pele a pele)</text>
+            </g>
+            <g>
+              <rect x="300" y="290" width="160" height="125" rx="10" fill="url(#v13-warn)" stroke="#f0b440"/>
+              <text x="380" y="310" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#f0b440">AMARELO</text>
+              <text x="380" y="328" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">&lt;34 sem + boa vit.</text>
+              <text x="380" y="346" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">Clampear ≥30s</text>
+              <text x="380" y="364" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#f0b440">→ MESA</text>
+            </g>
+            <g>
+              <rect x="465" y="290" width="160" height="125" rx="10" fill="url(#v13-danger)" stroke="#ff5d6b"/>
+              <text x="545" y="310" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#ff5d6b">VERMELHO</text>
+              <text x="545" y="328" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">Má vit. (qualquer IG)</text>
+              <text x="545" y="346" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">Clampear imediato</text>
+              <text x="545" y="364" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#ff5d6b">→ MESA</text>
+            </g>
+            <!-- Convergência amarelo+vermelho pra mesa -->
+            <line x1="380" y1="430" x2="380" y2="460" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+            <text x="400" y="450" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae" font-style="italic">(se foi pra mesa)</text>
+
+            <!-- ASPAS -->
+            <rect x="200" y="470" width="360" height="135" rx="12" fill="url(#v13-bg)" stroke="#ff6b5a" stroke-width="2"/>
+            <text x="380" y="495" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#ff6b5a">ASPAS — passos iniciais (30s)</text>
+            <text x="380" y="518" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">A — Aquecer (sala 23-25°C, calor radiante)</text>
+            <text x="380" y="535" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">S — Secar (em &lt;34 sem: SACO PLÁSTICO + dupla touca)</text>
+            <text x="380" y="552" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">P — Posicionar (neutra/leve extensão)</text>
+            <text x="380" y="569" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">AS — Aspirar se necessário (boca antes de narinas)</text>
+            <line x1="380" y1="605" x2="380" y2="635" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- Avaliação pós-ASPAS -->
+            <rect x="200" y="645" width="360" height="80" rx="12" fill="url(#v13-bg)" stroke="#6cb4e8" stroke-width="2"/>
+            <text x="380" y="670" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#6cb4e8">AVALIAÇÃO PÓS-ASPAS</text>
+            <text x="380" y="690" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">FC: estetoscópio, 6s × 10</text>
+            <text x="380" y="708" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Qualidade da respiração (não frequência)</text>
+            <line x1="380" y1="725" x2="380" y2="755" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- Indicação VPP -->
+            <rect x="170" y="760" width="420" height="40" rx="20" fill="url(#v13-warn)" stroke="#f0b440" stroke-width="2"/>
+            <text x="380" y="785" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#f0b440">VPP? FC&lt;100 OU apneia OU irregular → continua no Painel 2</text>
+          </svg>
+        </figure>
+      </section>
+
+      <!-- PAINEL 2 -->
+      <section class="painel" id="painel-2" aria-labelledby="painel-2-title">
+        <h3 class="painel__title" id="painel-2-title">Painel 2 — VPP + checagem técnica + ML + IOT</h3>
+        <figure class="fig fig--scroll">
+          <svg viewBox="0 0 760 720" role="img" aria-labelledby="v13p2-title v13p2-desc" width="760" height="720" preserveAspectRatio="xMidYMid meet">
+            <title id="v13p2-title">V13 painel 2 — VPP, checagem e progressão de interface</title>
+            <desc id="v13p2-desc">Indicação de VPP balão+máscara com FiO2 21%/30%, reavaliação pelo oxímetro no MSD, checagem de técnica e progressão balão+máscara→ML→IOT.</desc>
+
+            <!-- VPP balão+máscara -->
+            <rect x="170" y="20" width="420" height="140" rx="12" fill="url(#v13-bg)" stroke="#ff6b5a" stroke-width="2"/>
+            <text x="380" y="44" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#ff6b5a">VPP — balão + máscara</text>
+            <text x="380" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Frequência: 40-60/min ("aperta, solta, solta")</text>
+            <text x="380" y="86" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Duração: 30s antes de reavaliar</text>
+            <text x="380" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">FiO2: 21% (≥34 sem) | 30% (&lt;34 sem)</text>
+            <text x="380" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Oxímetro: MSD (pré-ductal)</text>
+            <text x="380" y="142" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae" font-style="italic">Titular pela tabela SatO2 por minuto</text>
+            <line x1="380" y1="160" x2="380" y2="190" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- Reavaliação -->
+            <polygon points="380,200 540,260 380,320 220,260" fill="url(#v13-warn)" stroke="#f0b440" stroke-width="2"/>
+            <text x="380" y="255" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#f0b440">FC &lt; 100?</text>
+            <text x="380" y="275" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">(reavaliação por oxímetro)</text>
+            <!-- NÃO → segue -->
+            <line x1="540" y1="260" x2="640" y2="260" stroke="#5fcf80" stroke-width="2" marker-end="url(#v13-arr)"/>
+            <text x="595" y="252" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#5fcf80" font-weight="700">NÃO</text>
+            <text x="690" y="265" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#5fcf80">segue acomp.</text>
+            <!-- SIM → checar -->
+            <line x1="380" y1="320" x2="380" y2="350" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+            <text x="395" y="340" font-family="Inter,sans-serif" font-size="10" fill="#ff5d6b" font-weight="700">SIM</text>
+
+            <!-- Checar técnica -->
+            <rect x="170" y="360" width="420" height="100" rx="12" fill="url(#v13-danger)" stroke="#ff5d6b" stroke-width="2"/>
+            <text x="380" y="384" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#ff5d6b">CHECAR TÉCNICA (antes de mudar interface)</text>
+            <text x="380" y="404" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Vedação · escape de ar · tamanho de máscara</text>
+            <text x="380" y="422" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Compressão do balão · conexões · cadência</text>
+            <text x="380" y="445" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae" font-style="italic">"Duvide de si mesmo primeiro"</text>
+            <line x1="380" y1="460" x2="380" y2="490" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- Progredir interface -->
+            <rect x="120" y="500" width="520" height="170" rx="12" fill="url(#v13-bg)" stroke="#c3bcae" stroke-width="2"/>
+            <text x="380" y="525" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#c3bcae">PROGREDIR INTERFACE (técnica ok + sem melhora)</text>
+            <!-- ML -->
+            <rect x="140" y="545" width="220" height="100" rx="10" fill="url(#v13-warn)" stroke="#f0b440"/>
+            <text x="250" y="567" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#f0b440">Padrão</text>
+            <text x="250" y="588" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">balão+máscara → ML → IOT</text>
+            <text x="250" y="613" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae">3 etapas</text>
+            <!-- HDC/<34sem -->
+            <rect x="400" y="545" width="220" height="100" rx="10" fill="url(#v13-danger)" stroke="#ff5d6b"/>
+            <text x="510" y="567" text-anchor="middle" font-family="Lora,serif" font-size="12" font-weight="700" fill="#ff5d6b">Especial</text>
+            <text x="510" y="588" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">&lt;34 sem: balão → IOT (sem ML)</text>
+            <text x="510" y="608" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">HDC: TOT desde o início</text>
+            <text x="380" y="700" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#c3bcae" font-style="italic">Paciente intubado + FC ainda &lt;60 → continua no Painel 3</text>
+          </svg>
+        </figure>
+      </section>
+
+      <!-- PAINEL 3 -->
+      <section class="painel" id="painel-3" aria-labelledby="painel-3-title">
+        <h3 class="painel__title" id="painel-3-title">Painel 3 — MCE + epinefrina</h3>
+        <figure class="fig fig--scroll">
+          <svg viewBox="0 0 760 560" role="img" aria-labelledby="v13p3-title v13p3-desc" width="760" height="560" preserveAspectRatio="xMidYMid meet">
+            <title id="v13p3-title">V13 painel 3 — MCE e epinefrina</title>
+            <desc id="v13p3-desc">Paciente intubado + FC &lt;60 → MCE 2 polegares 3:1 sincronizada → após 1 minuto, FC ainda &lt;60 → epinefrina via CVU.</desc>
+
+            <!-- Decisão MCE -->
+            <polygon points="380,20 580,90 380,160 180,90" fill="url(#v13-danger)" stroke="#ff5d6b" stroke-width="2"/>
+            <text x="380" y="78" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#ff5d6b">Paciente INTUBADO</text>
+            <text x="380" y="98" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#ff5d6b">+ FC ainda &lt;60?</text>
+            <text x="380" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#f3ede0">(2 critérios CONJUNTOS)</text>
+            <line x1="380" y1="160" x2="380" y2="190" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+            <text x="395" y="180" font-family="Inter,sans-serif" font-size="10" fill="#ff5d6b" font-weight="700">SIM</text>
+
+            <!-- MCE -->
+            <rect x="170" y="200" width="420" height="120" rx="12" fill="url(#v13-bg)" stroke="#ff6b5a" stroke-width="2"/>
+            <text x="380" y="224" text-anchor="middle" font-family="Lora,serif" font-size="14" font-weight="700" fill="#ff6b5a">MCE — 2 polegares, 3:1 sincronizada</text>
+            <text x="380" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">90 compressões + 30 ventilações = 120 eventos/min</text>
+            <text x="380" y="266" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Terço inferior do esterno · profundidade 1/3 AP</text>
+            <text x="380" y="284" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Sincronizada SEMPRE em RN (≠ adulto intubado)</text>
+            <text x="380" y="304" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#c3bcae" font-style="italic">"1 e 2 e 3 e ventila"</text>
+            <line x1="380" y1="320" x2="380" y2="350" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- Após 1 min -->
+            <polygon points="380,360 580,410 380,460 180,410" fill="url(#v13-warn)" stroke="#f0b440" stroke-width="2"/>
+            <text x="380" y="400" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#f0b440">Após 1 minuto de MCE</text>
+            <text x="380" y="420" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#f0b440">FC ainda &lt;60?</text>
+            <line x1="380" y1="460" x2="380" y2="490" stroke="#ff6b5a" stroke-width="2" marker-end="url(#v13-arr)"/>
+
+            <!-- Epinefrina -->
+            <rect x="60" y="495" width="640" height="55" rx="14" fill="url(#v13-danger)" stroke="#ff5d6b" stroke-width="2"/>
+            <text x="380" y="518" text-anchor="middle" font-family="Lora,serif" font-size="13" font-weight="700" fill="#ff5d6b">EPINEFRINA</text>
+            <text x="380" y="538" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#f3ede0">Via CVU · 0,01-0,03 mg/kg EV (0,1-0,3 mL/kg da diluição 1:10.000) · repetir 3-5 min se persistir</text>
+          </svg>
+        </figure>
+      </section>
+
+      <h2>As 3 situações especiais como modificadores</h2>
+      <div class="comparison comparison--highlight">
+        <table>
+          <thead><tr><th>Situação</th><th>O que muda no fluxograma</th></tr></thead>
+          <tbody>
+            <tr><td><strong>&lt;34 semanas</strong></td><td>S de ASPAS = saco plástico; dupla touca; monitor desde início; FiO2 30%; sem ML</td></tr>
+            <tr><td><strong>Banhado em mecônio</strong></td><td>Igual ao padrão <strong>até</strong> checagem de técnica. Se tórax não expande → intubar pra ASPIRAR (não ventilar) → desfazer rolha → seguir</td></tr>
+            <tr><td><strong>Hérnia diafragmática</strong></td><td>VPP só por TOT desde início (proibido balão+máscara); abdome escavado é o sinal; + sonda gástrica simultânea</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+
+      <h2>Resolução do Caso 1 — João Eucalipto na sala de parto</h2>
+      <p>Agora você tem o fluxograma na cabeça. Aplica no João Eucalipto.</p>
+
+      <article class="case-card">
+        <div class="case-card__title">Caso 1 — João Eucalipto, capítulo final</div>
+        <p>Filho de Florinda Rosa. 36 semanas e 4 dias. 1900 gramas. PIG (já elucidado na Parte 1). Nasce hipotônico, em apneia.</p>
+
+        <p><strong>As 3 perguntas iniciais:</strong></p>
+        <ol>
+          <li>≥34 sem? <strong>SIM</strong> (36+4 sem)</li>
+          <li>Respirou/chorou? <strong>NÃO</strong> (apneia)</li>
+          <li>Bom tônus FLEXOR? <strong>NÃO</strong> (hipotonia)</li>
+        </ol>
+
+        <p><strong>Vitalidade:</strong> má vitalidade (alteração nos 2 últimos critérios).</p>
+        <p><strong>Semáforo:</strong> cenário <strong style="color:var(--color-danger-500)">VERMELHO</strong> — má vitalidade independente da IG. Pegadinha clássica: a IG ≥34 sem não salva do vermelho.</p>
+        <p><strong>Clampeamento:</strong> imediato. Sem tempo a perder.</p>
+        <p><strong>Destino:</strong> mesa de reanimação, direto.</p>
+        <p><strong>Mesa:</strong> passos iniciais ASPAS em 30 segundos (aquecer, secar, posicionar, aspirar se necessário). Mesa preparada antes da chegada (sala 23-25°C, materiais ao alcance).</p>
+        <p><strong>Avaliação pós-ASPAS:</strong> FC pelo estetoscópio em 6s × 10. Qualidade da respiração avaliada.</p>
+        <p><strong>Indicação de VPP:</strong> pelo menos apneia já indica VPP (OU lógico). Inicia VPP balão+máscara, 40-60/min ("aperta, solta, solta"), FiO2 21% (≥34 sem), 30 segundos.</p>
+        <p><strong>Reavaliação por oxímetro no MSD</strong> (pré-ductal). Se FC melhora → segue acompanhamento. Se persiste &lt;100, checar técnica. Se técnica correta sem melhora → progredir interface (ML → IOT). Se paciente intubado + FC ainda &lt;60 → MCE 3:1 sincronizada. Após 1 min de MCE eficaz com FC ainda &lt;60 → epinefrina via CVU.</p>
+        <p>João Eucalipto, na sala de parto, percorreu o caminho até onde a resposta foi positiva. Voltou. Está vivo. E é por isso que, depois da reanimação, foi avaliado pra sífilis congênita (Caso 1 retomado da apresentação na Parte 1) — porque sobreviveu à primeira batalha. Sem a reanimação correta, a sífilis seria irrelevante.</p>
+        <p style="margin:0;font-style:italic;color:var(--ink-70);">O Caso 1 começa na apresentação e termina aqui.</p>
+      </article>
+
+      <h2>O que ainda fica em aberto</h2>
+      <p>O conteúdo desenvolvido até aqui cobre o <strong>algoritmo de reanimação na sala de parto</strong>. Há um tema clássico, complementar, que <strong>não entra</strong> nesse recorte: o <strong>Apgar score</strong> — sistema de pontuação aplicado no 1º e 5º minutos pra avaliar a condição do RN. O Apgar <strong>não é usado pra decidir conduta na sala de parto</strong> (essa é função do algoritmo que você acabou de internalizar), mas é tema de prova e fica como ponto a desenvolver em material complementar dedicado.</p>
+      <aside class="bauer-note">
+        <div class="bauer-note__label">Gap declarado</div>
+        O Apgar <strong>não foi descrito</strong> aqui — gap deliberado pra não interpolar conteúdo fora da fonte canônica. Fica como referência cruzada futura.
+      </aside>
+
+      <h2>Checklist final de auto-avaliação</h2>
+      <p style="font-size:var(--fs-sm);color:var(--ink-70);">Marque cada item conforme você se sente seguro (clique pra marcar; salva localmente):</p>
+      <ul class="final-checklist" role="list">
+        <li tabindex="0" data-check-key="3perguntas">Sei as 3 perguntas iniciais na ordem (≥34 sem? Respirou/chorou? Bom tônus flexor?)</li>
+        <li tabindex="0" data-check-key="tonus-flexor">Reconheço bom tônus = FLEXOR (não genérico)</li>
+        <li tabindex="0" data-check-key="semaforo">Sei o semáforo: VERDE (mãe, ≥60s), AMARELO (mesa, ≥30s), VERMELHO (mesa, imediato — independe de IG)</li>
+        <li tabindex="0" data-check-key="aspas">Sei ASPAS em 30s com aspiração condicional</li>
+        <li tabindex="0" data-check-key="boca-narinas">Sei a ordem boca → narinas</li>
+        <li tabindex="0" data-check-key="fc-esteto">Sei avaliar FC por estetoscópio (6s × 10) e qualidade da respiração</li>
+        <li tabindex="0" data-check-key="vpp-criterios">Sei os 3 critérios de VPP (OU lógico): FC&lt;100 OU apneia OU irregular</li>
+        <li tabindex="0" data-check-key="vpp-tecnica">Sei a técnica VPP (40-60/min, 30s, FiO2 21% ou 30%, oxímetro MSD)</li>
+        <li tabindex="0" data-check-key="sato2-tabela">Sei a tabela SatO2 alvo por minuto (1: 60-65; 5: 80-85; 10: 85-95)</li>
+        <li tabindex="0" data-check-key="checar-tecnica">Sei checar técnica antes de progredir interface</li>
+        <li tabindex="0" data-check-key="progressao">Sei a progressão balão+máscara → ML → IOT</li>
+        <li tabindex="0" data-check-key="mce-criterios">Sei os 2 critérios CONJUNTOS pra MCE (intubado + FC&lt;60)</li>
+        <li tabindex="0" data-check-key="casca-banana">Sei a pegadinha casca de banana: FC 20 não pula etapas</li>
+        <li tabindex="0" data-check-key="mce-tecnica">Sei técnica MCE (2 polegares, 3:1 sincronizada, 120 eventos/min)</li>
+        <li tabindex="0" data-check-key="rn-vs-pals">Sei o contraste com PALS/ACLS (lá assíncrono após intubação; aqui sincronizado sempre)</li>
+        <li tabindex="0" data-check-key="epi-indicacao">Sei a indicação de epinefrina (após 1 min MCE, FC&lt;60, intubado)</li>
+        <li tabindex="0" data-check-key="epi-dose">Sei a dose precisa (0,01-0,03 mg/kg EV; diluição 1:10.000; via CVU)</li>
+        <li tabindex="0" data-check-key="3-especiais">Sei as 3 situações especiais e suas modificações</li>
+      </ul>
+      <p style="font-size:var(--fs-sm);color:var(--ink-70);margin-top:var(--space-3);">Se marcou todos → o algoritmo está internalizado. Aplicar em prova vira mecânico.</p>
+
+      <aside class="op-summary">
+        <div class="op-summary__label">Resumo operacional final</div>
+        <div class="op-summary__body">Reanimação neonatal = protocolo sistemático sem improviso. 3 perguntas → semáforo → ASPAS → avaliação → VPP (se OU lógico) → checar técnica → progredir interface → MCE (se intubado E FC&lt;60) → epinefrina (após 1 min de MCE com FC ainda &lt;60). Três situações especiais ajustam pontos do fluxograma.</div>
+      </aside>
+
+      <section class="quiz" data-quiz-id="p12" aria-labelledby="quiz-p12-title">
+        <h2 class="quiz__title" id="quiz-p12-title">Quiz — fixação final</h2>
+        <ol class="quiz__questions">
+          <li class="quiz__question" data-q="1" data-kind="mcq">
+            <span class="quiz__qnum">Questão 1 — MCQ</span>
+            <p class="quiz__stem">Sobre o Caso 1 — João Eucalipto (36+4 sem, hipotônico, em apneia ao nascer) — em qual cenário do semáforo ele se enquadra?</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — Cenário VERDE — IG ≥34 sem garante boa vitalidade</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">B — Cenário AMARELO — pré-termo tardio precisa de cuidado adicional</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">C — Cenário VERMELHO — má vitalidade independente da IG</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — Não há cenário definido — esperar Apgar de 5 min</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: C.</strong> Má vitalidade (apneia + hipotonia) define cenário vermelho automaticamente — IG ≥34 sem não anula.</p>
+              <p class="quiz__distractor">A é o erro clássico (IG ≥34 garante caminho específico, NÃO vitalidade). B aplica critério de amarelo (que exige boa vitalidade). D interpola Apgar — Apgar é avaliação posterior, não decide cenário inicial.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="2" data-kind="mcq">
+            <span class="quiz__qnum">Questão 2 — MCQ</span>
+            <p class="quiz__stem">Sobre a ordem inviolável do fluxograma de reanimação neonatal, marque a sequência correta:</p>
+            <div role="radiogroup" class="quiz__alternatives" aria-label="Alternativas">
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">A — ASPAS → VPP → MCE → checar técnica → epinefrina</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="true">B — ASPAS → VPP → checar técnica → progredir interface → MCE (se intubado + FC&lt;60) → epinefrina (após 1 min MCE)</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">C — Avaliação FC → MCE → VPP → epinefrina</button>
+              <button class="quiz__alt" type="button" role="radio" aria-checked="false" data-correct="false">D — VPP imediata → MCE imediata → epinefrina imediata</button>
+            </div>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict"></p>
+              <p class="quiz__justification"><strong>Gabarito: B.</strong> Ordem canônica inviolável.</p>
+              <p class="quiz__distractor">A inverte etapas críticas. C ignora ASPAS e VPP iniciais. D ignora todos os critérios de transição entre etapas.</p>
+            </div>
+          </li>
+          <li class="quiz__question" data-q="3" data-kind="gap">
+            <span class="quiz__qnum">Questão 3 — Completar lacuna</span>
+            <p class="quiz__stem">A dose de epinefrina EV na reanimação neonatal é ______________ mg/kg, com volume equivalente ______________ mL/kg da solução diluída ______________.</p>
+            <input class="quiz__gap-input" type="text" placeholder="Digite as três respostas (ex: A / B / C)…" aria-label="Sua resposta para as três lacunas">
+            <button class="quiz__gap-reveal" type="button">Revelar gabarito</button>
+            <div class="quiz__feedback" aria-live="polite" hidden>
+              <p class="quiz__verdict quiz__verdict--correct">Gabarito.</p>
+              <p class="quiz__justification"><strong>Respostas: 0,01-0,03 mg/kg / 0,1-0,3 mL/kg / 1:10.000.</strong> PRN-SBP 2022.</p>
+              <p class="quiz__distractor">Esses 3 dados juntos (dose em mg, volume em mL, diluição) são o vértice cobrado em prova quando a questão pergunta "calcule".</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <p class="next-link"><strong>Encerramento:</strong> a Parte 1 tem outros temas pendentes (triagens neonatais, distúrbios respiratórios desenvolvidos, icterícia, Apgar score como sistema de avaliação) que entram quando o restante da Parte 1 for fechado. O algoritmo de sala de parto desenvolvido aqui permanece como referência operacional.</p>
+
+      <nav class="page-nav" aria-label="Navegação entre páginas">
+        <a class="page-nav__btn page-nav__btn--prev" href="#/p1-m3-p11">‹ Anterior</a>
+        <span class="page-nav__indicator">12 / 12</span>
+        <a class="page-nav__btn page-nav__btn--next" aria-disabled="true">Fim do módulo</a>
+      </nav>
+    </article>
+
+    <!-- PAGES_INJECT_END -->
+  </main>
+
+  <footer class="app-footer">
+    Plataforma Bauer · Neonatologia Parte 1 · Módulo 3 · Reanimação Neonatal · Conteúdo conforme PRN-SBP 2022 · Sempre confirme contra a fonte primária antes do uso clínico.
+  </footer>
+
+</div>
+
+<script src="./assets/js/router.js"></script>
+<script src="./assets/js/quiz.js"></script>
+<script src="./assets/js/caso-card.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "caso-1": {
+    "id": "caso-1",
+    "nome": "João Eucalipto",
+    "mae": "Florinda Rosa",
+    "ig": "36 semanas e 4 dias",
+    "peso": "1900 g",
+    "classificacao": "PIG (pequeno para idade gestacional)",
+    "contexto_materno": "sífilis mal-tratada (1 dose de benzatina, duração desconhecida)",
+    "achados_iniciais": "hipotônico, em apneia ao nascer",
+    "cenario_semaforo": "vermelho",
+    "deep_links": {
+      "modulo_1_apresentacao": "../m1-icterneo/index.html#/p1-m1-p4",
+      "modulo_1_resolucao": "../m1-icterneo/index.html#/p1-m1-p11",
+      "modulo_3_abertura": "./index.html#/p1-m3-p1",
+      "modulo_3_resolucao": "./index.html#/p1-m3-p12"
+    },
+    "cross_module_fallback": "Caso desenvolvido em mais detalhes nos Módulos 1 e 3 da Parte 1."
+  }
+}
