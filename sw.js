@@ -1,7 +1,7 @@
 /* Service Worker — Hub Bauer Neonatologia
    Cache-first com fallback de rede + revalidação por versão. */
 
-const CACHE = 'neonato-hub-v1.0.0';
+const CACHE = 'neonato-hub-v1.1.0';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
@@ -17,7 +17,8 @@ const ASSETS = [
   BASE + 'modules/m1-classificacao-sifilis/index.html',
   BASE + 'modules/m2-torch/index.html',
   BASE + 'modules/m3-reanimacao/index.html',
-  BASE + 'modules/m4-triagem-neonatal/index.html'
+  BASE + 'modules/m4-triagem-neonatal/index.html',
+  BASE + 'modules/m5-triagem-auditiva-neonatal/index.html'
 ];
 
 self.addEventListener('install', (event) => {
