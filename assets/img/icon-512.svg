@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="icon512-title icon512-desc">
+  <title id="icon512-title">Neonatologia Bauer — ícone</title>
+  <desc id="icon512-desc">Logotipo NN em coral sobre fundo gradiente petróleo profundo, paleta Bauer Neonatologia.</desc>
+  <defs>
+    <linearGradient id="grad512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b5a"/>
+      <stop offset="100%" stop-color="#ff8a7a"/>
+    </linearGradient>
+    <linearGradient id="bg512" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1620"/>
+      <stop offset="100%" stop-color="#142838"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg512)"/>
+  <rect x="38" y="38" width="436" height="436" rx="86" fill="none" stroke="url(#grad512)" stroke-width="4" opacity="0.4"/>
+  <text x="256" y="332" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="246" font-weight="700" fill="url(#grad512)" letter-spacing="-8">NN</text>
+</svg>
