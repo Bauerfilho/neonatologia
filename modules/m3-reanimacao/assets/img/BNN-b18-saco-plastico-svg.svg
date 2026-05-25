@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-b18 desc-b18">
+  <title id="title-b18">Recém-nascido pré-termo envolto em saco plástico de polietileno para termorregulação na sala de parto</title>
+  <desc id="desc-b18">Esquema didático mostrando recém-nascido pré-termo com idade gestacional inferior a 34 semanas deitado em mesa de reanimação. O corpo, do pescoço aos pés, está envolvido em saco plástico transparente de polietileno representado por contorno tracejado, mantendo cabeça e face livres. Setas indicam preservação de calor e umidade, manobra que substitui o passo Secar do mnemônico ASPAS na rotina de cuidados ao prematuro extremo.</desc>
+  <defs>
+    <radialGradient id="bg-b18" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <linearGradient id="mesa-b18" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3245"/>
+      <stop offset="100%" stop-color="#0f1f2c"/>
+    </linearGradient>
+    <radialGradient id="rn-skin-b18" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffd5c0"/>
+      <stop offset="60%" stop-color="#f5b89a"/>
+      <stop offset="100%" stop-color="#e09578"/>
+    </radialGradient>
+    <linearGradient id="plastico-b18" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(108,180,232,0.18)"/>
+      <stop offset="50%" stop-color="rgba(108,180,232,0.08)"/>
+      <stop offset="100%" stop-color="rgba(108,180,232,0.18)"/>
+    </linearGradient>
+    <marker id="arrow-b18" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f0b440"/>
+    </marker>
+    <marker id="arrow-b18-coral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+  </defs>
+
+  <rect width="500" height="350" fill="url(#bg-b18)"/>
+
+  <!-- Mesa de reanimação - base retangular -->
+  <rect x="55" y="220" width="390" height="50" rx="6" fill="url(#mesa-b18)" stroke="#243a4e" stroke-width="1.5"/>
+  <!-- Bordas/molduras da mesa -->
+  <line x1="55" y1="232" x2="445" y2="232" stroke="#3a5066" stroke-width="0.8" opacity="0.6"/>
+  <line x1="55" y1="262" x2="445" y2="262" stroke="#1a2632" stroke-width="0.8"/>
+  <!-- Patas/suporte da mesa -->
+  <rect x="80" y="270" width="6" height="35" fill="#243a4e"/>
+  <rect x="414" y="270" width="6" height="35" fill="#243a4e"/>
+
+  <!-- Manta/campo na mesa (sutil) -->
+  <rect x="80" y="215" width="340" height="8" rx="3" fill="#1a3245" opacity="0.7"/>
+
+  <!-- ==== RN pré-termo deitado ==== -->
+  <!-- Cabeça (à esquerda - posição supino com cabeça à esquerda) -->
+  <ellipse cx="125" cy="200" rx="32" ry="28" fill="url(#rn-skin-b18)" stroke="#c47a5a" stroke-width="1.5"/>
+  <!-- Fontanela sugerida -->
+  <ellipse cx="118" cy="188" rx="9" ry="4" fill="#e09578" opacity="0.5"/>
+  <!-- Olho fechado -->
+  <path d="M 115 200 Q 124 204 132 200" fill="none" stroke="#7a4a3a" stroke-width="1.4" stroke-linecap="round"/>
+  <!-- Nariz pequeno -->
+  <path d="M 137 202 Q 138 208 135 210" fill="none" stroke="#a37e64" stroke-width="1"/>
+  <!-- Boca -->
+  <path d="M 132 215 Q 136 217 140 215" fill="none" stroke="#a04030" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Orelha sugerida -->
+  <ellipse cx="100" cy="200" rx="5" ry="9" fill="#e09578" opacity="0.7"/>
+
+  <!-- Pescoço (junção cabeça-tronco) -->
+  <rect x="148" y="198" width="22" height="14" fill="url(#rn-skin-b18)" stroke="#c47a5a" stroke-width="1"/>
+
+  <!-- Tronco -->
+  <ellipse cx="245" cy="207" rx="78" ry="22" fill="url(#rn-skin-b18)" stroke="#c47a5a" stroke-width="1.2" opacity="0.95"/>
+
+  <!-- Braço visível dobrado sobre o tronco -->
+  <path d="M 195 200 Q 200 218 220 222 Q 235 224 240 218 Q 235 212 218 210 Q 205 207 200 200 z"
+        fill="url(#rn-skin-b18)" stroke="#c47a5a" stroke-width="1" opacity="0.92"/>
+
+  <!-- Pernas semi-flexionadas -->
+  <path d="M 315 205 Q 345 200 365 208 Q 372 215 360 218 Q 340 215 320 213 z"
+        fill="url(#rn-skin-b18)" stroke="#c47a5a" stroke-width="1" opacity="0.92"/>
+  <path d="M 318 212 Q 348 215 368 220 Q 374 224 365 226 Q 342 224 320 220 z"
+        fill="url(#rn-skin-b18)" stroke="#c47a5a" stroke-width="1" opacity="0.92"/>
+
+  <!-- Pés -->
+  <ellipse cx="370" cy="215" rx="9" ry="5" fill="#e09578" stroke="#c47a5a" stroke-width="1"/>
+  <ellipse cx="372" cy="222" rx="9" ry="5" fill="#e09578" stroke="#c47a5a" stroke-width="1"/>
+
+  <!-- Veias sugeridas (pele translúcida pré-termo) -->
+  <path d="M 195 207 Q 220 210 245 207" fill="none" stroke="#7a8aa8" stroke-width="0.7" opacity="0.5"/>
+  <path d="M 220 215 Q 250 218 280 215" fill="none" stroke="#7a8aa8" stroke-width="0.7" opacity="0.5"/>
+  <path d="M 260 205 Q 290 207 315 205" fill="none" stroke="#7a8aa8" stroke-width="0.7" opacity="0.5"/>
+
+  <!-- ==== SACO PLÁSTICO TRANSPARENTE (envolvendo pescoço pra baixo) ==== -->
+  <!-- Contorno em tracejado azulado claro sugerindo polietileno transparente -->
+
+  <!-- Preenchimento sutil do interior do saco (transparência azulada) -->
+  <path d="M 158 185
+           Q 155 178 165 175
+           L 380 175
+           Q 395 175 395 195
+           L 395 240
+           Q 395 248 385 248
+           L 165 248
+           Q 155 248 155 240
+           L 158 195 z"
+        fill="url(#plastico-b18)" opacity="0.85"/>
+
+  <!-- Contorno tracejado do saco -->
+  <path d="M 158 185
+           Q 155 178 165 175
+           L 380 175
+           Q 395 175 395 195
+           L 395 240
+           Q 395 248 385 248
+           L 165 248
+           Q 155 248 155 240
+           L 158 195 z"
+        fill="none" stroke="#6cb4e8" stroke-width="1.6" stroke-dasharray="6 4" opacity="0.95"/>
+
+  <!-- Reflexos sugerindo plástico (highlights) -->
+  <path d="M 175 180 L 175 240" stroke="#a0d0f0" stroke-width="0.8" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 200 180 L 200 240" stroke="#a0d0f0" stroke-width="0.6" opacity="0.3" stroke-linecap="round"/>
+  <path d="M 370 180 L 370 240" stroke="#a0d0f0" stroke-width="0.6" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Abertura do saco no pescoço (linha de fechamento sutil) -->
+  <line x1="158" y1="190" x2="172" y2="190" stroke="#6cb4e8" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.9"/>
+
+  <!-- ==== Labels e setas didáticas ==== -->
+
+  <!-- Label CABEÇA livre (descer das estrelas) -->
+  <line x1="125" y1="115" x2="125" y2="170" stroke="#ff6b5a" stroke-width="1.6" marker-end="url(#arrow-b18-coral)"/>
+  <text x="125" y="103" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+    <tspan x="125" dy="0">Cabeça e face</tspan>
+    <tspan x="125" dy="14" font-weight="500">livres do saco</tspan>
+  </text>
+
+  <!-- Label SACO PLÁSTICO -->
+  <line x1="450" y1="155" x2="380" y2="185" stroke="#6cb4e8" stroke-width="1.6" stroke-dasharray="0" marker-end="url(#arrow-b18)"/>
+  <text x="455" y="130" fill="#6cb4e8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="700" text-anchor="end">
+    <tspan x="490" dy="0">Saco plástico</tspan>
+    <tspan x="490" dy="14" font-weight="500">transparente</tspan>
+    <tspan x="490" dy="13" font-weight="500">(polietileno)</tspan>
+  </text>
+
+  <!-- Label CALOR PRESERVADO - lado esquerdo abaixo -->
+  <g>
+    <rect x="20" y="278" width="135" height="58" rx="10" fill="rgba(240,180,64,0.10)" stroke="rgba(240,180,64,0.40)" stroke-width="1"/>
+    <text x="87" y="298" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.6">CALOR PRESERVADO</text>
+    <text x="87" y="316" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle">evita hipotermia</text>
+    <text x="87" y="329" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle" font-weight="600">por irradiação</text>
+  </g>
+  <line x1="155" y1="305" x2="180" y2="255" stroke="#f0b440" stroke-width="1.4" marker-end="url(#arrow-b18)" opacity="0.85"/>
+
+  <!-- Label UMIDADE PRESERVADA - lado direito abaixo -->
+  <g>
+    <rect x="345" y="278" width="135" height="58" rx="10" fill="rgba(108,180,232,0.10)" stroke="rgba(108,180,232,0.40)" stroke-width="1"/>
+    <text x="412" y="298" fill="#6cb4e8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.6">UMIDADE PRESERVADA</text>
+    <text x="412" y="316" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle">reduz perda</text>
+    <text x="412" y="329" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle" font-weight="600">transepidérmica</text>
+  </g>
+  <line x1="345" y1="305" x2="320" y2="255" stroke="#6cb4e8" stroke-width="1.4" marker-end="url(#arrow-b18)" opacity="0.85"/>
+
+  <!-- Tag de regra principal no topo -->
+  <rect x="100" y="20" width="300" height="34" rx="10" fill="rgba(255,107,90,0.12)" stroke="rgba(255,107,90,0.45)" stroke-width="1"/>
+  <text x="250" y="42" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.6">RN &lt; 34 SEMANAS — NÃO SECAR · ENVOLVER</text>
+</svg>
