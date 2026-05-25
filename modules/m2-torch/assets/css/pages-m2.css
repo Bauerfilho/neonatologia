@@ -515,3 +515,54 @@ abbr[title] {
 }
 .return-link::before { content: "↩"; }
 .return-link:hover { background: var(--accent-coral-soft); text-decoration: none; }
+
+/* === Figura clínica real (foto/TC licenciada CC ou domínio público) === */
+/* Renderiza imagem médica embutida com legenda + atribuição canônica.   */
+/* Substitui placeholders .img-placeholder após o embed do buscador.     */
+.figure-clinical {
+  margin: var(--space-5) auto;
+  padding: var(--space-3);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.figure-clinical img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-sm);
+  background: var(--bg-base);
+}
+.figure-clinical .figcaption {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--ink-90);
+}
+.figure-clinical .figcaption strong {
+  color: var(--ink-100);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.figure-clinical .attribution {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  color: var(--ink-50);
+  line-height: 1.4;
+  word-break: break-word;
+}
+/* Variante low-res — B11 (240×320 nativo, não fazer upscale visível) */
+.figure-clinical--lowres {
+  max-width: 320px;
+}
+.figure-clinical--lowres img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
