@@ -3,7 +3,7 @@
  * Cobertura offline: hub + 5 módulos (HTML + CSS + JS + SVGs + imagens).
  */
 
-const CACHE = 'neonato-platform-v2.2.0';
+const CACHE = 'neonato-platform-v2.3.0';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
