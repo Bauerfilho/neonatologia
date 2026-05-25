@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Pipeline interna Bauer (artefatos não-públicos)
+transcricoes/
+calibracao/
+laudos/
+prompts-finais/
+roteiros/
+validacao/
+.orquestrador-sessao.md
+RELATORIO-*.md
+ILUSTRADOR-*.md
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (caso futuro)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
