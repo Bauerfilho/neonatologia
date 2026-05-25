@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-b17 desc-b17">
+  <title id="title-b17">Recém-nascido pré-termo extremo apoiado na palma da mão do examinador</title>
+  <desc id="desc-b17">Esquema comparativo de tamanho mostrando recém-nascido pré-termo extremo, com idade gestacional inferior a 28 semanas, deitado em postura de semi-flexão fraca sobre a palma aberta de um adulto. O corpo do neonato ocupa apenas a região palmar, evidenciando que o comprimento total cabeça-pés é menor que o comprimento da palma. Pele do recém-nascido em tom claro translúcido sugerindo gelatinosa.</desc>
+  <defs>
+    <radialGradient id="bg-b17" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <radialGradient id="palm-skin" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#d9b496"/>
+      <stop offset="100%" stop-color="#a8826a"/>
+    </radialGradient>
+    <radialGradient id="palm-inner" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#e8c6aa"/>
+      <stop offset="100%" stop-color="#c4986e"/>
+    </radialGradient>
+    <radialGradient id="rn-skin" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffd5c0"/>
+      <stop offset="60%" stop-color="#f5b89a"/>
+      <stop offset="100%" stop-color="#e09578"/>
+    </radialGradient>
+    <marker id="arrow-b17" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+    <marker id="arrow-b17-rev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 10 0 L 0 5 L 10 10 z" fill="#ff6b5a"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bg-b17)"/>
+
+  <!-- Mão de adulto - vista palmar, dedos abertos -->
+  <!-- Palma (corpo central) -->
+  <path d="M 165 175
+           Q 155 220 165 280
+           Q 175 330 215 340
+           L 385 340
+           Q 425 330 435 280
+           Q 445 220 435 175
+           Q 425 145 405 138
+           L 195 138
+           Q 175 145 165 175 z"
+        fill="url(#palm-inner)" stroke="#7a5a48" stroke-width="2"/>
+
+  <!-- Dedo polegar (esquerdo) -->
+  <path d="M 165 200
+           Q 130 195 110 175
+           Q 95 160 95 145
+           Q 100 130 115 130
+           Q 135 135 155 155
+           Q 165 165 170 180 z"
+        fill="url(#palm-skin)" stroke="#7a5a48" stroke-width="2"/>
+  <!-- Unha polegar -->
+  <ellipse cx="108" cy="142" rx="8" ry="5" fill="#e8d0bc" stroke="#a37e64" stroke-width="0.8" transform="rotate(-30 108 142)"/>
+
+  <!-- Dedo indicador -->
+  <path d="M 200 142
+           Q 195 105 200 60
+           Q 205 45 220 45
+           Q 235 45 240 60
+           Q 245 105 240 140 z"
+        fill="url(#palm-skin)" stroke="#7a5a48" stroke-width="2"/>
+  <ellipse cx="220" cy="55" rx="9" ry="6" fill="#e8d0bc" stroke="#a37e64" stroke-width="0.8"/>
+
+  <!-- Dedo médio -->
+  <path d="M 255 140
+           Q 252 95 257 40
+           Q 262 25 278 25
+           Q 294 25 299 40
+           Q 304 95 301 140 z"
+        fill="url(#palm-skin)" stroke="#7a5a48" stroke-width="2"/>
+  <ellipse cx="278" cy="35" rx="9" ry="6" fill="#e8d0bc" stroke="#a37e64" stroke-width="0.8"/>
+
+  <!-- Dedo anelar -->
+  <path d="M 315 140
+           Q 312 100 317 55
+           Q 322 40 338 40
+           Q 354 40 359 55
+           Q 364 100 361 140 z"
+        fill="url(#palm-skin)" stroke="#7a5a48" stroke-width="2"/>
+  <ellipse cx="338" cy="50" rx="9" ry="6" fill="#e8d0bc" stroke="#a37e64" stroke-width="0.8"/>
+
+  <!-- Dedo mínimo -->
+  <path d="M 375 140
+           Q 372 115 377 80
+           Q 382 65 395 65
+           Q 408 65 413 80
+           Q 418 115 415 140 z"
+        fill="url(#palm-skin)" stroke="#7a5a48" stroke-width="2"/>
+  <ellipse cx="395" cy="74" rx="7.5" ry="5" fill="#e8d0bc" stroke="#a37e64" stroke-width="0.8"/>
+
+  <!-- Linhas da palma sutis -->
+  <path d="M 200 200 Q 280 215 360 195" fill="none" stroke="#8a6850" stroke-width="1" opacity="0.5"/>
+  <path d="M 195 240 Q 275 255 350 235" fill="none" stroke="#8a6850" stroke-width="1" opacity="0.5"/>
+  <path d="M 215 200 Q 220 260 240 305" fill="none" stroke="#8a6850" stroke-width="1" opacity="0.4"/>
+
+  <!-- Pulso (sai pra fora do frame) -->
+  <path d="M 215 340 L 220 380 L 380 380 L 385 340 z" fill="url(#palm-inner)" stroke="#7a5a48" stroke-width="2"/>
+
+  <!-- ==== RN pré-termo extremo sobre a palma ==== -->
+  <!-- Posição: centro da palma, ~10cm de comprimento na escala da imagem (~90px sobre palma de ~180px) -->
+  <!-- Postura: semi-flexão fraca, deitado de lado-levemente-supino -->
+
+  <!-- Tronco RN -->
+  <ellipse cx="300" cy="245" rx="34" ry="20" fill="url(#rn-skin)" stroke="#c47a5a" stroke-width="1.2" opacity="0.95"/>
+
+  <!-- Cabeça RN (proporcionalmente grande - característico de prematuro) -->
+  <ellipse cx="252" cy="240" rx="22" ry="20" fill="url(#rn-skin)" stroke="#c47a5a" stroke-width="1.2" opacity="0.95"/>
+  <!-- Fontanela sugerida -->
+  <ellipse cx="248" cy="232" rx="6" ry="3" fill="#e09578" opacity="0.5"/>
+  <!-- Olho fechado -->
+  <path d="M 244 238 Q 250 240 256 238" fill="none" stroke="#7a4a3a" stroke-width="1" stroke-linecap="round"/>
+  <!-- Boca -->
+  <path d="M 240 248 Q 242 250 246 249" fill="none" stroke="#a04030" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Braço esquerdo (visível) - semi-flexionado fraco -->
+  <path d="M 280 240 Q 275 252 282 264 Q 286 270 290 268 Q 286 258 284 248 z"
+        fill="url(#rn-skin)" stroke="#c47a5a" stroke-width="1" opacity="0.92"/>
+
+  <!-- Braço direito sob o tronco - sugerido -->
+  <ellipse cx="312" cy="262" rx="8" ry="4" fill="#d09078" stroke="#c47a5a" stroke-width="0.8" opacity="0.8"/>
+
+  <!-- Pernas semi-flexionadas (fracas) -->
+  <path d="M 328 245 Q 340 240 348 248 Q 352 256 346 260 Q 338 256 332 252 z"
+        fill="url(#rn-skin)" stroke="#c47a5a" stroke-width="1" opacity="0.92"/>
+  <path d="M 330 252 Q 342 254 348 262 Q 350 268 344 268 Q 338 262 332 258 z"
+        fill="url(#rn-skin)" stroke="#c47a5a" stroke-width="1" opacity="0.92"/>
+
+  <!-- Veias sugeridas (pele translúcida pré-termo) -->
+  <path d="M 285 240 Q 295 242 305 240" fill="none" stroke="#7a8aa8" stroke-width="0.6" opacity="0.55"/>
+  <path d="M 290 248 Q 300 250 312 248" fill="none" stroke="#7a8aa8" stroke-width="0.6" opacity="0.5"/>
+  <path d="M 248 245 Q 254 248 260 245" fill="none" stroke="#7a8aa8" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Cordão umbilical sugerido -->
+  <path d="M 304 252 Q 308 258 314 263" fill="none" stroke="#c8a888" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Indicador de escala/comparação - barra dimensional discreta -->
+  <line x1="245" y1="290" x2="350" y2="290" stroke="#ff6b5a" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.85"
+        marker-start="url(#arrow-b17-rev)" marker-end="url(#arrow-b17)"/>
+  <text x="297" y="305" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">comprimento total do RN</text>
+
+  <line x1="170" y1="320" x2="430" y2="320" stroke="#6cb4e8" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"
+        marker-start="url(#arrow-b17-rev)" marker-end="url(#arrow-b17)"/>
+  <text x="300" y="335" fill="#6cb4e8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">largura da palma do examinador</text>
+
+  <!-- Labels com setas -->
+  <line x1="490" y1="80" x2="305" y2="220" stroke="#ff6b5a" stroke-width="1.6" marker-end="url(#arrow-b17)"/>
+  <text x="495" y="68" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="13" font-weight="700">
+    <tspan x="495" dy="0">Pré-termo extremo</tspan>
+    <tspan x="495" dy="15" font-weight="500">IG &lt; 28 semanas</tspan>
+  </text>
+  <text x="495" y="105" fill="#c3bcae" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11">
+    <tspan x="495" dy="0">postura de</tspan>
+    <tspan x="495" dy="13">semi-flexão fraca</tspan>
+  </text>
+
+  <!-- Rótulo título inferior -->
+  <rect x="120" y="358" width="360" height="32" rx="10" fill="rgba(255,107,90,0.10)" stroke="rgba(255,107,90,0.40)" stroke-width="1"/>
+  <text x="300" y="379" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.6">CLASSIFICAÇÃO POR IDADE GESTACIONAL</text>
+</svg>

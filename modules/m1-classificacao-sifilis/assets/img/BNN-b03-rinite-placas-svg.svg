@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-b03 desc-b03">
+  <title id="title-b03">Rinite serossanguinolenta e placas mucosas em sífilis congênita precoce</title>
+  <desc id="desc-b03">Esquema de face de recém-nascido em vista frontal mostrando dois achados precoces de sífilis congênita: secreção serossanguinolenta amarelo-rosada escorrendo de ambas as narinas e placas mucosas esbranquiçadas distribuídas nas comissuras labiais e perilabial. Lesões altamente infectantes durante as primeiras 48 horas de tratamento.</desc>
+  <defs>
+    <radialGradient id="bg-b03" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <radialGradient id="skin-b03" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f7e0d2"/>
+      <stop offset="100%" stop-color="#e0bfa8"/>
+    </radialGradient>
+    <linearGradient id="secrecao-b03" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#f7d896" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#e8a070" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#c44a3a" stop-opacity="0.85"/>
+    </linearGradient>
+    <marker id="arrow-b03" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+  </defs>
+
+  <rect width="400" height="500" fill="url(#bg-b03)"/>
+
+  <!-- Rosto oval do RN -->
+  <ellipse cx="200" cy="230" rx="115" ry="140" fill="url(#skin-b03)" stroke="#b8957a" stroke-width="1.5"/>
+
+  <!-- Orelhas -->
+  <ellipse cx="88" cy="230" rx="14" ry="22" fill="#e0bfa8" stroke="#b8957a" stroke-width="1.2"/>
+  <ellipse cx="312" cy="230" rx="14" ry="22" fill="#e0bfa8" stroke="#b8957a" stroke-width="1.2"/>
+
+  <!-- Sobrancelhas sutis -->
+  <path d="M 160 175 Q 175 170 190 176" fill="none" stroke="#7a5a48" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 210 176 Q 225 170 240 175" fill="none" stroke="#7a5a48" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Olhos fechados (RN dormindo) -->
+  <path d="M 158 198 Q 175 204 192 198" fill="none" stroke="#3a2a22" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 208 198 Q 225 204 242 198" fill="none" stroke="#3a2a22" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Nariz -->
+  <path d="M 200 215 Q 192 245 195 270 Q 200 278 205 270 Q 208 245 200 215 z" fill="#d9b496" stroke="#a37e64" stroke-width="1.2"/>
+  <!-- Narinas -->
+  <ellipse cx="194" cy="268" rx="3.2" ry="4.5" fill="#5a3a2a"/>
+  <ellipse cx="206" cy="268" rx="3.2" ry="4.5" fill="#5a3a2a"/>
+
+  <!-- Secreção serossanguinolenta - narina esquerda -->
+  <path d="M 192 271 Q 188 285 186 305 Q 184 320 188 330 Q 192 335 194 332 Q 196 320 196 305 Q 195 290 194 275 z"
+        fill="url(#secrecao-b03)" stroke="#a04030" stroke-width="0.8" opacity="0.95"/>
+  <!-- Secreção serossanguinolenta - narina direita -->
+  <path d="M 208 271 Q 212 285 214 308 Q 216 325 213 335 Q 209 338 206 333 Q 204 318 205 302 Q 206 288 206 275 z"
+        fill="url(#secrecao-b03)" stroke="#a04030" stroke-width="0.8" opacity="0.95"/>
+
+  <!-- Gotículas adicionais sugerindo escorrimento ativo -->
+  <ellipse cx="190" cy="340" rx="2.5" ry="3.5" fill="#c44a3a" opacity="0.7"/>
+  <ellipse cx="212" cy="345" rx="2.5" ry="3.5" fill="#c44a3a" opacity="0.7"/>
+
+  <!-- Lábios -->
+  <path d="M 170 310 Q 200 318 230 310 Q 232 322 200 326 Q 168 322 170 310 z" fill="#c46b58" stroke="#8a4030" stroke-width="1.2"/>
+  <path d="M 175 315 Q 200 317 225 315" fill="none" stroke="#8a4030" stroke-width="1"/>
+
+  <!-- Placas mucosas esbranquiçadas - comissura esquerda -->
+  <ellipse cx="168" cy="318" rx="9" ry="6" fill="#f3ede0" stroke="#c0b89a" stroke-width="1" opacity="0.92"/>
+  <ellipse cx="166" cy="316" rx="3.5" ry="2.5" fill="#f8f5ed" opacity="0.95"/>
+
+  <!-- Placas mucosas esbranquiçadas - comissura direita -->
+  <ellipse cx="232" cy="318" rx="9" ry="6" fill="#f3ede0" stroke="#c0b89a" stroke-width="1" opacity="0.92"/>
+  <ellipse cx="234" cy="316" rx="3.5" ry="2.5" fill="#f8f5ed" opacity="0.95"/>
+
+  <!-- Placa perilabial inferior central -->
+  <ellipse cx="200" cy="338" rx="11" ry="5" fill="#f3ede0" stroke="#c0b89a" stroke-width="1" opacity="0.85"/>
+  <ellipse cx="195" cy="337" rx="3" ry="2" fill="#f8f5ed" opacity="0.9"/>
+  <ellipse cx="206" cy="339" rx="2.5" ry="1.8" fill="#f8f5ed" opacity="0.9"/>
+
+  <!-- Queixo discreto -->
+  <path d="M 180 365 Q 200 380 220 365" fill="none" stroke="#a37e64" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Setas e labels -->
+  <!-- Seta 1: Secreção -->
+  <line x1="60" y1="305" x2="180" y2="310" stroke="#ff6b5a" stroke-width="1.8" marker-end="url(#arrow-b03)"/>
+  <text x="20" y="295" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="13" font-weight="600">
+    <tspan x="20" dy="0">Secreção</tspan>
+    <tspan x="20" dy="15">serossanguinolenta</tspan>
+  </text>
+
+  <!-- Seta 2: Placa mucosa -->
+  <line x1="345" y1="305" x2="245" y2="318" stroke="#ff6b5a" stroke-width="1.8" marker-end="url(#arrow-b03)"/>
+  <text x="270" y="295" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="13" font-weight="600">
+    <tspan x="305" dy="0" text-anchor="middle">Placas</tspan>
+    <tspan x="305" dy="15" text-anchor="middle">mucosas</tspan>
+  </text>
+
+  <!-- Rótulo inferior - quadro -->
+  <rect x="40" y="415" width="320" height="65" rx="12" fill="rgba(255,107,90,0.10)" stroke="rgba(255,107,90,0.40)" stroke-width="1"/>
+  <text x="200" y="438" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8">SÍFILIS CONGÊNITA PRECOCE (&lt; 2 ANOS)</text>
+  <text x="200" y="458" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11" text-anchor="middle">Lesões inflamatórias altamente infectantes</text>
+  <text x="200" y="473" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="11" text-anchor="middle" font-weight="600">Isolamento de contato nas primeiras 48 h</text>
+</svg>
