@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="Esquema didático da tríade de Sabin da toxoplasmose congênita. Triângulo com três vértices interligados: vértice superior representa coriorretinite (olho com manchas retinianas); vértice inferior esquerdo representa hidrocefalia obstrutiva (silhueta de crânio com ventrículos dilatados); vértice inferior direito, em destaque dourado coral, representa calcificação intracraniana difusa (corte cerebral com múltiplos pontos espalhados pelo parênquima) — sinal de ouro patognomônico. No centro do triângulo, ícone estilizado do parasita Toxoplasma gondii.">
+  <defs>
+    <radialGradient id="g-gold" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff8a7a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff6b5a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Triângulo conector -->
+  <g stroke="#5fcf80" stroke-width="2" stroke-dasharray="6 6" fill="none" opacity="0.45">
+    <line x1="320" y1="90"  x2="120" y2="420"/>
+    <line x1="320" y1="90"  x2="520" y2="420"/>
+    <line x1="120" y1="420" x2="520" y2="420"/>
+  </g>
+
+  <!-- Centro: parasita estilizado -->
+  <g transform="translate(320,260)">
+    <ellipse cx="0" cy="0" rx="42" ry="22" fill="#1a3245" stroke="#c3bcae" stroke-width="1.5"/>
+    <circle cx="-14" cy="-4" r="5" fill="#ff6b5a"/>
+    <circle cx="10" cy="3" r="3" fill="#ff6b5a" opacity="0.7"/>
+    <text x="0" y="42" font-family="Lora, serif" font-size="13" fill="#c3bcae" text-anchor="middle" font-style="italic">Toxoplasma gondii</text>
+  </g>
+
+  <!-- Vértice 1: Coriorretinite (topo) -->
+  <g transform="translate(320,40)">
+    <rect x="-110" y="0" width="220" height="80" rx="14" fill="#142838" stroke="#5fcf80" stroke-width="1.5"/>
+    <g transform="translate(-72,40)">
+      <ellipse cx="0" cy="0" rx="22" ry="14" fill="#0a1620" stroke="#f3ede0" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="8" fill="#5fcf80"/>
+      <circle cx="-5" cy="-2" r="2" fill="#1a0a0a"/>
+      <circle cx="6" cy="3" r="1.5" fill="#1a0a0a"/>
+      <circle cx="2" cy="-4" r="1.5" fill="#1a0a0a"/>
+    </g>
+    <text x="-32" y="32" font-family="Lora, serif" font-size="14" fill="#f3ede0" font-weight="600">1. Coriorretinite</text>
+    <text x="-32" y="52" font-family="Inter, sans-serif" font-size="11" fill="#c3bcae">inflamação da retina</text>
+    <text x="-32" y="66" font-family="Inter, sans-serif" font-size="11" fill="#c3bcae">→ risco de cegueira</text>
+  </g>
+
+  <!-- Vértice 2: Hidrocefalia obstrutiva (inferior esquerdo) -->
+  <g transform="translate(60,400)">
+    <rect x="0" y="0" width="220" height="100" rx="14" fill="#142838" stroke="#6cb4e8" stroke-width="1.5"/>
+    <g transform="translate(40,50)">
+      <!-- Silhueta crânio -->
+      <ellipse cx="0" cy="0" rx="28" ry="32" fill="#0a1620" stroke="#f3ede0" stroke-width="1.2"/>
+      <!-- Ventrículos dilatados -->
+      <ellipse cx="-6" cy="-4" rx="10" ry="14" fill="#6cb4e8" opacity="0.55"/>
+      <ellipse cx="6"  cy="-4" rx="10" ry="14" fill="#6cb4e8" opacity="0.55"/>
+      <ellipse cx="0" cy="14" rx="8" ry="6" fill="#6cb4e8" opacity="0.55"/>
+    </g>
+    <text x="85" y="36" font-family="Lora, serif" font-size="14" fill="#f3ede0" font-weight="600">2. Hidrocefalia</text>
+    <text x="85" y="52" font-family="Lora, serif" font-size="13" fill="#f3ede0">obstrutiva</text>
+    <text x="85" y="70" font-family="Inter, sans-serif" font-size="11" fill="#c3bcae">olhar em sol poente</text>
+    <text x="85" y="84" font-family="Inter, sans-serif" font-size="11" fill="#c3bcae">vasos cranianos</text>
+  </g>
+
+  <!-- Vértice 3 — SINAL DE OURO: Calcificação intracraniana DIFUSA -->
+  <g transform="translate(360,400)">
+    <ellipse cx="110" cy="50" rx="160" ry="80" fill="url(#g-gold)"/>
+    <rect x="0" y="0" width="220" height="100" rx="14" fill="#1a0e0a" stroke="#ff6b5a" stroke-width="2.5"/>
+    <g transform="translate(40,50)">
+      <ellipse cx="0" cy="0" rx="30" ry="26" fill="#0a1620" stroke="#ff8a7a" stroke-width="1.4"/>
+      <!-- Múltiplos pontos brancos espalhados — DIFUSO -->
+      <circle cx="-12" cy="-10" r="2.2" fill="#f3ede0"/>
+      <circle cx="6"   cy="-13" r="2"   fill="#f3ede0"/>
+      <circle cx="-4"  cy="-2"  r="2.3" fill="#f3ede0"/>
+      <circle cx="14"  cy="-1"  r="2"   fill="#f3ede0"/>
+      <circle cx="-15" cy="6"   r="2.1" fill="#f3ede0"/>
+      <circle cx="0"   cy="8"   r="2"   fill="#f3ede0"/>
+      <circle cx="9"   cy="11"  r="2.2" fill="#f3ede0"/>
+      <circle cx="-7"  cy="14"  r="1.8" fill="#f3ede0"/>
+      <circle cx="16"  cy="6"   r="1.8" fill="#f3ede0"/>
+      <circle cx="-2"  cy="-15" r="1.6" fill="#f3ede0"/>
+    </g>
+    <text x="85" y="28" font-family="Lora, serif" font-size="14" fill="#ff8a7a" font-weight="700">3. Calcificação</text>
+    <text x="85" y="44" font-family="Lora, serif" font-size="13" fill="#ff8a7a" font-weight="700">intracraniana DIFUSA</text>
+    <rect x="85" y="54" width="120" height="20" rx="10" fill="#ff6b5a"/>
+    <text x="145" y="68" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#1a0a0a" text-anchor="middle" letter-spacing="1">SINAL DE OURO</text>
+    <text x="85" y="90" font-family="Inter, sans-serif" font-size="11" fill="#c3bcae" font-style="italic">"TODO o parênquima"</text>
+  </g>
+
+  <!-- Subtítulo -->
+  <text x="320" y="510" font-family="Lora, serif" font-size="13" fill="#c3bcae" text-anchor="middle" font-style="italic">Tríade de Sabin — toxoplasmose congênita (não confundir com o Sabin da vacina)</text>
+</svg>

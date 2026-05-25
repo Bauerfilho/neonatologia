@@ -1,0 +1,37 @@
+{
+  "caso-2": {
+    "id": "caso-2",
+    "nome": "Lucrécia",
+    "mae_nome": "Lucrécia",
+    "mae_ig_atendimento": "12 semanas",
+    "queixa": "Febre baixa há alguns dias + linfadenopatia cervical",
+    "epidemio_chave": "Viagem à casa de campo da prima 3 semanas antes (contato com gatos sem luvas)",
+    "sorologia_mae": {
+      "hiv": "negativo",
+      "vdrl": "não-reator",
+      "rubeola": "IgG positivo · IgM negativo (imune)",
+      "cmv": "IgG negativo · IgM negativo (suscetível)",
+      "toxo": "IgG positivo · IgM positivo (aguda recente)"
+    },
+    "rn_ig": "39 semanas (termo)",
+    "rn_peso": "2.200 g",
+    "rn_classificacao": "PIG (abaixo da P10)",
+    "rn_sorologia": "IgM positiva para toxoplasmose",
+    "pergunta_1": "Qual o significado da IgM positiva no recém-nascido — e qual o tratamento indicado?",
+    "pergunta_2": "Qual o tempo de duração do tratamento?",
+    "deep_links": {
+      "apresentacao": "#/p1-m2-p1",
+      "resolucao": "#/p1-m2-p8",
+      "m1_classificacao_pig": "../m1-classificacao-sifilis/index.html#/p1-m1-p4",
+      "m1_placenta_igm_igg": "../m1-classificacao-sifilis/index.html#/p1-m1-p5"
+    },
+    "resolucao": {
+      "diagnostico": "Toxoplasmose congênita",
+      "base_dx": "IgM positiva no RN (pentâmero não atravessa a placenta — produção própria) + história materna de infecção aguda confirmada no 1º trimestre",
+      "conduta_complementar": "Sorologia confirmatória (segunda amostra) + USG transfontanelar + fundoscopia; se alteração, TC de crânio + estudo do líquor",
+      "tratamento": "Sulfadiazina + pirimetamina + ácido FOLÍNICO (não fólico)",
+      "duracao": "12 meses (1 ano) contínuo",
+      "corticoide": "Apenas se coriorretinite grave em atividade OU proteína liquórica > 1 g/dL (1000 mg/dL)"
+    }
+  }
+}

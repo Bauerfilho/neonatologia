@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-label="Corte axial esquemático de crânio infantil mostrando calcificação intracraniana com padrão esparso e inespecífico — poucas calcificações sem distribuição característica. Padrão possível em varicela congênita mas não patognomônico; só puxa o diagnóstico quando associada a cicatriz em dermátomo ou hipoplasia de membros.">
+  <rect x="0" y="0" width="240" height="200" fill="#0a1620" rx="8"/>
+  <ellipse cx="120" cy="100" rx="92" ry="78" fill="#142838" stroke="#f3ede0" stroke-width="2"/>
+  <line x1="120" y1="22" x2="120" y2="178" stroke="#5d5b50" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <!-- Ventrículos sutis -->
+  <ellipse cx="104" cy="92" rx="14" ry="22" fill="#1a3245" opacity="0.4"/>
+  <ellipse cx="136" cy="92" rx="14" ry="22" fill="#1a3245" opacity="0.4"/>
+
+  <!-- Calcificações esparsas, poucas, sem padrão -->
+  <g fill="#f3ede0">
+    <circle cx="90"  cy="70"  r="2"/>
+    <circle cx="150" cy="115" r="2.2"/>
+    <circle cx="75"  cy="130" r="2"/>
+    <circle cx="165" cy="62"  r="2"/>
+    <circle cx="115" cy="148" r="2.3"/>
+  </g>
+
+  <!-- "?" indicando inespecificidade -->
+  <text x="180" y="40" font-family="Lora, serif" font-size="32" fill="#f0b440" font-weight="700" opacity="0.6">?</text>
+
+  <text x="120" y="195" font-family="Inter, sans-serif" font-size="10" fill="#f0b440" text-anchor="middle" font-weight="600" letter-spacing="0.5">POSSÍVEL · não patognomônico</text>
+</svg>
