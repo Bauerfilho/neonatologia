@@ -1,0 +1,117 @@
+/* Tokens semânticos Neonatologia — Parte 1 / Módulo 3 */
+/* Paleta Bauer canônica: vermelho coral, petróleo profundo, off-white quente */
+/* WCAG AA verificado para texto corpo (>=4.5:1) e UI grande (>=3:1) */
+
+:root {
+  /* === Paleta dark (default) === */
+  --bg-base: #0a1620;            /* petróleo profundo, não preto puro */
+  --bg-elev-1: #0f1f2c;          /* card-âncora */
+  --bg-elev-2: #142838;          /* card-secundário */
+  --bg-elev-3: #1a3245;          /* drawer/menu overlay */
+  --ink-100: #f3ede0;            /* off-white quente, não branco puro */
+  --ink-90:  #e7e0d0;
+  --ink-70:  #c3bcae;
+  --ink-50:  #8a8678;
+  --ink-30:  #5d5b50;
+  --border-soft: rgba(243, 237, 224, 0.10);
+  --border-medium: rgba(243, 237, 224, 0.18);
+  --border-strong: rgba(243, 237, 224, 0.30);
+
+  /* === Acento autoral Bauer === */
+  --accent-coral: #ff6b5a;       /* coral - destaque autoral */
+  --accent-coral-soft: rgba(255, 107, 90, 0.14);
+  --accent-coral-strong: #ff8a7a;
+
+  /* === Tokens semânticos semáforo (WCAG AA) === */
+  --color-success-500: #5fcf80;  /* verde - eficaz/ok/positivo */
+  --color-success-100: rgba(95, 207, 128, 0.14);
+  --color-success-border: rgba(95, 207, 128, 0.40);
+  --color-warning-500: #f0b440;  /* amarelo/âmbar - atenção/pegadinha */
+  --color-warning-100: rgba(240, 180, 64, 0.14);
+  --color-warning-border: rgba(240, 180, 64, 0.40);
+  --color-danger-500:  #ff5d6b;  /* vermelho - erro/contraindicação/perigo */
+  --color-danger-100:  rgba(255, 93, 107, 0.14);
+  --color-danger-border: rgba(255, 93, 107, 0.40);
+  --color-info-500:    #6cb4e8;  /* azul - info / nota neutra */
+  --color-info-100:    rgba(108, 180, 232, 0.14);
+  --color-info-border: rgba(108, 180, 232, 0.40);
+
+  /* === Raios === */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-pill: 999px;
+
+  /* === Espaçamento === */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* === Tipografia === */
+  --font-body: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Lora", "Georgia", "Iowan Old Style", serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+
+  /* === Escala tipográfica fluida === */
+  --fs-xs: clamp(0.74rem, 0.72rem + 0.1vw, 0.78rem);
+  --fs-sm: clamp(0.86rem, 0.83rem + 0.15vw, 0.92rem);
+  --fs-base: clamp(0.98rem, 0.94rem + 0.2vw, 1.05rem);
+  --fs-md: clamp(1.10rem, 1.04rem + 0.3vw, 1.22rem);
+  --fs-lg: clamp(1.30rem, 1.20rem + 0.5vw, 1.50rem);
+  --fs-xl: clamp(1.60rem, 1.40rem + 1.0vw, 2.00rem);
+  --fs-2xl: clamp(2.00rem, 1.70rem + 1.5vw, 2.75rem);
+  --fs-3xl: clamp(2.50rem, 2.00rem + 2.5vw, 4.00rem);
+
+  /* === Sombras === */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.20);
+  --shadow-md: 0 6px 24px rgba(0,0,0,0.28);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.40);
+  --shadow-glow-coral: 0 0 0 1px var(--accent-coral-soft), 0 8px 30px rgba(255, 107, 90, 0.12);
+
+  /* === z-index === */
+  --z-base: 1;
+  --z-sticky: 20;
+  --z-overlay: 100;
+  --z-modal: 200;
+  --z-toast: 400;
+
+  /* === Quiz === */
+  --quiz-correct: var(--color-success-500);
+  --quiz-wrong: var(--color-danger-500);
+}
+
+/* === Tema light (opt-in via [data-theme="light"]) === */
+[data-theme="light"] {
+  --bg-base: #f5efe2;
+  --bg-elev-1: #ffffff;
+  --bg-elev-2: #f0e9d8;
+  --bg-elev-3: #ece4d2;
+  --ink-100: #1a2330;
+  --ink-90: #2a3540;
+  --ink-70: #51606e;
+  --ink-50: #7b8794;
+  --ink-30: #b3bbc2;
+  --border-soft: rgba(26, 35, 48, 0.10);
+  --border-medium: rgba(26, 35, 48, 0.20);
+  --border-strong: rgba(26, 35, 48, 0.32);
+  --color-success-500: #2e8c4a;
+  --color-success-100: rgba(46, 140, 74, 0.10);
+  --color-success-border: rgba(46, 140, 74, 0.40);
+  --color-warning-500: #b07a1a;
+  --color-warning-100: rgba(176, 122, 26, 0.10);
+  --color-warning-border: rgba(176, 122, 26, 0.40);
+  --color-danger-500: #c8364a;
+  --color-danger-100: rgba(200, 54, 74, 0.10);
+  --color-danger-border: rgba(200, 54, 74, 0.40);
+  --color-info-500: #2870a8;
+  --color-info-100: rgba(40, 112, 168, 0.10);
+  --color-info-border: rgba(40, 112, 168, 0.40);
+  --accent-coral: #c8364a;
+  --accent-coral-soft: rgba(200, 54, 74, 0.10);
+}

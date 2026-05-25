@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 920" role="img" aria-label="Sub-fluxograma 2 (mobile): ramo mãe adequadamente tratada. Comparar VDRL do recém-nascido com VDRL materno em pelo menos 2 diluições. Cenário A — recém-nascido maior em pelo menos 2 diluições: sífilis congênita, tratar com cristalina ou procaína conforme líquor. Caso contrário, avaliar exame físico. Cenário B — exame físico normal: apenas acompanhar, não tratar. Cenário C — exame físico alterado + VDRL reator em qualquer nível: tratar como sífilis congênita. Cenário D — exame físico alterado + VDRL não reator: investigar outra causa.">
+  <defs>
+    <marker id="arr-m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5fcf80"/></marker>
+    <marker id="arr-m2n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c3bcae"/></marker>
+    <style>
+      .nd2 { fill:#0a1620; stroke:#5fcf80; stroke-width:2; }
+      .nd2-t { fill:#5fcf80; font-family:Lora, serif; font-size:14px; font-weight:600; text-anchor:middle; }
+      .na2 { fill:#0f1f2c; stroke:#c3bcae; stroke-width:1.5; }
+      .na2-t { fill:#e7e0d0; font-family:Lora, serif; font-size:13px; text-anchor:middle; }
+      .ncA { fill:#1a0d0e; stroke:#ff5d6b; stroke-width:2.5; }
+      .ncA-t { fill:#ff8a7a; font-family:Lora, serif; font-size:14px; font-weight:700; text-anchor:middle; }
+      .nmB { fill:#0a1620; stroke:#6cb4e8; stroke-width:2; stroke-dasharray:4 2; }
+      .nmB-t { fill:#6cb4e8; font-family:Lora, serif; font-size:14px; font-weight:600; text-anchor:middle; }
+      .npC { fill:#1a140a; stroke:#f0b440; stroke-width:2.5; }
+      .npC-t { fill:#f0b440; font-family:Lora, serif; font-size:13px; font-weight:700; text-anchor:middle; }
+      .noD { fill:#0a1620; stroke:#8a8678; stroke-width:1.5; stroke-dasharray:4 2; }
+      .noD-t { fill:#c3bcae; font-family:Lora, serif; font-size:13px; text-anchor:middle; }
+      .el2 { fill:#f3ede0; font-family:JetBrains Mono, monospace; font-size:12px; font-weight:600; text-anchor:middle; }
+      .sl2 { fill:#ff6b5a; font-family:JetBrains Mono, monospace; font-size:11px; font-weight:700; text-anchor:middle; }
+    </style>
+  </defs>
+
+  <text x="300" y="30" font-family="Lora, serif" font-size="16" fill="#5fcf80" text-anchor="middle" font-weight="700">Mãe ADEQUADAMENTE tratada</text>
+  <text x="300" y="50" font-family="Lora, serif" font-size="11" fill="#c3bcae" text-anchor="middle" font-style="italic">comparar VDRL RN vs materno em ≥2 diluições</text>
+
+  <!-- Decisão: VDRL RN ≥2 diluições > materno? -->
+  <polygon points="300,80 510,180 300,280 90,180" class="nd2"/>
+  <text x="300" y="160" class="nd2-t">VDRL RN ≥2 diluições</text>
+  <text x="300" y="182" class="nd2-t">&gt; VDRL materno?</text>
+  <text x="300" y="206" class="nd2-t" font-size="10" fill="#c3bcae">desenhar tracinhos sempre</text>
+
+  <!-- Cenário A: SIM → SC -->
+  <text x="500" y="200" class="el2" fill="#ff5d6b">SIM</text>
+  <path d="M 510,180 Q 560,210 560,280" stroke="#ff6b5a" stroke-width="1.6" fill="none" marker-end="url(#arr-m2n)"/>
+  <rect x="320" y="300" width="240" height="90" rx="12" class="ncA"/>
+  <text x="440" y="324" class="sl2">Cenário A</text>
+  <text x="440" y="348" class="ncA-t">SC → tratar</text>
+  <text x="440" y="368" class="ncA-t" font-size="11">Cristalina OU Procaína</text>
+  <text x="440" y="384" class="ncA-t" font-size="10" fill="#c3bcae" font-weight="400">conforme líquor</text>
+
+  <!-- NÃO → exame físico? -->
+  <text x="100" y="200" class="el2">NÃO</text>
+  <path d="M 90,180 Q 60,210 60,300" stroke="#c3bcae" stroke-width="1.6" fill="none" marker-end="url(#arr-m2n)"/>
+
+  <rect x="40" y="310" width="240" height="70" rx="10" class="na2"/>
+  <text x="160" y="338" class="na2-t" font-weight="600">Exame físico do RN</text>
+  <text x="160" y="358" class="na2-t" font-size="11" fill="#8a8678">normal vs alterado?</text>
+
+  <!-- Cenário B: normal → acompanhar -->
+  <text x="60" y="420" class="el2" fill="#6cb4e8">normal</text>
+  <path d="M 80,380 Q 60,430 60,470" stroke="#6cb4e8" stroke-width="1.6" fill="none" marker-end="url(#arr-m2n)"/>
+  <rect x="40" y="480" width="240" height="90" rx="12" class="nmB"/>
+  <text x="160" y="504" class="sl2" fill="#6cb4e8">Cenário B</text>
+  <text x="160" y="528" class="nmB-t">Só acompanhar</text>
+  <text x="160" y="548" class="nmB-t" font-size="11">exposto · não tratar</text>
+  <text x="160" y="564" class="nmB-t" font-size="10" fill="#c3bcae" font-weight="400">seguir cronograma</text>
+
+  <!-- Alterado → VDRL reator? -->
+  <text x="280" y="420" class="el2" fill="#f0b440">alterado</text>
+  <path d="M 240,380 Q 300,430 300,470" stroke="#f0b440" stroke-width="1.6" fill="none" marker-end="url(#arr-m2n)"/>
+  <polygon points="300,480 470,570 300,660 130,570" class="nd2" stroke="#f0b440"/>
+  <text x="300" y="565" class="nd2-t" fill="#f0b440">VDRL RN</text>
+  <text x="300" y="585" class="nd2-t" fill="#f0b440">reator?</text>
+  <text x="300" y="605" class="nd2-t" font-size="10" fill="#c3bcae">basta 1:2 ser reator</text>
+
+  <!-- Cenário C: SIM → tratar -->
+  <text x="450" y="660" class="el2" fill="#ff5d6b">SIM</text>
+  <path d="M 470,570 Q 530,640 470,720" stroke="#ff6b5a" stroke-width="1.6" fill="none" marker-end="url(#arr-m2n)"/>
+  <rect x="320" y="730" width="240" height="80" rx="12" class="npC"/>
+  <text x="440" y="754" class="sl2" fill="#f0b440">Cenário C</text>
+  <text x="440" y="776" class="npC-t">Tratar como SC</text>
+  <text x="440" y="794" class="npC-t" font-size="10" fill="#c3bcae" font-weight="400">cristalina ou procaína · líquor decide</text>
+
+  <!-- Cenário D: NÃO → outra causa -->
+  <text x="140" y="660" class="el2">NÃO</text>
+  <path d="M 130,570 Q 80,650 130,720" stroke="#8a8678" stroke-width="1.6" fill="none" marker-end="url(#arr-m2n)"/>
+  <rect x="40" y="730" width="240" height="80" rx="12" class="noD"/>
+  <text x="160" y="754" class="sl2" fill="#c3bcae">Cenário D</text>
+  <text x="160" y="776" class="noD-t">Outra causa</text>
+  <text x="160" y="794" class="noD-t" font-size="10" fill="#8a8678">não é sífilis · investigar</text>
+</svg>

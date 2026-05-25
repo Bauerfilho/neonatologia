@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-label="Fluxograma das vias de infecção neonatal. Duas grandes ramificações: intraútero e pós-natal. Da via intraútero saem três caminhos: transplacentária (destacada como a única que define infecção congênita), ascendente e intraparto. Da via pós-natal saem três caminhos: comunitária, nosocomial e via leite materno. Apenas a via transplacentária é considerada infecção congênita por definição.">
+  <!-- Cabeçalho -->
+  <text x="360" y="30" font-family="Lora, serif" font-size="14" fill="#f3ede0" text-anchor="middle" font-weight="600">Vias de infecção neonatal</text>
+
+  <!-- INTRAUTERO (esquerda) -->
+  <g>
+    <rect x="40" y="60" width="280" height="50" rx="10" fill="#142838" stroke="#6cb4e8" stroke-width="1.5"/>
+    <text x="180" y="90" font-family="Lora, serif" font-size="14" fill="#6cb4e8" text-anchor="middle" font-weight="600">Intraútero (antes/durante parto)</text>
+
+    <!-- Transplacentária — destaque -->
+    <rect x="60" y="140" width="240" height="60" rx="10" fill="#0f1f2c" stroke="#5fcf80" stroke-width="3"/>
+    <text x="180" y="166" font-family="Lora, serif" font-size="13" fill="#5fcf80" text-anchor="middle" font-weight="700">Transplacentária</text>
+    <text x="180" y="184" font-family="Lora, serif" font-size="10" fill="#5fcf80" text-anchor="middle" font-style="italic">via hematogênica — ÚNICA congênita</text>
+
+    <!-- Ascendente -->
+    <rect x="60" y="216" width="240" height="40" rx="8" fill="#0f1f2c" stroke="#c3bcae" stroke-width="1"/>
+    <text x="180" y="240" font-family="Lora, serif" font-size="12" fill="#e7e0d0" text-anchor="middle">Ascendente (canal de parto, antes)</text>
+
+    <!-- Intraparto -->
+    <rect x="60" y="266" width="240" height="40" rx="8" fill="#0f1f2c" stroke="#c3bcae" stroke-width="1"/>
+    <text x="180" y="290" font-family="Lora, serif" font-size="12" fill="#e7e0d0" text-anchor="middle">Intraparto (passagem pelo canal)</text>
+
+    <!-- Setas -->
+    <line x1="180" y1="110" x2="180" y2="140" stroke="#6cb4e8" stroke-width="1.5"/>
+    <line x1="180" y1="200" x2="180" y2="216" stroke="#6cb4e8" stroke-width="1"/>
+    <line x1="180" y1="256" x2="180" y2="266" stroke="#6cb4e8" stroke-width="1"/>
+  </g>
+
+  <!-- PÓS-NATAL (direita) -->
+  <g>
+    <rect x="400" y="60" width="280" height="50" rx="10" fill="#142838" stroke="#f0b440" stroke-width="1.5"/>
+    <text x="540" y="90" font-family="Lora, serif" font-size="14" fill="#f0b440" text-anchor="middle" font-weight="600">Pós-natal (depois do nascimento)</text>
+
+    <rect x="420" y="140" width="240" height="40" rx="8" fill="#0f1f2c" stroke="#c3bcae" stroke-width="1"/>
+    <text x="540" y="164" font-family="Lora, serif" font-size="12" fill="#e7e0d0" text-anchor="middle">Comunitária (casa, ambiente)</text>
+
+    <rect x="420" y="190" width="240" height="40" rx="8" fill="#0f1f2c" stroke="#c3bcae" stroke-width="1"/>
+    <text x="540" y="214" font-family="Lora, serif" font-size="12" fill="#e7e0d0" text-anchor="middle">Nosocomial / hospitalar (UTIN)</text>
+
+    <rect x="420" y="240" width="240" height="40" rx="8" fill="#0f1f2c" stroke="#c3bcae" stroke-width="1"/>
+    <text x="540" y="264" font-family="Lora, serif" font-size="12" fill="#e7e0d0" text-anchor="middle">Leite materno (HIV · HTLV · CMV)</text>
+
+    <line x1="540" y1="110" x2="540" y2="140" stroke="#f0b440" stroke-width="1.5"/>
+    <line x1="540" y1="180" x2="540" y2="190" stroke="#f0b440" stroke-width="1"/>
+    <line x1="540" y1="230" x2="540" y2="240" stroke="#f0b440" stroke-width="1"/>
+  </g>
+
+  <!-- Nota lateral central -->
+  <g transform="translate(220,330)">
+    <rect x="0" y="0" width="280" height="36" rx="10" fill="#0a1620" stroke="#5fcf80" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="140" y="22" font-family="Lora, serif" font-size="12" fill="#5fcf80" text-anchor="middle" font-weight="600">Apenas transplacentária é congênita</text>
+  </g>
+</svg>

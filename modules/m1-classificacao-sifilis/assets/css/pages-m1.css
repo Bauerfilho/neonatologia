@@ -1,0 +1,630 @@
+/* === Componentes específicos do Módulo 1 (Neonatologia P1) === */
+/* Reusa tokens canônicos (tokens.css), base.css e components.css.   */
+/* Adiciona: case-anchor stage label, V06 fluxograma, timeline João, */
+/* escala vertical de peso, gráfico IG×peso, esquema placentário,   */
+/* tabela cenários responsiva, nota técnica diretriz expansível.    */
+
+/* === Case anchor — label de estágio (evolutivo) === */
+.case-anchor__stage {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  margin-bottom: var(--space-2);
+  padding: 2px 6px;
+  background: var(--accent-coral-soft);
+  border-radius: var(--r-sm);
+  display: inline-block;
+}
+
+/* === Atalho box (estilo gold-rule alternativo, mais compacto) === */
+.shortcut-box {
+  background: linear-gradient(135deg, var(--accent-coral-soft), var(--bg-elev-2));
+  border: 1px solid var(--accent-coral);
+  border-radius: var(--r-md);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+  text-align: center;
+}
+.shortcut-box__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-coral);
+  margin-bottom: var(--space-2);
+}
+.shortcut-box__body {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--ink-100);
+  font-weight: 600;
+}
+.shortcut-box__body code {
+  background: transparent;
+  color: var(--accent-coral);
+  font-size: 1em;
+  padding: 0;
+}
+
+/* === Nota técnica diretriz (S03 Opção A) — lateral revisável === */
+.nota-diretriz {
+  margin: var(--space-5) 0;
+  border: 1px dashed var(--color-info-500);
+  border-radius: var(--r-md);
+  background: var(--color-info-100);
+  overflow: hidden;
+}
+.nota-diretriz__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(108, 180, 232, 0.08);
+}
+.nota-diretriz__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-info-500);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.nota-diretriz__label::before {
+  content: "ℹ";
+  font-size: 1rem;
+}
+.nota-diretriz__toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--r-sm);
+  background: transparent;
+  border: 1px solid var(--color-info-border);
+  color: var(--color-info-500);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  display: grid;
+  place-items: center;
+}
+.nota-diretriz__body {
+  padding: 0 var(--space-4);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, padding 0.28s ease;
+  font-size: var(--fs-sm);
+}
+.nota-diretriz[data-open="true"] .nota-diretriz__body {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  max-height: 600px;
+}
+.nota-diretriz[data-open="true"] .nota-diretriz__toggle {
+  transform: rotate(45deg);
+}
+.nota-diretriz__source {
+  margin-top: var(--space-3);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  font-style: italic;
+}
+
+/* === Caixinha "ASPAS" (caixa lateral citação técnica opcional) === */
+.aspas-box {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-1);
+  border-left: 3px solid var(--ink-70);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  color: var(--ink-70);
+}
+.aspas-box__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+  margin-bottom: var(--space-1);
+}
+
+/* === Cenários grid (cenário 1/2/3 mãe inadequada, A/B/C/D mãe adequada) === */
+.scenarios {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.scenario-card {
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-medium);
+  border-left-width: 5px;
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+.scenario-card__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+}
+.scenario-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin: 0;
+}
+.scenario-card__conduct {
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border-soft);
+  font-size: var(--fs-sm);
+}
+.scenario-card__conduct strong {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  font-size: 0.82rem;
+}
+.scenario-card--cristalina { border-left-color: var(--color-danger-500); }
+.scenario-card--cristalina .scenario-card__conduct strong { background: var(--color-danger-100); color: var(--color-danger-500); }
+.scenario-card--procaina   { border-left-color: var(--color-warning-500); }
+.scenario-card--procaina   .scenario-card__conduct strong { background: var(--color-warning-100); color: var(--color-warning-500); }
+.scenario-card--benzatina  { border-left-color: var(--color-success-500); }
+.scenario-card--benzatina  .scenario-card__conduct strong { background: var(--color-success-100); color: var(--color-success-500); }
+.scenario-card--monitor    { border-left-color: var(--color-info-500); }
+.scenario-card--monitor    .scenario-card__conduct strong { background: var(--color-info-100); color: var(--color-info-500); }
+.scenario-card--other      { border-left-color: var(--ink-50); }
+.scenario-card--other      .scenario-card__conduct strong { background: var(--bg-elev-3); color: var(--ink-90); }
+
+/* === V06 — Fluxograma decisório (container responsivo + nav mobile) === */
+.v06-container {
+  margin: var(--space-6) 0;
+}
+.v06-nav {
+  display: none;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.v06-nav__btn {
+  flex: 1;
+  padding: var(--space-3);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+.v06-nav__btn[aria-current="true"] {
+  background: var(--accent-coral-soft);
+  border-color: var(--accent-coral);
+  color: var(--ink-100);
+}
+.v06-painel {
+  background: var(--bg-elev-1);
+  border-radius: var(--r-lg);
+  padding: var(--space-4);
+  border: 1px solid var(--border-soft);
+  margin-bottom: var(--space-3);
+  overflow-x: auto;
+}
+.v06-painel__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--accent-coral);
+  margin: 0 0 var(--space-3);
+}
+.v06-painel svg {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  min-width: 720px;
+}
+.v06-painel--mobile-only { display: none; }
+
+@media (max-width: 768px) {
+  .v06-painel--desktop { display: none; }
+  .v06-nav { display: flex; }
+  .v06-painel { overflow-x: auto; }
+  .v06-painel svg { min-width: 600px; }
+}
+
+/* === Timeline João Eucalipto (1.11) === */
+.timeline {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-soft);
+}
+.timeline__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--accent-coral);
+  margin: 0 0 var(--space-4);
+}
+.timeline__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+.timeline__item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-4);
+  align-items: start;
+  padding: var(--space-3) 0;
+  border-bottom: 1px dashed var(--border-soft);
+}
+.timeline__item:last-child { border-bottom: 0; }
+.timeline__when {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent-coral);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.timeline__what {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+.timeline__what strong { color: var(--ink-100); }
+@media (max-width: 540px) {
+  .timeline__item { grid-template-columns: 1fr; gap: var(--space-1); }
+}
+
+/* === Escala vertical de peso (V03 — SVG já embutido tem classes) === */
+.weight-scale-wrapper {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  margin: var(--space-5) 0;
+}
+.weight-scale-wrapper figcaption {
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .weight-scale-wrapper { grid-template-columns: 1fr; }
+  .weight-scale-wrapper svg { max-width: 200px; margin: 0 auto; }
+}
+
+/* === Sequelas tardias — grid mnemônico (1.8) === */
+.sequelae-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.sequela-card {
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  padding: var(--space-3) var(--space-4);
+  display: grid;
+  gap: var(--space-1);
+}
+.sequela-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+}
+.sequela-card__where {
+  font-size: var(--fs-xs);
+  color: var(--ink-50);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.sequela-card__from {
+  font-size: var(--fs-sm);
+  color: var(--ink-70);
+  font-style: italic;
+}
+.sequela-card[data-where="cabeça"] { border-left: 3px solid var(--color-warning-500); }
+.sequela-card[data-where="membros"] { border-left: 3px solid var(--color-info-500); }
+
+/* === Manifestações precoces — grid icônico (1.7) === */
+.precoce-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.precoce-card {
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-left: 4px solid var(--color-danger-500);
+  border-radius: var(--r-md);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-2);
+}
+.precoce-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+}
+.precoce-card__where {
+  font-size: var(--fs-xs);
+  color: var(--accent-coral);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-mono);
+}
+.precoce-card__body { font-size: var(--fs-sm); color: var(--ink-90); }
+.precoce-card[data-territory="osso"] { border-left-color: var(--color-warning-500); }
+.precoce-card[data-territory="osso"] .precoce-card__where { color: var(--color-warning-500); }
+
+/* === TORCH chips (1.5) === */
+.torch-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 var(--space-5);
+}
+.torch-chip {
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-pill);
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+.torch-chip--highlight {
+  background: var(--accent-coral-soft);
+  border-color: var(--accent-coral);
+  color: var(--ink-100);
+  font-weight: 600;
+}
+
+/* === Pen-card (1.10 — cards das 3 penicilinas) === */
+.penicillins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.pen-card {
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-top: 5px solid var(--ink-70);
+  border-radius: var(--r-md);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-2);
+}
+.pen-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+}
+.pen-card__subname {
+  font-size: var(--fs-xs);
+  color: var(--ink-50);
+}
+.pen-card__dose {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  background: var(--bg-elev-2);
+  padding: var(--space-2);
+  border-radius: var(--r-sm);
+  color: var(--ink-100);
+}
+.pen-card__use {
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+}
+.pen-card--cristalina { border-top-color: var(--color-danger-500); }
+.pen-card--cristalina .pen-card__name { color: var(--color-danger-500); }
+.pen-card--procaina   { border-top-color: var(--color-warning-500); }
+.pen-card--procaina   .pen-card__name { color: var(--color-warning-500); }
+.pen-card--benzatina  { border-top-color: var(--color-success-500); }
+.pen-card--benzatina  .pen-card__name { color: var(--color-success-500); }
+
+/* === Diluições tracinhos (1.9, 1.10) === */
+.dilution-track {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin: var(--space-2) 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-pill);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+.dilution-track__step {
+  padding: 2px 8px;
+  background: var(--bg-elev-3);
+  border-radius: var(--r-sm);
+  color: var(--ink-70);
+}
+.dilution-track__step--active { background: var(--accent-coral-soft); color: var(--accent-coral); font-weight: 600; }
+.dilution-track__arrow { color: var(--ink-50); }
+
+/* === IgM vs IgG — split visual (1.5) === */
+.ig-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.ig-card {
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  padding: var(--space-4);
+  border: 1px solid var(--border-medium);
+}
+.ig-card--igm { border-top: 4px solid var(--color-danger-500); }
+.ig-card--igg { border-top: 4px solid var(--color-success-500); }
+.ig-card h4 {
+  font-family: var(--font-display);
+  margin: 0 0 var(--space-2);
+}
+.ig-card--igm h4 { color: var(--color-danger-500); }
+.ig-card--igg h4 { color: var(--color-success-500); }
+.ig-card__verdict {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border-soft);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-100);
+}
+@media (max-width: 540px) {
+  .ig-split { grid-template-columns: 1fr; }
+}
+
+/* === Vias de infecção (1.5) === */
+.vias-grid {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.via-group {
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  padding: var(--space-4);
+  border: 1px solid var(--border-soft);
+}
+.via-group__title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-50);
+  margin-bottom: var(--space-3);
+}
+.via-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+.via-list li {
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  border-left: 3px solid var(--border-medium);
+}
+.via-list li.is-congenita {
+  border-left-color: var(--color-success-500);
+  background: var(--color-success-100);
+  font-weight: 600;
+  color: var(--ink-100);
+}
+.via-list li.is-congenita::after {
+  content: " ← única congênita";
+  color: var(--color-success-500);
+  font-size: var(--fs-xs);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* === Stages-list (estágios maternos da sífilis — 1.6) === */
+.stages-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+.stage-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--ink-70);
+}
+.stage-item__name {
+  font-family: var(--font-display);
+  color: var(--ink-100);
+  font-weight: 600;
+}
+.stage-item__body { font-size: var(--fs-sm); color: var(--ink-90); }
+.stage-item[data-stage="primaria"]   { border-left-color: var(--color-danger-500); }
+.stage-item[data-stage="secundaria"] { border-left-color: var(--color-warning-500); }
+.stage-item[data-stage="latente"]    { border-left-color: var(--color-info-500); }
+.stage-item[data-stage="terciaria"]  { border-left-color: var(--ink-70); }
+@media (max-width: 540px) {
+  .stage-item { grid-template-columns: 1fr; }
+}
+
+/* === Faixas IG (1.2) === */
+.ig-bands {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+.ig-band {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-medium);
+  border-left-width: 5px;
+  background: var(--bg-elev-2);
+}
+.ig-band__name { font-family: var(--font-display); color: var(--ink-100); font-weight: 600; }
+.ig-band__limits { font-family: var(--font-mono); color: var(--ink-70); font-size: var(--fs-sm); }
+.ig-band--extremo  { border-left-color: var(--color-danger-500); }
+.ig-band--moderado { border-left-color: var(--color-warning-500); }
+.ig-band--tardio   { border-left-color: #d4a017; }
+.ig-band--termo    { border-left-color: var(--color-success-500); }
+.ig-band--postermo { border-left-color: var(--color-warning-500); }
+
+/* === Peso bands (1.3) === */
+.weight-bands {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+.weight-band {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-medium);
+  border-left-width: 5px;
+  background: var(--bg-elev-2);
+}
+.weight-band__name { font-family: var(--font-display); color: var(--ink-100); font-weight: 600; }
+.weight-band__limits { font-family: var(--font-mono); color: var(--ink-70); font-size: var(--fs-sm); }
+.weight-band__corr {
+  grid-column: 1 / -1;
+  font-size: var(--fs-xs);
+  color: var(--ink-50);
+  font-style: italic;
+}
+.weight-band--adequado { border-left-color: var(--color-success-500); }
+.weight-band--bp       { border-left-color: var(--color-warning-500); }
+.weight-band--mbp      { border-left-color: var(--color-danger-500); }
+.weight-band--ebp      { border-left-color: var(--color-danger-500); background: var(--color-danger-100); }
+
+/* === Quiz on dark questions já estilizada via components.css === */
+
+/* === ID rastreamento (debug-only, oculto em produção) === */
+.id-track { display: none; }
+
+/* === Print/screenreader only label === */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

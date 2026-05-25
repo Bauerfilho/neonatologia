@@ -1,0 +1,30 @@
+{
+  "caso-1": {
+    "id": "caso-1",
+    "nome": "João Eucalipto",
+    "municipio": "Gericianã da Mata",
+    "mae": "Florinda Rosa",
+    "mae_idade": "20 anos",
+    "mae_ig_diagnostico": "14ª semana de gestação",
+    "vdrl_materno": "1:32",
+    "tratamento_materno": "2.400.000 UI penicilina benzatina, dose única",
+    "tratamento_materno_avaliacao": "INADEQUADO — sífilis de duração ignorada exige 3 doses (esquema usado foi de fase primária/secundária/latente recente)",
+    "ig": "36+4 sem",
+    "ig_completo": "36 semanas e 4 dias",
+    "peso": "1.900 g",
+    "comprimento": "46 cm",
+    "classificacao": "PIG",
+    "classificacao_completa": "pré-termo tardio · baixo peso · PIG",
+    "achados_iniciais": "hipotônico + apneia",
+    "liquor": "40 céls / 160 prot",
+    "liquor_avaliacao": "ALTERADO — 40 > 25 céls E 160 > 150 prot",
+    "conduta_rn": "Cristalina EV 10 dias · 50.000 UI/kg/dose · 12/12h se <7d · 8/8h se ≥7d",
+    "deep_links": {
+      "modulo_1_abertura": "#/p1-m1-p1",
+      "modulo_1_classificacao": "#/p1-m1-p4",
+      "modulo_1_resolucao": "#/p1-m1-p11",
+      "modulo_3_abertura": "../m3-reanimacao/index.html#/p1-m3-p1",
+      "modulo_3_resolucao": "../m3-reanimacao/index.html#/p1-m3-p12"
+    }
+  }
+}

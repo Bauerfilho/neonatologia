@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="Gráfico de crescimento intrauterino com idade gestacional no eixo horizontal (24 a 44 semanas) e peso no eixo vertical (500 a 5000 gramas). Duas curvas vermelhas em forma de S definem as faixas: a curva superior é o percentil 90 e a curva inferior é o percentil 10. A faixa entre as curvas é considerada adequada para a idade gestacional (AIG). Acima do percentil 90 fica a faixa GIG (grande para idade gestacional). Abaixo do percentil 10 fica a faixa PIG (pequeno para idade gestacional). João Eucalipto está marcado em 36 semanas e 4 dias com 1900 gramas — claramente abaixo do percentil 10, classificado como PIG.">
+  <defs>
+    <pattern id="pig-pattern" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#ff5d6b" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="gig-pattern" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#f0b440" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="aig-pattern" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(0)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#5fcf80" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <!-- Plot area: x=60 a x=680 (largura 620, 20 sem = 31px/sem), y=40 a y=400 (altura 360, 4500g = 0.08px/g) -->
+  <!-- Mapeamento -->
+  <!-- ig→x: x = 60 + (ig-24)*31 -->
+  <!-- peso→y: y = 400 - (peso-500)*0.08 -->
+  <!-- P10: aproximadamente (24,500), (28,1000), (32,1500), (36,2200), (40,2900), (44,3300) -->
+  <!-- P90: (24,800), (28,1400), (32,2200), (36,3200), (40,4100), (44,4400) -->
+  <!-- Áreas: -->
+  <!-- GIG (acima de P90) -->
+  <path d="M 60,40 L 680,40 L 680,80 C 600,108 500,144 376,216 C 252,288 184,328 60,376 Z" fill="url(#gig-pattern)" opacity="0.4"/>
+  <!-- PIG (abaixo de P10) -->
+  <path d="M 60,400 L 680,400 L 680,336 C 600,328 500,320 376,304 C 252,288 184,360 60,360 Z" fill="url(#pig-pattern)" opacity="0.4"/>
+  <!-- AIG (entre P10 e P90) -->
+  <path d="M 60,376 C 184,328 252,288 376,216 C 500,144 600,108 680,80 L 680,336 C 600,328 500,320 376,304 C 252,288 184,360 60,360 Z" fill="url(#aig-pattern)" opacity="0.5"/>
+
+  <!-- Curva P90 (superior, vermelha) -->
+  <path d="M 60,376 C 184,328 252,288 376,216 C 500,144 600,108 680,80" fill="none" stroke="#ff5d6b" stroke-width="2.5"/>
+  <!-- Curva P10 (inferior, vermelha) -->
+  <path d="M 60,360 C 184,360 252,288 376,304 C 500,320 600,328 680,336" fill="none" stroke="#ff5d6b" stroke-width="2.5" stroke-dasharray="6 3"/>
+
+  <!-- Eixo X -->
+  <line x1="60" y1="400" x2="680" y2="400" stroke="#c3bcae" stroke-width="1.5"/>
+  <!-- Eixo Y -->
+  <line x1="60" y1="40" x2="60" y2="400" stroke="#c3bcae" stroke-width="1.5"/>
+  <!-- Ticks X -->
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="#c3bcae" text-anchor="middle">
+    <text x="60"  y="420">24</text>
+    <text x="184" y="420">28</text>
+    <text x="308" y="420">32</text>
+    <text x="432" y="420">36</text>
+    <text x="556" y="420">40</text>
+    <text x="680" y="420">44</text>
+  </g>
+  <!-- Ticks Y -->
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="#c3bcae" text-anchor="end">
+    <text x="55" y="400">500</text>
+    <text x="55" y="360">1000</text>
+    <text x="55" y="320">1500</text>
+    <text x="55" y="280">2000</text>
+    <text x="55" y="240">2500</text>
+    <text x="55" y="200">3000</text>
+    <text x="55" y="160">3500</text>
+    <text x="55" y="120">4000</text>
+    <text x="55" y="80">4500</text>
+  </g>
+  <!-- Labels eixos -->
+  <text x="370" y="445" font-family="Lora, serif" font-size="12" fill="#f3ede0" text-anchor="middle">Idade gestacional (semanas)</text>
+  <text x="20"  y="220" font-family="Lora, serif" font-size="12" fill="#f3ede0" text-anchor="middle" transform="rotate(-90 20 220)">Peso (g)</text>
+
+  <!-- Labels faixas -->
+  <g font-family="Lora, serif" font-size="13" font-weight="700">
+    <text x="600" y="60"  fill="#f0b440">GIG</text>
+    <text x="600" y="200" fill="#5fcf80">AIG</text>
+    <text x="600" y="380" fill="#ff5d6b">PIG</text>
+  </g>
+  <!-- Labels curvas -->
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="#ff5d6b">
+    <text x="690" y="80"  text-anchor="start">P90</text>
+    <text x="690" y="336" text-anchor="start">P10</text>
+  </g>
+
+  <!-- João Eucalipto: 36+4 sem (=36.57), 1900g -->
+  <!-- x = 60 + (36.57-24)*31 = 60 + 389.67 = 449.67 -->
+  <!-- y = 400 - (1900-500)*0.08 = 400 - 112 = 288 -->
+  <g>
+    <line x1="450" y1="288" x2="60" y2="288" stroke="#ff6b5a" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.5"/>
+    <line x1="450" y1="288" x2="450" y2="400" stroke="#ff6b5a" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.5"/>
+    <circle cx="450" cy="288" r="8" fill="#ff6b5a" stroke="#0a1620" stroke-width="2"/>
+    <text x="450" y="270" font-family="Lora, serif" font-size="11" fill="#ff6b5a" text-anchor="middle" font-weight="700">João Eucalipto</text>
+    <text x="450" y="258" font-family="JetBrains Mono, monospace" font-size="9" fill="#ff6b5a" text-anchor="middle">36+4 / 1.900 g</text>
+  </g>
+
+  <!-- Nota: P10/P90 NÃO P3/P97 -->
+  <g transform="translate(80,20)">
+    <rect x="0" y="0" width="240" height="20" fill="#0a1620" stroke="#ff5d6b" stroke-width="1" rx="4"/>
+    <text x="120" y="14" font-family="Lora, serif" font-size="10" fill="#ff5d6b" text-anchor="middle" font-weight="600">RN: P10 e P90 — NÃO P3/P97</text>
+  </g>
+</svg>

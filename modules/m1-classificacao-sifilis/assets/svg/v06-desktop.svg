@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 920" role="img" aria-label="Fluxograma decisório para tratamento da sífilis congênita no recém-nascido. Entrada: recém-nascido de mãe com sífilis. Primeira decisão: a mãe foi tratada adequadamente conforme os 3 critérios (penicilina benzatina, esquema adequado ao estágio, primeira dose pelo menos 30 dias antes do parto)? Caminho NÃO (mãe inadequada): sífilis congênita por definição; notificar e solicitar os 4 exames obrigatórios (VDRL sangue periférico, hemograma, radiografia de ossos longos, líquor). Avaliar líquor: se alterado (VDRL líquor positivo ou mais de 25 células ou mais de 150 de proteína), cristalina endovenosa por 10 dias. Se líquor normal mas houver outra alteração, cristalina endovenosa por 10 dias ou procaína intramuscular por 10 dias. Se tudo normal incluindo VDRL não reator, benzatina intramuscular dose única. Caminho SIM (mãe adequada): comparar VDRL do recém-nascido com VDRL materno em pelo menos 2 diluições. Cenário A — recém-nascido maior em pelo menos 2 diluições: sífilis congênita confirmada, tratar com cristalina ou procaína conforme líquor. Cenário B — recém-nascido não maior em 2 diluições e assintomático: apenas acompanhar, não tratar. Cenário C — recém-nascido não maior em 2 diluições mas com sintoma e VDRL reagente em qualquer nível: tratar como sífilis congênita. Cenário D — recém-nascido não maior em 2 diluições, com sintoma e VDRL não reator: investigar outra causa.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c3bcae"/>
+    </marker>
+    <marker id="arrow-coral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+    <!-- Estilos por classe -->
+    <style>
+      .node-decision { fill:#0a1620; stroke:#6cb4e8; stroke-width:2; }
+      .node-decision-text { fill:#6cb4e8; font-family:Lora, serif; font-size:13px; font-weight:600; text-anchor:middle; }
+      .node-action { fill:#0f1f2c; stroke:#c3bcae; stroke-width:1.5; }
+      .node-action-text { fill:#e7e0d0; font-family:Lora, serif; font-size:12px; text-anchor:middle; }
+      .node-cristalina { fill:#1a0d0e; stroke:#ff5d6b; stroke-width:2.5; }
+      .node-cristalina-text { fill:#ff8a7a; font-family:Lora, serif; font-size:13px; font-weight:700; text-anchor:middle; }
+      .node-procaina { fill:#1a140a; stroke:#f0b440; stroke-width:2.5; }
+      .node-procaina-text { fill:#f0b440; font-family:Lora, serif; font-size:13px; font-weight:700; text-anchor:middle; }
+      .node-benzatina { fill:#0c1a0e; stroke:#5fcf80; stroke-width:2.5; }
+      .node-benzatina-text { fill:#5fcf80; font-family:Lora, serif; font-size:13px; font-weight:700; text-anchor:middle; }
+      .node-monitor { fill:#0a1620; stroke:#6cb4e8; stroke-width:2; stroke-dasharray:4 2; }
+      .node-monitor-text { fill:#6cb4e8; font-family:Lora, serif; font-size:13px; font-weight:600; text-anchor:middle; }
+      .node-other { fill:#0a1620; stroke:#8a8678; stroke-width:1.5; stroke-dasharray:4 2; }
+      .node-other-text { fill:#c3bcae; font-family:Lora, serif; font-size:12px; text-anchor:middle; }
+      .edge-label { fill:#f3ede0; font-family:JetBrains Mono, monospace; font-size:11px; font-weight:600; }
+      .edge { stroke:#c3bcae; stroke-width:1.6; fill:none; }
+      .edge-coral { stroke:#ff6b5a; stroke-width:1.8; fill:none; }
+      .scenario-label { fill:#ff6b5a; font-family:JetBrains Mono, monospace; font-size:11px; font-weight:700; text-anchor:middle; }
+    </style>
+  </defs>
+
+  <!-- Título -->
+  <text x="550" y="28" font-family="Lora, serif" font-size="16" fill="#f3ede0" text-anchor="middle" font-weight="700">V06 — Fluxograma da sífilis congênita no RN</text>
+  <text x="550" y="48" font-family="Lora, serif" font-size="11" fill="#c3bcae" text-anchor="middle" font-style="italic">Comece sempre pela mãe · líquor decide a penicilina · crista = cabeça = cristalina</text>
+
+  <!-- Nó entrada -->
+  <g>
+    <rect x="425" y="70"  width="250" height="50" rx="25" class="node-action"/>
+    <text x="550" y="92"  class="node-action-text">RN de mãe com sífilis</text>
+    <text x="550" y="108" class="node-action-text" font-size="10" fill="#8a8678">entrada do fluxograma</text>
+  </g>
+
+  <!-- Decisão 1: mãe tratada adequadamente? -->
+  <g>
+    <polygon points="550,150 720,225 550,300 380,225" class="node-decision"/>
+    <text x="550" y="210" class="node-decision-text">Mãe tratada</text>
+    <text x="550" y="228" class="node-decision-text">adequadamente?</text>
+    <text x="550" y="248" class="node-decision-text" font-size="10" fill="#8a8678">3 critérios: benzatina · estágio · ≥30 d</text>
+  </g>
+  <line x1="550" y1="120" x2="550" y2="150" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- Caminho NÃO (esquerda) -->
+  <text x="350" y="220" class="edge-label" fill="#ff5d6b">NÃO</text>
+  <path d="M 380,225 Q 330,225 290,260" class="edge-coral" marker-end="url(#arrow-coral)"/>
+
+  <!-- Bloco "SC por definição + 4 exames" -->
+  <g>
+    <rect x="60"  y="265" width="460" height="80" rx="10" class="node-action" stroke="#ff5d6b"/>
+    <text x="290" y="290" class="node-action-text" fill="#ff8a7a" font-weight="700">Sífilis congênita por definição</text>
+    <text x="290" y="312" class="node-action-text" font-size="11">Notificar (SINAN semanal) · 4 exames obrigatórios:</text>
+    <text x="290" y="328" class="node-action-text" font-size="11" fill="#c3bcae">VDRL periférico · Hemograma · RX ossos longos · LÍQUOR</text>
+  </g>
+
+  <!-- Decisão 2 (mãe inadequada): líquor alterado? -->
+  <g>
+    <polygon points="290,400 470,475 290,550 110,475" class="node-decision" stroke="#ff8a7a"/>
+    <text x="290" y="460" class="node-decision-text" fill="#ff8a7a">Líquor alterado?</text>
+    <text x="290" y="478" class="node-decision-text" font-size="10" fill="#c3bcae">VDRL+ OU &gt;25 céls OU &gt;150 prot</text>
+  </g>
+  <line x1="290" y1="345" x2="290" y2="400" class="edge-coral" marker-end="url(#arrow-coral)"/>
+
+  <!-- Cenário 1 (líquor alterado → cristalina) -->
+  <text x="160" y="475" class="edge-label" fill="#ff5d6b">SIM</text>
+  <path d="M 110,475 Q 80,475 60,540" class="edge-coral" marker-end="url(#arrow-coral)"/>
+  <g>
+    <rect x="40" y="585" width="200" height="100" rx="12" class="node-cristalina"/>
+    <text x="140" y="608" class="scenario-label">Cenário 1 (mãe inadequada)</text>
+    <text x="140" y="630" class="node-cristalina-text">CRISTALINA</text>
+    <text x="140" y="650" class="node-cristalina-text" font-size="11">EV · 10 dias</text>
+    <text x="140" y="668" class="node-cristalina-text" font-size="10" fill="#c3bcae" font-weight="400">50.000 UI/kg · 12/12h &lt;7d · 8/8h ≥7d</text>
+  </g>
+
+  <!-- Decisão 2b — líquor normal + outra alteração? -->
+  <text x="320" y="565" class="edge-label">NÃO</text>
+  <line x1="290" y1="550" x2="290" y2="585" class="edge" marker-end="url(#arrow)"/>
+  <g>
+    <polygon points="290,585 460,650 290,715 120,650" class="node-decision" stroke="#f0b440"/>
+    <text x="290" y="640" class="node-decision-text" fill="#f0b440">Outra alteração?</text>
+    <text x="290" y="658" class="node-decision-text" font-size="10" fill="#c3bcae">VDRL · exame físico · hemo · RX</text>
+  </g>
+
+  <!-- Cenário 2 (mãe inadequada, líquor normal + outra alteração → cristalina OU procaína) -->
+  <text x="470" y="650" class="edge-label" fill="#f0b440">SIM</text>
+  <path d="M 460,650 Q 510,650 540,700" class="edge" stroke="#f0b440" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="270" y="745" width="280" height="80" rx="12" class="node-procaina"/>
+    <text x="410" y="768" class="scenario-label" fill="#f0b440">Cenário 2 (mãe inadequada)</text>
+    <text x="410" y="790" class="node-procaina-text">CRISTALINA EV  ou  PROCAÍNA IM</text>
+    <text x="410" y="808" class="node-procaina-text" font-size="10" fill="#c3bcae">10 dias · 50.000 UI/kg</text>
+  </g>
+
+  <!-- Cenário 3 (mãe inadequada, tudo normal incl. VDRL → benzatina) -->
+  <text x="130" y="745" class="edge-label" fill="#5fcf80">NÃO · tudo normal</text>
+  <path d="M 200,715 Q 130,750 80,790" class="edge" stroke="#5fcf80" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="40"  y="800" width="200" height="80" rx="12" class="node-benzatina"/>
+    <text x="140" y="822" class="scenario-label" fill="#5fcf80">Cenário 3 (mãe inadequada)</text>
+    <text x="140" y="844" class="node-benzatina-text">BENZATINA</text>
+    <text x="140" y="862" class="node-benzatina-text" font-size="11">IM · dose única</text>
+  </g>
+
+  <!-- ===== Caminho SIM (mãe adequada — direita) ===== -->
+  <text x="745" y="220" class="edge-label" fill="#5fcf80">SIM</text>
+  <path d="M 720,225 Q 770,225 810,260" class="edge" stroke="#5fcf80" marker-end="url(#arrow)"/>
+
+  <!-- Decisão 3: comparar VDRL RN vs materno em ≥2 diluições -->
+  <g>
+    <polygon points="900,275 1090,360 900,445 710,360" class="node-decision" stroke="#5fcf80"/>
+    <text x="900" y="345" class="node-decision-text" fill="#5fcf80">VDRL RN ≥2 diluições</text>
+    <text x="900" y="365" class="node-decision-text" fill="#5fcf80">&gt; VDRL materno?</text>
+    <text x="900" y="385" class="node-decision-text" font-size="10" fill="#c3bcae">(=fourfold no CDC)</text>
+  </g>
+
+  <!-- Cenário A: SIM → SC confirmada → cristalina/procaína conforme líquor -->
+  <text x="1015" y="320" class="edge-label" fill="#ff5d6b">SIM</text>
+  <path d="M 1000,310 Q 1060,290 1060,360" class="edge-coral" marker-end="url(#arrow-coral)"/>
+  <g>
+    <rect x="870" y="475" width="220" height="90" rx="12" class="node-cristalina"/>
+    <text x="980" y="498" class="scenario-label">Cenário A (mãe adequada)</text>
+    <text x="980" y="520" class="node-cristalina-text">SC → tratar</text>
+    <text x="980" y="540" class="node-cristalina-text" font-size="11">Cristalina ou Procaína</text>
+    <text x="980" y="558" class="node-cristalina-text" font-size="10" fill="#c3bcae">conforme líquor</text>
+  </g>
+
+  <!-- Decisão 4 (mãe adequada, &lt;2 diluições): exame físico alterado? -->
+  <text x="785" y="380" class="edge-label">NÃO</text>
+  <line x1="900" y1="445" x2="900" y2="475" class="edge" marker-end="url(#arrow)"/>
+  <g>
+    <polygon points="900,475 1080,545 900,615 720,545" class="node-decision" opacity="0"/>
+  </g>
+  <g>
+    <rect x="710" y="600" width="380" height="60" rx="10" class="node-action"/>
+    <text x="900" y="624" class="node-action-text">Exame físico do RN?</text>
+    <text x="900" y="644" class="node-action-text" font-size="10" fill="#8a8678">normal vs alterado decide os cenários B/C/D</text>
+  </g>
+  <line x1="900" y1="565" x2="900" y2="600" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- Cenário B: assintomático → só acompanhar -->
+  <path d="M 750,660 Q 700,690 700,720" class="edge" stroke="#6cb4e8" marker-end="url(#arrow)"/>
+  <text x="650" y="700" class="edge-label" fill="#6cb4e8">normal</text>
+  <g>
+    <rect x="580" y="730" width="240" height="70" rx="12" class="node-monitor"/>
+    <text x="700" y="752" class="scenario-label" fill="#6cb4e8">Cenário B (mãe adequada)</text>
+    <text x="700" y="774" class="node-monitor-text">Só acompanhar</text>
+    <text x="700" y="790" class="node-monitor-text" font-size="10" fill="#c3bcae">exposto, não tratar</text>
+  </g>
+
+  <!-- Decisão 5 (alterado): VDRL reator? -->
+  <text x="980" y="700" class="edge-label" fill="#f0b440">alterado</text>
+  <path d="M 1010,660 Q 1050,690 1010,720" class="edge" stroke="#f0b440" marker-end="url(#arrow)"/>
+  <g>
+    <polygon points="1010,725 1090,775 1010,825 930,775" class="node-decision" stroke="#f0b440"/>
+    <text x="1010" y="770" class="node-decision-text" fill="#f0b440">VDRL RN</text>
+    <text x="1010" y="788" class="node-decision-text" fill="#f0b440">reator?</text>
+  </g>
+
+  <!-- Cenário C: VDRL reator → tratar como SC -->
+  <path d="M 1090,775 Q 1130,820 1100,855" class="edge-coral" marker-end="url(#arrow-coral)"/>
+  <text x="1085" y="810" class="edge-label" fill="#ff5d6b">SIM</text>
+  <g>
+    <rect x="870" y="845" width="220" height="60" rx="12" class="node-procaina"/>
+    <text x="980" y="866" class="scenario-label" fill="#f0b440">Cenário C (mãe adequada)</text>
+    <text x="980" y="886" class="node-procaina-text">Tratar como SC</text>
+    <text x="980" y="900" class="node-procaina-text" font-size="10" fill="#c3bcae">cristalina ou procaína conforme líquor</text>
+  </g>
+
+  <!-- Cenário D: VDRL não reator → outra causa -->
+  <text x="900" y="810" class="edge-label">NÃO</text>
+  <path d="M 930,775 Q 880,820 820,855" class="edge" stroke="#8a8678" marker-end="url(#arrow)"/>
+  <g>
+    <rect x="610" y="845" width="220" height="60" rx="12" class="node-other"/>
+    <text x="720" y="866" class="scenario-label" fill="#c3bcae">Cenário D (mãe adequada)</text>
+    <text x="720" y="886" class="node-other-text">Outra causa</text>
+    <text x="720" y="900" class="node-other-text" font-size="10" fill="#8a8678">investigar — não é sífilis</text>
+  </g>
+
+  <!-- Legenda inferior -->
+  <g transform="translate(60,886)">
+    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8678">Cores semânticas:</text>
+    <rect x="120" y="-9" width="10" height="10" fill="#ff5d6b"/><text x="135" y="0" font-family="Lora, serif" font-size="10" fill="#ff5d6b">Cristalina (grave/SC)</text>
+    <rect x="270" y="-9" width="10" height="10" fill="#f0b440"/><text x="285" y="0" font-family="Lora, serif" font-size="10" fill="#f0b440">Procaína (intermediário)</text>
+    <rect x="430" y="-9" width="10" height="10" fill="#5fcf80"/><text x="445" y="0" font-family="Lora, serif" font-size="10" fill="#5fcf80">Benzatina (exposto/leve)</text>
+  </g>
+</svg>

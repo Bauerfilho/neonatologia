@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 880" role="img" aria-label="Sub-fluxograma 1 (mobile): ramo mãe inadequadamente tratada. Sífilis congênita por definição. Notificar e fazer os 4 exames obrigatórios. Avaliar líquor. Cenário 1 (líquor alterado): cristalina endovenosa 10 dias. Cenário 2 (líquor normal + outra alteração): cristalina endovenosa ou procaína intramuscular 10 dias. Cenário 3 (tudo normal incluindo VDRL não reator): benzatina intramuscular dose única.">
+  <defs>
+    <marker id="arr-m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#ff6b5a"/></marker>
+    <marker id="arr-m1n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c3bcae"/></marker>
+    <style>
+      .nd { fill:#0a1620; stroke:#ff8a7a; stroke-width:2; }
+      .nd-t { fill:#ff8a7a; font-family:Lora, serif; font-size:14px; font-weight:600; text-anchor:middle; }
+      .na { fill:#0f1f2c; stroke:#c3bcae; stroke-width:1.5; }
+      .na-t { fill:#e7e0d0; font-family:Lora, serif; font-size:13px; text-anchor:middle; }
+      .nc { fill:#1a0d0e; stroke:#ff5d6b; stroke-width:2.5; }
+      .nc-t { fill:#ff8a7a; font-family:Lora, serif; font-size:14px; font-weight:700; text-anchor:middle; }
+      .np { fill:#1a140a; stroke:#f0b440; stroke-width:2.5; }
+      .np-t { fill:#f0b440; font-family:Lora, serif; font-size:14px; font-weight:700; text-anchor:middle; }
+      .nb { fill:#0c1a0e; stroke:#5fcf80; stroke-width:2.5; }
+      .nb-t { fill:#5fcf80; font-family:Lora, serif; font-size:14px; font-weight:700; text-anchor:middle; }
+      .el { fill:#f3ede0; font-family:JetBrains Mono, monospace; font-size:12px; font-weight:600; text-anchor:middle; }
+      .sl { fill:#ff6b5a; font-family:JetBrains Mono, monospace; font-size:11px; font-weight:700; text-anchor:middle; }
+    </style>
+  </defs>
+
+  <text x="300" y="30" font-family="Lora, serif" font-size="16" fill="#ff8a7a" text-anchor="middle" font-weight="700">Mãe INADEQUADAMENTE tratada</text>
+  <text x="300" y="50" font-family="Lora, serif" font-size="11" fill="#c3bcae" text-anchor="middle" font-style="italic">sífilis congênita por definição — líquor decide</text>
+
+  <!-- Notificar + 4 exames -->
+  <rect x="60" y="80" width="480" height="80" rx="12" class="na" stroke="#ff8a7a"/>
+  <text x="300" y="106" class="na-t" fill="#ff8a7a" font-weight="700">SC por definição → notificar + 4 exames</text>
+  <text x="300" y="128" class="na-t" font-size="11">VDRL periférico · hemograma</text>
+  <text x="300" y="146" class="na-t" font-size="11">RX ossos longos · LÍQUOR (obrigatório)</text>
+
+  <line x1="300" y1="160" x2="300" y2="200" stroke="#ff6b5a" stroke-width="1.6" marker-end="url(#arr-m1)"/>
+
+  <!-- Decisão: líquor alterado? -->
+  <polygon points="300,210 510,300 300,390 90,300" class="nd"/>
+  <text x="300" y="290" class="nd-t">Líquor alterado?</text>
+  <text x="300" y="312" class="nd-t" font-size="11" fill="#c3bcae">VDRL+ líquor OU</text>
+  <text x="300" y="330" class="nd-t" font-size="11" fill="#c3bcae">&gt;25 céls OU &gt;150 prot</text>
+
+  <!-- Cenário 1: SIM → cristalina -->
+  <text x="110" y="330" class="el" fill="#ff5d6b">SIM</text>
+  <path d="M 90,300 Q 60,340 60,420" stroke="#ff6b5a" stroke-width="1.6" fill="none" marker-end="url(#arr-m1)"/>
+
+  <rect x="40" y="430" width="240" height="100" rx="12" class="nc"/>
+  <text x="160" y="454" class="sl">Cenário 1</text>
+  <text x="160" y="478" class="nc-t">CRISTALINA EV</text>
+  <text x="160" y="498" class="nc-t" font-size="11">10 dias · 50k UI/kg</text>
+  <text x="160" y="516" class="nc-t" font-size="10" fill="#c3bcae" font-weight="400">12/12h &lt;7d · 8/8h ≥7d</text>
+
+  <!-- NÃO → outra alteração? -->
+  <text x="500" y="330" class="el">NÃO</text>
+  <line x1="510" y1="300" x2="540" y2="300" stroke="#c3bcae" stroke-width="1.5"/>
+  <line x1="540" y1="300" x2="540" y2="420" stroke="#c3bcae" stroke-width="1.5" marker-end="url(#arr-m1n)"/>
+
+  <polygon points="540,430 600,500 540,570 480,500" class="nd" stroke="#f0b440"/>
+  <text x="540" y="495" class="nd-t" fill="#f0b440">Outra</text>
+  <text x="540" y="515" class="nd-t" fill="#f0b440">alteração?</text>
+
+  <!-- Cenário 2: outra alteração → cristalina OU procaína -->
+  <text x="465" y="610" class="el" fill="#f0b440">SIM</text>
+  <path d="M 540,570 Q 510,600 410,610" stroke="#f0b440" stroke-width="1.6" fill="none" marker-end="url(#arr-m1n)"/>
+
+  <rect x="280" y="610" width="280" height="100" rx="12" class="np"/>
+  <text x="420" y="634" class="sl" fill="#f0b440">Cenário 2</text>
+  <text x="420" y="658" class="np-t">CRISTALINA EV</text>
+  <text x="420" y="678" class="np-t">ou PROCAÍNA IM</text>
+  <text x="420" y="697" class="np-t" font-size="10" fill="#c3bcae" font-weight="400">10 d · 50k UI/kg</text>
+
+  <!-- Cenário 3: tudo normal → benzatina -->
+  <text x="540" y="610" class="el" fill="#5fcf80">NÃO</text>
+  <path d="M 540,570 Q 540,650 200,750" stroke="#5fcf80" stroke-width="1.6" fill="none" marker-end="url(#arr-m1n)"/>
+
+  <rect x="40" y="750" width="240" height="100" rx="12" class="nb"/>
+  <text x="160" y="774" class="sl" fill="#5fcf80">Cenário 3</text>
+  <text x="160" y="798" class="nb-t">BENZATINA</text>
+  <text x="160" y="818" class="nb-t" font-size="11">IM · dose única</text>
+  <text x="160" y="836" class="nb-t" font-size="10" fill="#c3bcae" font-weight="400">basta cobertura — VDRL zero</text>
+</svg>
