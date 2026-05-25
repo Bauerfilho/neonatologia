@@ -60,7 +60,11 @@ body::before {
 .site-header__inner {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 18px 28px;
+  /* Safe area top: respeita Dynamic Island / notch em PWA standalone iOS */
+  padding-top: calc(18px + env(safe-area-inset-top, 0px));
+  padding-right: max(28px, env(safe-area-inset-right, 0px));
+  padding-bottom: 18px;
+  padding-left: max(28px, env(safe-area-inset-left, 0px));
   display: flex;
   align-items: center;
   gap: 16px;
@@ -149,7 +153,9 @@ main {
   z-index: 1;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 28px;
+  /* Safe areas horizontais pra landscape em iPhone com notch */
+  padding-left: max(28px, env(safe-area-inset-left, 0px));
+  padding-right: max(28px, env(safe-area-inset-right, 0px));
 }
 
 /* === Hero === */
@@ -554,8 +560,9 @@ body[data-filter="bonus"] [data-section="parte-2"] { display: none; }
 
 .pwa-update-toast {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  /* Safe area bottom: home indicator iPhone */
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  right: calc(20px + env(safe-area-inset-right, 0px));
   background: var(--bg-elev-2);
   border: 1px solid var(--accent-coral);
   border-radius: var(--r-md);
@@ -597,7 +604,11 @@ body[data-filter="bonus"] [data-section="parte-2"] { display: none; }
   position: relative;
   z-index: 1;
   border-top: 1px solid var(--border-soft);
-  padding: 40px 28px;
+  /* Safe area bottom: respeita home indicator do iPhone */
+  padding-top: 40px;
+  padding-right: max(28px, env(safe-area-inset-right, 0px));
+  padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+  padding-left: max(28px, env(safe-area-inset-left, 0px));
   margin-top: 40px;
 }
 .site-footer__inner {
