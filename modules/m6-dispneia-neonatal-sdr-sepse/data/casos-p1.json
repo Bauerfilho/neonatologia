@@ -1,0 +1,32 @@
+{
+  "firmindo": {
+    "id": "firmindo",
+    "label": "Caso Firmindo",
+    "mae": "Esmeralda",
+    "obstetra": "Vinicius",
+    "dados": {
+      "Idade gestacional": "30 semanas (pre-termo extremo)",
+      "Mae": "Esmeralda — trabalho de parto prematuro sem causa evidente",
+      "Antenatal": "Betametasona 6 h antes do parto (curso incompleto)",
+      "Bolsa rota": "20 h (> 18 h, fator de risco materno)",
+      "Sala de parto": "Taquipneia FR 80, gemencia, retracao subcostal, batimento de asa do nariz",
+      "Suporte inicial": "CPAP nasal 5 cmH2O, FiO2 0,4",
+      "Evolucao": "Necessidade progressiva de FiO2 -> ventilacao mecanica invasiva",
+      "Radiografia": "Infiltrado reticulo-granular difuso",
+      "12 h de vida": "Disturbio de perfusao + hipotermia + hipoatividade",
+      "Hemograma": "Relacao I/T 0,3"
+    },
+    "diagnosticos": [
+      "SDR/DMH (pulmao imaturo, IG < 34 sem)",
+      "Sepse neonatal precoce (bolsa rota prolongada + I/T 0,3 + sinais sistemicos)"
+    ],
+    "esquema": "Ampicilina 50 mg/kg/dose 12/12 h + Gentamicina 3 mg/kg/dose 36/36 h (RNPT < 34 sem)",
+    "erro_evitavel": "Surfactante exogeno fora da janela das 2 horas",
+    "paginas": [1, 6, 10, 12, 13],
+    "cross_modulos": {
+      "M1": "#/p1-m1-p1",
+      "M3": "#/p1-m3-p5",
+      "M5": "#/p1-m5-p6"
+    }
+  }
+}

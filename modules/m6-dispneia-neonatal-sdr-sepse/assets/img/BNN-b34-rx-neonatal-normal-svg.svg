@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-b34 desc-b34">
+  <title id="title-b34">Radiografia de torax neonatal normal</title>
+  <desc id="desc-b34">Esquema de radiografia de torax neonatal normal mostrando pulmoes transparentes bilateralmente expandidos, diafragma em oitavo a nono arco costal posterior, silhueta cardiaca com indice cardiotoracico inferior a zero virgula seis e trama vascular pulmonar normal. Referencia anatomica para contraste com padroes patologicos como sindrome do desconforto respiratorio.</desc>
+  <defs>
+    <radialGradient id="bg-b34" cx="50%" cy="40%" r="85%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <radialGradient id="lung-b34" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#3a4a58" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#2c3a48" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#1d2a36" stop-opacity="0.30"/>
+    </radialGradient>
+    <radialGradient id="heart-b34" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#c8cdd4" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#9aa3ad" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="diaphragm-b34" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c0c6cd" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#7a828c" stop-opacity="0.90"/>
+    </linearGradient>
+    <marker id="arrow-b34" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff8a7a"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bg-b34)"/>
+
+  <rect x="22" y="22" width="416" height="44" rx="10" fill="rgba(95,207,128,0.10)" stroke="rgba(95,207,128,0.42)" stroke-width="1"/>
+  <text x="230" y="44" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.9">RX TORAX NEONATAL · REFERENCIA NORMAL</text>
+  <text x="230" y="60" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle" opacity="0.88">Pulmoes transparentes · diafragma 8-9 arco · ICT &lt; 0,6</text>
+
+  <rect x="170" y="100" width="260" height="320" rx="20" fill="#1a2230" stroke="#2a3340" stroke-width="1.5"/>
+
+  <path d="M 230 138 Q 195 142 188 178 Q 178 230 184 290 Q 192 340 220 360 L 286 360 L 286 138 Q 260 134 230 138 z"
+        fill="url(#lung-b34)" stroke="#5a6470" stroke-width="1.2" opacity="0.92"/>
+
+  <path d="M 370 138 Q 405 142 412 178 Q 422 230 416 290 Q 408 340 380 360 L 314 360 L 314 138 Q 340 134 370 138 z"
+        fill="url(#lung-b34)" stroke="#5a6470" stroke-width="1.2" opacity="0.92"/>
+
+  <g stroke="#6a737e" stroke-width="0.7" fill="none" opacity="0.55">
+    <path d="M 188 168 Q 230 154 286 160"/>
+    <path d="M 188 192 Q 230 180 286 185"/>
+    <path d="M 184 220 Q 230 210 286 214"/>
+    <path d="M 184 248 Q 230 240 286 244"/>
+    <path d="M 184 276 Q 230 270 286 274"/>
+    <path d="M 188 304 Q 230 300 286 304"/>
+    <path d="M 192 330 Q 230 328 286 332"/>
+  </g>
+  <g stroke="#6a737e" stroke-width="0.7" fill="none" opacity="0.55">
+    <path d="M 314 160 Q 370 154 412 168"/>
+    <path d="M 314 185 Q 370 180 412 192"/>
+    <path d="M 314 214 Q 370 210 416 220"/>
+    <path d="M 314 244 Q 370 240 416 248"/>
+    <path d="M 314 274 Q 370 270 416 276"/>
+    <path d="M 314 304 Q 370 300 412 304"/>
+    <path d="M 314 332 Q 370 328 408 330"/>
+  </g>
+
+  <g stroke="#5fcf80" stroke-width="0.6" fill="none" opacity="0.50" stroke-dasharray="2,2">
+    <path d="M 215 168 Q 245 165 280 168"/>
+    <path d="M 320 168 Q 355 165 385 168"/>
+    <path d="M 210 192 Q 245 188 280 190"/>
+    <path d="M 320 190 Q 355 188 390 192"/>
+  </g>
+
+  <g fill="none" stroke="#8a92a0" stroke-width="0.8" opacity="0.75">
+    <path d="M 240 200 Q 250 218 248 240"/>
+    <path d="M 250 200 Q 262 222 260 245"/>
+    <path d="M 220 215 Q 230 232 232 252"/>
+    <path d="M 360 200 Q 350 218 352 240"/>
+    <path d="M 350 200 Q 338 222 340 245"/>
+    <path d="M 380 215 Q 370 232 368 252"/>
+  </g>
+
+  <path d="M 270 138 Q 286 140 300 140 Q 314 140 330 138 L 330 220 L 270 220 z"
+        fill="#aab2bc" stroke="#6a737e" stroke-width="1" opacity="0.78"/>
+  <line x1="300" y1="140" x2="300" y2="220" stroke="#5a6470" stroke-width="0.8" opacity="0.6"/>
+
+  <path d="M 275 220 Q 270 240 268 268 Q 268 296 280 318 Q 296 340 322 340 Q 348 338 354 312 Q 356 282 348 250 Q 338 226 320 220 z"
+        fill="url(#heart-b34)" stroke="#5a6470" stroke-width="1.5" opacity="0.92"/>
+
+  <path d="M 184 358 Q 235 348 286 360 L 286 372 Q 235 380 184 364 z"
+        fill="url(#diaphragm-b34)" stroke="#5a6470" stroke-width="1.2"/>
+  <path d="M 314 360 Q 365 348 416 358 L 416 364 Q 365 376 314 372 z"
+        fill="url(#diaphragm-b34)" stroke="#5a6470" stroke-width="1.2"/>
+
+  <g fill="none" stroke="#8a92a0" stroke-width="0.8" opacity="0.42">
+    <path d="M 170 156 Q 230 142 290 150"/>
+    <path d="M 310 150 Q 370 142 430 156"/>
+    <path d="M 168 188 Q 230 174 292 182"/>
+    <path d="M 308 182 Q 370 174 432 188"/>
+    <path d="M 166 222 Q 230 208 294 215"/>
+    <path d="M 306 215 Q 370 208 434 222"/>
+    <path d="M 164 256 Q 230 244 296 250"/>
+    <path d="M 304 250 Q 370 244 436 256"/>
+    <path d="M 164 290 Q 230 280 296 286"/>
+    <path d="M 304 286 Q 370 280 436 290"/>
+    <path d="M 166 322 Q 230 314 294 320"/>
+    <path d="M 306 320 Q 370 314 434 322"/>
+    <path d="M 170 352 Q 230 348 290 352"/>
+    <path d="M 310 352 Q 370 348 430 352"/>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" fill="#5fcf80" opacity="0.85" font-weight="600">
+    <text x="146" y="158" text-anchor="end">1</text>
+    <text x="146" y="190" text-anchor="end">3</text>
+    <text x="146" y="224" text-anchor="end">5</text>
+    <text x="146" y="258" text-anchor="end">7</text>
+    <text x="146" y="292" text-anchor="end">8</text>
+    <text x="146" y="324" text-anchor="end">9</text>
+    <text x="146" y="354" text-anchor="end">10</text>
+  </g>
+
+  <line x1="42" y1="158" x2="138" y2="158" stroke="#5fcf80" stroke-width="0.6" opacity="0.40"/>
+  <line x1="42" y1="354" x2="138" y2="354" stroke="#5fcf80" stroke-width="0.6" opacity="0.40"/>
+
+  <line x1="270" y1="285" x2="354" y2="285" stroke="#ff8a7a" stroke-width="1" stroke-dasharray="4,3" opacity="0.85"/>
+  <line x1="184" y1="262" x2="416" y2="262" stroke="#6cb4e8" stroke-width="1" stroke-dasharray="4,3" opacity="0.85"/>
+
+  <line x1="118" y1="200" x2="170" y2="220" stroke="#ff8a7a" stroke-width="1.4" marker-end="url(#arrow-b34)"/>
+  <text x="115" y="195" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="600" text-anchor="end">Pulmoes</text>
+  <text x="115" y="208" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="600" text-anchor="end">transparentes</text>
+
+  <line x1="492" y1="285" x2="358" y2="285" stroke="#ff8a7a" stroke-width="1.4" marker-end="url(#arrow-b34)"/>
+  <text x="498" y="280" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="700">ICT &lt; 0,6</text>
+  <text x="498" y="294" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" opacity="0.85">silhueta cardiaca</text>
+  <text x="498" y="306" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" opacity="0.85">centrada</text>
+
+  <line x1="118" y1="368" x2="184" y2="362" stroke="#ff8a7a" stroke-width="1.4" marker-end="url(#arrow-b34)"/>
+  <text x="115" y="365" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="600" text-anchor="end">Diafragma</text>
+  <text x="115" y="378" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="600" text-anchor="end">8-9 arco</text>
+
+  <line x1="492" y1="222" x2="412" y2="218" stroke="#ff8a7a" stroke-width="1.4" marker-end="url(#arrow-b34)"/>
+  <text x="498" y="218" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="700">Trama</text>
+  <text x="498" y="232" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="700">vascular</text>
+  <text x="498" y="244" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" opacity="0.85">normal</text>
+
+  <text x="178" y="448" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" opacity="0.65" font-weight="600">PA · neonato termo · referencia</text>
+  <text x="422" y="448" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" opacity="0.65" text-anchor="end" font-weight="600">Contraponto didatico ao RX-SDR</text>
+</svg>

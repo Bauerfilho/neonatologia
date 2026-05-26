@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-b36 desc-b36">
+  <title id="title-b36">Tecnicas LISA e INSURE para administracao de surfactante</title>
+  <desc id="desc-b36">Esquema didatico comparando tecnicas LISA e INSURE para administracao de surfactante em recem-nascido pre-termo. LISA preserva respiracao espontanea durante cateterizacao fina por laringoscopia direta com pronga nasal CPAP mantida. INSURE requer intubacao orotraqueal transitoria com ventilacao por pressao positiva para administracao do surfactante e posterior extubacao.</desc>
+  <defs>
+    <radialGradient id="bg-b36" cx="50%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <radialGradient id="skin-b36" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#f7e0d2"/>
+      <stop offset="100%" stop-color="#dab09a"/>
+    </radialGradient>
+    <linearGradient id="lisa-panel-b36" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(95,207,128,0.10)"/>
+      <stop offset="100%" stop-color="rgba(95,207,128,0.04)"/>
+    </linearGradient>
+    <linearGradient id="insure-panel-b36" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(240,180,64,0.10)"/>
+      <stop offset="100%" stop-color="rgba(240,180,64,0.04)"/>
+    </linearGradient>
+    <linearGradient id="surfactant-b36" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff6d8" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffd06a" stop-opacity="0.85"/>
+    </linearGradient>
+    <marker id="arrow-b36" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff8a7a"/>
+    </marker>
+    <marker id="arrow-amber-b36" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f0b440"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="480" fill="url(#bg-b36)"/>
+
+  <rect x="22" y="22" width="676" height="40" rx="10" fill="rgba(108,180,232,0.08)" stroke="rgba(108,180,232,0.40)" stroke-width="1"/>
+  <text x="360" y="48" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="0.6">SURFACTANTE NO RNPT · LISA vs INSURE</text>
+
+  <rect x="22" y="78" width="332" height="378" rx="16" fill="url(#lisa-panel-b36)" stroke="rgba(95,207,128,0.42)" stroke-width="1.2"/>
+  <rect x="366" y="78" width="332" height="378" rx="16" fill="url(#insure-panel-b36)" stroke="rgba(240,180,64,0.42)" stroke-width="1.2"/>
+
+  <text x="188" y="104" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="0.4">LISA</text>
+  <text x="188" y="122" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle" opacity="0.85">Less Invasive Surfactant Administration</text>
+
+  <text x="532" y="104" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="0.4">INSURE</text>
+  <text x="532" y="122" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" text-anchor="middle" opacity="0.85">INtubation · SURfactant · Extubation</text>
+
+  <g transform="translate(0,0)">
+    <ellipse cx="155" cy="240" rx="48" ry="56" fill="url(#skin-b36)" stroke="#a37e64" stroke-width="1.4"/>
+    <path d="M 145 196 Q 155 192 165 196" fill="none" stroke="#7a5a48" stroke-width="1.2"/>
+
+    <ellipse cx="142" cy="234" rx="5" ry="3" fill="#fafafa" stroke="#7a5a48" stroke-width="0.7"/>
+    <circle cx="142" cy="234" r="1.8" fill="#3a5560"/>
+    <ellipse cx="168" cy="234" rx="5" ry="3" fill="#fafafa" stroke="#7a5a48" stroke-width="0.7"/>
+    <circle cx="168" cy="234" r="1.8" fill="#3a5560"/>
+
+    <path d="M 155 244 Q 150 256 152 266" fill="none" stroke="#a37e64" stroke-width="1.2"/>
+    <ellipse cx="149" cy="266" rx="2" ry="1.4" fill="#5a3a2a"/>
+    <ellipse cx="158" cy="266" rx="2" ry="1.4" fill="#5a3a2a"/>
+
+    <path d="M 145 280 Q 155 286 165 280" fill="none" stroke="#8a4030" stroke-width="1.2" stroke-linecap="round"/>
+
+    <ellipse cx="143" cy="263" rx="3" ry="2.2" fill="rgba(108,180,232,0.35)" stroke="#6cb4e8" stroke-width="1"/>
+    <ellipse cx="167" cy="263" rx="3" ry="2.2" fill="rgba(108,180,232,0.35)" stroke="#6cb4e8" stroke-width="1"/>
+    <path d="M 138 263 Q 110 258 88 262 Q 70 266 62 282 Q 60 296 72 304" fill="none" stroke="#6cb4e8" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M 172 263 Q 200 258 222 262 Q 240 266 248 282 Q 250 296 238 304" fill="none" stroke="#6cb4e8" stroke-width="2.2" stroke-linecap="round"/>
+
+    <rect x="56" y="306" width="20" height="16" rx="3" fill="#3d5a6e" stroke="#5a7a8c" stroke-width="1"/>
+    <text x="66" y="318" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="7" text-anchor="middle" font-weight="600">CPAP</text>
+
+    <g transform="translate(218,168)">
+      <rect x="0" y="0" width="44" height="14" rx="2" fill="#1f3645" stroke="#3d5a6e" stroke-width="1"/>
+      <path d="M 44 0 L 56 7 L 44 14 z" fill="#3d5a6e" stroke="#5a7a8c" stroke-width="0.8"/>
+      <path d="M 0 7 L -18 7 L -18 36" fill="none" stroke="#3d5a6e" stroke-width="2"/>
+      <text x="22" y="10" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="7" text-anchor="middle" font-weight="600">LARINGOSCOPIO</text>
+    </g>
+
+    <path d="M 235 215 L 195 240 L 180 252 L 165 268 L 158 282"
+          fill="none" stroke="#ff6b5a" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="0"/>
+    <circle cx="158" cy="282" r="2.2" fill="#ff6b5a"/>
+
+    <ellipse cx="158" cy="282" rx="6" ry="4" fill="url(#surfactant-b36)" opacity="0.85"/>
+    <path d="M 158 286 Q 154 296 158 305 Q 162 296 158 286 z" fill="url(#surfactant-b36)" opacity="0.75"/>
+
+    <text x="248" y="216" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="600">Cateter fino</text>
+    <text x="248" y="227" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="600">flexivel</text>
+
+    <rect x="40" y="345" width="296" height="32" rx="8" fill="rgba(95,207,128,0.12)" stroke="rgba(95,207,128,0.40)" stroke-width="1"/>
+    <text x="188" y="358" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.3">RESPIRACAO ESPONTANEA PRESERVADA</text>
+    <text x="188" y="370" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" opacity="0.85">CPAP nasal mantido durante todo o procedimento</text>
+
+    <rect x="40" y="388" width="296" height="56" rx="8" fill="rgba(255,107,90,0.08)" stroke="rgba(255,107,90,0.32)" stroke-width="1"/>
+    <text x="50" y="404" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700">PASSOS</text>
+    <text x="50" y="418" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9">1 · CPAP nasal estabelecido</text>
+    <text x="50" y="430" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9">2 · laringoscopia direta · cateter fino na traqueia</text>
+    <text x="50" y="442" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9">3 · surfactante em bolus · cateter retirado · CPAP segue</text>
+  </g>
+
+  <g transform="translate(344,0)">
+    <ellipse cx="155" cy="240" rx="48" ry="56" fill="url(#skin-b36)" stroke="#a37e64" stroke-width="1.4"/>
+    <path d="M 145 196 Q 155 192 165 196" fill="none" stroke="#7a5a48" stroke-width="1.2"/>
+
+    <ellipse cx="142" cy="234" rx="5" ry="3" fill="#fafafa" stroke="#7a5a48" stroke-width="0.7"/>
+    <circle cx="142" cy="234" r="1.6" fill="#3a5560"/>
+    <ellipse cx="168" cy="234" rx="5" ry="3" fill="#fafafa" stroke="#7a5a48" stroke-width="0.7"/>
+    <circle cx="168" cy="234" r="1.6" fill="#3a5560"/>
+
+    <path d="M 155 244 Q 150 256 152 266" fill="none" stroke="#a37e64" stroke-width="1.2"/>
+    <ellipse cx="149" cy="266" rx="2" ry="1.4" fill="#5a3a2a"/>
+    <ellipse cx="158" cy="266" rx="2" ry="1.4" fill="#5a3a2a"/>
+
+    <ellipse cx="156" cy="280" rx="10" ry="3" fill="#3a5560" stroke="#1f3645" stroke-width="1"/>
+
+    <rect x="151" y="170" width="10" height="116" rx="2" fill="#e7e0d0" stroke="#a37e64" stroke-width="1" opacity="0.92"/>
+    <circle cx="156" cy="170" r="3" fill="#a37e64"/>
+
+    <ellipse cx="156" cy="160" rx="14" ry="6" fill="rgba(240,180,64,0.30)" stroke="#f0b440" stroke-width="1.2"/>
+    <path d="M 156 154 L 156 144 L 142 130 L 156 138 L 170 130 L 156 144" fill="none" stroke="#f0b440" stroke-width="1.4" stroke-linecap="round"/>
+
+    <ellipse cx="156" cy="225" rx="8" ry="6" fill="url(#surfactant-b36)" opacity="0.85"/>
+    <path d="M 156 232 Q 152 250 156 268 Q 160 250 156 232 z" fill="url(#surfactant-b36)" opacity="0.65"/>
+
+    <text x="220" y="160" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700">VPP / Ambu</text>
+    <line x1="218" y1="160" x2="174" y2="158" stroke="#f0b440" stroke-width="1.2" marker-end="url(#arrow-amber-b36)"/>
+
+    <text x="220" y="220" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700">TOT</text>
+    <line x1="218" y1="220" x2="170" y2="228" stroke="#f0b440" stroke-width="1.2" marker-end="url(#arrow-amber-b36)"/>
+
+    <text x="220" y="282" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700">Surfactante</text>
+    <text x="220" y="294" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700">via tubo</text>
+    <line x1="218" y1="282" x2="170" y2="266" stroke="#f0b440" stroke-width="1.2" marker-end="url(#arrow-amber-b36)"/>
+
+    <g transform="translate(40,310)">
+      <rect x="0" y="0" width="86" height="22" rx="6" fill="rgba(108,180,232,0.14)" stroke="rgba(108,180,232,0.45)" stroke-width="1"/>
+      <text x="43" y="14" fill="#6cb4e8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">1 · INtubar</text>
+
+      <path d="M 90 11 L 102 11" stroke="#f0b440" stroke-width="1.2" marker-end="url(#arrow-amber-b36)"/>
+
+      <rect x="104" y="0" width="86" height="22" rx="6" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.45)" stroke-width="1"/>
+      <text x="147" y="14" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">2 · SURfactante</text>
+
+      <path d="M 194 11 L 206 11" stroke="#f0b440" stroke-width="1.2" marker-end="url(#arrow-amber-b36)"/>
+
+      <rect x="208" y="0" width="86" height="22" rx="6" fill="rgba(95,207,128,0.14)" stroke="rgba(95,207,128,0.45)" stroke-width="1"/>
+      <text x="251" y="14" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">3 · Extubar</text>
+    </g>
+
+    <rect x="40" y="345" width="296" height="32" rx="8" fill="rgba(240,180,64,0.12)" stroke="rgba(240,180,64,0.40)" stroke-width="1"/>
+    <text x="188" y="358" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.3">VENTILACAO INVASIVA TRANSITORIA</text>
+    <text x="188" y="370" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" opacity="0.85">VPP por tubo orotraqueal durante o bolus</text>
+
+    <rect x="40" y="388" width="296" height="56" rx="8" fill="rgba(255,107,90,0.08)" stroke="rgba(255,107,90,0.32)" stroke-width="1"/>
+    <text x="50" y="404" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700">PASSOS</text>
+    <text x="50" y="418" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9">1 · intubacao orotraqueal · VPP iniciada</text>
+    <text x="50" y="430" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9">2 · surfactante em bolus pelo TOT</text>
+    <text x="50" y="442" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9">3 · extubacao precoce · transicao para CPAP</text>
+  </g>
+
+  <rect x="22" y="464" width="676" height="12" rx="6" fill="rgba(255,107,90,0.08)" stroke="rgba(255,107,90,0.30)" stroke-width="0.8"/>
+  <text x="360" y="474" fill="#ff8a7a" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.3">LISA evita ventilacao invasiva mesmo brevemente · vantagem no RNPT com drive respiratorio adequado</text>
+</svg>

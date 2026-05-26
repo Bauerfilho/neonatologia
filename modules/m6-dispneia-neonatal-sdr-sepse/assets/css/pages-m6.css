@@ -1,0 +1,948 @@
+/* === Componentes específicos M6 — Dispneia neonatal SDR + sepse precoce === */
+/* Não modificam tokens canônicos, apenas adicionam componentes derivados. */
+
+/* ============================================================ */
+/* prefers-reduced-motion para animações SVG B37                */
+/* ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  svg animate,
+  svg animateTransform,
+  svg animateMotion {
+    display: none;
+  }
+}
+
+/* ============================================================ */
+/* V44 — Vinheta clínica Caso Firmindo (case-anchor existente)  */
+/* (já coberto por .case-anchor no chassi components.css)       */
+/* ============================================================ */
+.case-anchor--firmindo .case-anchor__title { color: var(--accent-coral); }
+.case-anchor--firmindo .case-anchor__title::before {
+  content: "🍼 ";
+  margin-right: 4px;
+}
+
+/* ============================================================ */
+/* V45 — Fluxograma 3 perguntas + 5 doenças (cards verticais)   */
+/* ============================================================ */
+.three-questions {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+}
+.three-questions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.three-questions__q {
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border-top: 4px solid var(--accent-coral);
+  text-align: center;
+}
+.three-questions__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent-coral);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+.three-questions__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-2);
+}
+.three-questions__desc {
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+}
+.diseases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.disease-card {
+  padding: var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--color-info-500);
+}
+.disease-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-1);
+}
+.disease-card__tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+.disease-card__weight {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent-coral);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.disease-card--star { border-left-color: var(--accent-coral); }
+.disease-card--star .disease-card__name { color: var(--accent-coral); }
+@media (max-width: 720px) {
+  .three-questions__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================ */
+/* V46 — Esquema alvéolo aberto/fechado (SVG pareado)           */
+/* ============================================================ */
+.alveolus-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+}
+.alveolus-compare__side {
+  padding: var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  text-align: center;
+}
+.alveolus-compare__side--ok { border-top: 4px solid var(--color-success-500); }
+.alveolus-compare__side--bad { border-top: 4px solid var(--color-danger-500); }
+.alveolus-compare__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-70);
+  margin-bottom: var(--space-2);
+}
+.alveolus-compare__side--ok .alveolus-compare__label { color: var(--color-success-500); }
+.alveolus-compare__side--bad .alveolus-compare__label { color: var(--color-danger-500); }
+.alveolus-compare__svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto var(--space-2);
+}
+.alveolus-compare__desc {
+  font-size: var(--fs-xs);
+  color: var(--ink-90);
+}
+.alveolus-compare__note {
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--accent-coral-soft);
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent-coral);
+  text-align: center;
+  letter-spacing: 0.06em;
+  grid-column: 1 / -1;
+}
+@media (max-width: 640px) {
+  .alveolus-compare { grid-template-columns: 1fr; }
+}
+
+/* ============================================================ */
+/* V47 — Pique × Chique pareados                                */
+/* ============================================================ */
+.pique-chique {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.pique-chique__col {
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-soft);
+  display: grid;
+  gap: var(--space-2);
+}
+.pique-chique__col--pique { border-left: 4px solid var(--color-success-500); }
+.pique-chique__col--chique { border-left: 4px solid var(--color-danger-500); }
+.pique-chique__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.pique-chique__col--pique .pique-chique__title { color: var(--color-success-500); }
+.pique-chique__col--chique .pique-chique__title { color: var(--color-danger-500); }
+.pique-chique__chain {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+  line-height: 1.6;
+}
+.pique-chique__lung {
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-sm);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-align: center;
+}
+.pique-chique__col--pique .pique-chique__lung { color: var(--color-success-500); }
+.pique-chique__col--chique .pique-chique__lung { color: var(--color-danger-500); }
+@media (max-width: 640px) {
+  .pique-chique { grid-template-columns: 1fr; }
+}
+
+/* ============================================================ */
+/* V48 + V58 — Cards de fatores de risco numerados              */
+/* ============================================================ */
+.risk-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.risk-card {
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-soft);
+  display: grid;
+  gap: var(--space-2);
+  position: relative;
+}
+.risk-card__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--accent-coral);
+  line-height: 1;
+}
+.risk-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  font-weight: 600;
+}
+.risk-card__why {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+.risk-card__badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  background: var(--color-warning-100);
+  color: var(--color-warning-500);
+  border: 1px solid var(--color-warning-border);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.risk-card__badge--big {
+  background: var(--color-danger-100);
+  color: var(--color-danger-500);
+  border-color: var(--color-danger-border);
+}
+
+/* ============================================================ */
+/* V51 — Fluxograma terapêutico SDR (cascata vertical)          */
+/* ============================================================ */
+.therapy-flow {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  display: grid;
+  gap: var(--space-3);
+}
+.therapy-flow__node {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-medium);
+  position: relative;
+}
+.therapy-flow__node + .therapy-flow__node::before {
+  content: "▼";
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--ink-50);
+  font-size: 1rem;
+}
+.therapy-flow__node--cpap { border-left: 4px solid var(--color-success-500); }
+.therapy-flow__node--surfactant { border-left: 4px solid var(--color-warning-500); background: var(--color-warning-100); }
+.therapy-flow__node--vm { border-left: 4px solid var(--color-danger-500); background: var(--color-danger-100); }
+.therapy-flow__step {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-50);
+  margin-bottom: var(--space-1);
+}
+.therapy-flow__node--cpap .therapy-flow__step { color: var(--color-success-500); }
+.therapy-flow__node--surfactant .therapy-flow__step { color: var(--color-warning-500); }
+.therapy-flow__node--vm .therapy-flow__step { color: var(--color-danger-500); }
+.therapy-flow__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-1);
+}
+.therapy-flow__body {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+
+/* ============================================================ */
+/* V52, V60 — quadro definitório (apneia, I/T)                  */
+/* ============================================================ */
+.def-box {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: linear-gradient(155deg, var(--bg-elev-2), var(--bg-elev-1));
+  border: 1px solid var(--accent-coral);
+  border-radius: var(--r-lg);
+  position: relative;
+}
+.def-box__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  margin-bottom: var(--space-3);
+}
+.def-box__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--ink-100);
+  margin-bottom: var(--space-3);
+}
+.def-box__crit {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
+}
+.def-box__crit-item {
+  padding: var(--space-3);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--accent-coral);
+}
+.def-box__or {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent-coral);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: var(--space-1) 0;
+}
+.def-box__contrast {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  background: var(--color-info-100);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--color-info-500);
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+.def-box__contrast strong { color: var(--color-info-500); }
+
+/* I/T formula visual */
+.it-formula {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xl);
+  text-align: center;
+  margin: var(--space-3) 0;
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  color: var(--ink-100);
+}
+.it-formula__highlight { color: var(--accent-coral); font-weight: 700; }
+.it-formula__divisor {
+  display: inline-block;
+  margin: 0 var(--space-2);
+  font-size: 1.4em;
+  color: var(--ink-50);
+}
+
+/* ============================================================ */
+/* V55 — Tabela comparativa precoce × tardia 4 eixos            */
+/* (já coberto por .comparison no chassi)                       */
+/* ============================================================ */
+
+/* ============================================================ */
+/* V56 — Lista visual manifestações sistêmicas                  */
+/* ============================================================ */
+.manifestations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+.manifestation {
+  padding: var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--color-info-500);
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: var(--space-2);
+  align-items: center;
+}
+.manifestation__icon {
+  width: 32px; height: 32px;
+  border-radius: var(--r-pill);
+  background: var(--color-info-100);
+  color: var(--color-info-500);
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.manifestation__name {
+  font-size: var(--fs-sm);
+  color: var(--ink-100);
+}
+.manifestation--highlight { border-left-color: var(--accent-coral); background: var(--accent-coral-soft); }
+.manifestation--highlight .manifestation__icon { background: rgba(255, 107, 90, 0.20); color: var(--accent-coral); }
+
+/* ============================================================ */
+/* V57 — Cards de agentes microbiológicos                       */
+/* ============================================================ */
+.microbes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+.microbe {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border-top: 3px solid var(--color-info-500);
+}
+.microbe--early { border-top-color: var(--accent-coral); }
+.microbe--late { border-top-color: var(--color-info-500); }
+.microbe__name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--ink-100);
+  margin-bottom: var(--space-1);
+}
+.microbe__role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-50);
+  margin-bottom: var(--space-1);
+}
+.microbe__note {
+  font-size: var(--fs-xs);
+  color: var(--ink-90);
+}
+.microbe__badge {
+  display: inline-block;
+  margin-top: var(--space-1);
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  background: var(--color-warning-100);
+  color: var(--color-warning-500);
+  border-radius: var(--r-pill);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ============================================================ */
+/* V61 — Árvore decisória de culturas (cascata por ramo)        */
+/* ============================================================ */
+.culture-tree {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.culture-branch {
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+.culture-branch--always { border-left: 4px solid var(--color-success-500); }
+.culture-branch--almost { border-left: 4px solid var(--color-warning-500); }
+.culture-branch--conditional { border-left: 4px solid var(--ink-70); }
+.culture-branch__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+.culture-branch--always .culture-branch__label { background: var(--color-success-100); color: var(--color-success-500); }
+.culture-branch--almost .culture-branch__label { background: var(--color-warning-100); color: var(--color-warning-500); }
+.culture-branch--conditional .culture-branch__label { background: var(--bg-elev-3); color: var(--ink-70); }
+.culture-branch__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+.culture-branch__body {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+
+/* ============================================================ */
+/* V64 — Cards de doses pediátricas reusáveis                   */
+/* ============================================================ */
+.doses-neonatais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.dose-card {
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--accent-coral);
+  display: grid;
+  gap: var(--space-2);
+}
+.dose-card__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  font-weight: 600;
+}
+.dose-card__name em { color: var(--ink-70); font-size: 0.85em; font-style: normal; }
+.dose-card__dose {
+  font-family: var(--font-mono);
+  font-size: var(--fs-md);
+  color: var(--accent-coral);
+  font-weight: 700;
+}
+.dose-card__freq {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+}
+.dose-card__note {
+  font-size: var(--fs-xs);
+  color: var(--ink-90);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border-soft);
+}
+
+/* ============================================================ */
+/* V65 — Fluxograma decisório GBS protocolo (denso)             */
+/* ============================================================ */
+.gbs-flow {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-lg);
+  display: grid;
+  gap: var(--space-4);
+}
+.gbs-flow__entry {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-3);
+  border-radius: var(--r-md);
+  font-family: var(--font-display);
+  text-align: center;
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  border: 1px solid var(--border-strong);
+}
+.gbs-flow__question {
+  padding: var(--space-3);
+  background: var(--accent-coral-soft);
+  border-radius: var(--r-md);
+  font-family: var(--font-display);
+  text-align: center;
+  color: var(--ink-100);
+  border: 1px dashed var(--accent-coral);
+  font-style: italic;
+}
+.gbs-flow__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+.gbs-flow__branch {
+  padding: var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: var(--space-2);
+}
+.gbs-flow__branch-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  text-align: center;
+  font-weight: 700;
+}
+.gbs-flow__outcome {
+  padding: var(--space-3);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  color: var(--ink-100);
+}
+.gbs-flow__outcome--routine { border-left: 4px solid var(--color-success-500); background: var(--color-success-100); }
+.gbs-flow__outcome--observe { border-left: 4px solid var(--color-warning-500); background: var(--color-warning-100); }
+.gbs-flow__outcome--abx { border-left: 4px solid var(--color-danger-500); background: var(--color-danger-100); }
+.gbs-flow__outcome strong { display: block; margin-bottom: var(--space-1); font-family: var(--font-display); }
+@media (max-width: 720px) {
+  .gbs-flow__split { grid-template-columns: 1fr; }
+}
+
+/* ============================================================ */
+/* V66 — Mapa cruzado Firmindo (estilo M5 joao-cross)           */
+/* ============================================================ */
+.firmindo-cross {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-lg);
+}
+.firmindo-cross__patient {
+  text-align: center;
+  padding: var(--space-3);
+  margin: 0 auto var(--space-4);
+  max-width: 360px;
+  background: var(--accent-coral-soft);
+  border: 1px solid var(--accent-coral);
+  border-radius: var(--r-md);
+}
+.firmindo-cross__patient strong {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--accent-coral);
+}
+.firmindo-cross__axes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+.firmindo-cross__axis {
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: var(--space-2);
+}
+.firmindo-cross__axis--sdr { border-top: 4px solid var(--color-info-500); }
+.firmindo-cross__axis--sepsis { border-top: 4px solid var(--accent-coral); }
+.firmindo-cross__axis-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.firmindo-cross__axis--sdr .firmindo-cross__axis-label { color: var(--color-info-500); }
+.firmindo-cross__axis--sepsis .firmindo-cross__axis-label { color: var(--accent-coral); }
+.firmindo-cross__axis-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  font-weight: 600;
+}
+.firmindo-cross__chain {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+  line-height: 1.5;
+}
+.firmindo-cross__decision {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border-left: 4px solid var(--accent-coral);
+  border-radius: var(--r-md);
+  font-family: var(--font-display);
+  text-align: center;
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+}
+.firmindo-cross__decision strong { color: var(--accent-coral); }
+.firmindo-cross__error {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-danger-100);
+  border-left: 4px solid var(--color-danger-500);
+  border-radius: var(--r-md);
+  font-family: var(--font-mono);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--ink-100);
+}
+.firmindo-cross__error strong { color: var(--color-danger-500); text-transform: uppercase; letter-spacing: 0.08em; }
+@media (max-width: 640px) {
+  .firmindo-cross__axes { grid-template-columns: 1fr; }
+}
+
+/* ============================================================ */
+/* V67 — Pegadinhas grid (já coberto por .trap-grid M5)         */
+/* ============================================================ */
+
+/* ============================================================ */
+/* V68 — Timeline M6                                            */
+/* ============================================================ */
+.timeline-m6 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-2);
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-soft);
+}
+.timeline-m6__node {
+  padding: var(--space-2);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-sm);
+  text-align: center;
+  border: 1px solid var(--border-soft);
+  font-size: 0.7rem;
+}
+.timeline-m6__node--firmindo {
+  border: 2px solid var(--accent-coral);
+  background: var(--accent-coral-soft);
+}
+.timeline-m6__num {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent-coral);
+  font-size: 0.78rem;
+}
+.timeline-m6__what {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink-90);
+  line-height: 1.2;
+}
+@media (max-width: 720px) {
+  .timeline-m6 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================================ */
+/* Tríade RX SDR — par lado a lado (B33 + B34)                  */
+/* ============================================================ */
+.rx-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin: var(--space-5) 0;
+}
+.rx-compare .figure-clinical { margin: 0; }
+@media (max-width: 720px) {
+  .rx-compare { grid-template-columns: 1fr; }
+}
+
+/* ============================================================ */
+/* Block "Saiba mais" (LISA/MIST)                               */
+/* ============================================================ */
+.know-more {
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--color-info-border);
+  border-left: 4px solid var(--color-info-500);
+  border-radius: var(--r-md);
+}
+.know-more__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-info-500);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.know-more__label::before { content: "★"; font-size: 1rem; }
+.know-more__body { font-size: var(--fs-sm); color: var(--ink-90); }
+.know-more__body p:last-child { margin-bottom: 0; }
+
+/* ============================================================ */
+/* CARECE-CONSENSO badge                                        */
+/* ============================================================ */
+.consensus-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 2px 10px;
+  background: var(--color-warning-100);
+  border: 1px solid var(--color-warning-border);
+  color: var(--color-warning-500);
+  border-radius: var(--r-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 var(--space-1);
+  vertical-align: baseline;
+}
+.consensus-flag::before { content: "⚠"; }
+
+/* ============================================================ */
+/* 5 lições centrais (síntese 6.14)                             */
+/* ============================================================ */
+.lessons-list {
+  margin: var(--space-5) 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-3);
+}
+.lessons-list li {
+  padding: var(--space-4);
+  background: linear-gradient(155deg, var(--bg-elev-2), var(--bg-elev-1));
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--accent-coral);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+.lessons-list__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--accent-coral);
+  line-height: 1;
+}
+.lessons-list__body { color: var(--ink-100); font-size: var(--fs-sm); }
+.lessons-list__body strong { color: var(--ink-100); }
+
+/* ============================================================ */
+/* .bauer-revisable — divergência institucional SBP × AAP (6.12)*/
+/* Reusa padrão M5 §5.6 (Apgar dual)                            */
+/* ============================================================ */
+.bauer-revisable {
+  margin: var(--space-5) 0;
+  border: 1px dashed var(--accent-coral);
+  border-radius: var(--r-lg);
+  background: var(--bg-elev-1);
+  overflow: hidden;
+}
+.bauer-revisable__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent-coral-soft);
+  border-bottom: 1px solid var(--accent-coral);
+  flex-wrap: wrap;
+}
+.bauer-revisable__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  font-weight: 700;
+}
+.bauer-revisable__label::before { content: "⚖"; font-size: 1rem; }
+.bauer-revisable__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px var(--space-3);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-pill);
+  color: var(--ink-90);
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  cursor: pointer;
+}
+.bauer-revisable__toggle::after {
+  content: "▾";
+  transition: transform 0.2s;
+}
+.bauer-revisable[data-expanded="true"] .bauer-revisable__toggle::after { transform: rotate(180deg); }
+.bauer-revisable__voices {
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+}
+.bauer-revisable[data-expanded="false"] .bauer-revisable__voices { display: none; }
+.voice {
+  padding: var(--space-4);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--border-medium);
+  background: var(--bg-elev-2);
+}
+.voice__name {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+}
+.voice--sbp { border-left-color: var(--color-success-500); background: var(--color-success-100); }
+.voice--sbp .voice__name { color: var(--color-success-500); }
+.voice--aap-cdc { border-left-color: var(--color-danger-500); }
+.voice--aap-cdc .voice__name { color: var(--color-danger-500); }
+.voice--aap-kaiser { border-left-color: var(--color-info-500); }
+.voice--aap-kaiser .voice__name { color: var(--color-info-500); }
+.voice ul { margin: 0; padding-left: var(--space-5); }
+.voice li { font-size: var(--fs-sm); }
+.voice p { margin: 0 0 var(--space-2); font-size: var(--fs-sm); color: var(--ink-100); }
+.voice p:last-child { margin-bottom: 0; }
+.voice__source {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  font-style: italic;
+}

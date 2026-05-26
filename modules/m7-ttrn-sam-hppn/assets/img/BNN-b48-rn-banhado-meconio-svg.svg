@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="b48-title b48-desc">
+  <title id="b48-title">Recém-nascido banhado em mecônio com pele, cordão e unhas tingidos</title>
+  <desc id="b48-desc">Esquema de recém-nascido em decúbito dorsal sobre mesa de parto com pele de coloração amarelo-esverdeada característica de impregnação por mecônio, cordão umbilical pigmentado verde-amarelado e unhas tingidas. Achado clínico que sugere aspiração de mecônio antes mesmo da confirmação radiológica.</desc>
+  <defs>
+    <radialGradient id="bg-b48" cx="50%" cy="42%" r="80%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="65%" stop-color="#0f1f2c"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+
+    <!-- Mesa de parto -->
+    <linearGradient id="table-b48" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3540"/>
+      <stop offset="100%" stop-color="#141d27"/>
+    </linearGradient>
+    <linearGradient id="sheet-b48" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(243,237,224,0.18)"/>
+      <stop offset="100%" stop-color="rgba(243,237,224,0.06)"/>
+    </linearGradient>
+
+    <!-- Pele tingida de mecônio: gradiente amarelo-esverdeado -->
+    <linearGradient id="skin-meconium" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8b878"/>
+      <stop offset="40%" stop-color="#a8a058"/>
+      <stop offset="100%" stop-color="#6a7038"/>
+    </linearGradient>
+    <radialGradient id="skin-highlight" cx="40%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="rgba(220,210,140,0.55)"/>
+      <stop offset="100%" stop-color="rgba(220,210,140,0)"/>
+    </radialGradient>
+
+    <!-- Manchas verdes intensas espalhadas pela pele -->
+    <radialGradient id="meconium-blotch" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="rgba(85,100,40,0.7)"/>
+      <stop offset="100%" stop-color="rgba(85,100,40,0)"/>
+    </radialGradient>
+
+    <!-- Cordão umbilical pigmentado -->
+    <linearGradient id="cord-meconium" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8a8838"/>
+      <stop offset="50%" stop-color="#a0a04a"/>
+      <stop offset="100%" stop-color="#6a6028"/>
+    </linearGradient>
+
+    <marker id="arrow-coral-b48" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+  </defs>
+
+  <rect width="600" height="480" fill="url(#bg-b48)"/>
+
+  <!-- Tag-topo: alerta clínico -->
+  <g transform="translate(20,14)">
+    <rect width="560" height="36" rx="10" fill="rgba(255,107,90,0.16)" stroke="rgba(255,107,90,0.55)" stroke-width="1.2"/>
+    <circle cx="20" cy="18" r="5.5" fill="#ff6b5a"/>
+    <text x="36" y="16" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="700" fill="#ff8a7a" letter-spacing="0.5">ACHADO CLÍNICO</text>
+    <text x="36" y="30" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#f3ede0">RN BANHADO EM MECÔNIO · suspeita de aspiração ANTES da imagem</text>
+  </g>
+
+  <!-- Mesa de parto -->
+  <g transform="translate(60,330)">
+    <rect width="480" height="74" rx="6" fill="url(#table-b48)" stroke="rgba(243,237,224,0.14)" stroke-width="1"/>
+    <!-- Lençol/manta -->
+    <rect x="14" y="10" width="452" height="46" rx="4" fill="url(#sheet-b48)"/>
+    <!-- Pernas/suporte da mesa -->
+    <rect x="32" y="74" width="8" height="32" fill="#2a3540"/>
+    <rect x="440" y="74" width="8" height="32" fill="#2a3540"/>
+  </g>
+
+  <!-- ===================== RN ===================== -->
+  <g transform="translate(300,260)">
+    <!-- Corpo (tronco) -->
+    <path d="M -60 -30 Q -64 -10, -58 30 Q -50 60, -30 72 Q 0 80, 30 72 Q 50 60, 58 30 Q 64 -10, 60 -30 Q 30 -42, 0 -42 Q -30 -42, -60 -30 z"
+          fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="1"/>
+    <ellipse cx="-10" cy="-20" rx="40" ry="30" fill="url(#skin-highlight)"/>
+
+    <!-- Manchas de mecônio espalhadas -->
+    <ellipse cx="-30" cy="0" rx="20" ry="14" fill="url(#meconium-blotch)"/>
+    <ellipse cx="22" cy="-8" rx="18" ry="12" fill="url(#meconium-blotch)"/>
+    <ellipse cx="-10" cy="40" rx="22" ry="15" fill="url(#meconium-blotch)"/>
+    <ellipse cx="40" cy="32" rx="14" ry="10" fill="url(#meconium-blotch)"/>
+    <ellipse cx="-40" cy="48" rx="12" ry="9" fill="url(#meconium-blotch)"/>
+
+    <!-- Cabeça -->
+    <ellipse cx="-90" cy="0" rx="36" ry="40" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="1"/>
+    <ellipse cx="-95" cy="-10" rx="22" ry="18" fill="url(#skin-highlight)"/>
+    <!-- Mancha de mecônio na face -->
+    <ellipse cx="-78" cy="10" rx="14" ry="10" fill="url(#meconium-blotch)"/>
+    <ellipse cx="-100" cy="20" rx="10" ry="7" fill="url(#meconium-blotch)"/>
+    <!-- Olhos fechados -->
+    <path d="M -104 -5 Q -98 -2, -92 -5" stroke="#3a3818" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <path d="M -90 -5 Q -84 -2, -78 -5" stroke="#3a3818" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <!-- Narina sugerida -->
+    <ellipse cx="-90" cy="6" rx="2" ry="1.2" fill="#5a5828"/>
+    <!-- Boca -->
+    <path d="M -98 18 Q -90 22, -82 18" stroke="#5a5828" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <!-- Orelha -->
+    <path d="M -56 -8 Q -50 -4, -54 8" stroke="#5a5828" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+    <!-- Braço esquerdo (lado da cabeça) -->
+    <path d="M -58 -25 Q -75 -20, -84 -8 Q -90 4, -78 18"
+          fill="none" stroke="#5a5828" stroke-width="1.2"/>
+    <ellipse cx="-72" cy="-12" rx="14" ry="22" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="1" transform="rotate(-25 -72 -12)"/>
+
+    <!-- Braço direito flexionado -->
+    <ellipse cx="56" cy="-10" rx="14" ry="20" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="1" transform="rotate(20 56 -10)"/>
+    <!-- Mão direita -->
+    <g transform="translate(70,8)">
+      <ellipse cx="0" cy="0" rx="10" ry="7" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="0.9"/>
+      <!-- Unhas tingidas -->
+      <ellipse cx="6" cy="-2" rx="1.8" ry="1.2" fill="#3a4018"/>
+      <ellipse cx="6" cy="1" rx="1.8" ry="1.2" fill="#3a4018"/>
+      <ellipse cx="5" cy="4" rx="1.6" ry="1" fill="#3a4018"/>
+    </g>
+
+    <!-- Pernas -->
+    <ellipse cx="-20" cy="74" rx="16" ry="28" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="1" transform="rotate(-12 -20 74)"/>
+    <ellipse cx="22" cy="76" rx="16" ry="28" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="1" transform="rotate(10 22 76)"/>
+    <!-- Pés -->
+    <g transform="translate(-30,98)">
+      <ellipse cx="0" cy="0" rx="10" ry="6" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="0.9"/>
+      <ellipse cx="-4" cy="-3" rx="1.4" ry="0.9" fill="#3a4018"/>
+      <ellipse cx="-1" cy="-4" rx="1.4" ry="0.9" fill="#3a4018"/>
+      <ellipse cx="2" cy="-4" rx="1.4" ry="0.9" fill="#3a4018"/>
+    </g>
+    <g transform="translate(34,100)">
+      <ellipse cx="0" cy="0" rx="10" ry="6" fill="url(#skin-meconium)" stroke="#5a5828" stroke-width="0.9"/>
+      <ellipse cx="4" cy="-3" rx="1.4" ry="0.9" fill="#3a4018"/>
+      <ellipse cx="1" cy="-4" rx="1.4" ry="0.9" fill="#3a4018"/>
+      <ellipse cx="-2" cy="-4" rx="1.4" ry="0.9" fill="#3a4018"/>
+    </g>
+
+    <!-- Cordão umbilical pigmentado -->
+    <path d="M 0 20 Q 14 38, 28 58 Q 42 78, 56 92"
+          fill="none" stroke="url(#cord-meconium)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Reforço de manchas espessas no cordão -->
+    <circle cx="14" cy="34" r="2.2" fill="#4a4818"/>
+    <circle cx="28" cy="58" r="2.4" fill="#4a4818"/>
+    <circle cx="42" cy="78" r="2" fill="#4a4818"/>
+    <!-- Clamp do cordão -->
+    <rect x="50" y="88" width="14" height="8" rx="2" fill="#a8b2bd" stroke="#4a5560" stroke-width="0.6"/>
+  </g>
+
+  <!-- ============= ANOTAÇÕES ============= -->
+
+  <!-- Pele tingida (esquerda alta) -->
+  <g transform="translate(20,160)">
+    <rect width="120" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.45)" stroke-width="1"/>
+    <text x="10" y="20" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#f0b440">Pele tingida</text>
+    <text x="10" y="34" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="500" fill="#e7e0d0">amarelo-esverdeado</text>
+  </g>
+  <path d="M 140 184 Q 168 210, 198 246" stroke="#ff6b5a" stroke-width="1.6" fill="none" marker-end="url(#arrow-coral-b48)"/>
+
+  <!-- Cordão umbilical (direita média) -->
+  <g transform="translate(454,308)">
+    <rect width="126" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.45)" stroke-width="1"/>
+    <text x="10" y="20" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#f0b440">Cordão umbilical</text>
+    <text x="10" y="34" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="500" fill="#e7e0d0">manchado</text>
+  </g>
+  <path d="M 454 332 Q 420 332, 376 342" stroke="#ff6b5a" stroke-width="1.6" fill="none" marker-end="url(#arrow-coral-b48)"/>
+
+  <!-- Unhas com mecônio (direita inferior) -->
+  <g transform="translate(454,372)">
+    <rect width="126" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.45)" stroke-width="1"/>
+    <text x="10" y="20" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="600" fill="#f0b440">Unhas com mecônio</text>
+    <text x="10" y="34" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="500" fill="#e7e0d0">pigmento subungueal</text>
+  </g>
+  <path d="M 454 395 Q 410 380, 370 360" stroke="#ff6b5a" stroke-width="1.6" fill="none" marker-end="url(#arrow-coral-b48)"/>
+
+  <!-- Boxe rodapé: significado clínico -->
+  <g transform="translate(20,430)">
+    <rect width="560" height="40" rx="9" fill="rgba(108,180,232,0.10)" stroke="rgba(108,180,232,0.40)" stroke-width="1"/>
+    <text x="14" y="18" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="700" fill="#6cb4e8">SIGNIFICADO CLÍNICO</text>
+    <text x="14" y="32" font-family="-apple-system,SF Pro Text,Inter,system-ui,sans-serif" font-size="11" font-weight="500" fill="#f3ede0">Mecônio no líquido amniótico em contato prolongado com a pele · pigmenta vérnix, cordão e leito ungueal</text>
+  </g>
+</svg>

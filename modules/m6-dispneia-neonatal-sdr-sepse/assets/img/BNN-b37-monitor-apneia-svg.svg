@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title-b37 desc-b37">
+  <title id="title-b37">Episodio de apneia significativa em recem-nascido pre-termo</title>
+  <desc id="desc-b37">Esquema de monitor multiparametros bedside neonatal mostrando episodio de apneia significativa em recem-nascido pre-termo. Canal de frequencia respiratoria evidencia pausa respiratoria superior a vinte segundos. Canal de frequencia cardiaca cai abaixo de cem batimentos por minuto caracterizando bradicardia. Canal de saturacao de oxigenio cai abaixo de oitenta e cinco por cento caracterizando dessaturacao. Triade classica do evento apneico significativo.</desc>
+  <defs>
+    <radialGradient id="bg-b37" cx="50%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <linearGradient id="monitor-bezel-b37" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a3340"/>
+      <stop offset="100%" stop-color="#1a2230"/>
+    </linearGradient>
+    <linearGradient id="screen-b37" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06121b"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </linearGradient>
+    <linearGradient id="event-shade-b37" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,93,107,0.22)"/>
+      <stop offset="100%" stop-color="rgba(255,93,107,0.08)"/>
+    </linearGradient>
+    <marker id="arrow-b37" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff5d6b"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="440" fill="url(#bg-b37)"/>
+
+  <rect x="14" y="14" width="692" height="412" rx="20" fill="url(#monitor-bezel-b37)" stroke="#3d4956" stroke-width="1.5"/>
+  <rect x="26" y="26" width="668" height="388" rx="14" fill="url(#screen-b37)" stroke="#1d2a36" stroke-width="1"/>
+
+  <rect x="40" y="40" width="372" height="34" rx="8" fill="rgba(255,93,107,0.14)" stroke="rgba(255,93,107,0.50)" stroke-width="1"/>
+  <circle cx="55" cy="57" r="5" fill="#ff5d6b">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="70" y="62" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="13" font-weight="700" letter-spacing="0.5">EPISODIO DE APNEIA SIGNIFICATIVA</text>
+
+  <text x="680" y="50" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="end" font-weight="600" opacity="0.85">RNPT · 30 sem · DV 8</text>
+  <text x="680" y="64" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="end" opacity="0.65">Bedside · Leito 12</text>
+
+  <g stroke="rgba(243,237,224,0.05)" stroke-width="0.5">
+    <line x1="100" y1="92" x2="680" y2="92"/>
+    <line x1="100" y1="172" x2="680" y2="172"/>
+    <line x1="100" y1="252" x2="680" y2="252"/>
+    <line x1="100" y1="332" x2="680" y2="332"/>
+    <line x1="100" y1="392" x2="680" y2="392"/>
+  </g>
+
+  <rect x="320" y="92" width="120" height="300" fill="url(#event-shade-b37)"/>
+  <line x1="320" y1="92" x2="320" y2="392" stroke="rgba(255,93,107,0.55)" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="440" y1="92" x2="440" y2="392" stroke="rgba(255,93,107,0.55)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="380" y="408" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700" letter-spacing="0.4">EVENTO · &gt; 20 s</text>
+
+  <g transform="translate(0,92)">
+    <rect x="40" y="0" width="56" height="62" rx="8" fill="rgba(95,207,128,0.10)" stroke="rgba(95,207,128,0.35)" stroke-width="1"/>
+    <text x="68" y="14" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">FR</text>
+    <text x="68" y="32" fill="#5fcf80" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="22" text-anchor="middle" font-weight="700">0</text>
+    <text x="68" y="48" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" text-anchor="middle" opacity="0.75">irpm</text>
+    <text x="68" y="58" fill="#7ad6a8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="7" text-anchor="middle" opacity="0.85">40-60</text>
+
+    <path d="M 100 40
+             Q 110 20 120 40 Q 130 60 140 40
+             Q 150 22 160 40 Q 170 58 180 40
+             Q 190 18 200 40 Q 210 62 220 40
+             Q 230 24 240 40 Q 250 56 260 40
+             Q 270 20 280 40 Q 290 60 300 40
+             Q 310 30 320 40
+             L 440 40
+             Q 450 32 460 40 Q 470 18 480 40 Q 490 60 500 40
+             Q 510 22 520 40 Q 530 58 540 40
+             Q 550 26 560 40 Q 570 54 580 40
+             Q 590 24 600 40 Q 610 56 620 40
+             Q 630 28 640 40 Q 650 52 660 40
+             L 680 40"
+          fill="none" stroke="#5fcf80" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="320" y1="40" x2="440" y2="40" stroke="#5fcf80" stroke-width="2.2" opacity="0.9"/>
+  </g>
+
+  <g transform="translate(0,172)">
+    <rect x="40" y="0" width="56" height="62" rx="8" fill="rgba(255,93,107,0.10)" stroke="rgba(255,93,107,0.35)" stroke-width="1"/>
+    <text x="68" y="14" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">FC</text>
+    <text x="68" y="32" fill="#ff5d6b" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="22" text-anchor="middle" font-weight="700">84</text>
+    <text x="68" y="48" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" text-anchor="middle" opacity="0.75">bpm</text>
+    <text x="68" y="58" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="7" text-anchor="middle" opacity="0.85">100-160</text>
+
+    <path d="M 100 28
+             L 112 28 L 116 14 L 120 44 L 124 22 L 128 28
+             L 144 28 L 148 14 L 152 44 L 156 22 L 160 28
+             L 176 28 L 180 14 L 184 44 L 188 22 L 192 28
+             L 208 28 L 212 14 L 216 44 L 220 22 L 224 28
+             L 240 28 L 244 14 L 248 44 L 252 22 L 256 28
+             L 272 28 L 276 14 L 280 44 L 284 22 L 288 28
+             L 304 28 L 308 14 L 312 44 L 316 22 L 320 28
+             L 336 38 L 344 30 L 352 46 L 360 36 L 368 38
+             L 384 42 L 392 36 L 400 48 L 408 40 L 416 42
+             L 432 38
+             L 448 28 L 452 14 L 456 44 L 460 22 L 464 28
+             L 480 28 L 484 14 L 488 44 L 492 22 L 496 28
+             L 512 28 L 516 14 L 520 44 L 524 22 L 528 28
+             L 544 28 L 548 14 L 552 44 L 556 22 L 560 28
+             L 576 28 L 580 14 L 584 44 L 588 22 L 592 28
+             L 608 28 L 612 14 L 616 44 L 620 22 L 624 28
+             L 640 28 L 644 14 L 648 44 L 652 22 L 656 28
+             L 680 28"
+          fill="none" stroke="#ff5d6b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(0,252)">
+    <rect x="40" y="0" width="56" height="62" rx="8" fill="rgba(240,180,64,0.10)" stroke="rgba(240,180,64,0.35)" stroke-width="1"/>
+    <text x="68" y="14" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">SpO2</text>
+    <text x="68" y="32" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="22" text-anchor="middle" font-weight="700">78</text>
+    <text x="68" y="48" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" text-anchor="middle" opacity="0.75">%</text>
+    <text x="68" y="58" fill="#f0b440" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="7" text-anchor="middle" opacity="0.85">90-95</text>
+
+    <path d="M 100 18
+             Q 130 16 160 18
+             Q 200 17 240 18
+             Q 280 18 320 19
+             L 340 28
+             L 360 42
+             L 380 50
+             L 400 48
+             L 420 42
+             L 440 30
+             L 460 22
+             Q 500 19 540 19
+             Q 580 18 620 18
+             Q 660 18 680 18"
+          fill="none" stroke="#f0b440" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="395" cy="50" r="3" fill="#ff5d6b"/>
+  </g>
+
+  <g transform="translate(0,332)">
+    <rect x="40" y="0" width="56" height="50" rx="8" fill="rgba(108,180,232,0.10)" stroke="rgba(108,180,232,0.35)" stroke-width="1"/>
+    <text x="68" y="14" fill="#6cb4e8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">PA</text>
+    <text x="68" y="32" fill="#6cb4e8" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="14" text-anchor="middle" font-weight="700">60/30</text>
+    <text x="68" y="45" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="7" text-anchor="middle" opacity="0.75">mmHg</text>
+
+    <path d="M 100 28 Q 130 22 160 30 Q 200 22 240 30 Q 280 22 320 30 Q 360 24 400 30 Q 440 22 480 30 Q 520 22 560 30 Q 600 22 640 30 Q 670 22 680 28"
+          fill="none" stroke="#6cb4e8" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <text x="40" y="408" fill="#8a8678" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" font-weight="600">0 s</text>
+  <text x="195" y="408" fill="#8a8678" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" font-weight="600">10 s</text>
+  <text x="320" y="408" fill="#8a8678" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" font-weight="600">20 s</text>
+  <text x="440" y="408" fill="#8a8678" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" font-weight="600">40 s</text>
+  <text x="565" y="408" fill="#8a8678" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" font-weight="600">50 s</text>
+  <text x="680" y="408" fill="#8a8678" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" font-weight="600" text-anchor="end">60 s</text>
+
+  <g transform="translate(440,98)">
+    <rect x="6" y="0" width="120" height="20" rx="6" fill="rgba(255,93,107,0.18)" stroke="rgba(255,93,107,0.55)" stroke-width="1"/>
+    <text x="66" y="13" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">APNEIA &gt; 20 s</text>
+    <line x1="-15" y1="14" x2="6" y2="14" stroke="#ff5d6b" stroke-width="1.2" marker-end="url(#arrow-b37)"/>
+  </g>
+
+  <g transform="translate(440,202)">
+    <rect x="6" y="0" width="120" height="20" rx="6" fill="rgba(255,93,107,0.18)" stroke="rgba(255,93,107,0.55)" stroke-width="1"/>
+    <text x="66" y="13" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">BRADICARDIA &lt; 100</text>
+    <line x1="-15" y1="14" x2="6" y2="14" stroke="#ff5d6b" stroke-width="1.2" marker-end="url(#arrow-b37)"/>
+  </g>
+
+  <g transform="translate(440,298)">
+    <rect x="6" y="0" width="120" height="20" rx="6" fill="rgba(255,93,107,0.18)" stroke="rgba(255,93,107,0.55)" stroke-width="1"/>
+    <text x="66" y="13" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" text-anchor="middle" font-weight="700">DESSATURACAO &lt; 85%</text>
+    <line x1="-50" y1="14" x2="6" y2="14" stroke="#ff5d6b" stroke-width="1.2" marker-end="url(#arrow-b37)"/>
+  </g>
+
+  <rect x="572" y="376" width="116" height="32" rx="8" fill="rgba(255,93,107,0.10)" stroke="rgba(255,93,107,0.40)" stroke-width="1"/>
+  <text x="630" y="390" fill="#ff8a92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0.3">TRIADE CLASSICA</text>
+  <text x="630" y="402" fill="#f3ede0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, sans-serif" font-size="8" text-anchor="middle" opacity="0.85">apneia + brady + dessat</text>
+</svg>
