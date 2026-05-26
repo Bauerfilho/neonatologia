@@ -138,7 +138,10 @@ async function loadPage(browser, url, viewport) {
     }
   });
   page.on('pageerror', (err) => errors.push(`pageerror: ${err.message}`));
-  await page.goto(url, { waitUntil: 'networkidle', timeout: 20000 });
+  await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+  // Aguarda SPA hydration (router.js + quiz.js defer) sem esperar networkidle
+  // (SW faz background fetches contínuos em PWA — networkidle nunca cessa)
+  await page.waitForLoadState('load', { timeout: 5000 }).catch(() => {});
   return { ctx, page, errors };
 }
 
