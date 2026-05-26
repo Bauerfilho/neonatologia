@@ -1,0 +1,850 @@
+/* === Pages M12 — Defeitos neonatais / Cirurgia pediátrica === */
+/* Componentes específicos: VACTERL bloco síntese, cascata alcalose 7 passos, */
+/* LAUDO-DUAL (.bauer-revisable), escalonamento tamanho, hierarquia degraus, */
+/* régua coto AAR, Gross A-E, diff defeitos parede, fluxograma conduta AAR. */
+
+/* === Mapa 4 eixos cirúrgicos (P1 hero) === */
+.surgical-map {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: linear-gradient(160deg, var(--bg-elev-2), var(--bg-elev-1));
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-lg);
+}
+.surgical-map__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--accent-coral);
+  margin-bottom: var(--space-3);
+}
+.surgical-map__legend {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .surgical-map__legend { grid-template-columns: 1fr 1fr; }
+}
+.surgical-map__legend li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border-soft);
+}
+.surgical-map__num {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--fs-md);
+  width: 28px; height: 28px;
+  border-radius: var(--r-pill);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.surgical-map__num--1 { background: rgba(108, 180, 232, 0.25); color: #6cb4e8; }
+.surgical-map__num--2 { background: rgba(255, 107, 90, 0.25); color: var(--accent-coral); }
+.surgical-map__num--3 { background: rgba(95, 207, 128, 0.25); color: var(--color-success-500); }
+.surgical-map__num--4 { background: rgba(240, 180, 64, 0.25); color: var(--color-warning-500); }
+
+/* === Escalonamento de tamanho (onfalocele P2) === */
+.scale-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin: var(--space-5) 0;
+}
+.scale-card {
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-soft);
+  border-left: 4px solid var(--accent-coral);
+  border-radius: var(--r-md);
+}
+.scale-card--small { border-left-color: var(--color-success-500); }
+.scale-card--medium { border-left-color: var(--color-warning-500); }
+.scale-card--giant { border-left-color: var(--color-danger-500); }
+.scale-card__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-50);
+  margin-bottom: var(--space-1);
+}
+.scale-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-2);
+}
+.scale-card__body { font-size: var(--fs-sm); color: var(--ink-90); }
+.scale-card--small .scale-card__title { color: var(--color-success-500); }
+.scale-card--medium .scale-card__title { color: var(--color-warning-500); }
+.scale-card--giant .scale-card__title { color: var(--color-danger-500); }
+
+/* === Hierarquia degraus terapêuticos (P4) === */
+.therapy-ladder {
+  margin: var(--space-5) 0;
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+  counter-reset: ladder;
+}
+@media (min-width: 720px) {
+  .therapy-ladder { grid-template-columns: repeat(3, 1fr); }
+}
+.therapy-step {
+  position: relative;
+  padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 36px);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  counter-increment: ladder;
+}
+.therapy-step::before {
+  content: counter(ladder);
+  position: absolute;
+  left: var(--space-3);
+  top: var(--space-3);
+  width: 28px; height: 28px;
+  border-radius: var(--r-pill);
+  background: var(--accent-coral);
+  color: #1a1010;
+  font-family: var(--font-display);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+}
+.therapy-step--ideal { border-left: 4px solid var(--color-success-500); }
+.therapy-step--ideal::before { background: var(--color-success-500); color: #0a1a10; }
+.therapy-step--intermediate { border-left: 4px solid var(--color-warning-500); }
+.therapy-step--intermediate::before { background: var(--color-warning-500); color: #1a1010; }
+.therapy-step--escarification { border-left: 4px solid var(--color-danger-500); }
+.therapy-step--escarification::before { background: var(--color-danger-500); color: #f5e8e8; }
+.therapy-step__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-2);
+  color: var(--ink-100);
+}
+.therapy-step__body { font-size: var(--fs-sm); color: var(--ink-90); }
+
+/* === Diff cards defeitos parede (P5) === */
+.diff-pair {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+  margin: var(--space-5) 0;
+}
+@media (min-width: 720px) {
+  .diff-pair { grid-template-columns: 1fr 1fr; }
+}
+.diff-card {
+  padding: var(--space-4);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-elev-1);
+}
+.diff-card--onfalo {
+  border-left: 4px solid var(--color-info-500);
+  background: linear-gradient(160deg, rgba(108, 180, 232, 0.08), var(--bg-elev-1));
+}
+.diff-card--gastro {
+  border-left: 4px solid var(--accent-coral);
+  background: linear-gradient(160deg, rgba(255, 107, 90, 0.08), var(--bg-elev-1));
+}
+.diff-card__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-2);
+}
+.diff-card--onfalo .diff-card__title { color: var(--color-info-500); }
+.diff-card--gastro .diff-card__title { color: var(--accent-coral); }
+.diff-card dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-1) var(--space-3);
+  margin: 0;
+}
+.diff-card dt {
+  color: var(--ink-50);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.diff-card dd {
+  margin: 0;
+  color: var(--ink-100);
+  font-size: var(--fs-sm);
+}
+
+/* === Gross A-E sequência tipológica (P7) === */
+.gross-grid {
+  margin: var(--space-5) 0;
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .gross-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+}
+.gross-card {
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-md);
+  border-top: 4px solid var(--ink-70);
+}
+.gross-card--c {
+  border-top-color: var(--accent-coral);
+  background: linear-gradient(170deg, rgba(255, 107, 90, 0.10), var(--bg-elev-1));
+  grid-column: span 1;
+}
+@media (min-width: 720px) {
+  .gross-card--c { grid-column: span 2; }
+}
+.gross-card__type {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--accent-coral);
+  line-height: 1;
+}
+.gross-card__freq {
+  display: inline-block;
+  margin-left: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-70);
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  background: var(--bg-elev-2);
+}
+.gross-card--c .gross-card__freq {
+  background: var(--accent-coral);
+  color: #1a1010;
+  font-weight: 700;
+}
+.gross-card__desc {
+  margin-top: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+}
+.gross-card__abdomen {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-50);
+}
+.gross-card__abdomen strong {
+  color: var(--ink-100);
+}
+
+/* === LAUDO-DUAL .bauer-revisable (P9 — D08) === */
+.bauer-revisable {
+  margin: var(--space-5) 0;
+  border: 1px dashed var(--accent-coral);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.bauer-revisable__header {
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent-coral-soft);
+  border-bottom: 1px dashed var(--accent-coral);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-coral-strong);
+  font-weight: 700;
+}
+.bauer-revisable__body {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .bauer-revisable__body { grid-template-columns: 1fr 1fr; }
+}
+.laudo-pane {
+  padding: var(--space-4);
+}
+.laudo-pane--br {
+  background: linear-gradient(160deg, rgba(95, 207, 128, 0.06), var(--bg-elev-1));
+  border-right: 1px dashed var(--border-medium);
+}
+@media (max-width: 719px) {
+  .laudo-pane--br { border-right: 0; border-bottom: 1px dashed var(--border-medium); }
+}
+.laudo-pane--int {
+  background: linear-gradient(160deg, rgba(108, 180, 232, 0.06), var(--bg-elev-1));
+}
+.laudo-pane__label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+}
+.laudo-pane--br .laudo-pane__label {
+  background: var(--color-success-100);
+  color: var(--color-success-500);
+  border: 1px solid var(--color-success-border);
+}
+.laudo-pane--int .laudo-pane__label {
+  background: var(--color-info-100);
+  color: var(--color-info-500);
+  border: 1px solid var(--color-info-border);
+}
+.laudo-pane__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-2);
+}
+.laudo-pane__body { font-size: var(--fs-sm); color: var(--ink-90); }
+.laudo-pane__body p:last-child { margin-bottom: 0; }
+.laudo-pane__bordao {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  background: var(--bg-elev-2);
+  border-left: 3px solid var(--accent-coral);
+  border-radius: var(--r-sm);
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--ink-100);
+  font-size: var(--fs-sm);
+}
+
+/* === Cascata alcalose 7 passos (P12 — FONTE CANÔNICA) === */
+.cascade {
+  margin: var(--space-5) 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.cascade-step {
+  position: relative;
+  padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 44px);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.cascade-step:focus-visible { outline: 2px solid var(--accent-coral); outline-offset: 3px; }
+.cascade-step:hover { background: var(--bg-elev-2); border-color: var(--border-strong); }
+.cascade-step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: var(--space-3);
+  top: var(--space-3);
+  width: 32px; height: 32px;
+  border-radius: var(--r-pill);
+  background: var(--accent-coral);
+  color: #1a1010;
+  font-family: var(--font-display);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+.cascade-step__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-2);
+  display: flex; align-items: center; gap: var(--space-2);
+}
+.cascade-step__title::after {
+  content: "+";
+  margin-left: auto;
+  font-family: var(--font-mono);
+  color: var(--accent-coral);
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: transform 0.18s;
+}
+.cascade-step[data-expanded="true"] .cascade-step__title::after {
+  transform: rotate(45deg);
+}
+.cascade-step__body {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+  margin-bottom: 0;
+}
+.cascade-step__detail {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border-soft);
+  font-size: var(--fs-sm);
+  color: var(--ink-70);
+  display: none;
+}
+.cascade-step[data-expanded="true"] .cascade-step__detail { display: block; }
+.cascade-step--final {
+  background: var(--color-warning-100);
+  border-color: var(--color-warning-border);
+}
+.cascade-step--final::before {
+  background: var(--color-warning-500); color: #1a1010;
+}
+
+.acid-paradox {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: linear-gradient(160deg, rgba(255, 107, 90, 0.08), var(--bg-elev-2));
+  border: 1px solid var(--accent-coral-soft);
+  border-radius: var(--r-lg);
+}
+.acid-paradox__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--accent-coral);
+  margin-bottom: var(--space-3);
+}
+.acid-paradox ol {
+  counter-reset: paradox;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.acid-paradox ol li {
+  position: relative;
+  padding: var(--space-3) var(--space-3) var(--space-3) calc(var(--space-3) + 36px);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border-soft);
+  font-size: var(--fs-sm);
+  counter-increment: paradox;
+}
+.acid-paradox ol li::before {
+  content: counter(paradox);
+  position: absolute;
+  left: var(--space-2);
+  top: var(--space-3);
+  width: 26px; height: 26px;
+  border-radius: var(--r-pill);
+  background: var(--accent-coral);
+  color: #1a1010;
+  font-family: var(--font-display);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+}
+
+/* === VACTERL bloco síntese (P13) === */
+.vacterl {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: linear-gradient(165deg, var(--bg-elev-2), var(--bg-elev-1));
+  border: 1px solid var(--accent-coral-soft);
+  border-radius: var(--r-lg);
+}
+.vacterl__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  color: var(--accent-coral);
+  margin-bottom: var(--space-2);
+}
+.vacterl__sub {
+  font-size: var(--fs-sm);
+  color: var(--ink-70);
+  margin-bottom: var(--space-4);
+}
+.vacterl__letters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+}
+.vacterl-letter {
+  position: relative;
+  padding: var(--space-3) var(--space-2);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+.vacterl-letter:focus-visible { outline: 2px solid var(--accent-coral); outline-offset: 3px; }
+.vacterl-letter:hover {
+  background: var(--bg-elev-2);
+  border-color: var(--accent-coral);
+  transform: translateY(-2px);
+}
+.vacterl-letter__letter {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--accent-coral);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.vacterl-letter__name {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-70);
+  display: block;
+}
+.vacterl-letter__freq {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-50);
+  margin-top: var(--space-1);
+  display: block;
+}
+.vacterl-letter__detail {
+  display: none;
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--border-soft);
+  font-size: var(--fs-xs);
+  color: var(--ink-90);
+  text-align: left;
+}
+.vacterl-letter[data-expanded="true"] {
+  background: var(--accent-coral-soft);
+  border-color: var(--accent-coral);
+  grid-column: 1 / -1;
+}
+.vacterl-letter[data-expanded="true"] .vacterl-letter__detail { display: block; }
+.vacterl__criterion {
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent-coral-soft);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  color: var(--ink-100);
+  font-family: var(--font-display);
+}
+.vacterl__criterion strong { color: var(--accent-coral); }
+
+/* === Régua altura do coto AAR (P15) === */
+.coto-ruler {
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+}
+.coto-ruler__title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-70);
+  margin-bottom: var(--space-3);
+}
+.coto-ruler__bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-bottom: var(--space-3);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+.coto-ruler__slice {
+  padding: var(--space-3) var(--space-2);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: #0a1620;
+}
+.coto-ruler__slice--vlow { background: rgba(95, 207, 128, 0.55); color: var(--ink-100); }
+.coto-ruler__slice--low { background: var(--color-success-500); color: #0a1a10; }
+.coto-ruler__slice--mid { background: var(--color-warning-500); color: #1a1010; }
+.coto-ruler__slice--high { background: var(--color-danger-500); color: #f5e8e8; }
+.coto-ruler__legend {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: 1fr;
+  font-size: var(--fs-xs);
+  color: var(--ink-90);
+}
+@media (min-width: 640px) { .coto-ruler__legend { grid-template-columns: 1fr 1fr; } }
+
+/* === Fluxograma conduta AAR (P17) === */
+.flowchart-aar {
+  margin: var(--space-5) 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.flow-node {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+  position: relative;
+}
+.flow-node--decision {
+  background: var(--color-info-100);
+  border-color: var(--color-info-border);
+  border-left: 4px solid var(--color-info-500);
+}
+.flow-node--low {
+  background: var(--color-success-100);
+  border-color: var(--color-success-border);
+  border-left: 4px solid var(--color-success-500);
+}
+.flow-node--high {
+  background: var(--color-danger-100);
+  border-color: var(--color-danger-border);
+  border-left: 4px solid var(--color-danger-500);
+}
+.flow-node__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-50);
+  margin-bottom: var(--space-1);
+}
+.flow-node strong { color: var(--ink-100); }
+
+/* === Síntese 4 eixos (P17) === */
+.synth-axes {
+  margin: var(--space-5) 0;
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .synth-axes { grid-template-columns: 1fr 1fr; }
+}
+.synth-axis {
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-md);
+  border-top: 4px solid var(--accent-coral);
+}
+.synth-axis__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  margin-bottom: var(--space-1);
+}
+.synth-axis__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-2);
+}
+.synth-axis__body { font-size: var(--fs-sm); color: var(--ink-90); }
+.synth-axis__body ul { margin: 0; padding-left: var(--space-4); }
+.synth-axis__body strong { color: var(--ink-100); }
+
+/* === Image skeleton (foto/RX real pendente) === */
+.img-skeleton {
+  margin: var(--space-4) 0;
+  padding: var(--space-5) var(--space-4);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--bg-elev-2) 0,
+    var(--bg-elev-2) 10px,
+    var(--bg-elev-1) 10px,
+    var(--bg-elev-1) 20px
+  );
+  border: 2px dashed var(--border-medium);
+  border-radius: var(--r-md);
+  text-align: center;
+  color: var(--ink-70);
+  font-size: var(--fs-sm);
+}
+.img-skeleton__id {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent-coral);
+  background: var(--bg-elev-3);
+  padding: 2px 10px;
+  border-radius: var(--r-pill);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+.img-skeleton__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  margin-bottom: var(--space-2);
+}
+.img-skeleton__brief {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+  margin-bottom: var(--space-3);
+  line-height: 1.55;
+}
+.img-skeleton__attribution {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-50);
+  font-style: italic;
+}
+.img-skeleton__attribution::before { content: "Atribuição sugerida: "; }
+
+/* === Bordão diagnóstico card === */
+.bordao-card {
+  margin: var(--space-4) 0;
+  padding: var(--space-4) var(--space-5);
+  background: var(--accent-coral-soft);
+  border-left: 4px solid var(--accent-coral);
+  border-radius: var(--r-md);
+}
+.bordao-card__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  margin-bottom: var(--space-2);
+  display: block;
+}
+.bordao-card__body {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+  font-style: italic;
+  margin: 0;
+}
+
+/* === Cross-link M12 ↔ M2/M3/M9/M11 === */
+.crosslink {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-info-100);
+  border: 1px solid var(--color-info-border);
+  border-left: 3px solid var(--color-info-500);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+}
+.crosslink__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-info-500);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.crosslink a {
+  color: var(--color-info-500);
+  font-weight: 600;
+}
+.crosslink__body { color: var(--ink-100); }
+.crosslink__body strong { color: var(--ink-100); }
+
+/* === AAR sex table === */
+.sex-table {
+  margin: var(--space-5) 0;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+}
+.sex-table table { margin: 0; }
+.sex-table th:first-child,
+.sex-table td:first-child {
+  background: var(--bg-elev-3);
+  font-family: var(--font-display);
+  color: var(--accent-coral);
+  font-weight: 600;
+}
+
+/* === Anatomy fig wrapper M12-specific === */
+.anat-fig {
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-md);
+}
+.anat-fig svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.anat-fig__caption {
+  margin-top: var(--space-3);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  font-style: italic;
+  text-align: center;
+}
+
+/* === Painel duplo (P11 dupla bolha + diamante) === */
+.dual-panel {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+  margin: var(--space-5) 0;
+}
+@media (min-width: 720px) {
+  .dual-panel { grid-template-columns: 1fr 1fr; }
+}
+.dual-panel__cell {
+  padding: var(--space-4);
+  background: var(--bg-elev-2);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-md);
+}
+.dual-panel__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--accent-coral);
+  margin-bottom: var(--space-2);
+}
+.dual-panel__cell svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+.dual-panel__caption {
+  margin-top: var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  font-style: italic;
+  text-align: center;
+}
+
+/* === Cross-link forward inline === */
+.crosslink-forward {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-1);
+  border-left: 3px solid var(--accent-coral);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+}
+.crosslink-forward__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-coral);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+.crosslink-forward a { color: var(--accent-coral); font-weight: 600; }

@@ -1,10 +1,10 @@
-/* Service Worker — Plataforma Bauer Neonatologia (Parte 1 + Parte 2 + Bônus 1-3)
+/* Service Worker — Plataforma Bauer Neonatologia (COMPLETA)
  * Cache-first com fallback stale-while-revalidate.
- * Cobertura offline: hub + 11 módulos (M1-M5 Parte 1; M6-M8 Parte 2; M9-M11 Bônus 1-3).
- * M12 (Bônus 4) entra em bump v2.5.0 quando entregue.
+ * Cobertura offline: hub + 12 módulos (M1-M5 Parte 1; M6-M8 Parte 2; M9-M12 Bônus 1-4).
+ * Neonatologia 1+2 fechada — fechamento da semana.
  */
 
-const CACHE = 'neonato-platform-v2.4.3';
+const CACHE = 'neonato-platform-v2.5.0';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
@@ -201,7 +201,16 @@ const ASSETS = [
   BASE + 'modules/m11-condicoes-cervicais/assets/css/components.css',
   BASE + 'modules/m11-condicoes-cervicais/assets/css/pages-m11.css',
   BASE + 'modules/m11-condicoes-cervicais/assets/js/router.js',
-  BASE + 'modules/m11-condicoes-cervicais/assets/js/quiz.js'
+  BASE + 'modules/m11-condicoes-cervicais/assets/js/quiz.js',
+
+  /* === M12 — Bônus 4 Defeitos cirúrgicos neonatais (fechamento da semana) === */
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/index.html',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/css/tokens.css',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/css/base.css',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/css/components.css',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/css/pages-m12.css',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/js/router.js',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/js/quiz.js'
 ];
 
 self.addEventListener('install', (event) => {
