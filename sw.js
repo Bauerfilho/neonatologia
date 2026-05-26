@@ -4,7 +4,7 @@
  * M12 (Bônus 4) entra em bump v2.5.0 quando entregue.
  */
 
-const CACHE = 'neonato-platform-v2.4.0';
+const CACHE = 'neonato-platform-v2.4.1';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
