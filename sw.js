@@ -4,7 +4,7 @@
  * M12 (Bônus 4) entra em bump v2.5.0 quando entregue.
  */
 
-const CACHE = 'neonato-platform-v2.4.2';
+const CACHE = 'neonato-platform-v2.4.3';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
@@ -147,6 +147,7 @@ const ASSETS = [
   BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-meconio-passagem-fralda.jpg',
   BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-rx-pneumotorax-neonato-hellerhoff.jpg',
   BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-rx-sam-grosseiro-hellerhoff.jpg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-n1-cianose-central-neonato.jpg',
 
   /* === M8 — Icterícia Neonatal (Caso Eusébio Foucault) === */
   BASE + 'modules/m8-ictericia-neonatal/index.html',
@@ -157,6 +158,18 @@ const ASSETS = [
   BASE + 'modules/m8-ictericia-neonatal/assets/js/router.js',
   BASE + 'modules/m8-ictericia-neonatal/assets/js/quiz.js',
   BASE + 'modules/m8-ictericia-neonatal/assets/js/caso-eusebio.js',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v69-rn-ictericia-wikimedia-muago.jpg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v74-rn-hemolitico-hidropsia-pamj.png',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v79-esferocitos-mgg-wikimedia.png',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v79b-sem-esferocito-vs-normal-wikimedia.png',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v81a-heinz-bodies-felino-wikimedia.jpg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v81b-bite-cells-pmc-cureus.jpg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v86-usg-cordao-triangular-pmc-rb.jpg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v87-biopsia-hepatica-atresia-pmc-fsoa.jpg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v89-acolia-rh-pmc-cmip.jpg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v91-grafico-aap-2004-fototerapia.svg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v93-fototerapia-rn-wikimedia-vtbijoy.jpg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v94-grafico-bhutani-1999.svg',
 
   /* === M9 — Bônus 1 ECN === */
   BASE + 'modules/m9-enterocolite-necrosante/index.html',
@@ -166,6 +179,10 @@ const ASSETS = [
   BASE + 'modules/m9-enterocolite-necrosante/assets/css/pages-m9.css',
   BASE + 'modules/m9-enterocolite-necrosante/assets/js/router.js',
   BASE + 'modules/m9-enterocolite-necrosante/assets/js/quiz.js',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v74-v78-pneumatose-portal-nec-0w-hellerhoff.jpg',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v75-pneumatose-linear-nec-mishra-pmc.jpg',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v77-pneumoperitonio-perforacao-neonatal-hellerhoff.jpg',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v79-rigler-pneumoperitonio-hellerhoff.jpg',
 
   /* === M10 — Bônus 2 Miscelânia === */
   BASE + 'modules/m10-miscelania-neonatal/index.html',
@@ -175,6 +192,7 @@ const ASSETS = [
   BASE + 'modules/m10-miscelania-neonatal/assets/css/pages-m10.css',
   BASE + 'modules/m10-miscelania-neonatal/assets/js/router.js',
   BASE + 'modules/m10-miscelania-neonatal/assets/js/quiz.js',
+  BASE + 'modules/m10-miscelania-neonatal/assets/img/BNN-v16-rop-fundoscopia-pmc-fped.jpg',
 
   /* === M11 — Bônus 3 Condições cervicais === */
   BASE + 'modules/m11-condicoes-cervicais/index.html',

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title-aap2004 desc-aap2004" preserveAspectRatio="xMidYMid meet">
+  <title id="title-aap2004">Fototerapia — Limiares por horas de vida × bilirrubina total (AAP 2004)</title>
+  <desc id="desc-aap2004">Gráfico com três curvas ascendentes de limiar de fototerapia em recém-nascidos estratificados por risco. Eixo horizontal mostra horas de vida de 0 a 168 (7 dias). Eixo vertical mostra bilirrubina total sérica em miligramas por decilitro de 0 a 25. Curva verde representa baixo risco (RN com 38 semanas ou mais sem fatores de risco), atingindo cerca de 21 mg/dL em 96 horas. Curva amarela representa risco médio (38+ semanas com fatores OU 35-37 semanas e 6 dias sem fatores), atingindo cerca de 18 mg/dL em 96 horas. Curva vermelha representa alto risco (35-37 semanas e 6 dias com fatores OU menos de 35 semanas), atingindo cerca de 15 mg/dL em 96 horas. Cruzar a curva pela bilirrubina indica fototerapia.</desc>
+
+  <defs>
+    <linearGradient id="bg-aap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1620"/>
+      <stop offset="100%" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="aurora-aap" cx="80%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow-aap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f3ede0" opacity="0.65"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="600" fill="url(#bg-aap)"/>
+  <rect width="960" height="600" fill="url(#aurora-aap)"/>
+
+  <text x="60" y="50" fill="#f3ede0" font-family="Lora, Georgia, 'Times New Roman', serif" font-size="22" font-weight="600" letter-spacing="-0.3">Fototerapia — Limiares por horas de vida × bilirrubina total</text>
+  <text x="60" y="76" fill="#b8c0cc" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="13" font-weight="500">AAP 2004 — canon BR de prova</text>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif" font-size="11" fill="#8f9bad">
+    <line x1="100" y1="500" x2="100" y2="120" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+    <line x1="100" y1="500" x2="880" y2="500" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+
+    <g stroke="rgba(255,255,255,0.06)" stroke-width="0.8">
+      <line x1="100" y1="425" x2="880" y2="425"/>
+      <line x1="100" y1="349" x2="880" y2="349"/>
+      <line x1="100" y1="273" x2="880" y2="273"/>
+      <line x1="100" y1="197" x2="880" y2="197"/>
+      <line x1="100" y1="121" x2="880" y2="121"/>
+    </g>
+    <g stroke="rgba(255,255,255,0.06)" stroke-width="0.8">
+      <line x1="211" y1="500" x2="211" y2="120"/>
+      <line x1="323" y1="500" x2="323" y2="120"/>
+      <line x1="434" y1="500" x2="434" y2="120"/>
+      <line x1="546" y1="500" x2="546" y2="120"/>
+      <line x1="657" y1="500" x2="657" y2="120"/>
+      <line x1="769" y1="500" x2="769" y2="120"/>
+    </g>
+
+    <text x="92" y="504" text-anchor="end">0</text>
+    <text x="92" y="428" text-anchor="end">5</text>
+    <text x="92" y="352" text-anchor="end">10</text>
+    <text x="92" y="276" text-anchor="end">15</text>
+    <text x="92" y="200" text-anchor="end">20</text>
+    <text x="92" y="124" text-anchor="end">25</text>
+
+    <text x="100" y="520" text-anchor="middle">0</text>
+    <text x="211" y="520" text-anchor="middle">24</text>
+    <text x="323" y="520" text-anchor="middle">48</text>
+    <text x="434" y="520" text-anchor="middle">72</text>
+    <text x="546" y="520" text-anchor="middle">96</text>
+    <text x="657" y="520" text-anchor="middle">120</text>
+    <text x="769" y="520" text-anchor="middle">144</text>
+    <text x="880" y="520" text-anchor="middle">168</text>
+
+    <text x="490" y="552" text-anchor="middle" fill="#b8c0cc" font-size="12" font-weight="500">Horas de vida</text>
+    <text transform="translate(38 310) rotate(-90)" text-anchor="middle" fill="#b8c0cc" font-size="12" font-weight="500">Bilirrubina total (mg/dL)</text>
+  </g>
+
+  <g fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 100 500 Q 155 470, 211 318 Q 267 282, 323 273 Q 378 232, 434 227 Q 490 198, 546 182 Q 657 167, 880 159"
+          stroke="#22c55e"/>
+    <path d="M 100 500 Q 155 480, 211 349 Q 267 318, 323 303 Q 378 273, 434 273 Q 490 242, 546 227 Q 657 212, 880 204"
+          stroke="#eab308"/>
+    <path d="M 100 500 Q 155 488, 211 379 Q 267 348, 323 349 Q 378 312, 434 326 Q 490 288, 546 273 Q 657 258, 880 250"
+          stroke="#ef4444"/>
+  </g>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif" font-size="11" font-weight="600">
+    <circle cx="546" cy="182" r="4" fill="#22c55e"/>
+    <text x="556" y="178" fill="#22c55e">21</text>
+    <circle cx="546" cy="227" r="4" fill="#eab308"/>
+    <text x="556" y="223" fill="#eab308">18</text>
+    <circle cx="546" cy="273" r="4" fill="#ef4444"/>
+    <text x="556" y="269" fill="#ef4444">15</text>
+  </g>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif" font-size="12">
+    <rect x="700" y="120" width="220" height="98" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <line x1="715" y1="142" x2="745" y2="142" stroke="#22c55e" stroke-width="2.6" stroke-linecap="round"/>
+    <text x="752" y="146" fill="#f3ede0" font-weight="600">Baixo risco</text>
+    <text x="752" y="160" fill="#8f9bad" font-size="10">≥38 sem · sem fatores</text>
+
+    <line x1="715" y1="178" x2="745" y2="178" stroke="#eab308" stroke-width="2.6" stroke-linecap="round"/>
+    <text x="752" y="182" fill="#f3ede0" font-weight="600">Médio risco</text>
+    <text x="752" y="195" fill="#8f9bad" font-size="10">≥38 c/ fatores · 35–37+6 s/ fatores</text>
+
+    <line x1="715" y1="208" x2="745" y2="208" stroke="#ef4444" stroke-width="2.6" stroke-linecap="round"/>
+    <text x="752" y="212" fill="#f3ede0" font-weight="600">Alto risco</text>
+  </g>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif">
+    <line x1="380" y1="430" x2="380" y2="330" stroke="#f3ede0" stroke-width="1.4" stroke-dasharray="3 3" opacity="0.55" marker-end="url(#arrow-aap)"/>
+    <text x="388" y="395" fill="#f3ede0" font-size="11" font-weight="500" opacity="0.9">Subir cruza a curva</text>
+    <text x="388" y="410" fill="#f3ede0" font-size="11" opacity="0.7">→ indica fototerapia</text>
+  </g>
+
+  <text x="60" y="580" fill="#8f9bad" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="10" font-style="italic">Reconstrução SVG autoral Bauer · Cross-link curva original: AAP Pediatrics 2004;114(1):297-316 · DOI: 10.1542/peds.114.1.297</text>
+</svg>

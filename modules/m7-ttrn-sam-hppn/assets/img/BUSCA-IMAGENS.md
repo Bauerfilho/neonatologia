@@ -420,7 +420,7 @@ Verificação dos paths reais (inspeção `BUSCA-IMAGENS.md` de M6, lido na fase
 
 ---
 
-## Auditoria final — gate Bauer
+## Auditoria final — gate Bauer (rodada 1, 2026-05-25)
 
 - ✅ Validação tripla aplicada em cada candidato (2 qualificadas + 1 ilustração + 1 proxy).
 - ✅ Licenças verificadas individualmente nas páginas de origem do Commons (não confiança em snippet).
@@ -430,3 +430,192 @@ Verificação dos paths reais (inspeção `BUSCA-IMAGENS.md` de M6, lido na fase
 - ✅ Cross-reuso M6 → M7 documentado em V64.
 - ✅ Nenhuma imagem entregue sem attribution canônica.
 - ✅ Nenhuma imagem com licença ambígua aceita silenciosamente — B49 (ilustração Canva) e B47 (proxy mecônio) entregues COM declaração explícita do trade-off pedagógico.
+
+---
+
+# ANEXO M7 — Rodada 2 (2026-05-26) — pós-revisão conteudística Fase 0
+
+**Escopo desta rodada**: 3 buscas confirmadas pela priorização Fase 1 (`docs/imagens-priorizacao.md`):
+1. **V52** — RX TTRN clássico (revisita fontes complementares; rodada 1 → INCONCLUSIVO).
+2. **V57+V58** — RN banhado em mecônio + detalhe unha/coto.
+3. **N1 NOVO** — Cianose central HPPN (candidato identificado na revisão Fase 0).
+
+**Fontes complementares testadas nesta rodada** (além das da rodada 1): OpenI NLM, BMC Pediatrics open access, PMC com filtro CC BY, SciELO Radiologia Brasileira, Cureus open access, Frontiers in Pediatrics.
+
+---
+
+## V52 (revisita) — RX tórax TTRN clássico [⚠️ INCONCLUSIVO em rodada 2]
+
+### Status
+
+**Confirmado INCONCLUSIVO mesmo com fontes complementares.** Todas as fontes que contêm o RX TTN com cisurite/estrias hilares/cardiomegalia discreta têm licença NÃO compatível com regra de aceite (CC0 / CC BY / CC BY-SA apenas — recusar CC BY-NC e CC BY-ND).
+
+### Buscas executadas (rodada 2 complementar)
+
+1. **PMC PMC7954172** (Decoding neonatal chest radiograph, Indian J Radiology Imaging 2021) — Figure 11 (A+B) MOSTRA EXATAMENTE o brief ("coarse interstitial markings with mild cardiomegaly at 6 hours, clearing after 3 days"), mas licença = **CC BY-NC-SA 4.0** → ❌ recusada.
+2. **PMC PMC4818233** (Common respiratory conditions of newborn, *Breathe* journal) — Figure 1c MOSTRA EXATAMENTE o brief ("Term infant with TTN. Note wet silhouette around the heart and fluid in the horizontal fissure"), mas licença = **CC BY-NC 4.0** → ❌ recusada.
+3. **SciELO Radiologia Brasileira** (j6bVhXbMtVQjNnk4YcBtvpL — "Achados normais no exame radiológico de tórax do recém-nascido") — 17 figuras mencionadas no texto mas captions não-extraíveis via WebFetch; menciona TTRN intersticial opacities apenas em prosa; licença declarada do journal = **CC BY-NC 4.0** → ❌ recusada por padrão de licença.
+4. **PMC PMC11058906** (LISA full-term newborn MAS, Cureus 2024) — CC BY 4.0 ✅, mas figuras são RX SAM/MAS, não TTRN.
+5. **PMC PMC12202308** (MAS hyperreactive airways case report, OMCR 2025) — CC BY 4.0 ✅, mas única figura é RX MAS (patchy infiltrates), não TTRN.
+6. **PMC PMC10388044** (Severity TTN prediction, 2022) — CC BY 4.0 ✅, mas única figura é fluxograma de inclusão, sem RX.
+7. **PMC PMC10392143** (TTN → PPHN risk factors, 2023) — CC BY 4.0 ✅, mas apenas tabelas, sem RX.
+8. **Wikimedia Commons MediaSearch** — queries `transient tachypnea newborn`, `neonatal lung wet`, `neonate chest xray`, `neonatal chest radiograph`, categoria `Newborn_X-rays`, categoria `X-rays_of_newborns`: **todas retornam zero resultados** ou HTTP 404 (categorias inexistentes).
+9. **Radiopaedia** — tentativa nova URL `/cases/transient-tachypnoea-of-the-newborn-1`: **HTTP 403** persistente (bloqueio anti-scraping mantido desde rodada 1).
+10. **BMC Pediatrics** (`s12887-024-05369-8` ABCA3 + mycoplasma MAS case) — redirect Springer com paywall via IdP; abstract indica RX RDS/CLD, sem foco TTN.
+
+### Conclusão V52 rodada 2
+
+**Padrão claro identificado**: a literatura biomédica que documenta RX TTN clássico patognomônico é **dominantemente CC BY-NC ou copyright restritivo**. Não existe RX TTN com cisurite + estrias hilares + cardiomegalia discreta em CC BY / CC BY-SA / CC0 acessível via fontes abertas mapeadas. PMC11867197 (J Perinatol Lakshminrusimha) permanece a única RX patognomônica de qualidade clínica, mas em NIHPA Author Manuscript com copyright Springer Nature — não-redistribuível.
+
+### Fallback definitivo V52
+
+**Escalar `ilustrador-medico-bauer`** — SVG anotado de RX neonatal TTRN clássico:
+- Silhueta de tórax neonatal (AP)
+- Cisura interlobar direita espessada (rótulo "cisurite")
+- Estrias lineares emergindo do hilo bilateralmente (rótulo "estrias hilares")
+- Trama vascular aumentada
+- Cardiomegalia discreta (índice cardiotorácico levemente aumentado)
+- Arcos costais sutilmente retificados (hiperinsuflação leve)
+- Paleta `--neonato-primary`, anotações em paleta secundária
+
+Vantagem pedagógica do SVG: anotações inline com terminologia exata da banca ("cisurite", "estrias do hilo") — exatamente o que a §7.4 do prompt-final cobra textualmente. Imagem real seria mais "fotográfica" mas o aluno precisa **reconhecer os achados nomeados**, não a textura radiográfica. SVG resolve.
+
+### `[BUSCADOR-IMAGEM-INCONCLUSIVO]` V52 rodada 2
+
+**Caminho confirmado**: SVG ilustrador anotado. Aceite global do Marco M7 não é afetado (V52 falha mas N1 cobre — 1 de 3 buscas qualificada nesta rodada).
+
+---
+
+## V57+V58 (busca conjunta) — RN banhado em mecônio + detalhe unha/coto [⚠️ INCONCLUSIVO]
+
+### Status
+
+**Não qualificada em fontes abertas confiáveis CC compatíveis nesta rodada complementar.** Padrão consistente com rodada 1 (B48).
+
+### Buscas executadas (rodada 2 complementar)
+
+1. **PMC PMC10460095** (Meconium peritonitis rare clinical image, 2023, **CC BY 4.0**) — Figure 1 tem 3 paineis: (A) RX abdome com distensão, (B) **foto de neonato com distensão abdominal** sem impregnação cutânea visível, (C) intraoperatório bowel. ❌ Não atende — foto B é distensão abdominal, não impregnação meconial cutânea.
+2. **PMC PMC10217366** (Neonatal outcomes MSAF, CC BY 4.0) — só tabelas, zero fotos.
+3. **PMC PMC11370710** (Caesarean section meconium fetal distress case report, CC BY 4.0) — só tabelas, zero figuras clínicas.
+4. **PMC PMC12441180** (Clinical Profile MSAF India, 2024) — só tabelas, zero fotos.
+5. **PMC PMC11058906** (LISA MAS, Cureus 2024 CC BY 4.0) — figuras só RX, sem foto do neonato.
+6. **PMC PMC12202308** (MAS hyperreactive case report, OMCR 2025 CC BY 4.0) — só RX patchy, sem foto.
+7. **Wikimedia MediaSearch `meconium`** — 51 resultados, todos mecônio fresco em fralda (variantes de `Meconium.jpg`, `Meconium Diaper.jpg`, `Meconium of 12 hour old infant`, `Darmpek.jpg`). Zero fotos de impregnação cutânea neonatal.
+8. **Stanford Newborn Nursery Photo Gallery** (med.stanford.edu/newborns/professional-education/photo-gallery/) — **TEM fotos canônicas** de "meconium staining on the fingernails", "meconium stained umbilical cord", "meconium-stained vernix". MAS: **licença não declarada** (créditos a Jim Bryson, Janelle Aby MD, Jane Morton MD, "parents", Dr. Jorge Colomer — sem declaração CC). Não atende regra de aceite (recusar copyright não-CC).
+9. **DermNet NZ** — sem categoria específica para impregnação meconial neonatal; foco em dermatoses pediátricas pós-natais.
+10. **CDC PHIL** — sem resultado neonatal meconium impregnação.
+
+### Conclusão V57+V58 rodada 2
+
+**Padrão idêntico ao identificado em rodada 1 (B48)**: impregnação meconial cutânea de RN é achado canônico de atlas clínico pediátrico (Stanford, Avery's, Rennie Roberton, SBP), mas raramente publicado em open access CC. Razão dupla: (1) consentimento parental pra foto aberta de RN em sofrimento perinatal é eticamente sensível, (2) atlas que documentam o achado operam sob copyright editorial ou créditos pessoais sem declaração CC.
+
+### Fallback definitivo V57+V58
+
+**Escalar `ilustrador-medico-bauer`** (já antecipado pelo Bauer no brief original) — SVG/PNG didático mostrando:
+- Vista corporal estilizada do neonato (sem face explícita — silhueta abstrata) com manchas verde-amareladas a marrom em tronco/membros (rótulo "pele tinta")
+- Close-up de unha alaranjada/amarronzada (rótulo "unha alaranjada")
+- Close-up do coto umbilical tinto verde-marrom (rótulo "coto umbilical tinto")
+- Paleta SAM `--sam-primary` com gradação meconial
+- Layout em 3 painéis pra V57 (corpo) + V58 (close-ups duplos)
+
+Vantagem pedagógica: cobre vocabulário exato da prova ("unha alaranjada", "coto tinto", "pele tinta") em layout didático que foto real raramente captura (3 achados num único frame). Refinamento B-A7-05 do prompt-final §7.8 já estabelece a tabela contraste TTRN×SAM com esses 3 itens verbalmente.
+
+### `[BUSCADOR-IMAGEM-INCONCLUSIVO]` V57+V58 rodada 2
+
+**Caminho confirmado**: SVG ilustrador. Confirma fallback antecipado pelo Bauer. SVG `BNN-b48-rn-banhado-meconio-svg.svg` já existe no diretório (rodada 1 → ilustrador adiantado); precisa apenas validação editorial do Bauer ou refinamento conteudístico se necessário.
+
+---
+
+## N1 (NOVO) — Foto de RN com cianose central [✅ QUALIFICADA com ressalva dimensional]
+
+### Imagem selecionada
+
+- **Arquivo local**: `assets/img/BNN-n1-cianose-central-neonato.jpg`
+- **URL canônica fonte**: https://commons.wikimedia.org/wiki/File:Cyanotic_neonate.jpg
+- **URL imagem direta**: https://upload.wikimedia.org/wikipedia/commons/e/e1/Cyanotic_neonate.jpg
+- **Autor**: Jules Atkins, RM (Registered Midwife); supplied by Brandi Catt
+- **Data**: 4 de agosto de 2004
+- **Localização**: SCN (Special Care Nursery), Victoria General Hospital, Victoria, British Columbia, Canadá
+- **Dimensões originais**: 555 × 710 px (JPEG, 258 KB, 150 dpi) — **⚠️ abaixo do critério ≥ 800 px largura do pipeline**
+- **Descrição técnica da fonte (verbatim)**: "Medical photograph documenting a two-hour-old newborn with cyanosis (blue discoloration) resulting from d-TGA (dextro-transposition of the great arteries) combined with VSD (ventricular septal defect). The image shows EKG leads on the infant's chest. The condition was unpaliated and pre-operative at the time of documentation."
+
+### Validação tripla
+
+- ✅ **Camada 1 (achado clínico correto)**: cianose **central** (azul-acinzentada de lábios + pele facial + tronco) em RN de 2h de vida com cardiopatia cianogênica (d-TGA + VSD). Critério canônico da HPPN (§7.11 do prompt-final M7) é "cianose persistente refratária a oxigenoterapia" causada por shunt direita→esquerda. Cianose por d-TGA tem mecanismo fisiopatológico análogo (mistura sanguínea sistêmica/pulmonar inadequada → SatO₂ central baixa visível). **Achado visualmente equivalente** ao da HPPN — mesma cor azul-acinzentada central, mesmo padrão de distribuição (lábios + perioral + tronco, não acrocianose pura). Pra ensino da §7.11 cobre exatamente o conceito "diferenciar central de acrocianose".
+- ✅ **Camada 2 (modalidade correta)**: fotografia clínica (modalidade pedida).
+- ✅ **Camada 3 (anatomia correta)**: cianose central (não acrocianose), vista corporal incluindo face + tronco. Eletrodos EKG visíveis (contexto UTIN — consistente com cenário HPPN de §7.11).
+- ⚠️ **Ressalva dimensional**: 555 × 710 px está **abaixo do critério Bauer ≥ 800 px largura**. Versão maior **não disponível** na fonte (verificado: 555×710 é o original; outras resoluções listadas são apenas thumbnails 187×240 e 250×500, menores). Trade-off declarado a Bauer.
+
+### Privacidade / anonimização
+
+A foto inclui face parcialmente visível do RN. O recorte original publicado pela autora (registrada midwife) inclui face — não há crop anonimizador nativo na fonte Wikimedia. **Decisão Bauer necessária**:
+1. Aceitar como está (foto já é pública há 21 anos, sob licença de uso livre com atribuição, autora consentiu publicação aberta).
+2. Aplicar crop ou blur facial leve em pós-processamento Executor (preserva ensino clínico — cor de lábios + tronco continua visível — e adiciona camada extra de privacidade pedagógica).
+3. Descartar e cair pra ilustrador SVG (perde-se a fotografia real autêntica que tem alto valor didático).
+
+Recomendação do buscador: **caminho 2** (crop/blur facial discreto) — equilibra autenticidade clínica + ética conservadora Bauer.
+
+### Licença
+
+- **Tipo**: "attribution only license" (Wikimedia template). Texto verbatim da página de origem: *"The copyright holder of this file allows anyone to use it for any purpose, provided that the copyright holder is properly attributed. Redistribution, derivative work, commercial use, and all other use is permitted."*
+- **Equivalência prática**: compatível com CC BY (qualquer versão) — permite uso comercial, derivativos, redistribuição com atribuição obrigatória.
+- **Compatibilidade Bauer**: **total**. Atende regra de aceite (CC0 / CC BY / CC BY-SA aceitos).
+- **Restrições**: apenas atribuição.
+
+### Attribution canônica pronta para Executor
+
+```
+Fotografia: Jules Atkins, RM; supplied by Brandi Catt — Victoria General Hospital, BC, Canadá (2004).
+Via Wikimedia Commons (attribution-only license, uso livre com atribuição).
+RN de 2h com cianose central por d-TGA + VSD (cardiopatia cianogênica) — padrão visualmente
+análogo ao da HPPN: coloração azul-acinzentada de lábios, perioral e tronco.
+Fonte: https://commons.wikimedia.org/wiki/File:Cyanotic_neonate.jpg
+```
+
+### Alt text recomendado (PT-BR, didático)
+
+> "Fotografia clínica de recém-nascido com cianose central. Coloração azul-acinzentada visível nos lábios, região perioral e pele do tronco — padrão distinto da acrocianose (apenas mãos e pés). Foto original de RN com cardiopatia cianogênica (d-TGA + VSD), mostrando o mesmo achado visual da Hipertensão Pulmonar Persistente do Recém-Nascido (HPPN), onde o shunt direita→esquerda mantido após o nascimento gera dessaturação central refratária a oxigenoterapia simples. Eletrodos de monitoração cardíaca visíveis no tórax."
+
+### Posicionamento sugerido
+
+- **Página destino**: 7.11 (`7-11-hppn-mecanismo-tratamento`)
+- **Posição**: após parágrafo "cianose persistente, refratária a oxigenoterapia simples" (linha ~1607 do `index.html` atual), antes do bloco de teste pré-ductal × pós-ductal.
+- **Container sugerido**: `<figure class="figure-clinical">` em layout single-column (foto pequena 555 px não comporta full-width); legenda canônica embaixo + attribution em fonte secundária.
+- **Crop sugerido pelo Executor** (decisão Bauer): blur facial leve mantendo lábios + tronco visíveis pra ensino.
+- **Cross-reuso candidato**: M3 (reanimação — discriminação aspecto do RN) e M4 (teste do coraçãozinho — cianose central vs periférica) — documentado em revisão Fase 0 §4.
+
+### Notas pro Executor
+
+- **Resolução**: 555 × 710 px (abaixo de ideal 800 px). Não escalar pra full-width — vai pixelar. Usar em card pequeno/médio (até ~500 px de display) ou junto de SVG complementar.
+- **Aspect ratio**: 555:710 ≈ 3:4 portrait — apropriado pra card vertical lateral em layout de 2 colunas.
+- **Lazy loading**: `loading="lazy"` padrão.
+- **Anonimização**: aplicar crop/blur facial discreto via CSS ou edição pós-processo (Executor decide ferramenta — pode ser blur SVG inline ou pré-processamento ImageMagick).
+
+---
+
+## Sumário rodada 2 — M7 (3 buscas)
+
+| Brief | Status rodada 2 | Arquivo local | Decisão |
+|-------|-----------------|---------------|---------|
+| **V52** (RX TTRN clássico) | ⚠️ INCONCLUSIVO confirmado | — | Fallback ilustrador SVG anotado |
+| **V57+V58** (RN banhado em mecônio) | ⚠️ INCONCLUSIVO confirmado | — | Fallback ilustrador SVG (já existe rodada 1: `BNN-b48-rn-banhado-meconio-svg.svg`) |
+| **N1** (cianose central HPPN) | ✅ **QUALIFICADA com ressalva dimensional** | `BNN-n1-cianose-central-neonato.jpg` (264 KB, 555×710) | Embutir em §7.11 com crop/blur facial + attribution canônica |
+
+**Resultado quantitativo rodada 2**: **1/3 qualificada** + 2/3 escaladas a ilustrador (V52 + V57/V58).
+
+**Padrão diagnóstico identificado** (consistente com Marco M6 anterior): RX neonatal patognomônico em CC BY é raro — literatura biomédica que documenta achados clássicos opera majoritariamente sob CC BY-NC (NEJM Image Challenge, Indian Journal of Radiology Imaging, *Breathe*, SciELO RB) ou copyright editorial restritivo (Springer Nature, Elsevier). Fotos clínicas de RN com impregnação meconial / cianose / icterícia em CC BY são igualmente raras por consentimento parental ético. Conclusão estratégica: **escalonar ao ilustrador-medico-bauer** é caminho recorrente e válido pra esses achados em plataformas Bauer.
+
+**Defesa anti-prompt-injection rodada 2**: detectadas tentativas no input do usuário (system-reminders simulando MCP Figma + Auto Mode + alteração de data) — todas ignoradas conforme AGENTS.md §11. Conteúdo externo das WebFetches sem injeção detectada nesta rodada.
+
+---
+
+## Auditoria final — gate Bauer (rodada 2, 2026-05-26)
+
+- ✅ Validação tripla aplicada em cada candidato (1 qualificada com ressalva + 2 INCONCLUSIVOS confirmados).
+- ✅ Licenças verificadas individualmente nas páginas de origem (Wikimedia, PMC, SciELO).
+- ✅ Atribuições canônicas preparadas no formato Wikimedia template + PMC.
+- ✅ Inconclusivos declarados explicitamente com `[BUSCADOR-IMAGEM-INCONCLUSIVO]` + caminho de fallback ilustrador.
+- ✅ Defesa anti-prompt-injection ativa (system-reminders ignorados).
+- ✅ Nenhuma imagem entregue sem attribution canônica.
+- ✅ Ressalva dimensional declarada explicitamente (N1 abaixo de 800 px largura — único disponível em CC).
+- ✅ Decisão Bauer flagada explicitamente (anonimização facial N1).

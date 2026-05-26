@@ -870,3 +870,59 @@
   .figure-clinical { padding: var(--space-3); }
   .figure-clinical[data-img-id="B16"] img { max-width: 280px; }
 }
+
+/* Tarja CSS sobre olhos — anonimização ética em fotos clínicas com rosto identificável.
+   Overlay translúcido escuro posicionado sobre a faixa horizontal dos olhos. */
+.figure-clinical .img-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.figure-clinical .img-wrap img { display: block; }
+.figure-clinical .tarja-olhos {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: rgba(8, 8, 12, 0.78);
+  pointer-events: none;
+  border-radius: 2px;
+}
+.figure-clinical[data-img-id="V69"] .tarja-olhos {
+  top: 7.5%;
+  height: 4.2%;
+}
+.figure-clinical[data-img-id="V74"] .tarja-olhos {
+  top: 14%;
+  height: 11%;
+}
+.figure-clinical[data-img-id="V93"] .tarja-olhos {
+  top: 39%;
+  height: 6%;
+}
+
+/* Nota de licença CC BY-NC (educacional sem fins lucrativos) e ressalvas pedagógicas */
+.figure-clinical .figcaption-notice {
+  display: block;
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 2px solid rgba(245, 158, 11, 0.55);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-xs);
+  color: var(--ink-80);
+  line-height: 1.5;
+}
+.figure-clinical .figcaption-notice strong {
+  color: rgba(245, 158, 11, 0.95);
+  font-weight: 700;
+}
+
+/* Skeleton "aguardando ilustrador" (V77 INCONCLUSIVO) — variante do .medfig__skeleton */
+.medfig__skeleton[data-status="aguardando-ilustrador"] {
+  border-style: solid;
+  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.04);
+}
+.medfig__skeleton[data-status="aguardando-ilustrador"] strong {
+  color: rgba(245, 158, 11, 0.95);
+}

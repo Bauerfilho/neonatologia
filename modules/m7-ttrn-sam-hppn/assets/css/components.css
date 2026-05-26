@@ -843,6 +843,7 @@
 .figure-clinical[data-img-id="B15"] img { max-width: 720px; }
 .figure-clinical[data-img-id="B16"] img { max-width: 380px; }
 .figure-clinical[data-img-id="B18"] object { max-width: 560px; width: 100%; }
+.figure-clinical[data-img-id="N1"] img { max-width: 400px; }
 .figure-clinical .figcaption {
   display: block;
   margin-top: var(--space-3);
@@ -869,4 +870,5 @@
 @media (max-width: 640px) {
   .figure-clinical { padding: var(--space-3); }
   .figure-clinical[data-img-id="B16"] img { max-width: 280px; }
+  .figure-clinical[data-img-id="N1"] img { max-width: 100%; }
 }

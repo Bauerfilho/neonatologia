@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title-bhutani desc-bhutani" preserveAspectRatio="xMidYMid meet">
+  <title id="title-bhutani">Nomograma de Bhutani — Bilirrubina sérica total por percentis (1999)</title>
+  <desc id="desc-bhutani">Nomograma com quatro zonas de risco estratificadas por percentis 40, 75 e 95 da bilirrubina sérica total em recém-nascidos. Eixo horizontal: idade pós-natal em horas, de 12 a 168. Eixo vertical: bilirrubina sérica total em miligramas por decilitro, de 0 a 25. Zona verde escuro abaixo do percentil 40 indica baixo risco. Zona verde-amarela entre P40 e P75 indica risco médio-baixo. Zona laranja entre P75 e P95 indica risco médio-alto. Zona vermelha acima do P95 indica alto risco e fototerapia direta pela SBP.</desc>
+
+  <defs>
+    <linearGradient id="bg-bhutani" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1620"/>
+      <stop offset="100%" stop-color="#07111f"/>
+    </linearGradient>
+    <radialGradient id="aurora-bhutani" cx="20%" cy="20%" r="70%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="plot-area-bhutani">
+      <rect x="100" y="120" width="780" height="380"/>
+    </clipPath>
+    <marker id="arrow-bhutani" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f3ede0" opacity="0.65"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="600" fill="url(#bg-bhutani)"/>
+  <rect width="960" height="600" fill="url(#aurora-bhutani)"/>
+
+  <text x="60" y="50" fill="#f3ede0" font-family="Lora, Georgia, 'Times New Roman', serif" font-size="22" font-weight="600" letter-spacing="-0.3">Nomograma de Bhutani — Percentis BTSc × idade pós-natal</text>
+  <text x="60" y="76" fill="#b8c0cc" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="13" font-weight="500">Bhutani 1999 — zonas P40 / P75 / P95</text>
+
+  <g clip-path="url(#plot-area-bhutani)">
+    <path d="M 100 500
+             Q 155 488, 211 440 Q 267 410, 323 380 Q 378 365, 434 357 Q 490 350, 546 342 Q 657 335, 880 327
+             L 880 500 Z" fill="#22c55e" opacity="0.22"/>
+
+    <path d="M 100 500
+             Q 155 470, 211 379 Q 267 333, 323 318 Q 378 303, 434 295 Q 490 288, 546 280 Q 657 273, 880 265
+             L 880 327 Q 657 335, 546 342 Q 490 350, 434 357 Q 378 365, 323 380 Q 267 410, 211 440 Q 155 488, 100 500 Z"
+          fill="#84cc16" opacity="0.22"/>
+
+    <path d="M 100 500
+             Q 155 440, 211 318 Q 267 280, 323 273 Q 378 250, 434 235 Q 490 227, 546 220 Q 657 212, 880 204
+             L 880 265 Q 657 273, 546 280 Q 490 288, 434 295 Q 378 303, 323 318 Q 267 333, 211 379 Q 155 470, 100 500 Z"
+          fill="#f97316" opacity="0.22"/>
+
+    <path d="M 100 500
+             Q 155 425, 211 273 Q 267 220, 323 220 Q 378 195, 434 195 Q 490 182, 546 182 Q 657 167, 880 159
+             L 880 204 Q 657 212, 546 220 Q 490 227, 434 235 Q 378 250, 323 273 Q 267 280, 211 318 Q 155 440, 100 500 Z"
+          fill="#ef4444" opacity="0.22"/>
+
+    <path d="M 100 500 Q 155 425, 211 273 Q 267 220, 323 220 Q 378 195, 434 195 Q 490 182, 546 182 Q 657 167, 880 159"
+          fill="none" stroke="#ef4444" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 100 500 Q 155 470, 211 318 Q 267 280, 323 273 Q 378 250, 434 235 Q 490 227, 546 220 Q 657 212, 880 204"
+          fill="none" stroke="#f97316" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 100 500 Q 155 488, 211 379 Q 267 333, 323 318 Q 378 303, 434 295 Q 490 288, 546 280 Q 657 273, 880 265"
+          fill="none" stroke="#84cc16" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif" font-size="11" fill="#8f9bad">
+    <line x1="100" y1="500" x2="100" y2="120" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+    <line x1="100" y1="500" x2="880" y2="500" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+
+    <g stroke="rgba(255,255,255,0.06)" stroke-width="0.8">
+      <line x1="100" y1="425" x2="880" y2="425"/>
+      <line x1="100" y1="349" x2="880" y2="349"/>
+      <line x1="100" y1="273" x2="880" y2="273"/>
+      <line x1="100" y1="197" x2="880" y2="197"/>
+      <line x1="100" y1="121" x2="880" y2="121"/>
+    </g>
+    <g stroke="rgba(255,255,255,0.06)" stroke-width="0.8">
+      <line x1="211" y1="500" x2="211" y2="120"/>
+      <line x1="323" y1="500" x2="323" y2="120"/>
+      <line x1="434" y1="500" x2="434" y2="120"/>
+      <line x1="546" y1="500" x2="546" y2="120"/>
+      <line x1="657" y1="500" x2="657" y2="120"/>
+      <line x1="769" y1="500" x2="769" y2="120"/>
+    </g>
+
+    <text x="92" y="504" text-anchor="end">0</text>
+    <text x="92" y="428" text-anchor="end">5</text>
+    <text x="92" y="352" text-anchor="end">10</text>
+    <text x="92" y="276" text-anchor="end">15</text>
+    <text x="92" y="200" text-anchor="end">20</text>
+    <text x="92" y="124" text-anchor="end">25</text>
+
+    <text x="100" y="520" text-anchor="middle">12</text>
+    <text x="211" y="520" text-anchor="middle">24</text>
+    <text x="323" y="520" text-anchor="middle">48</text>
+    <text x="434" y="520" text-anchor="middle">72</text>
+    <text x="546" y="520" text-anchor="middle">96</text>
+    <text x="657" y="520" text-anchor="middle">120</text>
+    <text x="769" y="520" text-anchor="middle">144</text>
+    <text x="880" y="520" text-anchor="middle">168</text>
+
+    <text x="490" y="552" text-anchor="middle" fill="#b8c0cc" font-size="12" font-weight="500">Idade pós-natal (horas)</text>
+    <text transform="translate(38 310) rotate(-90)" text-anchor="middle" fill="#b8c0cc" font-size="12" font-weight="500">Bilirrubina sérica total (mg/dL)</text>
+  </g>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif" font-size="11" font-weight="600">
+    <text x="870" y="155" text-anchor="end" fill="#ef4444">P95</text>
+    <text x="870" y="200" text-anchor="end" fill="#f97316">P75</text>
+    <text x="870" y="261" text-anchor="end" fill="#84cc16">P40</text>
+  </g>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif" font-size="12">
+    <rect x="120" y="138" width="240" height="118" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+    <rect x="135" y="152" width="14" height="14" rx="3" fill="#ef4444" opacity="0.55"/>
+    <text x="158" y="163" fill="#f3ede0" font-weight="600">Alto risco</text>
+    <text x="158" y="176" fill="#8f9bad" font-size="10">≥P95 · fototerapia direta SBP</text>
+
+    <rect x="135" y="184" width="14" height="14" rx="3" fill="#f97316" opacity="0.55"/>
+    <text x="158" y="195" fill="#f3ede0" font-weight="600">Médio-alto</text>
+    <text x="158" y="208" fill="#8f9bad" font-size="10">P75–P95</text>
+
+    <rect x="135" y="216" width="14" height="14" rx="3" fill="#84cc16" opacity="0.55"/>
+    <text x="158" y="227" fill="#f3ede0" font-weight="600">Médio-baixo</text>
+    <text x="158" y="240" fill="#8f9bad" font-size="10">P40–P75</text>
+  </g>
+
+  <g font-family="Inter, -apple-system, system-ui, sans-serif">
+    <line x1="600" y1="320" x2="600" y2="195" stroke="#f3ede0" stroke-width="1.4" stroke-dasharray="3 3" opacity="0.55" marker-end="url(#arrow-bhutani)"/>
+    <text x="608" y="270" fill="#f3ede0" font-size="11" font-weight="500" opacity="0.9">≥P95 = fototerapia</text>
+    <text x="608" y="285" fill="#f3ede0" font-size="11" opacity="0.7">direta (SBP)</text>
+  </g>
+
+  <text x="60" y="580" fill="#8f9bad" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="10" font-style="italic">Reconstrução SVG autoral Bauer · Cross-link original: Bhutani VK et al. Pediatrics 1999;103(1):6-14</text>
+</svg>
