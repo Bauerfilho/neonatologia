@@ -1,0 +1,197 @@
+{
+  "baseUrl": "http://localhost:8765/neonatologia/",
+  "date": "2026-05-26T00:20:39.934Z",
+  "suites": [
+    {
+      "suite": "hub",
+      "results": [
+        {
+          "name": "hub.cards (12)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "hub.cards.disponiveis (5)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "hub.filterChips (4)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "hub.console",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "hub.pwa.sw (http://localhost:8765/neonatologia/)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "hub.pwa.manifest",
+          "status": "PASS",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "suite": "m1-classificacao-sifilis",
+      "results": [
+        {
+          "name": "m1-classificacao-sifilis.firstPage",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m1-classificacao-sifilis.lastPage (p11)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m1-classificacao-sifilis.quiz.options (12)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m1-classificacao-sifilis.console",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m1-classificacao-sifilis.mobile375",
+          "status": "PASS",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "suite": "m2-torch",
+      "results": [
+        {
+          "name": "m2-torch.firstPage",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m2-torch.lastPage (p8)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m2-torch.quiz.options (10)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m2-torch.console",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m2-torch.mobile375",
+          "status": "PASS",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "suite": "m3-reanimacao",
+      "results": [
+        {
+          "name": "m3-reanimacao.firstPage",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m3-reanimacao.lastPage (p12)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m3-reanimacao.quiz.options (8)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m3-reanimacao.console",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m3-reanimacao.mobile375",
+          "status": "PASS",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "suite": "m4-triagem-neonatal",
+      "results": [
+        {
+          "name": "m4-triagem-neonatal.firstPage",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m4-triagem-neonatal.lastPage (p12)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m4-triagem-neonatal.quiz.options (10)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m4-triagem-neonatal.console",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m4-triagem-neonatal.mobile375",
+          "status": "PASS",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "suite": "m5-triagem-auditiva-neonatal",
+      "results": [
+        {
+          "name": "m5-triagem-auditiva-neonatal.firstPage",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m5-triagem-auditiva-neonatal.lastPage (p13)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m5-triagem-auditiva-neonatal.quiz.options (10)",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m5-triagem-auditiva-neonatal.console",
+          "status": "PASS",
+          "detail": ""
+        },
+        {
+          "name": "m5-triagem-auditiva-neonatal.mobile375",
+          "status": "PASS",
+          "detail": ""
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalPass": 31,
+    "totalWarn": 0,
+    "totalFail": 0,
+    "total": 31
+  }
+}

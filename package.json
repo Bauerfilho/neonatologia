@@ -1,0 +1,25 @@
+{
+  "name": "neonatologia-bauer",
+  "version": "1.0.0",
+  "description": "Plataforma Bauer Neonatologia — Parte 1 (M1-M5) + Parte 2 (M6-M8) + Bônus. SPA estática com hash routing, PWA com auto-update absoluto, 7 módulos sequenciais sobre cuidado neonatal nos primeiros dias.",
+  "private": true,
+  "main": "sw.js",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "qa": "node scripts/qa-neonato.js",
+    "qa:remote": "node scripts/qa-neonato.js"
+  },
+  "keywords": [
+    "neonatologia",
+    "pediatria",
+    "residencia-medica",
+    "spa",
+    "pwa",
+    "bauer"
+  ],
+  "author": "Bauer",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}
