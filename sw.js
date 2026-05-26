@@ -1,9 +1,10 @@
-/* Service Worker — Plataforma Bauer Neonatologia (Parte 1 completa)
+/* Service Worker — Plataforma Bauer Neonatologia (Parte 1 + Parte 2 + Bônus 1-3)
  * Cache-first com fallback stale-while-revalidate.
- * Cobertura offline: hub + 5 módulos (HTML + CSS + JS + SVGs + imagens).
+ * Cobertura offline: hub + 11 módulos (M1-M5 Parte 1; M6-M8 Parte 2; M9-M11 Bônus 1-3).
+ * M12 (Bônus 4) entra em bump v2.5.0 quando entregue.
  */
 
-const CACHE = 'neonato-platform-v2.3.0';
+const CACHE = 'neonato-platform-v2.4.0';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
@@ -14,6 +15,7 @@ const ASSETS = [
   BASE + 'assets/css/hub-tokens.css',
   BASE + 'assets/css/hub.css',
   BASE + 'assets/js/hub.js',
+  BASE + 'assets/js/pwa-bootstrap.js',
   BASE + 'assets/img/icon-192.png',
   BASE + 'assets/img/icon-512.png',
   BASE + 'assets/img/icon-192.svg',
@@ -112,7 +114,76 @@ const ASSETS = [
   BASE + 'modules/m5-triagem-auditiva-neonatal/assets/js/router.js',
   BASE + 'modules/m5-triagem-auditiva-neonatal/assets/js/quiz.js',
   BASE + 'modules/m5-triagem-auditiva-neonatal/assets/img/BNN-b30-coclea-corte-transversal.svg',
-  BASE + 'modules/m5-triagem-auditiva-neonatal/assets/img/BNN-b31-eoa-sonda-rn-triagem.jpg'
+  BASE + 'modules/m5-triagem-auditiva-neonatal/assets/img/BNN-b31-eoa-sonda-rn-triagem.jpg',
+
+  /* === M6 — Dispneia SDR + sepse precoce === */
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/index.html',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/css/tokens.css',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/css/base.css',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/css/components.css',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/css/pages-m6.css',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/js/router.js',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/js/quiz.js',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/data/casos-p1.json',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/img/BNN-b34-rx-neonatal-normal-svg.svg',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/img/BNN-b36-lisa-vs-insure-svg.svg',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/img/BNN-b37-monitor-apneia-svg.svg',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/img/BNN-cpap-premature-infant-hall.jpg',
+  BASE + 'modules/m6-dispneia-neonatal-sdr-sepse/assets/img/BNN-rx-sdr-irds-haggstrom.png',
+
+  /* === M7 — Dispneia TTRN + SAM + HPPN === */
+  BASE + 'modules/m7-ttrn-sam-hppn/index.html',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/css/tokens.css',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/css/base.css',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/css/components.css',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/css/pages-m7.css',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/js/router.js',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/js/quiz.js',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-b45-rx-ttrn-svg.svg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-b47-liquido-amniotico-meconial-svg.svg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-b48-rn-banhado-meconio-svg.svg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-b50-ino-setup-svg.svg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-hood-oxihood-illustration.png',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-meconio-passagem-fralda.jpg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-rx-pneumotorax-neonato-hellerhoff.jpg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-rx-sam-grosseiro-hellerhoff.jpg',
+
+  /* === M8 — Icterícia Neonatal (Caso Eusébio Foucault) === */
+  BASE + 'modules/m8-ictericia-neonatal/index.html',
+  BASE + 'modules/m8-ictericia-neonatal/assets/css/tokens.css',
+  BASE + 'modules/m8-ictericia-neonatal/assets/css/base.css',
+  BASE + 'modules/m8-ictericia-neonatal/assets/css/components.css',
+  BASE + 'modules/m8-ictericia-neonatal/assets/css/pages-m8.css',
+  BASE + 'modules/m8-ictericia-neonatal/assets/js/router.js',
+  BASE + 'modules/m8-ictericia-neonatal/assets/js/quiz.js',
+  BASE + 'modules/m8-ictericia-neonatal/assets/js/caso-eusebio.js',
+
+  /* === M9 — Bônus 1 ECN === */
+  BASE + 'modules/m9-enterocolite-necrosante/index.html',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/css/tokens.css',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/css/base.css',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/css/components.css',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/css/pages-m9.css',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/js/router.js',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/js/quiz.js',
+
+  /* === M10 — Bônus 2 Miscelânia === */
+  BASE + 'modules/m10-miscelania-neonatal/index.html',
+  BASE + 'modules/m10-miscelania-neonatal/assets/css/tokens.css',
+  BASE + 'modules/m10-miscelania-neonatal/assets/css/base.css',
+  BASE + 'modules/m10-miscelania-neonatal/assets/css/components.css',
+  BASE + 'modules/m10-miscelania-neonatal/assets/css/pages-m10.css',
+  BASE + 'modules/m10-miscelania-neonatal/assets/js/router.js',
+  BASE + 'modules/m10-miscelania-neonatal/assets/js/quiz.js',
+
+  /* === M11 — Bônus 3 Condições cervicais === */
+  BASE + 'modules/m11-condicoes-cervicais/index.html',
+  BASE + 'modules/m11-condicoes-cervicais/assets/css/tokens.css',
+  BASE + 'modules/m11-condicoes-cervicais/assets/css/base.css',
+  BASE + 'modules/m11-condicoes-cervicais/assets/css/components.css',
+  BASE + 'modules/m11-condicoes-cervicais/assets/css/pages-m11.css',
+  BASE + 'modules/m11-condicoes-cervicais/assets/js/router.js',
+  BASE + 'modules/m11-condicoes-cervicais/assets/js/quiz.js'
 ];
 
 self.addEventListener('install', (event) => {
