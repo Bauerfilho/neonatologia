@@ -1,0 +1,705 @@
+/* ============================================================ */
+/* M8 — Icterícia neonatal · estilos específicos                 */
+/* Reusa chassi Opção C: tokens.css + base.css + components.css   */
+/* Adiciona: bauer-revisable, vinheta Eusébio, Kramer, AAP, etc.  */
+/* ============================================================ */
+
+/* === Eusébio vinheta — V67 (reuso da estrutura .joao-vinheta de M7, renomeada) === */
+.eusebio-vinheta {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  border-radius: var(--r-lg);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  position: relative;
+}
+.eusebio-vinheta__badge {
+  display: inline-block;
+  padding: 4px var(--space-3);
+  border-radius: var(--r-pill);
+  background: var(--accent-coral-soft);
+  color: var(--accent-coral);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+.eusebio-vinheta__matron {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--ink-70);
+  margin-bottom: var(--space-3);
+  font-style: italic;
+}
+.eusebio-vinheta__matron strong {
+  color: var(--accent-coral);
+  font-style: normal;
+}
+.eusebio-vinheta__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  margin: 0 0 var(--space-4);
+  color: var(--ink-100);
+}
+.eusebio-vinheta__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .eusebio-vinheta__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 980px) {
+  .eusebio-vinheta__grid { grid-template-columns: repeat(4, 1fr); }
+}
+.eusebio-vinheta__item {
+  padding: var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--border-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.eusebio-vinheta__item--key {
+  border-left-color: var(--accent-coral);
+  background: var(--accent-coral-soft);
+}
+.eusebio-vinheta__icon {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-50);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+.eusebio-vinheta__item dt {
+  font-size: var(--fs-xs);
+  color: var(--ink-50);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.eusebio-vinheta__item dd {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--ink-100);
+  font-weight: 500;
+}
+
+/* === Case anchor flutuante — Eusébio (mesma estrutura M6/M7) === */
+.case-anchor--eusebio dt::before {
+  content: none;
+}
+
+/* === .bauer-revisable — LAUDO-DUAL (4 instâncias em M8) === */
+.bauer-revisable {
+  margin: var(--space-5) 0;
+  border: 1px dashed var(--accent-coral);
+  border-radius: var(--r-lg);
+  background: var(--bg-elev-1);
+  overflow: hidden;
+}
+.bauer-revisable__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent-coral-soft);
+  border-bottom: 1px solid var(--accent-coral);
+  flex-wrap: wrap;
+}
+.bauer-revisable__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-coral);
+  font-weight: 700;
+}
+.bauer-revisable__label::before { content: "⚖"; font-size: 1rem; }
+.bauer-revisable__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px var(--space-3);
+  background: var(--bg-elev-1);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--r-pill);
+  color: var(--ink-90);
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  cursor: pointer;
+}
+.bauer-revisable__toggle::after {
+  content: "▾";
+  transition: transform 0.2s;
+}
+.bauer-revisable[data-expanded="true"] .bauer-revisable__toggle::after { transform: rotate(180deg); }
+.bauer-revisable__voices {
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
+}
+.bauer-revisable[data-expanded="false"] .bauer-revisable__voices { display: none; }
+.voice {
+  padding: var(--space-4);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--border-medium);
+  background: var(--bg-elev-2);
+}
+.voice__name {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+}
+.voice--sbp { border-left-color: var(--color-success-500); background: var(--color-success-100); }
+.voice--sbp .voice__name { color: var(--color-success-500); }
+.voice--aap { border-left-color: var(--color-info-500); }
+.voice--aap .voice__name { color: var(--color-info-500); }
+.voice--canon-br { border-left-color: var(--color-warning-500); background: var(--color-warning-100); }
+.voice--canon-br .voice__name { color: var(--color-warning-500); }
+.voice--internacional { border-left-color: var(--color-info-500); }
+.voice--internacional .voice__name { color: var(--color-info-500); }
+.voice ul { margin: 0; padding-left: var(--space-5); }
+.voice li { font-size: var(--fs-sm); }
+.voice p { margin: 0 0 var(--space-2); font-size: var(--fs-sm); color: var(--ink-100); }
+.voice p:last-child { margin-bottom: 0; }
+.voice__source {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  font-style: italic;
+}
+
+/* === Zonas de Kramer SVG host (V73) === */
+.kramer-zones {
+  margin: var(--space-5) 0;
+  display: grid;
+  gap: var(--space-4);
+}
+@media (min-width: 760px) {
+  .kramer-zones { grid-template-columns: minmax(0, 320px) 1fr; align-items: start; }
+}
+.kramer-zones__svg-wrap {
+  background: var(--bg-elev-1);
+  border-radius: var(--r-lg);
+  padding: var(--space-4);
+  border: 1px solid var(--border-soft);
+}
+.kramer-zones__svg-wrap svg { width: 100%; height: auto; display: block; }
+.kramer-zones__list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kramer-zones__list li {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-1);
+  border-left: 4px solid var(--ink-50);
+  border-radius: var(--r-md);
+  font-size: var(--fs-sm);
+}
+.kramer-zones__list li[data-zone="3"] { border-left-color: var(--color-danger-500); background: var(--color-danger-100); }
+.kramer-zones__list li[data-zone="4"] { border-left-color: var(--color-danger-500); }
+.kramer-zones__list li[data-zone="5"] { border-left-color: var(--color-danger-500); }
+.kramer-zones__num {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--ink-30);
+  color: var(--ink-100);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-right: var(--space-2);
+}
+
+/* === Comparison table (Rh × ABO, Esferocitose × G6PD, leite × aleitamento, AAP × Bhutani) === */
+.comp-table-wrap {
+  margin: var(--space-5) 0;
+  overflow-x: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-medium);
+}
+.comp-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: collapse;
+  background: var(--bg-elev-1);
+}
+.comp-table th,
+.comp-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--fs-sm);
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+.comp-table th {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--bg-elev-2);
+  color: var(--ink-90);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.comp-table tbody tr:hover { background: var(--bg-elev-2); }
+.comp-table tbody tr:last-child td { border-bottom: 0; }
+.comp-table td strong { color: var(--ink-100); }
+.comp-table td.col-attr { font-weight: 600; color: var(--ink-90); }
+
+/* === Fluxograma decisão (B50, B52, B53) — chassi reusável === */
+.fluxograma {
+  margin: var(--space-5) 0;
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-soft);
+}
+.fluxograma__step {
+  position: relative;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-7);
+  border-radius: var(--r-md);
+  background: var(--bg-elev-2);
+  margin-bottom: var(--space-3);
+  border-left: 3px solid var(--color-info-500);
+}
+.fluxograma__step:last-child { margin-bottom: 0; }
+.fluxograma__step::before {
+  content: counter(flux-step);
+  counter-increment: flux-step;
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--color-info-500);
+  color: var(--bg-base);
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+.fluxograma { counter-reset: flux-step; }
+.fluxograma__step--question { border-left-color: var(--color-warning-500); }
+.fluxograma__step--question::before { background: var(--color-warning-500); }
+.fluxograma__step--diag { border-left-color: var(--color-success-500); }
+.fluxograma__step--diag::before { background: var(--color-success-500); }
+.fluxograma__step--alert { border-left-color: var(--color-danger-500); }
+.fluxograma__step--alert::before { background: var(--color-danger-500); }
+.fluxograma__step h4 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--fs-md);
+  color: var(--ink-100);
+}
+.fluxograma__step p { margin: 0 0 var(--space-2); font-size: var(--fs-sm); }
+.fluxograma__step p:last-child { margin-bottom: 0; }
+.fluxograma__branches {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding-left: var(--space-3);
+}
+.fluxograma__branch {
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-elev-3);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  border-left: 2px solid var(--border-medium);
+}
+.fluxograma__branch strong { color: var(--ink-100); }
+.fluxograma__branch--correct { border-left-color: var(--color-success-500); }
+.fluxograma__branch--wrong { border-left-color: var(--color-danger-500); }
+
+/* === Trio irradiâncias (8.13) === */
+.irradiance-trio {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+@media (min-width: 720px) {
+  .irradiance-trio { grid-template-columns: repeat(3, 1fr); }
+}
+.irradiance-card {
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  border-top: 4px solid var(--color-info-500);
+}
+.irradiance-card--high { border-top-color: var(--color-danger-500); background: var(--color-danger-100); }
+.irradiance-card__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-50);
+  margin-bottom: var(--space-2);
+}
+.irradiance-card__value {
+  font-family: var(--font-mono);
+  font-size: var(--fs-lg);
+  color: var(--ink-100);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+.irradiance-card__use {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+  margin: 0;
+}
+
+/* === AAP chart placeholder (V91) === */
+.aap-chart {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-medium);
+}
+.aap-chart__title {
+  font-family: var(--font-display);
+  margin: 0 0 var(--space-3);
+  color: var(--ink-100);
+}
+.aap-chart__skeleton {
+  position: relative;
+  height: 280px;
+  background: linear-gradient(180deg, rgba(108, 180, 232, 0.08) 0%, rgba(255, 107, 90, 0.04) 50%, rgba(95, 207, 128, 0.04) 100%);
+  border-radius: var(--r-md);
+  border: 1px dashed var(--border-medium);
+  overflow: hidden;
+}
+.aap-chart__svg { width: 100%; height: 100%; display: block; }
+.aap-chart__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  font-size: var(--fs-xs);
+}
+.aap-chart__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--ink-90);
+}
+.aap-chart__legend-swatch {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  border-radius: var(--r-pill);
+}
+.aap-chart__brief {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  border-left: 3px solid var(--color-info-500);
+}
+
+/* === Bhutani 4-zone === */
+.bhutani-zones {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-5) 0;
+}
+.bhutani-zone {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-md);
+  border-left: 4px solid;
+  background: var(--bg-elev-2);
+  display: grid;
+  gap: var(--space-1);
+}
+.bhutani-zone--low { border-left-color: var(--color-success-500); }
+.bhutani-zone--med-low { border-left-color: var(--color-info-500); }
+.bhutani-zone--med-high { border-left-color: var(--color-warning-500); }
+.bhutani-zone--high { border-left-color: var(--color-danger-500); background: var(--color-danger-100); }
+.bhutani-zone__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-90);
+}
+.bhutani-zone__pct {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--ink-100);
+}
+.bhutani-zone__cond { font-size: var(--fs-sm); color: var(--ink-90); }
+
+/* === Resolução caso (V97) === */
+.caso-resolucao {
+  margin: var(--space-5) 0;
+  border-radius: var(--r-lg);
+  background: var(--bg-elev-1);
+  border: 2px solid var(--color-success-500);
+  padding: var(--space-5);
+  display: grid;
+  gap: var(--space-4);
+}
+.caso-resolucao__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px var(--space-3);
+  background: var(--color-success-100);
+  color: var(--color-success-500);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--r-pill);
+  width: fit-content;
+}
+.caso-resolucao__badge::before { content: "🟢"; }
+.caso-resolucao h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+}
+.caso-resolucao__diag {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-info-100);
+  border-left: 4px solid var(--color-info-500);
+  border-radius: var(--r-md);
+}
+.caso-resolucao__diag strong { color: var(--color-info-500); }
+
+/* === Tabela síntese final (V98) === */
+.sintese-final-wrap {
+  margin: var(--space-5) 0;
+  overflow-x: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-medium);
+}
+.sintese-final {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+.sintese-final th,
+.sintese-final td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  font-size: var(--fs-xs);
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+.sintese-final th { background: var(--bg-elev-2); color: var(--ink-90); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; }
+.sintese-final td.subtipo-label a { color: var(--accent-coral); font-weight: 600; }
+.sintese-final tr.subtipo--bd { background: rgba(255, 93, 107, 0.04); }
+.sintese-final tr.subtipo--bi { background: rgba(240, 180, 64, 0.04); }
+.sintese-final tr.subtipo--fis { background: rgba(108, 180, 232, 0.04); }
+
+/* === Painel comparativo genérico (leite × aleitamento; esferócito × Heinz) === */
+.paired-panel {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+@media (min-width: 720px) {
+  .paired-panel { grid-template-columns: 1fr 1fr; }
+}
+.paired-panel__side {
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  border-top: 4px solid var(--ink-50);
+}
+.paired-panel__side--left { border-top-color: var(--color-info-500); }
+.paired-panel__side--right { border-top-color: var(--color-warning-500); }
+.paired-panel__title {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-display);
+  color: var(--ink-100);
+}
+.paired-panel__side dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-2) var(--space-3);
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+.paired-panel__side dt { color: var(--ink-50); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.06em; }
+.paired-panel__side dd { margin: 0; color: var(--ink-100); }
+
+/* === Image figcaption padrão (M7 Hellerhoff) === */
+.medfig {
+  margin: var(--space-5) 0;
+}
+.medfig__img-wrap {
+  background: var(--bg-elev-1);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: center;
+}
+.medfig__img-wrap img,
+.medfig__img-wrap svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.medfig__skeleton {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(45deg, var(--bg-elev-1), var(--bg-elev-1) 12px, var(--bg-elev-2) 12px, var(--bg-elev-2) 24px);
+  color: var(--ink-50);
+  padding: var(--space-5);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--r-md);
+}
+.medfig__skeleton strong { color: var(--accent-coral); display: block; margin-bottom: var(--space-2); font-size: var(--fs-sm); }
+.medfig__skeleton em { font-style: normal; color: var(--ink-70); display: block; margin-top: var(--space-2); font-size: var(--fs-xs); }
+.medfig figcaption {
+  margin-top: var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  line-height: 1.5;
+}
+.medfig figcaption strong { color: var(--ink-90); }
+.medfig figcaption a { color: var(--color-info-500); }
+
+/* === Pegadinha-âncora (E4) bem destacada — usada em 8.12 === */
+.peg-anchor {
+  margin: var(--space-5) 0;
+  padding: var(--space-5);
+  background: var(--color-warning-100);
+  border: 1px solid var(--color-warning-border);
+  border-radius: var(--r-lg);
+  border-left: 6px solid var(--color-warning-500);
+}
+.peg-anchor__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-warning-500);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+/* === Janela Kasai === */
+.janela-kasai {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-5) 0;
+}
+.janela-kasai__row {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elev-2);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--ink-50);
+  align-items: center;
+}
+.janela-kasai__row--ideal { border-left-color: var(--color-success-500); }
+.janela-kasai__row--good { border-left-color: var(--color-info-500); }
+.janela-kasai__row--gray { border-left-color: var(--color-warning-500); }
+.janela-kasai__row--closed { border-left-color: var(--color-danger-500); background: var(--color-danger-100); }
+.janela-kasai__age {
+  font-family: var(--font-mono);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--ink-100);
+}
+
+/* === Indicações exsanguíneo (V96) === */
+.indic-exs {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+.indic-exs__item {
+  padding: var(--space-4);
+  background: var(--bg-elev-1);
+  border-radius: var(--r-md);
+  border-left: 4px solid var(--color-danger-500);
+}
+.indic-exs__title {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--color-danger-500);
+}
+.indic-exs__cond {
+  font-size: var(--fs-sm);
+  color: var(--ink-90);
+  margin: 0 0 var(--space-2);
+}
+.indic-exs__cond:last-child { margin-bottom: 0; }
+.indic-exs__criterio {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-danger-500);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* === Page nav (anterior/próxima) — herdado de M7 mas confirma === */
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-soft);
+}
+.page-nav__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--r-md);
+  background: var(--bg-elev-2);
+  color: var(--ink-100);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  border: 1px solid var(--border-medium);
+}
+.page-nav__btn[aria-disabled="true"] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.page-nav__btn:hover { background: var(--bg-elev-3); }
+.page-nav__indicator {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-70);
+}
