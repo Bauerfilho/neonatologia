@@ -619,3 +619,58 @@ Fonte: https://commons.wikimedia.org/wiki/File:Cyanotic_neonate.jpg
 - ✅ Nenhuma imagem entregue sem attribution canônica.
 - ✅ Ressalva dimensional declarada explicitamente (N1 abaixo de 800 px largura — único disponível em CC).
 - ✅ Decisão Bauer flagada explicitamente (anonimização facial N1).
+
+---
+
+## V52 SVG autoral — RX TTRN esquemático anotado (2026-05-26)
+
+- **Status**: ✅ ENTREGUE pelo ilustrador-medico-bauer (fallback após `[BUSCADOR-IMAGEM-INCONCLUSIVO]` em CC).
+- **Arquivo**: `BNN-v52-rx-ttrn-svg-autoral.svg`
+- **Categoria** (taxonomia ilustrador §3): Anatomia simplificada + ilustração radiográfica esquemática.
+- **Dimensões viewBox**: 800 × 600 (aspect ratio 4:3 responsivo).
+- **Paleta**: Bauer Neonatologia (`bg-base #0a1620`, `ink-100 #f3ede0`, `accent-coral #ff6b5a`, `color-warning #f0b440` para setas de achado).
+- **Fonte**: Inter (labels técnicos).
+- **Acessibilidade**: `role="img"` + `<title>` + `<desc>` em PT-BR médico, WCAG AA (contraste texto/fundo > 4.5:1, fontes ≥ 10 px).
+- **Anonimização**: não se aplica (sem face humana — esquema radiográfico puro).
+- **Achados anotados (5 setas amarelas com labels técnicos)**:
+  1. **Cisurite** — linha amarela espessada na cisura interlobar direita (oblíqua menor).
+  2. **Estrias do hilo** — radiação fina bilateral do hilo, label "vasos peri-hilares ingurgitados".
+  3. **Trama vascular aumentada** — linhas radiando dos hilos pulmonares, label "congestão linfática perivascular".
+  4. **Cardiomegalia discreta** — silhueta cardíaca pouco aumentada, label "ICT levemente aumentado".
+  5. **Arcos costais retificados** — silhueta torácica com curvatura sutilmente reduzida, label "hiperinsuflação leve".
+- **Marcadores anatômicos**: D / E / AP visíveis no painel radiográfico.
+- **Footer SVG**: "Ilustração esquemática autoral Bauer Neonatologia · 2026"
+- **Posicionamento sugerido**: página 7.4 do M7 (`7-4-ttrn-radiografia` ou equivalente).
+- **Container sugerido**: `<figure class="figure-svg-anotada">` em coluna única ou layout de 2 colunas (texto + figura).
+- **Cross-reuso candidato**: páginas 7.5 (achados clínico-radiológicos) e 7.6 (diagnóstico diferencial TTRN × outras dispneias) — Didata decide.
+
+### V57+V58 SVG autoral — RN banhado em mecônio + close-up unha/coto (2026-05-26)
+
+- **Status**: ✅ ENTREGUE pelo ilustrador-medico-bauer (complemento ao `BNN-b48-rn-banhado-meconio-svg.svg` rodada 1, agora com insets ampliados).
+- **Arquivo**: `BNN-v57-v58-rn-meconio-svg-autoral.svg`
+- **Categoria**: Anatomia simplificada + insets clínicos ampliados (zoom em unha + coto).
+- **Dimensões viewBox**: 800 × 600 (aspect ratio 4:3).
+- **Paleta**: Bauer Neonatologia + tons marrom-esverdeados de mecônio (`#6b5d3a` painel principal, `#85724a → #4f4226` cordão, `#d68a4a → #8a5a30` leito ungueal tingido).
+- **Anonimização facial absoluta**: silhueta neonatal SEM face (cabeça representada como oval pleno, sem olhos/boca/nariz).
+- **Achados anotados (3 setas coral + labels técnicos)**:
+  1. **Pele tinta** — manchas marrom-esverdeadas distribuídas no tronco e membros, label "impregnação marrom-esverdeada".
+  2. **Inset unha** (canto superior direito) — dedo ampliado com leito ungueal alaranjado-amarronzado, label "unha alaranjada".
+  3. **Inset coto umbilical** (canto inferior direito) — coto tingido com halo de mecônio periumbilical, label "coto tinto".
+- **Indicadores de zoom**: círculos tracejados coral conectando insets aos pontos do corpo.
+- **Footer SVG**: "Ilustração esquemática autoral Bauer Neonatologia · 2026 · anonimização facial absoluta"
+- **Posicionamento sugerido**: página 7.8 do M7 (`7-8-sam-apresentacao-clinica` ou equivalente).
+- **Container sugerido**: `<figure class="figure-svg-clinica">` em coluna única, full-width até ~720 px.
+- **Cross-reuso candidato**: página 7.9 (estágios de impregnação meconial — pele, unha, coto, cordão) — Didata decide.
+
+### Auditoria SVG autoral (gate ilustrador)
+
+- ✅ `viewBox` definido + responsivo.
+- ✅ `role="img"` + `aria-labelledby` apontando pra `<title>` + `<desc>`.
+- ✅ `<title>` e `<desc>` técnicos em PT-BR, sem narração.
+- ✅ Paleta Bauer Neonatologia aplicada (tokens canônicos).
+- ✅ Fonte Inter (sistema/no fallback dependence).
+- ✅ Sem placeholder, sem watermark, sem assinatura de IA, sem comentário SVG.
+- ✅ Contraste de texto ≥ 4.5:1 contra fundo.
+- ✅ Morfologia médica correta (cisurite na oblíqua direita; impregnação distribuída em tronco+extremidades com pico em superfícies de exposição; unha alaranjada compatível com >12 h de exposição intrauterina ao mecônio).
+- ✅ Cores semânticas respeitadas (amarelo = atenção/achado patológico; coral = destaque/anotação clínica).
+- ✅ Anonimização facial absoluta no V57/V58.

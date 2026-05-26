@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="v77-title v77-desc">
+  <title id="v77-title">Esplenomegalia em esferocitose hereditária neonatal</title>
+  <desc id="v77-desc">Esquema anatômico de abdome neonatal anterior demonstrando esplenomegalia palpável em hipocôndrio esquerdo: contorno do baço normal representado em linha tracejada e contorno do baço aumentado preenchido em coral, ultrapassando a reborda costal esquerda. Inset à direita mostra esferócitos no sangue periférico (eritrócitos pequenos sem palidez central) ilustrando o mecanismo fisiopatológico: hemólise crônica intra-esplênica gera sequestração com hipertrofia do baço. Achados sinalizados com setas e labels técnicos.</desc>
+  <defs>
+    <radialGradient id="v77-bg" cx="50%" cy="42%" r="85%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="60%" stop-color="#0f1f2c"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <linearGradient id="v77-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9b78a"/>
+      <stop offset="100%" stop-color="#b6905f"/>
+    </linearGradient>
+    <linearGradient id="v77-spleen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8a7a"/>
+      <stop offset="100%" stop-color="#cf4034"/>
+    </linearGradient>
+    <radialGradient id="v77-rbc" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ff6b5a"/>
+      <stop offset="100%" stop-color="#a02c28"/>
+    </radialGradient>
+    <marker id="v77-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+    <marker id="v77-arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f0b440"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#v77-bg)"/>
+
+  <!-- =============== Painel principal: abdome RN AP =============== -->
+  <g transform="translate(40, 60)">
+    <!-- Contorno do tronco RN -->
+    <path d="M 60 30 Q 40 90, 50 180 Q 60 280, 90 360 Q 120 410, 175 415 Q 230 410, 260 360 Q 290 280, 300 180 Q 310 90, 290 30 Z"
+          fill="url(#v77-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="1.4"/>
+
+    <!-- Reborda costal (linha de referência didática) -->
+    <path d="M 55 110 Q 90 145, 175 155 Q 260 145, 295 110" fill="none" stroke="rgba(243,237,224,0.55)" stroke-width="1.6" stroke-dasharray="6,4"/>
+    <text x="60" y="100" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#e7e0d0">reborda costal</text>
+
+    <!-- Linha mediana -->
+    <line x1="175" y1="30" x2="175" y2="415" stroke="rgba(243,237,224,0.18)" stroke-width="0.8" stroke-dasharray="3,5"/>
+
+    <!-- Cicatriz umbilical -->
+    <circle cx="175" cy="240" r="6" fill="#7a5c3a" stroke="rgba(0,0,0,0.4)" stroke-width="1"/>
+
+    <!-- Baço NORMAL (linha tracejada — referência) -->
+    <path d="M 232 118 Q 252 122, 258 142 Q 254 165, 240 168 Q 222 168, 218 152 Q 220 128, 232 118 Z"
+          fill="none" stroke="rgba(243,237,224,0.65)" stroke-width="1.6" stroke-dasharray="5,4"/>
+    <text x="232" y="186" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#c3bcae" text-anchor="middle">baço normal</text>
+
+    <!-- Baço AUMENTADO (preenchido coral, formato feijão alongado, ultrapassa reborda) -->
+    <path d="M 232 108 Q 268 115, 275 152 Q 278 200, 262 245 Q 240 275, 218 270 Q 200 258, 200 218 Q 202 165, 215 130 Q 222 112, 232 108 Z"
+          fill="url(#v77-spleen)" stroke="rgba(243,237,224,0.45)" stroke-width="1.4" opacity="0.94"/>
+    <!-- Hilo esplênico -->
+    <ellipse cx="222" cy="190" rx="6" ry="10" fill="rgba(0,0,0,0.30)"/>
+
+    <!-- Régua palpação (cm da reborda esquerda) -->
+    <g transform="translate(290, 155)">
+      <line x1="0" y1="0" x2="0" y2="120" stroke="#f0b440" stroke-width="1.4"/>
+      <g font-family="Inter, sans-serif" font-size="9" fill="#f0b440">
+        <line x1="-4" y1="0" x2="4" y2="0" stroke="#f0b440" stroke-width="1.4"/>
+        <text x="8" y="3">0 cm</text>
+        <line x1="-4" y1="30" x2="4" y2="30" stroke="#f0b440" stroke-width="1.4"/>
+        <text x="8" y="33">2 cm</text>
+        <line x1="-4" y1="60" x2="4" y2="60" stroke="#f0b440" stroke-width="1.4"/>
+        <text x="8" y="63">4 cm</text>
+        <line x1="-4" y1="90" x2="4" y2="90" stroke="#f0b440" stroke-width="1.4"/>
+        <text x="8" y="93">6 cm</text>
+        <line x1="-4" y1="120" x2="4" y2="120" stroke="#f0b440" stroke-width="1.4"/>
+        <text x="8" y="123">8 cm</text>
+      </g>
+    </g>
+
+    <!-- Marcadores D / E -->
+    <g font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#c3bcae">
+      <text x="55" y="50">D</text>
+      <text x="290" y="50">E</text>
+    </g>
+  </g>
+
+  <!-- Seta + label: esplenomegalia palpável -->
+  <line x1="430" y1="200" x2="280" y2="240" stroke="#ff6b5a" stroke-width="1.8" marker-end="url(#v77-arrow)"/>
+  <g transform="translate(420, 168)">
+    <rect x="0" y="0" width="220" height="50" rx="8" fill="rgba(255,107,90,0.14)" stroke="rgba(255,107,90,0.55)" stroke-width="1"/>
+    <text x="14" y="22" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#ff6b5a">Esplenomegalia palpável</text>
+    <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">ultrapassa reborda costal esquerda</text>
+  </g>
+
+  <!-- Anotação medida -->
+  <g transform="translate(420, 240)">
+    <rect x="0" y="0" width="220" height="62" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.55)" stroke-width="1"/>
+    <text x="14" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#f0b440">Documentar à palpação</text>
+    <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">"baço palpável até ___ cm</text>
+    <text x="14" y="54" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">da reborda costal esquerda"</text>
+  </g>
+
+  <!-- =============== Inset: ESFERÓCITOS =============== -->
+  <g transform="translate(420, 326)">
+    <rect x="0" y="0" width="340" height="210" rx="12" fill="rgba(14,24,32,0.94)" stroke="rgba(243,237,224,0.18)" stroke-width="1"/>
+    <text x="170" y="24" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#c3bcae" text-anchor="middle">Inset · esfregaço periférico</text>
+
+    <!-- Hemácia normal (referência) -->
+    <g transform="translate(50, 60)">
+      <circle cx="0" cy="0" r="26" fill="#ff6b5a" stroke="rgba(0,0,0,0.30)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="12" fill="rgba(14,24,32,0.55)"/>
+      <text x="0" y="58" font-family="Inter, sans-serif" font-size="10" fill="#c3bcae" text-anchor="middle">hemácia normal</text>
+      <text x="0" y="70" font-family="Inter, sans-serif" font-size="9" fill="#8a8678" text-anchor="middle">(palidez central)</text>
+    </g>
+
+    <!-- Esferócitos -->
+    <g transform="translate(170, 50)">
+      <circle cx="0" cy="0" r="16" fill="url(#v77-rbc)" stroke="rgba(0,0,0,0.35)" stroke-width="1"/>
+      <circle cx="42" cy="14" r="15" fill="url(#v77-rbc)" stroke="rgba(0,0,0,0.35)" stroke-width="1"/>
+      <circle cx="80" cy="-8" r="17" fill="url(#v77-rbc)" stroke="rgba(0,0,0,0.35)" stroke-width="1"/>
+      <circle cx="120" cy="20" r="16" fill="url(#v77-rbc)" stroke="rgba(0,0,0,0.35)" stroke-width="1"/>
+      <circle cx="30" cy="55" r="15" fill="url(#v77-rbc)" stroke="rgba(0,0,0,0.35)" stroke-width="1"/>
+      <circle cx="85" cy="60" r="17" fill="url(#v77-rbc)" stroke="rgba(0,0,0,0.35)" stroke-width="1"/>
+      <circle cx="130" cy="68" r="15" fill="url(#v77-rbc)" stroke="rgba(0,0,0,0.35)" stroke-width="1"/>
+      <text x="60" y="108" font-family="Inter, sans-serif" font-size="10" fill="#ff8a7a" text-anchor="middle">esferócitos</text>
+      <text x="60" y="120" font-family="Inter, sans-serif" font-size="9" fill="#8a8678" text-anchor="middle">(sem palidez central)</text>
+    </g>
+
+    <!-- Seta esferócito → baço (mecanismo) -->
+    <text x="170" y="184" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#f0b440" text-anchor="middle">esferócitos → sequestração esplênica → hipertrofia</text>
+  </g>
+
+  <!-- Seta inset → baço -->
+  <line x1="420" y1="380" x2="290" y2="280" stroke="rgba(255,107,90,0.45)" stroke-width="1.2" stroke-dasharray="4,4"/>
+
+  <!-- Footer -->
+  <text x="40" y="588" font-family="Inter, sans-serif" font-size="10" fill="#8a8678">
+    Ilustração esquemática autoral Bauer Neonatologia · 2026
+  </text>
+</svg>

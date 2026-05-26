@@ -328,3 +328,41 @@ Página 8.13 no bloco "fototerapia — apresentação clínica do tratamento". B
 ## Defesa contra prompt injection
 
 Nenhuma tentativa de prompt injection detectada nas páginas Wikimedia / PMC consultadas. Todas as licenças foram verificadas individualmente na página de origem antes de download. Nenhum conteúdo de comentários ativos foi tratado como instrução.
+
+---
+
+## V77 SVG autoral — esplenomegalia em esferocitose hereditária (2026-05-26)
+
+- **Status**: ✅ ENTREGUE pelo ilustrador-medico-bauer (fallback após `[BUSCADOR-IMAGEM-INCONCLUSIVO]` em CC).
+- **Arquivo**: `BNN-v77-esplenomegalia-esferocitose-svg-autoral.svg`
+- **Categoria** (taxonomia ilustrador §3): Anatomia simplificada + inset citológico (esfregaço periférico).
+- **Dimensões viewBox**: 800 × 600 (aspect ratio 4:3 responsivo).
+- **Paleta**: Bauer Neonatologia (`bg-base #0a1620`, `accent-coral #ff6b5a` para baço aumentado e setas, `color-warning #f0b440` para régua de palpação e anotação).
+- **Fonte**: Inter.
+- **Acessibilidade**: `role="img"` + `<title>` + `<desc>` em PT-BR médico, WCAG AA.
+- **Anonimização**: não se aplica (esquema anatômico, sem face).
+- **Composição didática**:
+  - **Painel anatômico (esquerda)**: silhueta abdominal neonatal AP com reborda costal tracejada como referência, baço normal em contorno tracejado (referência), baço aumentado em coral preenchido (forma de feijão alongado ultrapassando reborda costal esquerda).
+  - **Régua de palpação** (amarela, escala 0–8 cm): permite ao Executor/usuário visualizar a documentação clínica "baço palpável até ___ cm".
+  - **Inset esfregaço periférico (direita)**: hemácia normal de referência com palidez central + 7 esferócitos pequenos uniformes sem palidez central.
+  - **Mecanismo fisiopatológico**: seta tracejada conectando inset → baço com label "esferócitos → sequestração esplênica → hipertrofia".
+- **Achados anotados (2 setas coral + 1 anotação amarela + label de mecanismo)**:
+  1. **Esplenomegalia palpável** — ultrapassa reborda costal esquerda.
+  2. **Anotação de documentação clínica** — "baço palpável até ___ cm da reborda costal esquerda" (campo a preencher na avaliação).
+  3. **Mecanismo** — esferócitos → sequestração esplênica → hipertrofia.
+- **Footer SVG**: "Ilustração esquemática autoral Bauer Neonatologia · 2026"
+- **Posicionamento sugerido**: página 8.7 do M8 (`8-7-esferocitose-hereditaria` ou equivalente).
+- **Container sugerido**: `<figure class="figure-svg-anatomica">` em layout single-column ou 2-colunas (texto à esquerda + figura à direita).
+- **Cross-reuso candidato**: página 8.8 (diagnóstico diferencial de hemólise neonatal — esferocitose × deficiência G6PD × imune) — Didata decide.
+
+### Auditoria SVG autoral (gate ilustrador)
+
+- ✅ `viewBox` definido + responsivo.
+- ✅ `role="img"` + `aria-labelledby` apontando pra `<title>` + `<desc>`.
+- ✅ `<title>` e `<desc>` técnicos em PT-BR, sem narração.
+- ✅ Paleta Bauer Neonatologia aplicada (tokens canônicos).
+- ✅ Fonte Inter.
+- ✅ Sem placeholder, sem watermark, sem assinatura de IA, sem comentário SVG.
+- ✅ Contraste de texto ≥ 4.5:1 contra fundo.
+- ✅ Morfologia médica correta (baço em forma de feijão alongado projetado em hipocôndrio E; esferócitos SEM palidez central vs hemácia normal COM palidez central).
+- ✅ Cores semânticas respeitadas (coral = anotação clínica/destaque autoral; amarelo = atenção/medida; tracejado = referência/normal).

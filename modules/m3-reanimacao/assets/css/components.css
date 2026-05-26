@@ -870,3 +870,36 @@
   .figure-clinical { padding: var(--space-3); }
   .figure-clinical[data-img-id="B16"] img { max-width: 280px; }
 }
+
+/* ============================================================ */
+/* Cross-link card (reuso M4/M5 — reversos S44 M3 → M7/M10/M12)  */
+/* ============================================================ */
+.cross-link {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-info-100);
+  border: 1px solid var(--color-info-border);
+  border-radius: var(--r-md);
+  margin: var(--space-3) 0;
+  font-size: var(--fs-sm);
+}
+.cross-link::before {
+  content: "↔";
+  font-size: 1.4rem;
+  color: var(--color-info-500);
+  font-weight: 700;
+}
+.cross-link a {
+  color: var(--ink-100);
+  font-weight: 600;
+}
+.cross-link__module {
+  font-family: var(--font-mono);
+  color: var(--color-info-500);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

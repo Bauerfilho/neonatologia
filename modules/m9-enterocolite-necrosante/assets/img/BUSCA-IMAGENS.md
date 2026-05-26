@@ -347,3 +347,51 @@ Conforme `docs/imagens-revisao-m9.md` §3, duas otimizações pré-aprovadas par
 - **Aceite global**: ≥4/6 = ✅ aceite verde. Entregue 5/6 = supera teto.
 
 — Buscador-imagem-medica-bauer, 2026-05-26
+
+---
+
+## V72 SVG autoral — distensão abdominal + eritema parede em ECN (2026-05-26)
+
+- **Status**: ✅ ENTREGUE pelo ilustrador-medico-bauer (fallback após `[BUSCADOR-IMAGEM-INCONCLUSIVO]` em CC — única alternativa pedagógica viável para ilustrar o sinal de alarme clínico de ECN sem comprometer consentimento parental).
+- **Arquivo**: `BNN-v72-distensao-clinica-ecn-svg-autoral.svg`
+- **Categoria** (taxonomia ilustrador §3): Anatomia simplificada clínica + inset temporal (linha do tempo de progressão).
+- **Dimensões viewBox**: 800 × 600 (aspect ratio 4:3 responsivo).
+- **Paleta**: Bauer Neonatologia (`bg-base #0a1620`, `color-danger #e74c3c` para eritema e setas de alarme, `color-warning #f0b440` para alça sentinela e marcação de atenção, pele em tom neonatal `#dcb88c → #b48d5e`).
+- **Fonte**: Inter.
+- **Acessibilidade**: `role="img"` + `<title>` + `<desc>` em PT-BR médico, WCAG AA.
+- **Anonimização facial absoluta**: silhueta lateral neonatal pré-termo SEM face (cabeça representada como oval pleno).
+- **Composição didática**:
+  - **Painel principal (esquerda)**: silhueta lateral de RN pré-termo com abdome proeminente/distendido (curva ventral exagerada), eritema difuso em gradiente radial vermelho sobre parede abdominal (textura pontilhada complementar), alça sentinela representada como protuberância localizada em fossa ilíaca direita.
+  - **3 setas + labels**: distensão (vermelho), eritema parede (vermelho), alça sentinela (amarelo).
+  - **Caixa de alarme** (vermelha forte): "Distensão progressiva + eritema parede = sinal de alarme ECN (estágio II→III Bell)".
+  - **Inset linha do tempo (canto inferior direito)**: 3 mini-abdomes mostrando progressão basal → 12 h (distensão) → 24 h (distensão + eritema).
+- **Achados anotados (3 setas + 1 caixa de alarme + 1 timeline)**:
+  1. **Distensão abdominal** — curva ventral proeminente progressiva.
+  2. **Eritema parede abdominal** — sinal de comprometimento transmural.
+  3. **Alça sentinela** — protuberância fixa em FID.
+  4. **Caixa de alarme**: combinação dos achados = estágio II→III Bell.
+  5. **Linha do tempo**: basal → 12 h → 24 h.
+- **Footer SVG**: "Ilustração esquemática autoral Bauer Neonatologia · 2026 · anonimização facial absoluta"
+- **Posicionamento sugerido**: página 9.4 do M9 (`9-4-ecn-apresentacao-clinica` ou equivalente).
+- **Container sugerido**: `<figure class="figure-svg-clinica-alarme">` em coluna única, full-width até ~720 px (composição rica, não comporta layout estreito).
+- **Cross-reuso candidato**: página 9.5 (sinais clínicos × estágios Bell-Walsh) e 9.6 (critérios de cirurgia em ECN) — Didata decide.
+
+### Auditoria SVG autoral (gate ilustrador)
+
+- ✅ `viewBox` definido + responsivo.
+- ✅ `role="img"` + `aria-labelledby` apontando pra `<title>` + `<desc>`.
+- ✅ `<title>` e `<desc>` técnicos em PT-BR, sem narração.
+- ✅ Paleta Bauer Neonatologia aplicada (tokens canônicos).
+- ✅ Fonte Inter.
+- ✅ Sem placeholder, sem watermark, sem assinatura de IA, sem comentário SVG.
+- ✅ Contraste de texto ≥ 4.5:1 contra fundo.
+- ✅ Morfologia médica correta (distensão lateral exagerada compatível com íleo paralítico/perfuração iminente; eritema parede abdominal compatível com inflamação transmural; alça sentinela em FID compatível com íleo terminal acometido — sítio mais comum em ECN).
+- ✅ Cores semânticas respeitadas (vermelho/danger = alarme/perigo/eritema; amarelo/warning = atenção/alça sentinela; coral neutro reservado para outros SVGs do módulo).
+- ✅ Anonimização facial absoluta.
+
+### Resumo M9 atualizado
+
+- **6 briefs** declarados (V72, V74, V75, V77, V78, V79).
+- **5 ✅ QUALIFICADAS em CC** (V74, V75, V77, V78, V79) + **1 ✅ ENTREGUE como SVG autoral** (V72).
+- **0 ⚠️ INCONCLUSIVOS pendentes** — cobertura visual 6/6 completa.
+- **Fornecedores**: Hellerhoff (3/6) + Mishra PMC9976546 (1/6) + Ilustrador-medico-bauer (1/6 — V72) + Hellerhoff compartilhado V74/V78.

@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="v72-title v72-desc">
+  <title id="v72-title">Distensão abdominal e eritema de parede em enterocolite necrosante neonatal</title>
+  <desc id="v72-desc">Silhueta lateral estilizada de recém-nascido pré-termo, sem face (anonimização total), evidenciando os sinais clínicos de alarme da enterocolite necrosante: abdome proeminente com curva exagerada por distensão progressiva, eritema difuso da parede abdominal em tonalidade rósea-avermelhada, e alça sentinela visível como protuberância localizada em fossa ilíaca direita. Inset à direita mostra linha do tempo da progressão clínica: abdome basal sem distensão, distensão em 12h, eritema em 24h. Achados sinalizados com setas e labels técnicos.</desc>
+  <defs>
+    <radialGradient id="v72-bg" cx="50%" cy="42%" r="85%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="60%" stop-color="#0f1f2c"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <linearGradient id="v72-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcb88c"/>
+      <stop offset="100%" stop-color="#b48d5e"/>
+    </linearGradient>
+    <radialGradient id="v72-erythema" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(231,76,60,0.55)"/>
+      <stop offset="60%" stop-color="rgba(231,76,60,0.25)"/>
+      <stop offset="100%" stop-color="rgba(231,76,60,0)"/>
+    </radialGradient>
+    <linearGradient id="v72-loop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a35e44"/>
+      <stop offset="100%" stop-color="#5c2f1f"/>
+    </linearGradient>
+    <marker id="v72-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e74c3c"/>
+    </marker>
+    <marker id="v72-arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f0b440"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#v72-bg)"/>
+
+  <!-- =============== Silhueta LATERAL RN pré-termo =============== -->
+  <g transform="translate(40, 80)">
+    <!-- cabeça (sem face) -->
+    <ellipse cx="60" cy="60" rx="46" ry="50" fill="url(#v72-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1"/>
+    <!-- pescoço -->
+    <path d="M 38 100 Q 50 130, 78 130 L 84 108 Z" fill="url(#v72-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1"/>
+    <!-- contorno do tronco lateral COM ABDOME PROEMINENTE -->
+    <!-- linha dorsal (atrás, mais reta) + ventral (à direita, abaulada exagerada) -->
+    <path d="M 78 130
+             L 92 180
+             Q 98 220, 100 270
+             Q 102 320, 96 360
+             L 92 420
+             Q 110 430, 145 432
+             L 155 380
+             Q 175 360, 200 320
+             Q 240 280, 260 220
+             Q 268 180, 250 160
+             Q 220 150, 180 145
+             Q 130 138, 84 130 Z"
+          fill="url(#v72-skin)" stroke="rgba(243,237,224,0.28)" stroke-width="1.4"/>
+
+    <!-- Membro superior (parcial) -->
+    <path d="M 100 168 Q 90 220, 110 260 L 130 255 Q 122 218, 130 178 Z" fill="url(#v72-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1"/>
+    <!-- Membro inferior (parcial) -->
+    <path d="M 92 425 Q 80 480, 95 530 L 130 530 Q 128 480, 140 432 Z" fill="url(#v72-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1"/>
+    <path d="M 145 432 Q 155 480, 175 520 L 200 510 Q 175 470, 165 432 Z" fill="url(#v72-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1"/>
+
+    <!-- ERITEMA difuso da parede abdominal -->
+    <ellipse cx="200" cy="240" rx="80" ry="65" fill="url(#v72-erythema)"/>
+    <ellipse cx="175" cy="290" rx="65" ry="50" fill="url(#v72-erythema)" opacity="0.85"/>
+
+    <!-- Pontilhado eritematoso fino (textura) -->
+    <g fill="#e74c3c" opacity="0.45">
+      <circle cx="180" cy="210" r="1.2"/>
+      <circle cx="195" cy="225" r="1.2"/>
+      <circle cx="215" cy="218" r="1.2"/>
+      <circle cx="230" cy="235" r="1.2"/>
+      <circle cx="170" cy="248" r="1.2"/>
+      <circle cx="200" cy="260" r="1.2"/>
+      <circle cx="225" cy="252" r="1.2"/>
+      <circle cx="245" cy="240" r="1.2"/>
+      <circle cx="160" cy="275" r="1.2"/>
+      <circle cx="185" cy="285" r="1.2"/>
+      <circle cx="215" cy="280" r="1.2"/>
+      <circle cx="240" cy="270" r="1.2"/>
+      <circle cx="155" cy="305" r="1.2"/>
+      <circle cx="180" cy="318" r="1.2"/>
+      <circle cx="210" cy="310" r="1.2"/>
+      <circle cx="190" cy="195" r="1.2"/>
+      <circle cx="220" cy="200" r="1.2"/>
+    </g>
+
+    <!-- ALÇA SENTINELA: protuberância localizada em fossa ilíaca direita -->
+    <ellipse cx="225" cy="320" rx="22" ry="14" fill="url(#v72-loop)" stroke="rgba(0,0,0,0.45)" stroke-width="1.2" opacity="0.85"/>
+    <path d="M 207 318 Q 225 308, 243 320 Q 225 332, 207 322 Z" fill="none" stroke="rgba(0,0,0,0.40)" stroke-width="0.8"/>
+
+    <!-- Cicatriz umbilical -->
+    <circle cx="195" cy="248" r="5" fill="#7a5c3a" stroke="rgba(0,0,0,0.4)" stroke-width="0.8"/>
+
+    <!-- Marcador lateral -->
+    <text x="0" y="20" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#c3bcae">vista lateral</text>
+  </g>
+
+  <!-- =========== Setas + labels =========== -->
+
+  <!-- Distensão abdominal -->
+  <line x1="430" y1="180" x2="295" y2="220" stroke="#e74c3c" stroke-width="1.8" marker-end="url(#v72-arrow)"/>
+  <g transform="translate(420, 148)">
+    <rect x="0" y="0" width="240" height="50" rx="8" fill="rgba(231,76,60,0.14)" stroke="rgba(231,76,60,0.55)" stroke-width="1"/>
+    <text x="14" y="22" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#e74c3c">Distensão abdominal</text>
+    <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">curva ventral proeminente, progressiva</text>
+  </g>
+
+  <!-- Eritema parede -->
+  <line x1="430" y1="280" x2="240" y2="288" stroke="#e74c3c" stroke-width="1.8" marker-end="url(#v72-arrow)"/>
+  <g transform="translate(420, 252)">
+    <rect x="0" y="0" width="240" height="50" rx="8" fill="rgba(231,76,60,0.14)" stroke="rgba(231,76,60,0.55)" stroke-width="1"/>
+    <text x="14" y="22" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#e74c3c">Eritema parede abdominal</text>
+    <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">sinal de comprometimento transmural</text>
+  </g>
+
+  <!-- Alça sentinela -->
+  <line x1="430" y1="378" x2="268" y2="394" stroke="#f0b440" stroke-width="1.8" marker-end="url(#v72-arrow-warn)"/>
+  <g transform="translate(420, 352)">
+    <rect x="0" y="0" width="240" height="50" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.55)" stroke-width="1"/>
+    <text x="14" y="22" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#f0b440">Alça sentinela</text>
+    <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">protuberância fixa em FID</text>
+  </g>
+
+  <!-- Anotação sinal de alarme -->
+  <g transform="translate(420, 416)">
+    <rect x="0" y="0" width="340" height="46" rx="8" fill="rgba(231,76,60,0.18)" stroke="rgba(231,76,60,0.70)" stroke-width="1.4"/>
+    <text x="170" y="20" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#e74c3c" text-anchor="middle">Distensão progressiva + eritema parede</text>
+    <text x="170" y="36" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#e7e0d0" text-anchor="middle">= sinal de alarme ECN (estágio II→III Bell)</text>
+  </g>
+
+  <!-- =========== Inset: linha do tempo =========== -->
+  <g transform="translate(420, 480)">
+    <rect x="0" y="0" width="340" height="80" rx="12" fill="rgba(14,24,32,0.94)" stroke="rgba(243,237,224,0.18)" stroke-width="1"/>
+    <text x="14" y="20" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#c3bcae">Linha do tempo · progressão clínica</text>
+
+    <!-- eixo -->
+    <line x1="30" y1="56" x2="320" y2="56" stroke="rgba(243,237,224,0.45)" stroke-width="1.2"/>
+    <line x1="30" y1="52" x2="30" y2="60" stroke="rgba(243,237,224,0.45)" stroke-width="1.2"/>
+    <line x1="160" y1="52" x2="160" y2="60" stroke="rgba(243,237,224,0.45)" stroke-width="1.2"/>
+    <line x1="290" y1="52" x2="290" y2="60" stroke="rgba(243,237,224,0.45)" stroke-width="1.2"/>
+
+    <!-- mini abdome basal -->
+    <path d="M 18 44 Q 30 38, 42 44 Q 42 50, 30 50 Q 18 50, 18 44 Z" fill="url(#v72-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="0.8"/>
+    <!-- mini abdome 12h: maior -->
+    <path d="M 142 42 Q 160 32, 178 42 Q 178 52, 160 53 Q 142 52, 142 42 Z" fill="url(#v72-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="0.8"/>
+    <!-- mini abdome 24h: maior + eritema -->
+    <path d="M 268 40 Q 290 28, 312 40 Q 312 54, 290 55 Q 268 54, 268 40 Z" fill="url(#v72-skin)" stroke="rgba(231,76,60,0.65)" stroke-width="1.2"/>
+    <ellipse cx="290" cy="46" rx="18" ry="9" fill="url(#v72-erythema)"/>
+
+    <!-- labels -->
+    <g font-family="Inter, sans-serif" font-size="10" fill="#e7e0d0" text-anchor="middle">
+      <text x="30" y="74">basal</text>
+      <text x="160" y="74">12 h · distensão</text>
+      <text x="290" y="74">24 h · eritema</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="40" y="588" font-family="Inter, sans-serif" font-size="10" fill="#8a8678">
+    Ilustração esquemática autoral Bauer Neonatologia · 2026 · anonimização facial absoluta
+  </text>
+</svg>

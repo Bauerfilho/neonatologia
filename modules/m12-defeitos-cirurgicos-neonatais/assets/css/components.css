@@ -870,3 +870,54 @@
   .figure-clinical { padding: var(--space-3); }
   .figure-clinical[data-img-id="B16"] img { max-width: 280px; }
 }
+
+/* === Figure clinical — M12 extension (V02a, V03a, V08a, V11a, V13a, V14a, V15a/b/c) === */
+.figure-clinical[data-img-id^="V"] img {
+  max-width: 720px;
+}
+.figure-clinical[data-img-id="V11a"] img { max-width: 520px; }
+.figure-clinical[data-img-id="V13a"] img { max-width: 520px; }
+.figure-clinical[data-img-id="V14a"] img { max-width: 600px; }
+
+/* Nota contextual em legenda (imagens fortes autorizadas Bauer) */
+.figcaption-notice {
+  display: block;
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-elev-1);
+  border-left: 3px solid var(--accent-coral-strong);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-xs);
+  color: var(--ink-70);
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Painel AAR — 3 figures complementares lado-a-lado (desktop) / stack (mobile) */
+.aar-painel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-5) 0;
+}
+.aar-painel .figure-clinical--panel {
+  margin: 0;
+  padding: var(--space-3);
+}
+.aar-painel .figure-clinical--panel img {
+  max-width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+}
+.aar-painel .figure-clinical--panel .figcaption {
+  font-size: var(--fs-xs);
+}
+@media (max-width: 900px) {
+  .aar-painel {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  .aar-painel .figure-clinical--panel img {
+    max-height: none;
+  }
+}

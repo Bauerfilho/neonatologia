@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="v52-title v52-desc">
+  <title id="v52-title">Radiografia esquemática de Taquipneia Transitória do Recém-Nascido</title>
+  <desc id="v52-desc">Esquema radiográfico de tórax neonatal em AP mostrando os achados clássicos da Taquipneia Transitória do RN: cisurite (líquido em cisura interlobar direita espessada), estrias lineares emergindo bilateralmente dos hilos pulmonares, trama vascular pulmonar aumentada com padrão radiado, cardiomegalia discreta com índice cardiotorácico levemente elevado, e arcos costais sutilmente retificados sugerindo hiperinsuflação leve. Achados rotulados com setas amarelas e labels técnicos.</desc>
+  <defs>
+    <radialGradient id="v52-bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="60%" stop-color="#0f1f2c"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <linearGradient id="v52-rx" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2731"/>
+      <stop offset="100%" stop-color="#0c1620"/>
+    </linearGradient>
+    <radialGradient id="v52-lung-r" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="rgba(108,180,232,0.16)"/>
+      <stop offset="70%" stop-color="rgba(108,180,232,0.06)"/>
+      <stop offset="100%" stop-color="rgba(10,22,32,0)"/>
+    </radialGradient>
+    <radialGradient id="v52-lung-l" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="rgba(108,180,232,0.16)"/>
+      <stop offset="70%" stop-color="rgba(108,180,232,0.06)"/>
+      <stop offset="100%" stop-color="rgba(10,22,32,0)"/>
+    </radialGradient>
+    <linearGradient id="v52-heart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6a7480"/>
+      <stop offset="100%" stop-color="#3a4450"/>
+    </linearGradient>
+    <linearGradient id="v52-diaph" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a5560"/>
+      <stop offset="100%" stop-color="#2a323b"/>
+    </linearGradient>
+    <marker id="v52-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f0b440"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#v52-bg)"/>
+
+  <!-- Painel RX -->
+  <rect x="40" y="40" width="520" height="520" rx="14" fill="url(#v52-rx)" stroke="rgba(243,237,224,0.10)" stroke-width="1"/>
+
+  <!-- Caixa torácica: arcos costais retificados -->
+  <g stroke="rgba(243,237,224,0.42)" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <!-- direita (lado esquerdo da imagem na AP) -->
+    <path d="M 90 130 Q 220 142, 290 158"/>
+    <path d="M 80 175 Q 220 188, 290 198"/>
+    <path d="M 75 222 Q 220 235, 290 242"/>
+    <path d="M 75 270 Q 220 282, 290 286"/>
+    <path d="M 80 318 Q 220 326, 290 330"/>
+    <path d="M 90 366 Q 220 372, 290 374"/>
+    <!-- esquerda -->
+    <path d="M 510 130 Q 380 142, 310 158"/>
+    <path d="M 520 175 Q 380 188, 310 198"/>
+    <path d="M 525 222 Q 380 235, 310 242"/>
+    <path d="M 525 270 Q 380 282, 310 286"/>
+    <path d="M 520 318 Q 380 326, 310 330"/>
+    <path d="M 510 366 Q 380 372, 310 374"/>
+  </g>
+
+  <!-- Coluna vertebral -->
+  <g stroke="rgba(243,237,224,0.30)" stroke-width="0.8" fill="rgba(243,237,224,0.10)">
+    <rect x="293" y="105" width="14" height="285" rx="2"/>
+  </g>
+
+  <!-- Pulmão direito (lado esquerdo da imagem AP) -->
+  <path d="M 88 140 Q 70 230, 90 340 Q 110 400, 175 410 Q 230 405, 270 380 L 285 130 Q 200 118, 88 140 Z"
+        fill="url(#v52-lung-r)" stroke="rgba(243,237,224,0.30)" stroke-width="1.2"/>
+  <!-- Pulmão esquerdo -->
+  <path d="M 512 140 Q 530 230, 510 340 Q 490 400, 425 410 Q 370 405, 330 380 L 315 130 Q 400 118, 512 140 Z"
+        fill="url(#v52-lung-l)" stroke="rgba(243,237,224,0.30)" stroke-width="1.2"/>
+
+  <!-- Diafragma -->
+  <path d="M 88 408 Q 175 440, 275 412 L 285 415 Q 200 460, 88 425 Z" fill="url(#v52-diaph)" opacity="0.6"/>
+  <path d="M 515 408 Q 425 440, 325 412 L 315 415 Q 400 460, 515 425 Z" fill="url(#v52-diaph)" opacity="0.6"/>
+
+  <!-- Silhueta cardíaca (discreta cardiomegalia) -->
+  <path d="M 240 270 Q 220 300, 240 360 Q 270 400, 340 405 Q 400 400, 380 350 Q 395 290, 370 265 Q 305 250, 240 270 Z"
+        fill="url(#v52-heart)" stroke="rgba(243,237,224,0.45)" stroke-width="1.2" opacity="0.92"/>
+
+  <!-- Trama vascular aumentada (linhas radiando do hilo) -->
+  <g stroke="rgba(243,237,224,0.55)" stroke-width="1" fill="none" stroke-linecap="round">
+    <!-- hilo direito -->
+    <path d="M 215 245 L 150 195"/>
+    <path d="M 215 245 L 130 235"/>
+    <path d="M 215 245 L 145 285"/>
+    <path d="M 215 245 L 170 330"/>
+    <path d="M 215 245 L 230 320"/>
+    <path d="M 215 245 L 180 220"/>
+    <path d="M 215 245 L 250 200"/>
+    <!-- hilo esquerdo -->
+    <path d="M 385 245 L 450 195"/>
+    <path d="M 385 245 L 470 235"/>
+    <path d="M 385 245 L 455 285"/>
+    <path d="M 385 245 L 430 330"/>
+    <path d="M 385 245 L 370 320"/>
+    <path d="M 385 245 L 420 220"/>
+    <path d="M 385 245 L 350 200"/>
+  </g>
+
+  <!-- Hilos como nódulos -->
+  <circle cx="215" cy="245" r="6" fill="rgba(243,237,224,0.55)"/>
+  <circle cx="385" cy="245" r="6" fill="rgba(243,237,224,0.55)"/>
+
+  <!-- Estrias lineares finas adicionais (radiando do hilo) -->
+  <g stroke="rgba(243,237,224,0.38)" stroke-width="0.7" fill="none" stroke-linecap="round">
+    <path d="M 220 250 L 105 195"/>
+    <path d="M 220 250 L 115 305"/>
+    <path d="M 220 250 L 200 380"/>
+    <path d="M 220 250 L 270 360"/>
+    <path d="M 380 250 L 495 195"/>
+    <path d="M 380 250 L 485 305"/>
+    <path d="M 380 250 L 400 380"/>
+    <path d="M 380 250 L 330 360"/>
+  </g>
+
+  <!-- Cisurite: cisura interlobar direita espessada (oblíqua menor) -->
+  <path d="M 130 220 Q 195 245, 280 220" stroke="#f0b440" stroke-width="3.2" fill="none" stroke-linecap="round" opacity="0.92"/>
+
+  <!-- Seta + label: CISURITE -->
+  <line x1="620" y1="200" x2="285" y2="222" stroke="#f0b440" stroke-width="1.8" marker-end="url(#v52-arrow)"/>
+  <g transform="translate(600, 170)">
+    <rect x="0" y="0" width="180" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.55)" stroke-width="1"/>
+    <text x="14" y="20" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#f0b440">Cisurite</text>
+    <text x="14" y="38" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">líquido em cisura interlobar D</text>
+  </g>
+
+  <!-- Seta + label: ESTRIAS DO HILO -->
+  <line x1="620" y1="270" x2="240" y2="248" stroke="#f0b440" stroke-width="1.8" marker-end="url(#v52-arrow)"/>
+  <line x1="620" y1="270" x2="365" y2="248" stroke="#f0b440" stroke-width="1.8" marker-end="url(#v52-arrow)"/>
+  <g transform="translate(600, 252)">
+    <rect x="0" y="0" width="180" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.55)" stroke-width="1"/>
+    <text x="14" y="20" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#f0b440">Estrias do hilo</text>
+    <text x="14" y="38" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">vasos peri-hilares ingurgitados</text>
+  </g>
+
+  <!-- Seta + label: TRAMA VASCULAR -->
+  <line x1="620" y1="340" x2="170" y2="340" stroke="#f0b440" stroke-width="1.8" marker-end="url(#v52-arrow)"/>
+  <g transform="translate(600, 322)">
+    <rect x="0" y="0" width="180" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.55)" stroke-width="1"/>
+    <text x="14" y="20" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#f0b440">Trama vascular aumentada</text>
+    <text x="14" y="38" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">congestão linfática perivascular</text>
+  </g>
+
+  <!-- Seta + label: CARDIOMEGALIA DISCRETA -->
+  <line x1="620" y1="410" x2="345" y2="380" stroke="#f0b440" stroke-width="1.8" marker-end="url(#v52-arrow)"/>
+  <g transform="translate(600, 394)">
+    <rect x="0" y="0" width="180" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.55)" stroke-width="1"/>
+    <text x="14" y="20" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#f0b440">Cardiomegalia discreta</text>
+    <text x="14" y="38" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">ICT levemente aumentado</text>
+  </g>
+
+  <!-- Seta + label: ARCOS COSTAIS RETIFICADOS -->
+  <line x1="620" y1="478" x2="125" y2="225" stroke="#f0b440" stroke-width="1.5" marker-end="url(#v52-arrow)" opacity="0.85"/>
+  <g transform="translate(600, 462)">
+    <rect x="0" y="0" width="180" height="46" rx="8" fill="rgba(240,180,64,0.14)" stroke="rgba(240,180,64,0.55)" stroke-width="1"/>
+    <text x="14" y="20" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#f0b440">Arcos costais retificados</text>
+    <text x="14" y="38" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">hiperinsuflação leve</text>
+  </g>
+
+  <!-- Marcadores AP -->
+  <g font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#c3bcae">
+    <text x="62" y="76">D</text>
+    <text x="535" y="76">E</text>
+    <text x="62" y="555">AP</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="40" y="588" font-family="Inter, sans-serif" font-size="10" fill="#8a8678">
+    Ilustração esquemática autoral Bauer Neonatologia · 2026
+  </text>
+</svg>

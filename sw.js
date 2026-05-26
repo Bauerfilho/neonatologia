@@ -4,7 +4,7 @@
  * Neonatologia 1+2 fechada — fechamento da semana.
  */
 
-const CACHE = 'neonato-platform-v2.5.0';
+const CACHE = 'neonato-platform-v2.5.1';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
@@ -148,6 +148,8 @@ const ASSETS = [
   BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-rx-pneumotorax-neonato-hellerhoff.jpg',
   BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-rx-sam-grosseiro-hellerhoff.jpg',
   BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-n1-cianose-central-neonato.jpg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-v52-rx-ttrn-svg-autoral.svg',
+  BASE + 'modules/m7-ttrn-sam-hppn/assets/img/BNN-v57-v58-rn-meconio-svg-autoral.svg',
 
   /* === M8 — Icterícia Neonatal (Caso Eusébio Foucault) === */
   BASE + 'modules/m8-ictericia-neonatal/index.html',
@@ -170,6 +172,7 @@ const ASSETS = [
   BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v91-grafico-aap-2004-fototerapia.svg',
   BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v93-fototerapia-rn-wikimedia-vtbijoy.jpg',
   BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v94-grafico-bhutani-1999.svg',
+  BASE + 'modules/m8-ictericia-neonatal/assets/img/BNN-v77-esplenomegalia-esferocitose-svg-autoral.svg',
 
   /* === M9 — Bônus 1 ECN === */
   BASE + 'modules/m9-enterocolite-necrosante/index.html',
@@ -183,6 +186,7 @@ const ASSETS = [
   BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v75-pneumatose-linear-nec-mishra-pmc.jpg',
   BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v77-pneumoperitonio-perforacao-neonatal-hellerhoff.jpg',
   BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v79-rigler-pneumoperitonio-hellerhoff.jpg',
+  BASE + 'modules/m9-enterocolite-necrosante/assets/img/BNN-v72-distensao-clinica-ecn-svg-autoral.svg',
 
   /* === M10 — Bônus 2 Miscelânia === */
   BASE + 'modules/m10-miscelania-neonatal/index.html',
@@ -210,7 +214,16 @@ const ASSETS = [
   BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/css/components.css',
   BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/css/pages-m12.css',
   BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/js/router.js',
-  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/js/quiz.js'
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/js/quiz.js',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v02a-onfalocele-saco-intacto-pmc-cureus.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v03a-gastrosquise-sala-parto-pmc-children.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v08a-ae-fte-tipo-c-hellerhoff.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v11a-dupla-bolha-atresia-duodenal-hellerhoff.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v13a-vacterl-aplasia-radial-cdc.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v14a-bucket-handle-aar-meconio-pmc.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v15a-invertograma-aar-wikimedia.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v15b-ctlxr-aar-coto-pmc-fped.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v15c-fistula-perineal-masculino-esquema-wikimedia.jpg'
 ];
 
 self.addEventListener('install', (event) => {
