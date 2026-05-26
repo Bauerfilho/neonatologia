@@ -4,7 +4,7 @@
  * Neonatologia 1+2 fechada — fechamento da semana.
  */
 
-const CACHE = 'neonato-platform-v2.5.1';
+const CACHE = 'neonato-platform-v2.5.2';
 const BASE = '/neonatologia/';
 
 const ASSETS = [
@@ -223,7 +223,9 @@ const ASSETS = [
   BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v14a-bucket-handle-aar-meconio-pmc.jpg',
   BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v15a-invertograma-aar-wikimedia.jpg',
   BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v15b-ctlxr-aar-coto-pmc-fped.jpg',
-  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v15c-fistula-perineal-masculino-esquema-wikimedia.jpg'
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v15c-fistula-perineal-masculino-esquema-wikimedia.jpg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v16a-aar-feminino-tipos-svg-autoral.svg',
+  BASE + 'modules/m12-defeitos-cirurgicos-neonatais/assets/img/BNN-v17a-raios-horizontais-aar-svg-autoral.svg'
 ];
 
 self.addEventListener('install', (event) => {

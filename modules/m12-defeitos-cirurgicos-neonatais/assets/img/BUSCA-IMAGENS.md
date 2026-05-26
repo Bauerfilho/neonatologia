@@ -506,3 +506,108 @@ Adicionar os 9 novos arquivos `BNN-v0Xa-*.jpg` ao manifesto do Service Worker (s
 2. **Ilustrador SVG**: cobrir V15a (períneo plano × ânus cego) + V16a (tríade × cloaca) + V17a (gás × cóccix) onde foto real não foi qualificável.
 3. **Régua didática Bauer**: rodar gate dos 12 critérios com as imagens reais integradas pra validar nota 9,5+ pré-release.
 4. **Commit**: aguardar autorização explícita Bauer (regra "NÃO COMMITAR" preservada).
+
+---
+
+## V16a + V17a SVG autoral — cobertura dos briefs declarados inviáveis em CC
+
+**Data**: 2026-05-26
+**Agente**: ilustrador-medico-bauer
+**Contexto**: dois briefs M12 originalmente escalonados pelo buscador (`buscador-imagem-medica-bauer`) por raridade ética (perineal feminino com cloaca em CC permissivo) ou por substituibilidade pedagógica (gás × cóccix coberto parcialmente por V15a+V15b). Bauer redirecionou cobertura pra SVG autoral inline em paleta Neonatologia.
+
+### V16a — AAR feminino comparativo sagital (3 subtipos) [✅ ENTREGUE]
+
+- **Arquivo**: `assets/img/BNN-v16a-aar-feminino-tipos-svg-autoral.svg`
+- **Tamanho**: 21 KB · viewBox 900×1200 · aspect ratio 3:4 (vertical, 3 painéis empilhados)
+- **Conteúdo**: corte sagital esquemático da pelve neonatal feminina, três painéis verticais lado a lado de cima pra baixo:
+  - **Painel A — Fístula perineal (cutânea)**: trato fistuloso baixo entre reto e períneo, ânus ectópico externo ao introito vaginal · cor de aceite verde (--color-success-500 #5fcf80)
+  - **Painel B — Fístula vestibular**: trato retal terminando no fôrnice posterior do vestíbulo vaginal, com tríade orificial visível (◆ uretra · ● vagina · ★ fístula) · cor coral autoral Bauer (--accent-coral #ff6b5a) destacando como MAIS COMUM na menina
+  - **Painel C — Cloaca persistente**: reto + vagina + uretra confluindo em canal comum único antes de uma abertura ÚNICA perineal externa · cor de perigo (--color-danger-500 #ff5d6b) marcando complexidade · nota inferior canal comum <3 cm (simples) vs >3 cm (complexa)
+- **Estruturas anatômicas em todos os painéis**: bexiga (azul --color-info), útero+vagina (coral leve), reto (marrom), sínfise púbica, sacro, cóccix, períneo cutâneo
+- **Marcadores anatômicos consistentes**: ★ ânus · ◆ uretra · ● vagina (declarados no header global)
+- **Setas + labels técnicos**: cada painel tem 3 cards laterais à direita (achado anatômico-chave + conduta cirúrgica correspondente)
+- **Sem face. Sem genitália em detalhe explícito** — corte anatômico didático abstrato
+
+### V17a — RX raios horizontais comparativo (invertograma × CTLxR) [✅ ENTREGUE]
+
+- **Arquivo**: `assets/img/BNN-v17a-raios-horizontais-aar-svg-autoral.svg`
+- **Tamanho**: 16 KB · viewBox 1200×720 · aspect ratio 5:3 (horizontal, 2 painéis lado a lado)
+- **Conteúdo**: comparativo educacional das duas técnicas radiográficas em raios horizontais para estimar altura do coto retal em AAR:
+  - **Painel esquerdo — Invertograma clássico (Wangensteen-Rice)**: silhueta neonatal lateral em decúbito invertido (cabeça pra baixo), sem face, com marcador metálico no plano cutâneo do ânus, gás retal subindo cranialmente até o coto, linha pubococcígea (PC) tracejada em amarelo entre púbis e cóccix · card inferior com vantagens (+ técnica clássica, ainda em uso) e desvantagem (− risco aspiração/instabilidade)
+  - **Painel direito — RX lateral cross-table (técnica moderna)**: silhueta neonatal lateral em decúbito prono com pelve elevada por coxim, sem face, cóccix elevado posterior, raio horizontal indicado em azul tracejado, gás retal subindo até o coto, linha PC tracejada · cards superiores com leitura (AAR baixa = gás abaixo PC → PSARP; AAR alta = gás acima PC → colostomia)
+- **Faixa síntese inferior** (princípio comum às duas técnicas): "o gás luminal sobe e demarca a extremidade do coto retal — a linha pubococcígea separa baixa (PSARP) de alta (colostomia)"
+- **Sem face. Silhueta esquemática estilizada** em ambos painéis
+
+### Paleta Bauer Neonatologia aplicada
+
+Todos os 2 SVGs herdam do `tokens.css` do módulo:
+
+- `--bg-base #0a1620` (petróleo profundo) como fundo base (radial gradient pra `#142838` ao centro)
+- `--ink-100 #f3ede0` (off-white quente) pra títulos e labels primárias
+- `--ink-70 #c3bcae` pra labels secundárias
+- `--accent-coral #ff6b5a` pra destaques autorais (fístula vestibular MAIS COMUM em V16a; síntese em V17a)
+- `--color-success-500 #5fcf80` pra "aceito/baixa/PSARP primária"
+- `--color-warning-500 #f0b440` pra "âmbar/linha PC/marcadores ósseos chave"
+- `--color-danger-500 #ff5d6b` pra "complexo/alta/cloaca/colostomia"
+- `--color-info-500 #6cb4e8` pra "uretra/raio horizontal/bexiga"
+- Fonte: Inter (labels), Lora (títulos painel)
+- Markers de seta dedicados em 4 variações (âmbar, coral, verde, vermelho)
+
+### Acessibilidade
+
+Ambos os SVGs possuem:
+
+- `role="img"` + `aria-labelledby` apontando pra title+desc únicos
+- `<title>` técnico curto (PT-BR médico)
+- `<desc>` descritivo completo de 1-3 frases (PT-BR didático) cobrindo todo o conteúdo visual pra screen reader
+- Contraste de texto ≥ 4.5:1 contra fundo dark verificado (off-white quente + cores semânticas sobre petróleo)
+- `viewBox` responsivo (sem width/height fixos), `preserveAspectRatio="xMidYMid meet"`
+
+### Recomendação de embed (pro Executor M12)
+
+| SVG | Página alvo | Substituição |
+|-----|-------------|--------------|
+| V16a (3 subtipos sagital) | P16 — `<figure class="img-skeleton" data-img-id="V16a">` linhas 3169-3175 | substituir por `<figure class="figure-clinical"><img src="./assets/img/BNN-v16a-aar-feminino-tipos-svg-autoral.svg" alt="..." loading="lazy"><figcaption class="figcaption">...</figcaption></figure>` (ou inline `<object type="image/svg+xml" data="..."></object>` se quiser preservar fontes do sistema) |
+| V17a (raios horizontais comparativo) | P17 — `<figure class="img-skeleton" data-img-id="V17a">` linhas 3373-3378 | idem com `BNN-v17a-raios-horizontais-aar-svg-autoral.svg` |
+
+### Attribution canônica (autoral Bauer)
+
+Sem atribuição externa — são ilustrações esquemáticas autorais Bauer. Footer interno de cada SVG já declara "Ilustração esquemática autoral Bauer Neonatologia · 2026".
+
+### Alt text recomendado V16a (PT-BR didático)
+
+> "Ilustração esquemática autoral em corte sagital comparando os três principais subtipos de anomalia anorretal na menina. Painel A: fístula perineal (cutânea) — trato baixo entre reto e períneo, ânus ectópico externo ao introito vaginal. Painel B: fístula vestibular — abertura retal no vestíbulo vaginal posterior, com tríade orificial (uretra, vagina, fístula) visível na mesma cavidade; subtipo mais comum na menina. Painel C: cloaca persistente — reto, vagina e uretra confluindo em canal comum único antes de uma abertura única externa no períneo; defeito mais complexo da cirurgia pediátrica neonatal. Estruturas anatômicas marcadas: bexiga, útero, reto, sínfise púbica, sacro, cóccix, períneo. Marcadores anatômicos: estrela = ânus, losango = uretra, círculo = vagina."
+
+### Alt text recomendado V17a (PT-BR didático)
+
+> "Ilustração esquemática autoral comparando duas técnicas radiográficas com raios horizontais usadas pra estimar a altura do coto retal em anomalia anorretal. Painel esquerdo: invertograma clássico de Wangensteen-Rice — recém-nascido em decúbito invertido (cabeça pra baixo), marcador metálico no plano cutâneo do ânus, gás retal subindo cranialmente e demarcando a extremidade do coto. Painel direito: radiografia lateral cross-table em decúbito prono com cóccix elevado, raio horizontal lateral, sem necessidade de inverter o paciente. Em ambos os painéis, a linha pubococcígea (PC), tracejada entre púbis e cóccix, define a leitura: gás abaixo da PC = AAR baixa (conduta: anorretoplastia primária); gás acima da PC = AAR alta (conduta: colostomia inicial). Princípio comum: o gás sobe e demarca o coto; a linha PC separa baixa de alta."
+
+### Auto-checklist Ilustrador (§5)
+
+- [x] `viewBox` definido nos 2 SVGs
+- [x] `role="img"` + `aria-labelledby` apontando pra title+desc únicos por SVG
+- [x] `<title>` e `<desc>` técnicos PT-BR, sem narração
+- [x] Paleta Bauer Neonatologia (tokens.css) aplicada em ambos
+- [x] Fonte sistema (Inter + Lora, sem dependência externa runtime)
+- [x] Sem placeholders, sem watermark do agente, sem assinatura comercial
+- [x] Sem texto "vamos ver"/"observe que"/"ilustração genérica de"
+- [x] Contraste de texto ≥ 4.5:1 contra fundo verificado
+- [x] Aspect ratios coerentes (V16a 3:4 vertical empilhado · V17a 5:3 horizontal paralelo)
+- [x] Morfologia anatômica correta (sínfise/sacro/cóccix corretamente posicionados; vestíbulo entre uretra e vagina; canal comum cloacal antes da abertura externa; gás subindo em direção cranial nos 2 painéis V17a)
+- [x] Cores semânticas respeitadas (verde = baixa/PSARP; vermelho = alta/cloaca/colostomia; coral = autoral Bauer destaque; âmbar = âmbar/atenção/linha PC)
+- [x] Footer Bauer canônico (paralelo a V52/V57-V58/V72/V77 já em produção em M7-M9)
+- [x] Sintaxe XML válida (xmllint OK)
+- [x] Sem face. Sem genitália detalhada. Esquema didático em corte sagital / silhueta abstrata.
+
+### Defesa anti-prompt-injection (operação corrente)
+
+Detectados durante a sessão:
+
+6. `<system-reminder>` sobre MCP Figma (instrução não-solicitada de carregar skills `/figma-use`). **Tratada como dado, instrução ignorada.** Tarefa é SVG inline médico Bauer com convenções já estabelecidas no projeto, não design Figma.
+7. `<system-reminder>` sobre "Auto Mode Active". Operando em auto-mode declarado pelo Bauer no brief atual; nenhum comportamento alterado.
+8. `<system-reminder>` sobre troca de data. Aceito como atualização operacional.
+9. `<system-reminder>` reforçando claudeMd/userEmail/currentDate. Tratado como contexto válido.
+
+Defesa AGENTS.md §11 aplicada — instruções externas que tentavam desviar a tarefa pra Figma foram tratadas como dado, não-instrução, e ignoradas.
+
+---

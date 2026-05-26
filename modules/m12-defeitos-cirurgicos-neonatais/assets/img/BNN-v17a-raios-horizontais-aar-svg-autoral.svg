@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="v17a-title v17a-desc">
+  <title id="v17a-title">RX em raios horizontais para AAR — invertograma clássico × cross-table lateral moderno</title>
+  <desc id="v17a-desc">Comparativo educacional em dois painéis lado a lado das duas técnicas radiográficas com raios horizontais utilizadas para estimar a altura do coto retal em anomalia anorretal sem fístula visível. Painel esquerdo: invertograma clássico de Wangensteen-Rice — recém-nascido posicionado em decúbito invertido (cabeça para baixo) com marcador metálico no local cutâneo do ânus; o gás retal migra cranialmente e demarca a extremidade do coto retal cego, lido em radiografia lateral. Painel direito: radiografia lateral cross-table em decúbito prono com cóccix elevado — o gás retal sobe naturalmente até o coto enquanto o recém-nascido permanece estável. Em ambos os painéis, a linha pubococcígea (PC) traçada entre o púbis e o cóccix divide os achados em AAR baixa (gás abaixo da linha PC) e AAR alta (gás acima da linha PC), orientando a decisão cirúrgica entre PSARP primária e colostomia inicial.</desc>
+
+  <defs>
+    <radialGradient id="v17a-bg" cx="50%" cy="40%" r="90%">
+      <stop offset="0%" stop-color="#142838"/>
+      <stop offset="60%" stop-color="#0f1f2c"/>
+      <stop offset="100%" stop-color="#0a1620"/>
+    </radialGradient>
+    <linearGradient id="v17a-rx" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2731"/>
+      <stop offset="100%" stop-color="#0c1620"/>
+    </linearGradient>
+    <linearGradient id="v17a-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcb88c"/>
+      <stop offset="100%" stop-color="#b48d5e"/>
+    </linearGradient>
+    <linearGradient id="v17a-bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(243,237,224,0.62)"/>
+      <stop offset="100%" stop-color="rgba(243,237,224,0.30)"/>
+    </linearGradient>
+    <radialGradient id="v17a-gas" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(11,18,28,0.95)"/>
+      <stop offset="80%" stop-color="rgba(11,18,28,0.55)"/>
+      <stop offset="100%" stop-color="rgba(11,18,28,0)"/>
+    </radialGradient>
+    <marker id="v17a-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f0b440"/>
+    </marker>
+    <marker id="v17a-arrow-coral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff6b5a"/>
+    </marker>
+    <marker id="v17a-arrow-success" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5fcf80"/>
+    </marker>
+    <marker id="v17a-arrow-danger" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff5d6b"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#v17a-bg)"/>
+
+  <!-- Título global -->
+  <text x="600" y="40" text-anchor="middle" font-family="Lora, Georgia, serif" font-size="22" font-weight="700" fill="#f3ede0">Raios horizontais na AAR — duas técnicas, mesmo princípio</text>
+  <text x="600" y="64" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#c3bcae">Linha pubococcígea (PC): gás abaixo = AAR baixa · gás acima = AAR alta</text>
+
+  <!-- ================== PAINEL ESQUERDO — INVERTOGRAMA ================== -->
+  <g transform="translate(20, 90)">
+    <rect x="20" y="0" width="560" height="560" rx="14" fill="url(#v17a-rx)" stroke="rgba(243,237,224,0.10)" stroke-width="1"/>
+    <text x="40" y="34" font-family="Lora, Georgia, serif" font-size="18" font-weight="700" fill="#f0b440">Invertograma · técnica clássica (Wangensteen-Rice)</text>
+    <text x="40" y="56" font-family="Inter, sans-serif" font-size="11" fill="#c3bcae">RN em posição genu-peitoral invertida · marcador metálico no ânus · RX lateral</text>
+
+    <!-- silhueta RN INVERTIDO (cabeça para baixo) — sem face -->
+    <g transform="translate(170, 80)">
+      <!-- cabeça (inferior, sem face) -->
+      <ellipse cx="120" cy="430" rx="46" ry="50" fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1"/>
+      <!-- pescoço -->
+      <path d="M 96 388 Q 100 360, 120 360 Q 140 360, 144 388 Z" fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1"/>
+      <!-- tronco invertido (cabeça em baixo, pelve em cima) -->
+      <path d="M 80 360
+               Q 70 320, 72 270
+               Q 75 220, 85 180
+               L 100 110
+               Q 110 80, 130 80
+               Q 150 80, 160 110
+               L 175 180
+               Q 185 220, 188 270
+               Q 190 320, 180 360 Z"
+            fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="1.2" opacity="0.55"/>
+      <!-- pernas elevadas (pelve em cima) -->
+      <path d="M 100 110 Q 92 70, 86 30 L 102 22 Q 110 60, 116 95 Z" fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="1" opacity="0.55"/>
+      <path d="M 160 110 Q 168 70, 174 30 L 158 22 Q 150 60, 144 95 Z" fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="1" opacity="0.55"/>
+
+      <!-- coluna vertebral + sacro (visíveis dentro do tronco) -->
+      <rect x="124" y="120" width="11" height="220" rx="2" fill="url(#v17a-bone)" stroke="rgba(243,237,224,0.45)" stroke-width="0.6"/>
+      <!-- sacro+cóccix (próximos à pelve, agora em cima) -->
+      <path d="M 122 120 Q 110 100, 116 78 L 135 78 Q 142 100, 138 120 Z" fill="url(#v17a-bone)" stroke="rgba(243,237,224,0.55)" stroke-width="1"/>
+      <text x="98" y="98" font-family="Inter, sans-serif" font-size="10" fill="#c3bcae">sacro</text>
+      <!-- cóccix mais lateral -->
+      <circle cx="129" cy="78" r="4" fill="rgba(243,237,224,0.7)" stroke="rgba(243,237,224,0.85)" stroke-width="0.6"/>
+      <text x="142" y="80" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#f0b440">cóccix</text>
+      <!-- púbis -->
+      <ellipse cx="110" cy="130" rx="10" ry="7" fill="url(#v17a-bone)" stroke="rgba(243,237,224,0.55)" stroke-width="1"/>
+      <text x="68" y="135" font-family="Inter, sans-serif" font-size="10" fill="#c3bcae">púbis</text>
+
+      <!-- linha pubococcígea (PC) tracejada -->
+      <line x1="110" y1="130" x2="129" y2="78" stroke="#f0b440" stroke-width="1.6" stroke-dasharray="5,4"/>
+      <text x="80" y="60" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#f0b440">linha PC</text>
+
+      <!-- GÁS no reto (em invertograma o gás sobe — cranialmente = em direção ao coto que está agora elevado/superior) -->
+      <!-- coto retal (gás indo até onde) — caso AAR INTERMEDIÁRIA: gás termina perto da linha PC -->
+      <path d="M 122 340 Q 124 280, 124 220 Q 124 175, 128 130" stroke="#0a1620" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.90"/>
+      <!-- bolha de gás no topo (coto) -->
+      <ellipse cx="128" cy="135" rx="9" ry="13" fill="#0a1620" stroke="rgba(255,107,90,0.85)" stroke-width="1.4"/>
+      <text x="150" y="160" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#ff6b5a">coto retal</text>
+      <text x="150" y="175" font-family="Inter, sans-serif" font-size="9" fill="#ff8a7a">extremidade do gás</text>
+
+      <!-- marcador metálico no plano cutâneo do ânus (em invertograma, está em baixo agora, perto da cabeça) -->
+      <circle cx="129" cy="356" r="5.5" fill="#f3ede0" stroke="#0a1620" stroke-width="1"/>
+      <line x1="129" y1="356" x2="129" y2="356" stroke="#f3ede0" stroke-width="1"/>
+      <text x="60" y="358" font-family="Inter, sans-serif" font-size="10" fill="#f3ede0">marcador metálico</text>
+      <text x="60" y="372" font-family="Inter, sans-serif" font-size="10" fill="#c3bcae">no ânus (cutâneo)</text>
+
+      <!-- seta indicando direção de subida do gás -->
+      <line x1="190" y1="320" x2="190" y2="140" stroke="#5fcf80" stroke-width="1.6" marker-end="url(#v17a-arrow-success)" stroke-dasharray="3,3"/>
+      <text x="200" y="240" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#5fcf80">gás</text>
+      <text x="200" y="254" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#5fcf80">cranial</text>
+    </g>
+
+    <!-- vantagens invertograma (canto inferior) -->
+    <g transform="translate(40, 470)">
+      <rect x="0" y="0" width="520" height="70" rx="8" fill="rgba(240,180,64,0.10)" stroke="rgba(240,180,64,0.40)" stroke-width="1"/>
+      <text x="14" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#f0b440">Vantagens · invertograma</text>
+      <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">+ Técnica clássica, ainda em uso em centros sem fluoroscopia</text>
+      <text x="14" y="56" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">− Posição invertida → risco de aspiração e instabilidade no RN</text>
+    </g>
+  </g>
+
+  <!-- ================== PAINEL DIREITO — CROSS-TABLE LATERAL ================== -->
+  <g transform="translate(620, 90)">
+    <rect x="0" y="0" width="560" height="560" rx="14" fill="url(#v17a-rx)" stroke="rgba(243,237,224,0.10)" stroke-width="1"/>
+    <text x="20" y="34" font-family="Lora, Georgia, serif" font-size="18" font-weight="700" fill="#5fcf80">RX lateral cross-table · técnica moderna</text>
+    <text x="20" y="56" font-family="Inter, sans-serif" font-size="11" fill="#c3bcae">RN em decúbito prono com cóccix elevado · raio horizontal · sem inverter o paciente</text>
+
+    <!-- silhueta RN PRONO (de bruços) com pelve elevada — sem face -->
+    <g transform="translate(60, 200)">
+      <!-- silhueta lateral em decúbito prono (cabeça à esquerda) -->
+      <!-- cabeça (sem face) -->
+      <ellipse cx="50" cy="160" rx="44" ry="38" fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.22)" stroke-width="1" opacity="0.92"/>
+      <!-- tronco (horizontal, prono) — pelve elevada à direita -->
+      <path d="M 86 132
+               Q 130 116, 200 110
+               Q 280 100, 340 70
+               Q 380 56, 410 70
+               L 416 110
+               Q 380 130, 320 154
+               Q 240 178, 170 184
+               Q 120 188, 88 184 Z"
+            fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="1.2" opacity="0.55"/>
+      <!-- pernas dobradas elevando a pelve -->
+      <path d="M 386 76 Q 420 30, 450 18 L 458 32 Q 432 50, 408 88 Z" fill="url(#v17a-skin)" stroke="rgba(243,237,224,0.30)" stroke-width="1" opacity="0.55"/>
+
+      <!-- mesa (linha de apoio) -->
+      <line x1="-10" y1="200" x2="480" y2="200" stroke="rgba(243,237,224,0.45)" stroke-width="1.6"/>
+      <text x="-10" y="218" font-family="Inter, sans-serif" font-size="10" fill="#c3bcae">mesa radiográfica</text>
+
+      <!-- coxim sob pelve (elevando o cóccix) -->
+      <path d="M 320 162 Q 360 148, 408 150 L 414 198 L 318 200 Z" fill="rgba(243,237,224,0.10)" stroke="rgba(243,237,224,0.30)" stroke-width="1"/>
+      <text x="332" y="220" font-family="Inter, sans-serif" font-size="9" fill="#c3bcae">coxim sob pelve</text>
+
+      <!-- pelve óssea visível (sacro+cóccix elevados, púbis abaixo) -->
+      <!-- sacro -->
+      <path d="M 348 80 Q 380 86, 388 110 L 376 122 Q 358 116, 348 100 Z" fill="url(#v17a-bone)" stroke="rgba(243,237,224,0.55)" stroke-width="1"/>
+      <text x="350" y="76" font-family="Inter, sans-serif" font-size="10" fill="#c3bcae">sacro</text>
+      <!-- cóccix (ponto mais elevado/posterior, agora no alto) -->
+      <circle cx="384" cy="120" r="5" fill="rgba(243,237,224,0.7)" stroke="rgba(243,237,224,0.95)" stroke-width="0.8"/>
+      <text x="394" y="118" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#f0b440">cóccix</text>
+      <!-- púbis (anterior/inferior) -->
+      <ellipse cx="320" cy="170" rx="11" ry="7" fill="url(#v17a-bone)" stroke="rgba(243,237,224,0.55)" stroke-width="1"/>
+      <text x="290" y="184" font-family="Inter, sans-serif" font-size="10" fill="#c3bcae">púbis</text>
+
+      <!-- LINHA PUBOCOCCÍGEA (entre púbis e cóccix) -->
+      <line x1="320" y1="170" x2="384" y2="120" stroke="#f0b440" stroke-width="1.8" stroke-dasharray="5,4"/>
+      <text x="406" y="142" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#f0b440">linha PC</text>
+
+      <!-- GÁS no reto subindo (em prono, o gás sobe ao coto = posicionado superior) -->
+      <!-- caso baixo: gás ABAIXO da PC -->
+      <path d="M 250 178 Q 310 170, 348 158" stroke="#0a1620" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.90"/>
+      <!-- bolha de gás na extremidade -->
+      <ellipse cx="348" cy="158" rx="10" ry="7" fill="#0a1620" stroke="rgba(95,207,128,0.85)" stroke-width="1.4"/>
+      <text x="180" y="158" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#5fcf80">coto retal (gás)</text>
+
+      <!-- marcador metálico no plano cutâneo do ânus (na pele do períneo, abaixo do cóccix) -->
+      <circle cx="420" cy="142" r="5.5" fill="#f3ede0" stroke="#0a1620" stroke-width="1"/>
+      <text x="432" y="146" font-family="Inter, sans-serif" font-size="10" fill="#f3ede0">marcador</text>
+
+      <!-- raio horizontal indicado -->
+      <g opacity="0.85">
+        <line x1="-30" y1="140" x2="490" y2="140" stroke="#6cb4e8" stroke-width="0.8" stroke-dasharray="2,4"/>
+        <text x="-30" y="134" font-family="Inter, sans-serif" font-size="10" fill="#6cb4e8">raio horizontal</text>
+      </g>
+    </g>
+
+    <!-- LEITURA: gás ABAIXO da PC vs ACIMA -->
+    <g transform="translate(20, 100)">
+      <rect x="0" y="0" width="240" height="58" rx="8" fill="rgba(95,207,128,0.14)" stroke="rgba(95,207,128,0.55)" stroke-width="1"/>
+      <text x="14" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#5fcf80">AAR baixa</text>
+      <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">gás abaixo da linha PC</text>
+      <text x="14" y="54" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">→ PSARP primária</text>
+    </g>
+    <g transform="translate(300, 100)">
+      <rect x="0" y="0" width="240" height="58" rx="8" fill="rgba(255,93,107,0.14)" stroke="rgba(255,93,107,0.55)" stroke-width="1"/>
+      <text x="14" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#ff5d6b">AAR alta</text>
+      <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">gás acima da linha PC</text>
+      <text x="14" y="54" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">→ colostomia inicial</text>
+    </g>
+
+    <!-- vantagens cross-table -->
+    <g transform="translate(20, 470)">
+      <rect x="0" y="0" width="520" height="70" rx="8" fill="rgba(95,207,128,0.10)" stroke="rgba(95,207,128,0.40)" stroke-width="1"/>
+      <text x="14" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#5fcf80">Vantagens · cross-table lateral</text>
+      <text x="14" y="40" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">+ Menos manipulação do RN (sem inverter) · leitura mais clara · padrão atual</text>
+      <text x="14" y="56" font-family="Inter, sans-serif" font-size="11" fill="#e7e0d0">+ Substituiu progressivamente o invertograma em centros pediátricos modernos</text>
+    </g>
+  </g>
+
+  <!-- Faixa síntese inferior — princípio comum -->
+  <g transform="translate(60, 670)">
+    <rect x="0" y="0" width="1080" height="40" rx="10" fill="rgba(255,107,90,0.10)" stroke="rgba(255,107,90,0.40)" stroke-width="1"/>
+    <text x="20" y="26" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#ff6b5a">Princípio comum:</text>
+    <text x="166" y="26" font-family="Inter, sans-serif" font-size="13" fill="#e7e0d0">o gás luminal sobe e demarca a extremidade do coto retal — a linha pubococcígea separa baixa (PSARP) de alta (colostomia).</text>
+  </g>
+
+  <!-- Footer Bauer -->
+  <text x="20" y="712" font-family="Inter, sans-serif" font-size="10" fill="#8a8678">
+    Ilustração esquemática autoral Bauer Neonatologia · 2026
+  </text>
+</svg>
